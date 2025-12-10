@@ -12,7 +12,8 @@ interface CacheEntry<T> {
   data: T;
 }
 
-const CACHE_DURATION = 15 * 60 * 1000; // 15 minutes
+const CACHE_DURATION_DEFAULT = 15 * 60 * 1000; // 15 minutes
+const CACHE_DURATION_LIVE = 60 * 1000; // 1 minute
 
 const getTodayDateString = (): string => {
   return new Date().toDateString(); // e.g. "Fri Oct 27 2023"
@@ -31,12 +32,15 @@ export const getFromCache = <T>(key: string): T | null => {
     }
 
     const now = Date.now();
+    let effectiveTTL = CACHE_DURATION_DEFAULT;
 
-    // Check 2: Smart Kick-off
-    // If we have cached matches that are marked SCHEDULED but the time has passed, 
-    // we invalidate the cache to force a fetch of the new status (IN_PLAY).
+    // Analyze data if it is an array (assuming it's matches)
     if (Array.isArray(parsed.data)) {
         const matches = parsed.data as any[];
+
+        // Check 2: Smart Kick-off
+        // If we have cached matches that are marked SCHEDULED but the time has passed, 
+        // we invalidate the cache to force a fetch of the new status (IN_PLAY).
         const hasPendingKickoff = matches.some(m => {
             if (m && typeof m === 'object' && 'status' in m && 'rawDate' in m) {
                 const isScheduled = m.status === 'SCHEDULED' || m.status === 'TIMED';
@@ -49,13 +53,27 @@ export const getFromCache = <T>(key: string): T | null => {
         });
 
         if (hasPendingKickoff) return null;
+
+        // Check 3: Dynamic TTL
+        // If ANY match is currently live or paused (halftime), we shorten the TTL to 1 minute.
+        // This ensures status changes (like PAUSED -> IN_PLAY for 2nd half) are picked up quickly.
+        const hasLiveActivity = matches.some(m => {
+             if (m && typeof m === 'object' && 'status' in m) {
+                 return m.status === 'IN_PLAY' || m.status === 'PAUSED';
+             }
+             return false;
+        });
+
+        if (hasLiveActivity) {
+            effectiveTTL = CACHE_DURATION_LIVE;
+        }
     }
 
-    // Check 3: TTL
-    // If cache is older than CACHE_DURATION, invalidate it.
+    // Check 4: TTL Application
+    // If cache is older than effectiveTTL, invalidate it.
     // Fallback to 0 if timestamp is missing (legacy cache)
     const timestamp = parsed.timestamp || 0;
-    if (now - timestamp > CACHE_DURATION) {
+    if (now - timestamp > effectiveTTL) {
         return null;
     }
 
