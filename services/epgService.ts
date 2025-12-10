@@ -1,5 +1,7 @@
 
-import { EPGData, EPGProgram } from '../types';
+
+
+import { EPGData, EPGProgram, Channel, LocalMatchChannel } from '../types';
 
 // XMLTV Date Format: YYYYMMDDHHMMSS +/-HHMM (e.g. 20231027183000 +0200)
 const parseXMLTVDate = (dateStr: string): Date | null => {
@@ -128,4 +130,64 @@ export const getNextProgram = (programs: EPGProgram[] | undefined): EPGProgram |
     const now = new Date();
     // Find the first program that starts after now
     return programs.find(p => p.start > now) || null;
+};
+
+export const findLocalMatches = (matchTitle: string, channels: Channel[], epgData: EPGData): LocalMatchChannel[] => {
+     if (!channels || !epgData) return [];
+
+     // Normalize and split teams
+     // Example: "Inter Milan vs Como" -> ["inter milan", "como"]
+     const terms = matchTitle.toLowerCase()
+        .replace(/\s(vs|v|VS|V)\s/g, '|')
+        .split('|')
+        .map(t => t.trim());
+     
+     if (terms.length < 2) return [];
+
+     const results: LocalMatchChannel[] = [];
+     const MAX_RESULTS = 20;
+
+     // Helper: Does the EPG text contain the team name?
+     const isFuzzyMatch = (text: string, team: string) => {
+         const cleanText = text.toLowerCase();
+         if (cleanText.includes(team)) return true;
+         
+         const teamWords = team.split(' ').filter(w => w.length > 2 && !['fc', 'afc', 'united', 'city', 'real'].includes(w));
+         if (teamWords.length > 0) {
+             if (teamWords.some(w => cleanText.includes(w))) return true;
+         }
+
+         if (team.includes('manchester') && (cleanText.includes('man ') || cleanText.includes('man.'))) return true;
+         if (team.includes('saint-germain') && cleanText.includes('psg')) return true;
+
+         return false;
+     };
+
+     for (const channel of channels) {
+        if (results.length >= MAX_RESULTS) break;
+        if (!channel.tvgId || !epgData[channel.tvgId]) continue;
+
+        const programs = epgData[channel.tvgId];
+        const now = new Date();
+        const futureLimit = new Date(now.getTime() + 12 * 60 * 60 * 1000); // Look 12h ahead
+
+        const relevantProgram = programs.find(p => {
+             if (p.end < now || p.start > futureLimit) return false;
+             const textToCheck = (p.title + " " + p.description).toLowerCase();
+             const match0 = isFuzzyMatch(textToCheck, terms[0]);
+             const match1 = isFuzzyMatch(textToCheck, terms[1]);
+             return match0 && match1;
+        });
+
+        if (relevantProgram) {
+            results.push({
+                channel,
+                programTitle: relevantProgram.title,
+                isLive: now >= relevantProgram.start && now < relevantProgram.end,
+                start: relevantProgram.start
+            });
+        }
+     }
+     
+     return results.sort((a, b) => (a.isLive === b.isLive ? 0 : a.isLive ? -1 : 1));
 };

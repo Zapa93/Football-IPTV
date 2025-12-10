@@ -1,4 +1,6 @@
 
+
+
 import React, { useEffect, useMemo, useState, useRef, useCallback } from 'react';
 import { Sidebar, SidebarRef } from './components/Sidebar';
 import { VideoPlayer } from './components/VideoPlayer';
@@ -28,6 +30,7 @@ interface FlatItem {
 const App: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<Category>(Category.KANALER);
   const [playlist, setPlaylist] = useState<PlaylistData>([]);
+  const [allKnownChannels, setAllKnownChannels] = useState<Channel[]>([]); // Combined list for Global Search
   const [loading, setLoading] = useState<boolean>(true);
   const [selectedChannel, setSelectedChannel] = useState<Channel | null>(null);
   const [selectedGroup, setSelectedGroup] = useState<ChannelGroup | null>(null);
@@ -55,21 +58,40 @@ const App: React.FC = () => {
       setEpgData({});
       setSelectedGroup(null); 
       
-      const url = activeCategory === Category.KANALER ? ENTERTAINMENT_URL : SPORT_URL;
-      const { groups, epgUrl } = await fetchPlaylist(url);
-      setPlaylist(groups);
-      setLoading(false);
+      // Fetch BOTH playlists to enable Global Search
+      const [entData, sportData] = await Promise.all([
+        fetchPlaylist(ENTERTAINMENT_URL),
+        fetchPlaylist(SPORT_URL)
+      ]);
+
+      // Combine all channels and remove duplicates by URL
+      const allEntChannels = entData.groups.flatMap(g => g.channels);
+      const allSportChannels = sportData.groups.flatMap(g => g.channels);
+      
+      const uniqueChannelsMap = new Map<string, Channel>();
+      [...allEntChannels, ...allSportChannels].forEach(c => {
+         if (c.url && !uniqueChannelsMap.has(c.url)) {
+             uniqueChannelsMap.set(c.url, c);
+         }
+      });
+      const combinedChannels = Array.from(uniqueChannelsMap.values());
+      setAllKnownChannels(combinedChannels);
+      
+      // Set the Visible Playlist based on Active Category
+      const activeData = activeCategory === Category.KANALER ? entData : sportData;
+      setPlaylist(activeData.groups);
       
       setActiveSection('sidebar');
       setFocusedIndex(-1);
       setSavedGroupIndex(0);
 
-      if (groups.length === 1) {
-          setSelectedGroup(groups[0]);
+      if (activeData.groups.length === 1) {
+          setSelectedGroup(activeData.groups[0]);
       }
 
       // Dual EPG Strategy: Provider + Custom
-      const providerSource = MANUAL_EPG_URL || epgUrl;
+      // Use the active playlist's EPG URL as fallback for provider source
+      const providerSource = MANUAL_EPG_URL || activeData.epgUrl;
       const customSource = CUSTOM_EPG_URL;
       
       const fetchTasks: Promise<EPGData>[] = [];
@@ -463,6 +485,7 @@ const App: React.FC = () => {
         activeCategory={activeCategory} 
         onSelectCategory={setActiveCategory} 
         allChannels={playlist.flatMap(g => g.channels)}
+        globalChannels={allKnownChannels}
         epgData={epgData}
         onChannelSelect={setSelectedChannel}
       />
@@ -511,6 +534,7 @@ const App: React.FC = () => {
           channel={selectedChannel} 
           activeCategory={activeCategory}
           allChannels={selectedGroup ? selectedGroup.channels : playlist.flatMap(g => g.channels)}
+          globalChannels={allKnownChannels}
           playlist={playlist}
           epgData={epgData}
           onChannelSelect={setSelectedChannel}

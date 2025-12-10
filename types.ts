@@ -1,4 +1,5 @@
 
+
 export interface Channel {
   id: string;
   name: string;
@@ -53,4 +54,12 @@ export interface GoalEvent {
   score: string;
   scorer: string;
   minute: string;
+  channelToWatch?: Channel;
+}
+
+export interface LocalMatchChannel {
+    channel: Channel;
+    programTitle: string;
+    isLive: boolean;
+    start: Date;
 }

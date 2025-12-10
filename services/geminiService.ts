@@ -287,6 +287,15 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
                 scorer: 'Checking...',
                 minute: 'LIVE'
             });
+        } else if (newHomeScore < oldHomeScore || newAwayScore < oldAwayScore) {
+            // VAR Decision - Goal Disallowed
+            goalEvents.push({
+                matchId: prevMatch.id,
+                matchTitle: prevMatch.match,
+                score: `${newHomeScore} - ${newAwayScore}`,
+                scorer: 'Goal Disallowed (VAR)',
+                minute: 'VAR'
+            });
         }
 
         return {
@@ -299,6 +308,9 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
 
     // Fetch details for scorer
     for (const event of goalEvents) {
+        // Skip fetching scorer details for VAR events, as the API might return old goal data
+        if (event.minute === 'VAR') continue;
+
         try {
             const detailRes = await fetch(`https://api.football-data.org/v4/matches/${event.matchId}`, {
                 headers: { 'X-Auth-Token': apiKey }

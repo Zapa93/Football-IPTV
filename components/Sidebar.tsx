@@ -1,14 +1,17 @@
 
 
+
 import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef } from 'react';
-import { Category, EPGData, Channel, HighlightMatch } from '../types';
+import { Category, EPGData, Channel, HighlightMatch, LocalMatchChannel } from '../types';
 import { fetchFootballHighlights } from '../services/geminiService';
+import { findLocalMatches } from '../services/epgService';
 import { DEFAULT_LOGO } from '../constants';
 
 interface SidebarProps {
   activeCategory: Category;
   onSelectCategory: (category: Category) => void;
   allChannels: Channel[];
+  globalChannels: Channel[]; // New Prop for Global Search
   epgData: EPGData;
   onChannelSelect: (channel: Channel) => void;
 }
@@ -17,14 +20,7 @@ export interface SidebarRef {
     closeDrawer: () => void;
 }
 
-interface LocalMatchChannel {
-    channel: Channel;
-    programTitle: string;
-    isLive: boolean;
-    start: Date;
-}
-
-export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, onSelectCategory, allChannels, epgData, onChannelSelect }, ref) => {
+export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, onSelectCategory, allChannels, globalChannels, epgData, onChannelSelect }, ref) => {
   const [highlights, setHighlights] = useState<HighlightMatch[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -74,66 +70,6 @@ export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, o
     return () => window.removeEventListener('keydown', handleKeyDown, { capture: true });
   }, [activeMatchId]);
 
-  const findLocalMatches = (matchTitle: string) => {
-     if (!allChannels || !epgData) return [];
-
-     // Normalize and split teams
-     // Example: "Inter Milan vs Como" -> ["inter milan", "como"]
-     const terms = matchTitle.toLowerCase()
-        .replace(/\s(vs|v|VS|V)\s/g, '|')
-        .split('|')
-        .map(t => t.trim());
-     
-     if (terms.length < 2) return [];
-
-     const results: LocalMatchChannel[] = [];
-     const MAX_RESULTS = 20;
-
-     // Helper: Does the EPG text contain the team name?
-     const isFuzzyMatch = (text: string, team: string) => {
-         const cleanText = text.toLowerCase();
-         if (cleanText.includes(team)) return true;
-         
-         const teamWords = team.split(' ').filter(w => w.length > 2 && !['fc', 'afc', 'united', 'city', 'real'].includes(w));
-         if (teamWords.length > 0) {
-             if (teamWords.some(w => cleanText.includes(w))) return true;
-         }
-
-         if (team.includes('manchester') && (cleanText.includes('man ') || cleanText.includes('man.'))) return true;
-         if (team.includes('saint-germain') && cleanText.includes('psg')) return true;
-
-         return false;
-     };
-
-     for (const channel of allChannels) {
-        if (results.length >= MAX_RESULTS) break;
-        if (!channel.tvgId || !epgData[channel.tvgId]) continue;
-
-        const programs = epgData[channel.tvgId];
-        const now = new Date();
-        const futureLimit = new Date(now.getTime() + 12 * 60 * 60 * 1000); // Look 12h ahead
-
-        const relevantProgram = programs.find(p => {
-             if (p.end < now || p.start > futureLimit) return false;
-             const textToCheck = (p.title + " " + p.description).toLowerCase();
-             const match0 = isFuzzyMatch(textToCheck, terms[0]);
-             const match1 = isFuzzyMatch(textToCheck, terms[1]);
-             return match0 && match1;
-        });
-
-        if (relevantProgram) {
-            results.push({
-                channel,
-                programTitle: relevantProgram.title,
-                isLive: now >= relevantProgram.start && now < relevantProgram.end,
-                start: relevantProgram.start
-            });
-        }
-     }
-     
-     return results.sort((a, b) => (a.isLive === b.isLive ? 0 : a.isLive ? -1 : 1));
-  };
-
   const handleMatchClick = async (matchId: string, matchTitle: string) => {
     if (activeMatchId === matchId && localMatches.length > 0) return;
 
@@ -141,7 +77,7 @@ export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, o
     setIsSearching(true);
     setLocalMatches([]);
     
-    const local = findLocalMatches(matchTitle);
+    const local = findLocalMatches(matchTitle, globalChannels, epgData);
     setLocalMatches(local);
 
     setIsSearching(false);

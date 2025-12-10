@@ -1,7 +1,9 @@
+
+
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Channel, EPGData, EPGProgram, ChannelGroup, Category, GoalEvent, HighlightMatch } from '../types';
 import { DEFAULT_LOGO } from '../constants';
-import { getCurrentProgram, getNextProgram } from '../services/epgService';
+import { getCurrentProgram, getNextProgram, findLocalMatches } from '../services/epgService';
 import { PlayerChannelItem, PlayerGroupItem } from './ListItems';
 import { TeletextViewer } from './TeletextViewer';
 import { pollLiveScores, getFromCache } from '../services/geminiService';
@@ -10,6 +12,7 @@ interface VideoPlayerProps {
   channel: Channel;
   activeCategory: Category;
   allChannels: Channel[]; // Default list (if needed)
+  globalChannels: Channel[]; // For Global Search on Goal Alerts
   playlist: ChannelGroup[]; // All groups for switching
   epgData: EPGData;
   onClose: () => void;
@@ -20,7 +23,7 @@ declare global {
   interface Window { Hls: any; }
 }
 
-export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategory, allChannels, playlist, epgData, onClose, onChannelSelect }) => {
+export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategory, allChannels, globalChannels, playlist, epgData, onClose, onChannelSelect }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const listContainerRef = useRef<HTMLDivElement>(null);
   
@@ -28,6 +31,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   const [isLoading, setIsLoading] = useState(true);
   const [isListOpen, setIsListOpen] = useState(false);
   const [showTeletext, setShowTeletext] = useState(false);
+  const [resolution, setResolution] = useState<string | null>(null);
   
   // State for virtualization
   const [scrollTop, setScrollTop] = useState(0);
@@ -52,7 +56,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
 
   // Goal Alert State
   const [isGoalAlertEnabled, setIsGoalAlertEnabled] = useState(false);
-  const [goalNotification, setGoalNotification] = useState<GoalEvent | null>(null);
+  const [notificationQueue, setNotificationQueue] = useState<GoalEvent[]>([]);
+  const [currentNotification, setCurrentNotification] = useState<GoalEvent | null>(null);
+  
   const lastKnownMatchesRef = useRef<HighlightMatch[]>([]);
   const notificationTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -141,10 +147,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     }
   }, []);
 
+  // 1. Polling Effect (Adds to Queue)
   useEffect(() => {
     // Enable goal alerts for any category if enabled (supporting Kanaler as requested)
     if (!isGoalAlertEnabled) {
-        setGoalNotification(null);
+        setCurrentNotification(null);
+        setNotificationQueue([]);
+        if (notificationTimeoutRef.current) clearTimeout(notificationTimeoutRef.current);
         return;
     }
 
@@ -153,17 +162,19 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         lastKnownMatchesRef.current = updatedMatches;
 
         if (events.length > 0) {
-            // Play sound
-            playNotificationSound();
-            
-            // Show latest event
-            const latestEvent = events[events.length - 1];
-            setGoalNotification(latestEvent);
+            // Enrich events with channel to watch if available
+            const enrichedEvents = events.map(event => {
+                const searchList = globalChannels && globalChannels.length > 0 ? globalChannels : allChannels;
+                const found = findLocalMatches(event.matchTitle, searchList, epgData);
+                // If we found a live match channel, attach it
+                if (found.length > 0 && found[0].isLive) {
+                    return { ...event, channelToWatch: found[0].channel };
+                }
+                return event;
+            });
 
-            if (notificationTimeoutRef.current) clearTimeout(notificationTimeoutRef.current);
-            notificationTimeoutRef.current = setTimeout(() => {
-                setGoalNotification(null);
-            }, 8000); // Show for 8 seconds
+            // Append all new events to the queue
+            setNotificationQueue(prev => [...prev, ...enrichedEvents]);
         }
     };
 
@@ -173,23 +184,54 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     // Poll every 60 seconds
     const interval = setInterval(poll, 60000);
     return () => clearInterval(interval);
-  }, [isGoalAlertEnabled, playNotificationSound]);
+  }, [isGoalAlertEnabled, globalChannels, allChannels, epgData]);
+
+  // 2. Queue Processor Effect (Displays one at a time)
+  useEffect(() => {
+      // If a notification is currently showing, wait for it to finish.
+      if (currentNotification) return;
+
+      // If the queue is empty, do nothing.
+      if (notificationQueue.length === 0) return;
+
+      // Get the next event
+      const nextEvent = notificationQueue[0];
+
+      // Remove it from the queue and set as current
+      setNotificationQueue(prev => prev.slice(1));
+      setCurrentNotification(nextEvent);
+
+      // Play sound
+      playNotificationSound();
+
+      // Set a timer to clear the current notification after 8 seconds
+      if (notificationTimeoutRef.current) clearTimeout(notificationTimeoutRef.current);
+      notificationTimeoutRef.current = setTimeout(() => {
+          setCurrentNotification(null);
+      }, 8000);
+
+  }, [notificationQueue, currentNotification, playNotificationSound]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+      return () => {
+          if (notificationTimeoutRef.current) clearTimeout(notificationTimeoutRef.current);
+      };
+  }, []);
 
   const triggerTestNotification = useCallback(() => {
-    playNotificationSound();
-    setGoalNotification({
-        matchId: 'test-demo',
+    const testEvent: GoalEvent = {
+        matchId: `test-${Date.now()}`,
         matchTitle: 'Test Match: Sweden vs Denmark',
         score: '2 - 1',
         scorer: 'Isak',
         minute: '88\''
-    });
-
-    if (notificationTimeoutRef.current) clearTimeout(notificationTimeoutRef.current);
-    notificationTimeoutRef.current = setTimeout(() => {
-        setGoalNotification(null);
-    }, 8000);
-  }, [playNotificationSound]);
+        // channelToWatch can be mocked if we want to test that button too, but handled via generic flow
+    };
+    
+    // Add to queue
+    setNotificationQueue(prev => [...prev, testEvent]);
+  }, []);
 
   // Refs for Event Listeners
   const channelRef = useRef(channel);
@@ -202,6 +244,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   const onCloseRef = useRef(onClose);
   const showTeletextRef = useRef(showTeletext);
   
+  // Ref for current notification to be accessible in keydown
+  const currentNotificationRef = useRef(currentNotification);
+  
   useEffect(() => { channelRef.current = channel; }, [channel]);
   useEffect(() => { currentChannelListRef.current = currentChannelList; }, [currentChannelList]);
   useEffect(() => { playlistRef.current = playlist; }, [playlist]);
@@ -211,6 +256,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   useEffect(() => { focusAreaRef.current = focusArea; }, [focusArea]);
   useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
   useEffect(() => { showTeletextRef.current = showTeletext; }, [showTeletext]);
+  useEffect(() => { currentNotificationRef.current = currentNotification; }, [currentNotification]);
 
   const controlsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const retryTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -275,6 +321,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     if (stallTimeoutRef.current) clearTimeout(stallTimeoutRef.current);
     
     setIsLoading(true);
+    setResolution(null);
 
     const loadStream = () => {
         setIsLoading(true);
@@ -304,10 +351,17 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         retryTimeoutRef.current = setTimeout(() => { loadStream(); }, 3000);
     };
 
+    const updateResolution = () => {
+        if (video.videoWidth && video.videoHeight) {
+            setResolution(`${video.videoWidth}x${video.videoHeight}`);
+        }
+    };
+
     const handleStreamReady = () => { 
         setIsLoading(false); 
         if (stallTimeoutRef.current) clearTimeout(stallTimeoutRef.current);
         if (video.paused) video.play().catch(() => {}); 
+        updateResolution();
     };
     
     const handleNativeError = () => { retryConnection(); };
@@ -326,6 +380,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     video.addEventListener('timeupdate', () => { if (video.currentTime > 0.1 && isLoading) setIsLoading(false); });
     video.addEventListener('error', handleNativeError);
     video.addEventListener('waiting', handleWaiting);
+    video.addEventListener('resize', updateResolution);
 
     loadStream();
 
@@ -338,6 +393,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       video.removeEventListener('playing', handleStreamReady);
       video.removeEventListener('error', handleNativeError);
       video.removeEventListener('waiting', handleWaiting);
+      video.removeEventListener('resize', updateResolution);
       video.removeAttribute('src'); 
       video.load();
     };
@@ -376,10 +432,23 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
           return;
       }
 
+      const isEnter = e.key === 'Enter';
+      const currentIsListOpen = isListOpenRef.current;
+      const notif = currentNotificationRef.current;
+
+      // --- GOAL ALERT SHORTCUT (WATCH NOW) ---
+      if (isEnter && !currentIsListOpen && notif && notif.channelToWatch) {
+          e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+          // Switch to channel immediately
+          onChannelSelect(notif.channelToWatch);
+          // We can optionally clear the notification or let it stay briefly. 
+          // Since we switch channel, the player re-mounts and clears state anyway.
+          return;
+      }
+
       resetControls();
       
       const isBack = e.key === 'Back' || e.key === 'Escape' || e.keyCode === 461;
-      const isEnter = e.key === 'Enter';
       const isUp = e.key === 'ArrowUp';
       const isDown = e.key === 'ArrowDown';
       const isLeft = e.key === 'ArrowLeft';
@@ -387,7 +456,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       const isChUp = e.key === 'PageUp' || e.keyCode === 33 || e.key === 'ChannelUp';
       const isChDown = e.key === 'PageDown' || e.keyCode === 34 || e.key === 'ChannelDown';
 
-      const currentIsListOpen = isListOpenRef.current;
       const currentCursorIndex = selectedIndexRef.current;
       const currentList = currentChannelListRef.current;
       const currentView = viewModeRef.current;
@@ -640,17 +708,38 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       {/* GOAL NOTIFICATION POPUP */}
       <div 
         className={`absolute top-8 right-8 z-[60] transition-all duration-500 ease-out transform
-          ${goalNotification ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
+          ${currentNotification ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}
       >
-        {goalNotification && (
+        {currentNotification && (
             <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl flex flex-col gap-1 w-80">
                 <div className="flex items-center justify-between mb-2">
                     <span className="text-2xl font-black text-green-400 animate-pulse uppercase tracking-wider">Goal!</span>
-                    <span className="text-white font-bold bg-white/20 px-2 rounded">{goalNotification.minute}</span>
+                    <span className="text-white font-bold bg-white/20 px-2 rounded">{currentNotification.minute}</span>
                 </div>
-                <div className="text-white text-lg font-bold leading-tight">{goalNotification.matchTitle}</div>
-                <div className="text-3xl text-white font-mono font-bold my-1 tracking-widest">{goalNotification.score}</div>
-                <div className="text-gray-300 text-sm mt-1">{goalNotification.scorer}</div>
+                <div className="text-white text-lg font-bold leading-tight">{currentNotification.matchTitle}</div>
+                <div className="text-3xl text-white font-mono font-bold my-1 tracking-widest">{currentNotification.score}</div>
+                <div className="text-gray-300 text-sm mt-1">{currentNotification.scorer}</div>
+                
+                {/* Watch Now Button */}
+                {currentNotification.channelToWatch && (
+                    <button
+                        className="mt-3 bg-white text-black font-bold py-1.5 px-4 rounded-lg hover:bg-gray-200 transition-colors w-full uppercase tracking-wider text-sm flex items-center justify-center gap-2 shadow-lg"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onChannelSelect(currentNotification.channelToWatch!);
+                        }}
+                    >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        Watch Now
+                    </button>
+                )}
+
+                {/* Optional Queue Indicator if multiple events are pending */}
+                {notificationQueue.length > 0 && (
+                    <div className="mt-2 text-xs text-gray-500 text-right">
+                        +{notificationQueue.length} more
+                    </div>
+                )}
             </div>
         )}
       </div>
@@ -742,6 +831,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
             <div className="mb-1 flex-1">
                <div className="flex items-center gap-4 mb-3">
                    <h1 className="text-4xl font-bold text-white">{channel.name}</h1>
+                   
+                   {/* Resolution Badge */}
+                   {resolution && (
+                       <div className="px-2 py-1 rounded bg-white/10 border border-white/10 text-xs font-mono text-gray-300 font-bold">
+                           {resolution}
+                       </div>
+                   )}
                    
                    {/* GOAL ALERT CONTROLS */}
                    {(activeCategory === Category.FOTBOLL || activeCategory === Category.KANALER) && (
