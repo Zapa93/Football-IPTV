@@ -4,6 +4,8 @@ import { FOOTBALL_API_KEY } from '../constants';
 
 export type HighlightsResult = HighlightMatch[];
 
+const CACHE_KEY = 'football_data_highlights_v2';
+
 // --- CACHING UTILITIES ---
 
 interface CacheEntry<T> {
@@ -19,17 +21,20 @@ const getTodayDateString = (): string => {
   return new Date().toDateString(); // e.g. "Fri Oct 27 2023"
 };
 
-export const getFromCache = <T>(key: string): T | null => {
+export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | null => {
   try {
     const item = localStorage.getItem(key);
     if (!item) return null;
 
     const parsed = JSON.parse(item) as CacheEntry<T>;
     
-    // Check 1: Date
+    // Check 1: Date (Always enforce date check to avoid comparing with yesterday's matches)
     if (parsed.date !== getTodayDateString()) {
       return null;
     }
+
+    // If ignoring TTL, return data immediately (skipping Smart Kick-off and Time checks)
+    if (ignoreTTL) return parsed.data;
 
     const now = Date.now();
     let effectiveTTL = CACHE_DURATION_DEFAULT;
@@ -131,8 +136,6 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
   cleanupOldCache();
 
   let matches: HighlightMatch[] = [];
-  // NEW KEY to invalidate old data structure
-  const CACHE_KEY = 'football_data_highlights_v2';
 
   try {
     // 1. Check Cache
@@ -307,24 +310,35 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
 };
 
 export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise<{ events: GoalEvent[], updatedMatches: HighlightMatch[] }> => {
+  // If previousMatches is empty (e.g. initially or due to expired cache logic in parent), 
+  // try to hydrate from cache IGNORING TTL to establish a baseline.
+  // This prevents the "Silent Update" bug where new goals aren't notified because we had no prior state.
+  let baselineMatches = previousMatches;
+  if (!baselineMatches || baselineMatches.length === 0) {
+      const cached = getFromCache<HighlightMatch[]>(CACHE_KEY, true); // ignoreTTL = true
+      if (cached) {
+          baselineMatches = cached;
+      }
+  }
+
   const apiKey = FOOTBALL_API_KEY;
-  if (!apiKey) return { events: [], updatedMatches: previousMatches };
+  if (!apiKey) return { events: [], updatedMatches: baselineMatches };
 
   try {
     const response = await fetch(`https://api.football-data.org/v4/matches?status=IN_PLAY`, {
         headers: { 'X-Auth-Token': apiKey }
     });
 
-    if (!response.ok) return { events: [], updatedMatches: previousMatches };
+    if (!response.ok) return { events: [], updatedMatches: baselineMatches };
     
     const data = await response.json();
-    if (!data.matches) return { events: [], updatedMatches: previousMatches };
+    if (!data.matches) return { events: [], updatedMatches: baselineMatches };
 
     const goalEvents: GoalEvent[] = [];
     const newMatchesMap = new Map<string, any>();
     data.matches.forEach((m: any) => newMatchesMap.set(String(m.id), m));
 
-    const updatedMatches = previousMatches.map(prevMatch => {
+    const updatedMatches = baselineMatches.map(prevMatch => {
         const liveMatch = newMatchesMap.get(prevMatch.id);
         if (!liveMatch) return prevMatch; 
 
@@ -384,6 +398,6 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
     return { events: goalEvents, updatedMatches };
 
   } catch (e) {
-    return { events: [], updatedMatches: previousMatches };
+    return { events: [], updatedMatches: baselineMatches };
   }
 };
