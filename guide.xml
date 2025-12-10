@@ -1,0 +1,1898 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="WebGrab+Plus/w MDB &amp; REX Postprocess -- version  V5.5.0.0 -- Jan van Straaten" generator-info-url="http://www.webgrabplus.com">
+  <channel id="CMoreFotboll.se">
+    <display-name lang="sv">TV4 Fotboll</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/tv4-fotboll-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="v sport extra">
+    <display-name lang="sv">Viaplay Sport Extra</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/v-sport-extra-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="v sport 1">
+    <display-name lang="sv">Viaplay Sport</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/v-sport-1-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="ViasatFotboll.se">
+    <display-name lang="sv">Viaplay Sport Fotboll</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/v-sport-football-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="ViasatSportPremium.se">
+    <display-name lang="sv">Viaplay Sport Premium</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/v-sport-premium-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="Sportkanalen.se">
+    <display-name lang="sv">TV4 Sportkanalen</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/sportkanalen-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="CMoreLive.se">
+    <display-name lang="sv">TV4 Sport Live 1</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/tv4-sport-live-1-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="CMoreLive2.se">
+    <display-name lang="sv">TV4 Sport Live 2</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/tv4-sport-live-2-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="CMoreLive3.se">
+    <display-name lang="sv">TV4 Sport Live 3</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/tv4-sport-live-3-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="CMoreLive4.se">
+    <display-name lang="sv">TV4 Sport Live 4</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/63/logo-sm/tv4-sport-live-4-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <programme start="20251210013000 +0100" stop="20251210050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Espanyol-Rayo Vallecano</title>
+  </programme>
+  <programme start="20251210050000 +0100" stop="20251210080000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210080000 +0100" stop="20251210103000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Madrid-Celta Vigo</title>
+  </programme>
+  <programme start="20251210103000 +0100" stop="20251210130000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Pisa-Parma</title>
+  </programme>
+  <programme start="20251210130000 +0100" stop="20251210153000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Torino-Milan</title>
+  </programme>
+  <programme start="20251210153000 +0100" stop="20251210180000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Osasuna-Levante</title>
+  </programme>
+  <programme start="20251210180000 +0100" stop="20251210203000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Oviedo-Mallorca</title>
+  </programme>
+  <programme start="20251210203000 +0100" stop="20251210230000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Sassuolo-Fiorentina</title>
+  </programme>
+  <programme start="20251210230000 +0100" stop="20251211013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Deportivo Alaves-Real Sociedad</title>
+  </programme>
+  <programme start="20251211013000 +0100" stop="20251211050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Inter-Como</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211080000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211080000 +0100" stop="20251211103000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Betis-Barcelona</title>
+  </programme>
+  <programme start="20251211103000 +0100" stop="20251211130000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Athletic Bilbao-Atletico Madrid</title>
+  </programme>
+  <programme start="20251211130000 +0100" stop="20251211153000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Cremonese-Lecce</title>
+  </programme>
+  <programme start="20251211153000 +0100" stop="20251211180000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Elche-Girona</title>
+  </programme>
+  <programme start="20251211180000 +0100" stop="20251211203000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Cagliari-Roma</title>
+  </programme>
+  <programme start="20251211203000 +0100" stop="20251211230000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Valencia-Sevilla</title>
+  </programme>
+  <programme start="20251211230000 +0100" stop="20251212013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Lazio-Bologna</title>
+  </programme>
+  <programme start="20251212013000 +0100" stop="20251212050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Espanyol-Rayo Vallecano</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212080000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212080000 +0100" stop="20251212103000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Madrid-Celta Vigo</title>
+  </programme>
+  <programme start="20251212103000 +0100" stop="20251212130000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Pisa-Parma</title>
+  </programme>
+  <programme start="20251212130000 +0100" stop="20251212153000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Torino-Milan</title>
+  </programme>
+  <programme start="20251212153000 +0100" stop="20251212180000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Osasuna-Levante</title>
+  </programme>
+  <programme start="20251212180000 +0100" stop="20251212205500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Oviedo-Mallorca</title>
+  </programme>
+  <programme start="20251212205500 +0100" stop="20251212231500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Sociedad-Girona</title>
+  </programme>
+  <programme start="20251212231500 +0100" stop="20251213013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Sociedad-Girona</title>
+  </programme>
+  <programme start="20251213013000 +0100" stop="20251213050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Inter-Como</title>
+  </programme>
+  <programme start="20251213050000 +0100" stop="20251213080000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251213080000 +0100" stop="20251213103000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Madrid-Celta Vigo</title>
+  </programme>
+  <programme start="20251213103000 +0100" stop="20251213135500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Sociedad-Girona</title>
+  </programme>
+  <programme start="20251213135500 +0100" stop="20251213161000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Atletico Madrid-Valencia</title>
+  </programme>
+  <programme start="20251213161000 +0100" stop="20251213182000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Mallorca-Elche</title>
+  </programme>
+  <programme start="20251213182000 +0100" stop="20251213205500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Barcelona-Osasuna</title>
+  </programme>
+  <programme start="20251213205500 +0100" stop="20251213231500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Getafe-Espanyol</title>
+  </programme>
+  <programme start="20251213231500 +0100" stop="20251214013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Barcelona-Osasuna</title>
+  </programme>
+  <programme start="20251214013000 +0100" stop="20251214050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Getafe-Espanyol</title>
+  </programme>
+  <programme start="20251214050000 +0100" stop="20251214073000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251214073000 +0100" stop="20251214094500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Atletico Madrid-Valencia</title>
+  </programme>
+  <programme start="20251214094500 +0100" stop="20251214122000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Barcelona-Osasuna</title>
+  </programme>
+  <programme start="20251214122000 +0100" stop="20251214145500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Milan-Sassuolo</title>
+  </programme>
+  <programme start="20251214145500 +0100" stop="20251214175000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Udinese-Napoli</title>
+  </programme>
+  <programme start="20251214175000 +0100" stop="20251214205000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Genoa-Inter</title>
+  </programme>
+  <programme start="20251214205000 +0100" stop="20251214231500 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Deportivo Alaves-Real Madrid</title>
+  </programme>
+  <programme start="20251214231500 +0100" stop="20251215013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Genoa-Inter</title>
+  </programme>
+  <programme start="20251215013000 +0100" stop="20251215050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Deportivo Alaves-Real Madrid</title>
+  </programme>
+  <programme start="20251215050000 +0100" stop="20251215080000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251215080000 +0100" stop="20251215103000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Real Sociedad-Girona</title>
+  </programme>
+  <programme start="20251215103000 +0100" stop="20251215130000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Atletico Madrid-Valencia</title>
+  </programme>
+  <programme start="20251215130000 +0100" stop="20251215153000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Torino-Cremonese</title>
+  </programme>
+  <programme start="20251215153000 +0100" stop="20251215180000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Parma-Lazio</title>
+  </programme>
+  <programme start="20251215180000 +0100" stop="20251215204000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Barcelona-Osasuna</title>
+  </programme>
+  <programme start="20251215204000 +0100" stop="20251215230000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Roma-Como</title>
+  </programme>
+  <programme start="20251215230000 +0100" stop="20251216013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Roma-Como</title>
+  </programme>
+  <programme start="20251216013000 +0100" stop="20251216050000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Getafe-Espanyol</title>
+  </programme>
+  <programme start="20251216050000 +0100" stop="20251216080000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251216080000 +0100" stop="20251216103000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Milan-Sassuolo</title>
+  </programme>
+  <programme start="20251216103000 +0100" stop="20251216130000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Sevilla-Real Oviedo</title>
+  </programme>
+  <programme start="20251216130000 +0100" stop="20251216153000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Udinese-Napoli</title>
+  </programme>
+  <programme start="20251216153000 +0100" stop="20251216180000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Celta Vigo-Athletic Bilbao</title>
+  </programme>
+  <programme start="20251216180000 +0100" stop="20251216203000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Genoa-Inter</title>
+  </programme>
+  <programme start="20251216203000 +0100" stop="20251216230000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">La Liga: Deportivo Alaves-Real Madrid</title>
+  </programme>
+  <programme start="20251216230000 +0100" stop="20251217013000 +0100" channel="CMoreFotboll.se">
+    <title lang="sv">Serie A: Roma-Como</title>
+  </programme>
+  <programme start="20251210000000 +0100" stop="20251210010500 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251210010500 +0100" stop="20251210040000 +0100" channel="v sport extra">
+    <title lang="sv">NHL: New York Islanders-Vegas Golden Knights</title>
+  </programme>
+  <programme start="20251210040000 +0100" stop="20251210130000 +0100" channel="v sport extra">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251210130000 +0100" stop="20251210150000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251210150000 +0100" stop="20251210170000 +0100" channel="v sport extra">
+    <title lang="sv">UEFA Champions League: Tottenham-Slavia Prag</title>
+  </programme>
+  <programme start="20251210170000 +0100" stop="20251210173000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210173000 +0100" stop="20251210180000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251210180000 +0100" stop="20251210185500 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251210185500 +0100" stop="20251210195500 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251210195500 +0100" stop="20251210202500 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210202500 +0100" stop="20251210210000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251210210000 +0100" stop="20251210220000 +0100" channel="v sport extra">
+    <title lang="sv">MLB: Plays of the Week</title>
+  </programme>
+  <programme start="20251210220000 +0100" stop="20251210230000 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251210230000 +0100" stop="20251210233000 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251210233000 +0100" stop="20251211000000 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251211000000 +0100" stop="20251211003000 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251211003000 +0100" stop="20251211010000 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251211010000 +0100" stop="20251211030500 +0100" channel="v sport extra">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251211030500 +0100" stop="20251211130000 +0100" channel="v sport extra">
+    <title lang="sv">NHL: Utah Mammoth-Florida Panthers</title>
+  </programme>
+  <programme start="20251211130000 +0100" stop="20251211140000 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251211140000 +0100" stop="20251211143000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251211143000 +0100" stop="20251211150000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251211150000 +0100" stop="20251211160000 +0100" channel="v sport extra">
+    <title lang="sv">MLB: Plays of the Week</title>
+  </programme>
+  <programme start="20251211160000 +0100" stop="20251211170000 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251211170000 +0100" stop="20251211173000 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251211173000 +0100" stop="20251211180000 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251211180000 +0100" stop="20251211183000 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251211183000 +0100" stop="20251211190000 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251211190000 +0100" stop="20251211193000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251211193000 +0100" stop="20251211200000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251211200000 +0100" stop="20251211203000 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251211203000 +0100" stop="20251211210000 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251211210000 +0100" stop="20251211230000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251211230000 +0100" stop="20251211233000 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251211233000 +0100" stop="20251212000000 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251212000000 +0100" stop="20251212010000 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251212010000 +0100" stop="20251212020500 +0100" channel="v sport extra">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251212020500 +0100" stop="20251212130000 +0100" channel="v sport extra">
+    <title lang="sv">NHL: Minnesota WIld-Dallas Stars</title>
+  </programme>
+  <programme start="20251212130000 +0100" stop="20251212133000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251212133000 +0100" stop="20251212173000 +0100" channel="v sport extra">
+    <title lang="sv">World Darts Championship</title>
+  </programme>
+  <programme start="20251212173000 +0100" stop="20251212180000 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251212180000 +0100" stop="20251212190000 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251212190000 +0100" stop="20251212193000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251212193000 +0100" stop="20251212200000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251212200000 +0100" stop="20251212202500 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251212202500 +0100" stop="20251212205500 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251212205500 +0100" stop="20251212230000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251212230000 +0100" stop="20251213124500 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251213124500 +0100" stop="20251213131500 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251213131500 +0100" stop="20251213151500 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga: Union Berlin-Leipzig</title>
+  </programme>
+  <programme start="20251213151500 +0100" stop="20251213155500 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251213155500 +0100" stop="20251213180000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251213180000 +0100" stop="20251213183000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251213183000 +0100" stop="20251213190000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251213190000 +0100" stop="20251213193000 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251213193000 +0100" stop="20251213200000 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251213200000 +0100" stop="20251213210500 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251213210500 +0100" stop="20251214000000 +0100" channel="v sport extra">
+    <title lang="sv">NHL: Pittsburgh Penguins-San Jose Sharks</title>
+  </programme>
+  <programme start="20251214000000 +0100" stop="20251214020500 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251214020500 +0100" stop="20251214124500 +0100" channel="v sport extra">
+    <title lang="sv">NHL: Dallas Stars-Florida Panthers</title>
+  </programme>
+  <programme start="20251214124500 +0100" stop="20251214131500 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251214131500 +0100" stop="20251214134500 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251214134500 +0100" stop="20251214145500 +0100" channel="v sport extra">
+    <title lang="sv">Formel 1 Highlights</title>
+  </programme>
+  <programme start="20251214145500 +0100" stop="20251214171000 +0100" channel="v sport extra">
+    <title lang="sv">Premier League: West Ham-Aston Villa</title>
+  </programme>
+  <programme start="20251214171000 +0100" stop="20251214191500 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251214191500 +0100" stop="20251214194500 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251214194500 +0100" stop="20251214201500 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251214201500 +0100" stop="20251214204500 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251214204500 +0100" stop="20251214211500 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251214211500 +0100" stop="20251214231500 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251214231500 +0100" stop="20251215000500 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251215000500 +0100" stop="20251215130000 +0100" channel="v sport extra">
+    <title lang="sv">NHL: Minnesota Wild-Boston Bruins</title>
+  </programme>
+  <programme start="20251215130000 +0100" stop="20251215133000 +0100" channel="v sport extra">
+    <title lang="sv">Fast Zone</title>
+  </programme>
+  <programme start="20251215133000 +0100" stop="20251215140000 +0100" channel="v sport extra">
+    <title lang="sv">GP Confidential</title>
+  </programme>
+  <programme start="20251215140000 +0100" stop="20251215143000 +0100" channel="v sport extra">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251215143000 +0100" stop="20251215150000 +0100" channel="v sport extra">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251215150000 +0100" stop="20251215170000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251215170000 +0100" stop="20251215190000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251215190000 +0100" stop="20251215200000 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251215200000 +0100" stop="20251215203000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251215203000 +0100" stop="20251215210000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251215210000 +0100" stop="20251215230000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251215230000 +0100" stop="20251216000000 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216000000 +0100" stop="20251216003000 +0100" channel="v sport extra">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251216003000 +0100" stop="20251216010000 +0100" channel="v sport extra">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251216010000 +0100" stop="20251216020500 +0100" channel="v sport extra">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251216020500 +0100" stop="20251216123000 +0100" channel="v sport extra">
+    <title lang="sv">NHL: Dallas Stars-Los Angeles Kings</title>
+  </programme>
+  <programme start="20251216123000 +0100" stop="20251216133000 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216133000 +0100" stop="20251216172500 +0100" channel="v sport extra">
+    <title lang="sv">World Darts Championship</title>
+  </programme>
+  <programme start="20251216172500 +0100" stop="20251216200000 +0100" channel="v sport extra">
+    <title lang="sv">Champions Hockey League</title>
+  </programme>
+  <programme start="20251216200000 +0100" stop="20251216220000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251216220000 +0100" stop="20251217000000 +0100" channel="v sport extra">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251217000000 +0100" stop="20251217010000 +0100" channel="v sport extra">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251217010000 +0100" stop="20251217020500 +0100" channel="v sport extra">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251210000000 +0100" stop="20251210003000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210003000 +0100" stop="20251210010500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251210010500 +0100" stop="20251210040000 +0100" channel="v sport 1">
+    <title lang="sv">NHL: Pittsburgh Penguins-Anaheim Ducks</title>
+  </programme>
+  <programme start="20251210040000 +0100" stop="20251210130000 +0100" channel="v sport 1">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251210130000 +0100" stop="20251210133000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210133000 +0100" stop="20251210140000 +0100" channel="v sport 1">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251210140000 +0100" stop="20251210150000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251210150000 +0100" stop="20251210170000 +0100" channel="v sport 1">
+    <title lang="sv">UEFA Champions League: Atalanta-Chelsea</title>
+  </programme>
+  <programme start="20251210170000 +0100" stop="20251210180000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251210180000 +0100" stop="20251210183000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210183000 +0100" stop="20251210190000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251210190000 +0100" stop="20251210205500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Brighton-West Ham</title>
+  </programme>
+  <programme start="20251210205500 +0100" stop="20251210230000 +0100" channel="v sport 1">
+    <title lang="sv">UEFA Champions League: Leverkusen-Newcastle</title>
+  </programme>
+  <programme start="20251210230000 +0100" stop="20251210233000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251210233000 +0100" stop="20251211000000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251211000000 +0100" stop="20251211010000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251211010000 +0100" stop="20251211040500 +0100" channel="v sport 1">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251211040500 +0100" stop="20251211130000 +0100" channel="v sport 1">
+    <title lang="sv">NHL: Seattle Kraken-Los Angeles Kings</title>
+  </programme>
+  <programme start="20251211130000 +0100" stop="20251211150000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Brighton-West Ham</title>
+  </programme>
+  <programme start="20251211150000 +0100" stop="20251211170000 +0100" channel="v sport 1">
+    <title lang="sv">UEFA Champions League: Leverkusen-Newcastle</title>
+  </programme>
+  <programme start="20251211170000 +0100" stop="20251211173000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251211173000 +0100" stop="20251211180000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251211180000 +0100" stop="20251211190000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251211190000 +0100" stop="20251211210000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Fulham-Crystal Palace</title>
+  </programme>
+  <programme start="20251211210000 +0100" stop="20251211230000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Wolverhampton-Manchester United</title>
+  </programme>
+  <programme start="20251211230000 +0100" stop="20251211233000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251211233000 +0100" stop="20251212000000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251212000000 +0100" stop="20251212003000 +0100" channel="v sport 1">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251212003000 +0100" stop="20251212010500 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251212010500 +0100" stop="20251212130000 +0100" channel="v sport 1">
+    <title lang="sv">NHL: New Jersey Devils-Tampa Bay Lightning</title>
+  </programme>
+  <programme start="20251212130000 +0100" stop="20251212150000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Fulham-Crystal Palace</title>
+  </programme>
+  <programme start="20251212150000 +0100" stop="20251212170000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Wolverhampton-Manchester United</title>
+  </programme>
+  <programme start="20251212170000 +0100" stop="20251212173000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251212173000 +0100" stop="20251212180000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251212180000 +0100" stop="20251212183000 +0100" channel="v sport 1">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251212183000 +0100" stop="20251212190000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251212190000 +0100" stop="20251212193000 +0100" channel="v sport 1">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251212193000 +0100" stop="20251212200000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251212200000 +0100" stop="20251212203000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251212203000 +0100" stop="20251212210000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251212210000 +0100" stop="20251212230000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Manchester City-Sunderland</title>
+  </programme>
+  <programme start="20251212230000 +0100" stop="20251213000000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251213000000 +0100" stop="20251213003000 +0100" channel="v sport 1">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251213003000 +0100" stop="20251213124500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251213124500 +0100" stop="20251213131500 +0100" channel="v sport 1">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251213131500 +0100" stop="20251213134500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251213134500 +0100" stop="20251213141500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251213141500 +0100" stop="20251213152000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251213152000 +0100" stop="20251213173000 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga: Frankfurt-Augsburg</title>
+  </programme>
+  <programme start="20251213173000 +0100" stop="20251213182000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251213182000 +0100" stop="20251213203000 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga: Leverkusen-Köln</title>
+  </programme>
+  <programme start="20251213203000 +0100" stop="20251213210000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251213210000 +0100" stop="20251213213500 +0100" channel="v sport 1">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251213213500 +0100" stop="20251214003000 +0100" channel="v sport 1">
+    <title lang="sv">NHL: New York Islanders-Tampa Bay Lightning</title>
+  </programme>
+  <programme start="20251214003000 +0100" stop="20251214030500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Liverpool-Brighton</title>
+  </programme>
+  <programme start="20251214030500 +0100" stop="20251214124500 +0100" channel="v sport 1">
+    <title lang="sv">NHL: Colorado Avalanche-Nashville Predators</title>
+  </programme>
+  <programme start="20251214124500 +0100" stop="20251214145500 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga: Leverkusen-Köln</title>
+  </programme>
+  <programme start="20251214145500 +0100" stop="20251214172000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Nottingham-Tottenham</title>
+  </programme>
+  <programme start="20251214172000 +0100" stop="20251214193000 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga: Bayern München-Mainz</title>
+  </programme>
+  <programme start="20251214193000 +0100" stop="20251214200000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251214200000 +0100" stop="20251214203000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251214203000 +0100" stop="20251214210000 +0100" channel="v sport 1">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20251214210000 +0100" stop="20251214230000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Crystal Palace-Manchester City</title>
+  </programme>
+  <programme start="20251214230000 +0100" stop="20251215130000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Sunderland-Newcastle</title>
+  </programme>
+  <programme start="20251215130000 +0100" stop="20251215150000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Chelsea-Everton</title>
+  </programme>
+  <programme start="20251215150000 +0100" stop="20251215170000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Liverpool-Brighton</title>
+  </programme>
+  <programme start="20251215170000 +0100" stop="20251215190000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Burnley-Fulham</title>
+  </programme>
+  <programme start="20251215190000 +0100" stop="20251215193000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251215193000 +0100" stop="20251215200000 +0100" channel="v sport 1">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251215200000 +0100" stop="20251215210000 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251215210000 +0100" stop="20251215230000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Crystal Palace-Manchester City</title>
+  </programme>
+  <programme start="20251215230000 +0100" stop="20251215233000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251215233000 +0100" stop="20251216000000 +0100" channel="v sport 1">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251216000000 +0100" stop="20251216010000 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216010000 +0100" stop="20251216020500 +0100" channel="v sport 1">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251216020500 +0100" stop="20251216130000 +0100" channel="v sport 1">
+    <title lang="sv">NHL: St Louis Blues-Nashville Predators</title>
+  </programme>
+  <programme start="20251216130000 +0100" stop="20251216133000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251216133000 +0100" stop="20251216140000 +0100" channel="v sport 1">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251216140000 +0100" stop="20251216150000 +0100" channel="v sport 1">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216150000 +0100" stop="20251216165500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Crystal Palace-Manchester City</title>
+  </programme>
+  <programme start="20251216165500 +0100" stop="20251216172500 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251216172500 +0100" stop="20251216200000 +0100" channel="v sport 1">
+    <title lang="sv">Champions Hockey League</title>
+  </programme>
+  <programme start="20251216200000 +0100" stop="20251216210000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251216210000 +0100" stop="20251216230000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League: Sunderland-Newcastle</title>
+  </programme>
+  <programme start="20251216230000 +0100" stop="20251217000000 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251217000000 +0100" stop="20251217003000 +0100" channel="v sport 1">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251217003000 +0100" stop="20251217010500 +0100" channel="v sport 1">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251210010000 +0100" stop="20251210115500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251210115500 +0100" stop="20251210135500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251210135500 +0100" stop="20251210145500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251210145500 +0100" stop="20251210165500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251210165500 +0100" stop="20251210192500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20251210192500 +0100" stop="20251210195500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210195500 +0100" stop="20251210205500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251210205500 +0100" stop="20251210230000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">UEFA Champions League: Athletic Bilbao-PSG</title>
+  </programme>
+  <programme start="20251210230000 +0100" stop="20251211120000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Hamburg-Werder Bremen</title>
+  </programme>
+  <programme start="20251211120000 +0100" stop="20251211140000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251211140000 +0100" stop="20251211143000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251211143000 +0100" stop="20251211150000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251211150000 +0100" stop="20251211170000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Mainz-Mönchengladbach</title>
+  </programme>
+  <programme start="20251211170000 +0100" stop="20251211190000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251211190000 +0100" stop="20251211200000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251211200000 +0100" stop="20251211220000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251211220000 +0100" stop="20251212000000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251212000000 +0100" stop="20251212120000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251212120000 +0100" stop="20251212140000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Leipzig-Frankfurt</title>
+  </programme>
+  <programme start="20251212140000 +0100" stop="20251212150000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251212150000 +0100" stop="20251212170000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251212170000 +0100" stop="20251212190000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251212190000 +0100" stop="20251212193000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20251212193000 +0100" stop="20251212200000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251212200000 +0100" stop="20251212204000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251212204000 +0100" stop="20251212224500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251212224500 +0100" stop="20251212231500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251212231500 +0100" stop="20251213112500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20251213112500 +0100" stop="20251213122500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251213122500 +0100" stop="20251213125500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251213125500 +0100" stop="20251213132500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251213132500 +0100" stop="20251213155500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251213155500 +0100" stop="20251213180000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League: Chelsea-Everton</title>
+  </programme>
+  <programme start="20251213180000 +0100" stop="20251213185500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251213185500 +0100" stop="20251213210000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251213210000 +0100" stop="20251213213000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251213213000 +0100" stop="20251213233000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251213233000 +0100" stop="20251214000000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251214000000 +0100" stop="20251214003000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251214003000 +0100" stop="20251214102000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20251214102000 +0100" stop="20251214122000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251214122000 +0100" stop="20251214142000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251214142000 +0100" stop="20251214145500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251214145500 +0100" stop="20251214172500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League: Crystal Palace-Manchester City</title>
+  </programme>
+  <programme start="20251214172500 +0100" stop="20251214193000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League: Brentford-Leeds</title>
+  </programme>
+  <programme start="20251214193000 +0100" stop="20251214204000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251214204000 +0100" stop="20251214224500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251214224500 +0100" stop="20251215115000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251215115000 +0100" stop="20251215135000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251215135000 +0100" stop="20251215155000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Werder Bremen-Stuttgart</title>
+  </programme>
+  <programme start="20251215155000 +0100" stop="20251215162000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251215162000 +0100" stop="20251215165000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251215165000 +0100" stop="20251215185000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Bayern München-Mainz</title>
+  </programme>
+  <programme start="20251215185000 +0100" stop="20251215205500 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251215205500 +0100" stop="20251215230000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251215230000 +0100" stop="20251215233000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251215233000 +0100" stop="20251216000000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251216000000 +0100" stop="20251216120000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216120000 +0100" stop="20251216140000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20251216140000 +0100" stop="20251216150000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216150000 +0100" stop="20251216170000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Frankfurt-Augsburg</title>
+  </programme>
+  <programme start="20251216170000 +0100" stop="20251216190000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Mönchengladbach-Wolfsburg</title>
+  </programme>
+  <programme start="20251216190000 +0100" stop="20251216200000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251216200000 +0100" stop="20251216203000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251216203000 +0100" stop="20251216223000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Bundesliga: Leverkusen-Köln</title>
+  </programme>
+  <programme start="20251216223000 +0100" stop="20251216230000 +0100" channel="ViasatFotboll.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251210003000 +0100" stop="20251210010000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251210010000 +0100" stop="20251210033500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251210033500 +0100" stop="20251210063000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Nashville Predators-Colorado Avalanche</title>
+  </programme>
+  <programme start="20251210063000 +0100" stop="20251210120000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251210120000 +0100" stop="20251210140000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Atalanta-Chelsea</title>
+  </programme>
+  <programme start="20251210140000 +0100" stop="20251210150000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251210150000 +0100" stop="20251210170000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Inter-Liverpool</title>
+  </programme>
+  <programme start="20251210170000 +0100" stop="20251210190000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Bayern München-Sporting</title>
+  </programme>
+  <programme start="20251210190000 +0100" stop="20251210193000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251210193000 +0100" stop="20251210200000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20251210200000 +0100" stop="20251210205500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League-studio</title>
+  </programme>
+  <programme start="20251210205500 +0100" stop="20251210230000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Real Madrid-Manchester City</title>
+  </programme>
+  <programme start="20251210230000 +0100" stop="20251210233000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League-studio</title>
+  </programme>
+  <programme start="20251210233000 +0100" stop="20251211013000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Barcelona-Eintracht Frankfurt</title>
+  </programme>
+  <programme start="20251211013000 +0100" stop="20251211023500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251211023500 +0100" stop="20251211120000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Calgary Flames-Detroit Red Wings</title>
+  </programme>
+  <programme start="20251211120000 +0100" stop="20251211140000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Real Madrid-Manchester City</title>
+  </programme>
+  <programme start="20251211140000 +0100" stop="20251211160000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Club Brugge-Arsenal</title>
+  </programme>
+  <programme start="20251211160000 +0100" stop="20251211180000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Dortmund-Bodo/Glimt</title>
+  </programme>
+  <programme start="20251211180000 +0100" stop="20251211200000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Juventus-Pafos</title>
+  </programme>
+  <programme start="20251211200000 +0100" stop="20251211203000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251211203000 +0100" stop="20251211210000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20251211210000 +0100" stop="20251211230000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Athletic Bilbao-PSG</title>
+  </programme>
+  <programme start="20251211230000 +0100" stop="20251212003000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Tiki-Taka</title>
+  </programme>
+  <programme start="20251212003000 +0100" stop="20251212013000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251212013000 +0100" stop="20251212033500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251212033500 +0100" stop="20251212115000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Colorado Avalanche-Florida Panthers</title>
+  </programme>
+  <programme start="20251212115000 +0100" stop="20251212135000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Real Madrid-Manchester City</title>
+  </programme>
+  <programme start="20251212135000 +0100" stop="20251212155000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Inter-Liverpool</title>
+  </programme>
+  <programme start="20251212155000 +0100" stop="20251212175000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Juventus-Pafos</title>
+  </programme>
+  <programme start="20251212175000 +0100" stop="20251212185000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251212185000 +0100" stop="20251212192000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20251212192000 +0100" stop="20251212195000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251212195000 +0100" stop="20251212202000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251212202000 +0100" stop="20251212223000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga: Union Berlin-Leipzig</title>
+  </programme>
+  <programme start="20251212223000 +0100" stop="20251212230000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251212230000 +0100" stop="20251213010000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Dortmund-Bodo/Glimt</title>
+  </programme>
+  <programme start="20251213010000 +0100" stop="20251213030500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20251213030500 +0100" stop="20251213101500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Utah Mammoth-Seattle Kraken</title>
+  </programme>
+  <programme start="20251213101500 +0100" stop="20251213111500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251213111500 +0100" stop="20251213114500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251213114500 +0100" stop="20251213121500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251213121500 +0100" stop="20251213141500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">UEFA Champions League: Juventus-Pafos</title>
+  </programme>
+  <programme start="20251213141500 +0100" stop="20251213151500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251213151500 +0100" stop="20251213154500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251213154500 +0100" stop="20251213155500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Studio</title>
+  </programme>
+  <programme start="20251213155500 +0100" stop="20251213180000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Liverpool-Brighton</title>
+  </programme>
+  <programme start="20251213180000 +0100" stop="20251213182500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Studio</title>
+  </programme>
+  <programme start="20251213182500 +0100" stop="20251213203000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Burnley-Fulham</title>
+  </programme>
+  <programme start="20251213203000 +0100" stop="20251213210000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20251213210000 +0100" stop="20251213230500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20251213230500 +0100" stop="20251214010500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Liverpool-Brighton</title>
+  </programme>
+  <programme start="20251214010500 +0100" stop="20251214103000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: New York Rangers-Montreal Canadiens</title>
+  </programme>
+  <programme start="20251214103000 +0100" stop="20251214110000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251214110000 +0100" stop="20251214113000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Preview</title>
+  </programme>
+  <programme start="20251214113000 +0100" stop="20251214133000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Burnley-Fulham</title>
+  </programme>
+  <programme start="20251214133000 +0100" stop="20251214140000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20251214140000 +0100" stop="20251214145500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Studio</title>
+  </programme>
+  <programme start="20251214145500 +0100" stop="20251214170000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Sunderland-Newcastle</title>
+  </programme>
+  <programme start="20251214170000 +0100" stop="20251214180000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Studio</title>
+  </programme>
+  <programme start="20251214180000 +0100" stop="20251214183000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20251214183000 +0100" stop="20251214192000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20251214192000 +0100" stop="20251214212500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga: Werder Bremen-Stuttgart</title>
+  </programme>
+  <programme start="20251214212500 +0100" stop="20251214215500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20251214215500 +0100" stop="20251214222500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251214222500 +0100" stop="20251214230500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20251214230500 +0100" stop="20251215020500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Carolina Hurricanes-Philadelphia Flyers</title>
+  </programme>
+  <programme start="20251215020500 +0100" stop="20251215115000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Seattle Kraken-Buffalo Sabres</title>
+  </programme>
+  <programme start="20251215115000 +0100" stop="20251215135000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Crystal Palace-Manchester City</title>
+  </programme>
+  <programme start="20251215135000 +0100" stop="20251215145000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251215145000 +0100" stop="20251215165000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Nottingham-Tottenham</title>
+  </programme>
+  <programme start="20251215165000 +0100" stop="20251215185000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Sunderland-Newcastle</title>
+  </programme>
+  <programme start="20251215185000 +0100" stop="20251215192000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20251215192000 +0100" stop="20251215195000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251215195000 +0100" stop="20251215205500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251215205500 +0100" stop="20251215230000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Manchester United-Bournemouth</title>
+  </programme>
+  <programme start="20251215230000 +0100" stop="20251216000000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Tiki-Taka</title>
+  </programme>
+  <programme start="20251216000000 +0100" stop="20251216010500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216010500 +0100" stop="20251216115000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: New York Rangers-Anaheim Ducks</title>
+  </programme>
+  <programme start="20251216115000 +0100" stop="20251216135000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Manchester United-Bournemouth</title>
+  </programme>
+  <programme start="20251216135000 +0100" stop="20251216155000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: West Ham-Aston Villa</title>
+  </programme>
+  <programme start="20251216155000 +0100" stop="20251216175000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League: Brentford-Leeds</title>
+  </programme>
+  <programme start="20251216175000 +0100" stop="20251216185000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20251216185000 +0100" stop="20251216195000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251216195000 +0100" stop="20251216202000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20251216202000 +0100" stop="20251216205500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20251216205500 +0100" stop="20251216230000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ligacupen</title>
+  </programme>
+  <programme start="20251216230000 +0100" stop="20251216233000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20251216233000 +0100" stop="20251217003000 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20251217003000 +0100" stop="20251217010500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20251217010500 +0100" stop="20251217040500 +0100" channel="ViasatSportPremium.se">
+    <title lang="sv">NHL: Toronto Maple Leafs-Chicago Blackhawks</title>
+  </programme>
+  <programme start="20251210003500 +0100" stop="20251210050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210050000 +0100" stop="20251210120000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210120000 +0100" stop="20251210124000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251210124000 +0100" stop="20251210125500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Journey to Jeddah</title>
+  </programme>
+  <programme start="20251210125500 +0100" stop="20251210140000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">ATP - Tournament Review Show</title>
+  </programme>
+  <programme start="20251210140000 +0100" stop="20251210143000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251210143000 +0100" stop="20251210150000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The WRC Magazine</title>
+  </programme>
+  <programme start="20251210150000 +0100" stop="20251210160000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">World Supercross Championship Highlights</title>
+  </programme>
+  <programme start="20251210160000 +0100" stop="20251210163500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20251210163500 +0100" stop="20251210170500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Dryflystories - Hämta håven</title>
+  </programme>
+  <programme start="20251210170500 +0100" stop="20251210173500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251210173500 +0100" stop="20251210181500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251210181500 +0100" stop="20251210185500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251210185500 +0100" stop="20251210212000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Kalmar-Karlskoga HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251210212000 +0100" stop="20251210213000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210213000 +0100" stop="20251210223000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251210223000 +0100" stop="20251210230000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251210230000 +0100" stop="20251210233000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The Swedish Jump Set - Åhman &amp; Hellvig</title>
+  </programme>
+  <programme start="20251210233000 +0100" stop="20251211000000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251211000000 +0100" stop="20251211004000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251211004000 +0100" stop="20251211013500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251211013500 +0100" stop="20251211050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211120000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211120000 +0100" stop="20251211125000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251211125000 +0100" stop="20251211130000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211130000 +0100" stop="20251211133000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251211133000 +0100" stop="20251211140000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The Swedish Jump Set - Åhman &amp; Hellvig</title>
+  </programme>
+  <programme start="20251211140000 +0100" stop="20251211143000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251211143000 +0100" stop="20251211150000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The WRC Magazine</title>
+  </programme>
+  <programme start="20251211150000 +0100" stop="20251211160000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Rally-VM: Highlight Show</title>
+  </programme>
+  <programme start="20251211160000 +0100" stop="20251211163500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20251211163500 +0100" stop="20251211170500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Dryflystories - Hämta håven</title>
+  </programme>
+  <programme start="20251211170500 +0100" stop="20251211181000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">World Supercross Championship Highlights</title>
+  </programme>
+  <programme start="20251211181000 +0100" stop="20251211184000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Rally-EM: Highlight Show</title>
+  </programme>
+  <programme start="20251211184000 +0100" stop="20251211191500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251211191500 +0100" stop="20251211195000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251211195000 +0100" stop="20251211202000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Extreme E Desert X Prix: The Final Lap Highlights</title>
+  </programme>
+  <programme start="20251211202000 +0100" stop="20251211203000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211203000 +0100" stop="20251211210000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251211210000 +0100" stop="20251211213000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20251211213000 +0100" stop="20251211220000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251211220000 +0100" stop="20251211223000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20251211223000 +0100" stop="20251211232500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251211232500 +0100" stop="20251212003000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">ATP - Tournament Review Show</title>
+  </programme>
+  <programme start="20251212003000 +0100" stop="20251212010500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251212010500 +0100" stop="20251212050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212120000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212120000 +0100" stop="20251212123000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251212123000 +0100" stop="20251212131000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251212131000 +0100" stop="20251212134000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251212134000 +0100" stop="20251212135000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251212135000 +0100" stop="20251212140000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251212140000 +0100" stop="20251212145500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251212145500 +0100" stop="20251212150500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212150500 +0100" stop="20251212154000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251212154000 +0100" stop="20251212155000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251212155000 +0100" stop="20251212160000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251212160000 +0100" stop="20251212163000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20251212163000 +0100" stop="20251212170000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251212170000 +0100" stop="20251212180500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20251212180500 +0100" stop="20251212181500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212181500 +0100" stop="20251212185500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251212185500 +0100" stop="20251212212000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Oskarshamn-AIK HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251212212000 +0100" stop="20251212220000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251212220000 +0100" stop="20251212223000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20251212223000 +0100" stop="20251212230000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251212230000 +0100" stop="20251212233000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251212233000 +0100" stop="20251213000000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251213000000 +0100" stop="20251213010500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">WRC Greatest Drivers</title>
+  </programme>
+  <programme start="20251213010500 +0100" stop="20251213050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251213050000 +0100" stop="20251213120000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251213120000 +0100" stop="20251213123000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251213123000 +0100" stop="20251213125500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Nadal Number 1 Story</title>
+  </programme>
+  <programme start="20251213125500 +0100" stop="20251213140000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">ATP - Tournament Review Show</title>
+  </programme>
+  <programme start="20251213140000 +0100" stop="20251213143000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251213143000 +0100" stop="20251213150000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251213150000 +0100" stop="20251213153500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Andrey Rublev - dokumentär</title>
+  </programme>
+  <programme start="20251213153500 +0100" stop="20251213161000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251213161000 +0100" stop="20251213182500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fotboll: Segunda División</title>
+  </programme>
+  <programme start="20251213182500 +0100" stop="20251213190000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251213190000 +0100" stop="20251213200000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20251213200000 +0100" stop="20251213204000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251213204000 +0100" stop="20251213225000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A: Atalanta-Cagliari</title>
+  </programme>
+  <programme start="20251213225000 +0100" stop="20251213230000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251213230000 +0100" stop="20251214000500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Race Summary: One Water Race</title>
+  </programme>
+  <programme start="20251214000500 +0100" stop="20251214003500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251214003500 +0100" stop="20251214010500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251214010500 +0100" stop="20251214014000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Armand Duplantis: The Next Centimeter</title>
+  </programme>
+  <programme start="20251214014000 +0100" stop="20251214050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251214050000 +0100" stop="20251214115000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251214115000 +0100" stop="20251214124500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251214124500 +0100" stop="20251214131500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251214131500 +0100" stop="20251214134500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Racing on the Edge</title>
+  </programme>
+  <programme start="20251214134500 +0100" stop="20251214141500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251214141500 +0100" stop="20251214145500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The WRC Magazine</title>
+  </programme>
+  <programme start="20251214145500 +0100" stop="20251214170500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A: Fiorentina-Verona</title>
+  </programme>
+  <programme start="20251214170500 +0100" stop="20251214171500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251214171500 +0100" stop="20251214175000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20251214175000 +0100" stop="20251214182500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20251214182500 +0100" stop="20251214203500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">La Liga: Levante-Villarreal</title>
+  </programme>
+  <programme start="20251214203500 +0100" stop="20251214205500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251214205500 +0100" stop="20251214230500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fotboll: Segunda División</title>
+  </programme>
+  <programme start="20251214230500 +0100" stop="20251214233500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251214233500 +0100" stop="20251215001000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Racing on the Edge</title>
+  </programme>
+  <programme start="20251215001000 +0100" stop="20251215011500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">WRC Greatest Drivers</title>
+  </programme>
+  <programme start="20251215011500 +0100" stop="20251215050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251215050000 +0100" stop="20251215120000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251215120000 +0100" stop="20251215125500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251215125500 +0100" stop="20251215140000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">ATP - Tournament Review Show</title>
+  </programme>
+  <programme start="20251215140000 +0100" stop="20251215143000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251215143000 +0100" stop="20251215150000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The WRC Magazine</title>
+  </programme>
+  <programme start="20251215150000 +0100" stop="20251215160000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Rally-VM: Highlight Show</title>
+  </programme>
+  <programme start="20251215160000 +0100" stop="20251215163500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20251215163500 +0100" stop="20251215170300 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251215170300 +0100" stop="20251215171500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251215171500 +0100" stop="20251215172500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251215172500 +0100" stop="20251215182000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251215182000 +0100" stop="20251215185000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Racing on the Edge</title>
+  </programme>
+  <programme start="20251215185000 +0100" stop="20251215195500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20251215195500 +0100" stop="20251215205500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">World Supercross Championship Highlights</title>
+  </programme>
+  <programme start="20251215205500 +0100" stop="20251215220000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Rally-VM: Highlight Show</title>
+  </programme>
+  <programme start="20251215220000 +0100" stop="20251215223000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20251215223000 +0100" stop="20251215230000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Emil Johansson: Den okända världsmästaren</title>
+  </programme>
+  <programme start="20251215230000 +0100" stop="20251216000500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">ATP - Tournament Review Show</title>
+  </programme>
+  <programme start="20251216000500 +0100" stop="20251216050000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">World Supercross Championship Highlights</title>
+  </programme>
+  <programme start="20251216050000 +0100" stop="20251216120000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251216120000 +0100" stop="20251216125500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251216125500 +0100" stop="20251216140000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">World Supercross Championship Highlights</title>
+  </programme>
+  <programme start="20251216140000 +0100" stop="20251216143000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251216143000 +0100" stop="20251216150000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">The WRC Magazine</title>
+  </programme>
+  <programme start="20251216150000 +0100" stop="20251216160000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Rally-VM: Highlight Show</title>
+  </programme>
+  <programme start="20251216160000 +0100" stop="20251216163500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20251216163500 +0100" stop="20251216170500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Global Champions Tour Highlights</title>
+  </programme>
+  <programme start="20251216170500 +0100" stop="20251216171500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251216171500 +0100" stop="20251216173000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Road to One Water Race</title>
+  </programme>
+  <programme start="20251216173000 +0100" stop="20251216183000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20251216183000 +0100" stop="20251216190000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Armand Duplantis: The Next Centimeter</title>
+  </programme>
+  <programme start="20251216190000 +0100" stop="20251216200000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20251216200000 +0100" stop="20251216210500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Race Summary: One Water Race</title>
+  </programme>
+  <programme start="20251216210500 +0100" stop="20251216213500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Sverige springer</title>
+  </programme>
+  <programme start="20251216213500 +0100" stop="20251216220000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Nadal Number 1 Story</title>
+  </programme>
+  <programme start="20251216220000 +0100" stop="20251216223000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20251216223000 +0100" stop="20251216231000 +0100" channel="Sportkanalen.se">
+    <title lang="sv">LaLiga Highlights</title>
+  </programme>
+  <programme start="20251216231000 +0100" stop="20251217001500 +0100" channel="Sportkanalen.se">
+    <title lang="sv">World Supercross Championship Highlights</title>
+  </programme>
+  <programme start="20251210013000 +0100" stop="20251210050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251210050000 +0100" stop="20251210070000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210070000 +0100" stop="20251210091000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251210091000 +0100" stop="20251210111500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251210111500 +0100" stop="20251210131500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251210131500 +0100" stop="20251210185500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251210185500 +0100" stop="20251211015500 +0100" channel="CMoreLive.se">
+    <title lang="sv">Modo-Oskarshamn HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211015500 +0100" stop="20251211050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211070000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211070000 +0100" stop="20251211151500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251211151500 +0100" stop="20251212050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212064000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212064000 +0100" stop="20251212185500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251212185500 +0100" stop="20251213000000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Karlskoga-Almtuna HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251213000000 +0100" stop="20251213015500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251213015500 +0100" stop="20251213050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251213050000 +0100" stop="20251213145500 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251213145500 +0100" stop="20251213175500 +0100" channel="CMoreLive.se">
+    <title lang="sv">Serie A: Torino-Cremonese</title>
+  </programme>
+  <programme start="20251213175500 +0100" stop="20251213201500 +0100" channel="CMoreLive.se">
+    <title lang="sv">Serie A: Parma-Lazio</title>
+  </programme>
+  <programme start="20251213201500 +0100" stop="20251214050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Serie A: Torino-Cremonese</title>
+  </programme>
+  <programme start="20251214050000 +0100" stop="20251214070000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251214070000 +0100" stop="20251214135500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251214135500 +0100" stop="20251214161000 +0100" channel="CMoreLive.se">
+    <title lang="sv">La Liga: Sevilla-Real Oviedo</title>
+  </programme>
+  <programme start="20251214161000 +0100" stop="20251214184500 +0100" channel="CMoreLive.se">
+    <title lang="sv">La Liga: Celta Vigo-Athletic Bilbao</title>
+  </programme>
+  <programme start="20251214184500 +0100" stop="20251214210000 +0100" channel="CMoreLive.se">
+    <title lang="sv">La Liga: Sevilla-Real Oviedo</title>
+  </programme>
+  <programme start="20251214210000 +0100" stop="20251215013000 +0100" channel="CMoreLive.se">
+    <title lang="sv">La Liga: Celta Vigo-Athletic Bilbao</title>
+  </programme>
+  <programme start="20251215013000 +0100" stop="20251215050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251215050000 +0100" stop="20251215070000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251215070000 +0100" stop="20251215091000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251215091000 +0100" stop="20251215111500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251215111500 +0100" stop="20251215132000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251215132000 +0100" stop="20251215152500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251215152500 +0100" stop="20251215205500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251215205500 +0100" stop="20251216000500 +0100" channel="CMoreLive.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Real Betis</title>
+  </programme>
+  <programme start="20251216000500 +0100" stop="20251216020500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251216020500 +0100" stop="20251216050000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251216050000 +0100" stop="20251216070000 +0100" channel="CMoreLive.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251216070000 +0100" stop="20251216090500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251216090500 +0100" stop="20251216122500 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251216122500 +0100" stop="20251217010000 +0100" channel="CMoreLive.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20251210050000 +0100" stop="20251210185500 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210185500 +0100" stop="20251210214500 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Mora-Nybro HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251210214500 +0100" stop="20251211050000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Mora-Nybro HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211050000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211185500 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211185500 +0100" stop="20251211213000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Södertälje-Nybro HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211213000 +0100" stop="20251212050000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Södertälje-Nybro HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210050000 +0100" stop="20251210185500 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210185500 +0100" stop="20251210214500 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Västerås-Troja-Ljungby HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251210214500 +0100" stop="20251211050000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Västerås-Troja-Ljungby HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211050000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211185500 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211185500 +0100" stop="20251211213000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Björklöven-Troja-Ljungby HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211213000 +0100" stop="20251212050000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Björklöven-Troja-Ljungby HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210050000 +0100" stop="20251210185500 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251210185500 +0100" stop="20251210214500 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Södertälje-Östersund HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251210214500 +0100" stop="20251211050000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Södertälje-Östersund HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211050000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211050000 +0100" stop="20251211185500 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251211185500 +0100" stop="20251211213000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Östersund-Västerås HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251211213000 +0100" stop="20251212050000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Östersund-Västerås HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20251212050000 +0100" stop="20251212050000 +0100" channel="CMoreLive4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+</tv>
