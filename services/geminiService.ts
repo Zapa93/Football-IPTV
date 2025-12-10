@@ -8,8 +8,11 @@ export type HighlightsResult = HighlightMatch[];
 
 interface CacheEntry<T> {
   date: string;
+  timestamp: number;
   data: T;
 }
+
+const CACHE_DURATION = 15 * 60 * 1000; // 15 minutes
 
 const getTodayDateString = (): string => {
   return new Date().toDateString(); // e.g. "Fri Oct 27 2023"
@@ -21,10 +24,42 @@ export const getFromCache = <T>(key: string): T | null => {
     if (!item) return null;
 
     const parsed = JSON.parse(item) as CacheEntry<T>;
-    if (parsed.date === getTodayDateString()) {
-      return parsed.data;
+    
+    // Check 1: Date
+    if (parsed.date !== getTodayDateString()) {
+      return null;
     }
-    return null;
+
+    const now = Date.now();
+
+    // Check 2: Smart Kick-off
+    // If we have cached matches that are marked SCHEDULED but the time has passed, 
+    // we invalidate the cache to force a fetch of the new status (IN_PLAY).
+    if (Array.isArray(parsed.data)) {
+        const matches = parsed.data as any[];
+        const hasPendingKickoff = matches.some(m => {
+            if (m && typeof m === 'object' && 'status' in m && 'rawDate' in m) {
+                const isScheduled = m.status === 'SCHEDULED' || m.status === 'TIMED';
+                if (isScheduled && m.rawDate) {
+                    const kickoff = new Date(m.rawDate).getTime();
+                    if (now >= kickoff) return true;
+                }
+            }
+            return false;
+        });
+
+        if (hasPendingKickoff) return null;
+    }
+
+    // Check 3: TTL
+    // If cache is older than CACHE_DURATION, invalidate it.
+    // Fallback to 0 if timestamp is missing (legacy cache)
+    const timestamp = parsed.timestamp || 0;
+    if (now - timestamp > CACHE_DURATION) {
+        return null;
+    }
+
+    return parsed.data;
   } catch (e) {
     return null;
   }
@@ -34,6 +69,7 @@ const saveToCache = <T>(key: string, data: T): void => {
   try {
     const entry: CacheEntry<T> = {
       date: getTodayDateString(),
+      timestamp: Date.now(),
       data: data
     };
     localStorage.setItem(key, JSON.stringify(entry));
