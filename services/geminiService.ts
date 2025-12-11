@@ -17,8 +17,11 @@ interface CacheEntry<T> {
 const CACHE_DURATION_DEFAULT = 15 * 60 * 1000; // 15 minutes
 const CACHE_DURATION_LIVE = 60 * 1000; // 1 minute
 
-const getTodayDateString = (): string => {
-  return new Date().toDateString(); // e.g. "Fri Oct 27 2023"
+// Helper to get local date string YYYY-MM-DD
+const getLocalDateString = (date: Date = new Date()): string => {
+  const offset = date.getTimezoneOffset();
+  const local = new Date(date.getTime() - (offset * 60 * 1000));
+  return local.toISOString().split('T')[0];
 };
 
 export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | null => {
@@ -28,29 +31,28 @@ export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | nu
 
     const parsed = JSON.parse(item) as CacheEntry<T>;
     
-    // Check 1: Date (Always enforce date check to avoid comparing with yesterday's matches)
-    if (parsed.date !== getTodayDateString()) {
+    // Check 1: Date (Matches must be from today)
+    if (parsed.date !== getLocalDateString()) {
       return null;
     }
 
-    // If ignoring TTL, return data immediately (skipping Smart Kick-off and Time checks)
+    // If ignoring TTL, return data immediately
     if (ignoreTTL) return parsed.data;
 
     const now = Date.now();
     let effectiveTTL = CACHE_DURATION_DEFAULT;
 
-    // Analyze data if it is an array (assuming it's matches)
+    // Analyze data if it is an array
     if (Array.isArray(parsed.data)) {
         const matches = parsed.data as any[];
 
         // Check 2: Smart Kick-off
-        // If we have cached matches that are marked SCHEDULED but the time has passed, 
-        // we invalidate the cache to force a fetch of the new status (IN_PLAY).
         const hasPendingKickoff = matches.some(m => {
             if (m && typeof m === 'object' && 'status' in m && 'rawDate' in m) {
                 const isScheduled = m.status === 'SCHEDULED' || m.status === 'TIMED';
                 if (isScheduled && m.rawDate) {
                     const kickoff = new Date(m.rawDate).getTime();
+                    // If we passed the kick-off time, invalidate cache to fetch live status
                     if (now >= kickoff) return true;
                 }
             }
@@ -59,9 +61,7 @@ export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | nu
 
         if (hasPendingKickoff) return null;
 
-        // Check 3: Dynamic TTL
-        // If ANY match is currently live or paused (halftime), we shorten the TTL to 1 minute.
-        // This ensures status changes (like PAUSED -> IN_PLAY for 2nd half) are picked up quickly.
+        // Check 3: Live Activity
         const hasLiveActivity = matches.some(m => {
              if (m && typeof m === 'object' && 'status' in m) {
                  return m.status === 'IN_PLAY' || m.status === 'PAUSED';
@@ -74,9 +74,6 @@ export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | nu
         }
     }
 
-    // Check 4: TTL Application
-    // If cache is older than effectiveTTL, invalidate it.
-    // Fallback to 0 if timestamp is missing (legacy cache)
     const timestamp = parsed.timestamp || 0;
     if (now - timestamp > effectiveTTL) {
         return null;
@@ -91,7 +88,7 @@ export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | nu
 const saveToCache = <T>(key: string, data: T): void => {
   try {
     const entry: CacheEntry<T> = {
-      date: getTodayDateString(),
+      date: getLocalDateString(),
       timestamp: Date.now(),
       data: data
     };
@@ -103,12 +100,11 @@ const saveToCache = <T>(key: string, data: T): void => {
 
 const cleanupOldCache = (): void => {
   try {
-    const today = getTodayDateString();
+    const today = getLocalDateString();
     const keysToRemove: string[] = [];
 
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      // Clean up old highlights and legacy broadcaster keys
       if (key && (key.startsWith('broadcaster_') || key.includes('highlights'))) {
         const item = localStorage.getItem(key);
         if (item) {
@@ -141,37 +137,40 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
     // 1. Check Cache
     const cachedMatches = getFromCache<HighlightMatch[]>(CACHE_KEY);
     
-    if (cachedMatches && cachedMatches.length > 0 && cachedMatches[0].homeTeam) {
+    if (cachedMatches && cachedMatches.length > 0) {
         matches = cachedMatches;
     } else {
-        // Use Constant directly
         const apiKey = FOOTBALL_API_KEY;
         
-        // Fetch matches for today AND tomorrow to ensure list isn't empty at night
+        // Use Local Time for Date Window
         const todayDate = new Date();
         const tomorrowDate = new Date();
         tomorrowDate.setDate(tomorrowDate.getDate() + 1);
         
-        const todayStr = todayDate.toISOString().split('T')[0];
-        const tomorrowStr = tomorrowDate.toISOString().split('T')[0];
+        const todayStr = getLocalDateString(todayDate);
+        const tomorrowStr = getLocalDateString(tomorrowDate);
         
         console.log(`Fetching matches for ${todayStr} to ${tomorrowStr}...`);
+        
+        const headers: HeadersInit = {};
+        if (apiKey) {
+            headers['X-Auth-Token'] = apiKey;
+        }
+
         const response = await fetch(`https://api.football-data.org/v4/matches?dateFrom=${todayStr}&dateTo=${tomorrowStr}`, {
-            headers: {
-                'X-Auth-Token': apiKey
-            }
+            headers: headers
         });
 
         if (!response.ok) {
             console.error(`API Error: ${response.status} ${response.statusText}`);
-            // If API fails (e.g. rate limit), return empty list so UI handles it gracefully
-             if (cachedMatches) return cachedMatches; 
+            // If API fails, try to return stale cache if available
+             const staleCache = getFromCache<HighlightMatch[]>(CACHE_KEY, true);
+             if (staleCache) return staleCache; 
              return [];
         }
 
         const data = await response.json();
         
-        // Map API response to our internal format
         if (data.matches && Array.isArray(data.matches)) {
             matches = data.matches.map((m: any) => {
                 const date = new Date(m.utcDate);
@@ -182,7 +181,6 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
                 const awayName = m.awayTeam?.name || 'Away';
                 const status = m.status;
                 
-                // Add Day prefix if tomorrow
                 const matchDay = date.getDate();
                 const currentDay = new Date().getDate();
                 const timeLabel = matchDay !== currentDay ? `Tom ${timeStr}` : timeStr;
@@ -193,7 +191,6 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
                     match: `${homeName} vs ${awayName}`,
                     time: timeLabel,
                     rawDate: m.utcDate,
-                    // New Fields
                     homeTeam: homeName,
                     awayTeam: awayName,
                     homeLogo: m.homeTeam?.crest || '',
@@ -205,7 +202,6 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
             });
         }
 
-        // Save raw results to cache if successful
         if (matches.length > 0) {
             saveToCache(CACHE_KEY, matches);
         }
@@ -215,10 +211,9 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
 
     const now = new Date();
     
-    // 1. Filter out old matches
+    // 1. Filter out old matches (keep live and upcoming)
     const validMatches = matches.filter(m => {
         try {
-            // Keep LIVE matches always
             if (m.status === 'IN_PLAY' || m.status === 'PAUSED') return true;
 
             let matchTime = 0;
@@ -228,7 +223,7 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
                 return true; 
             }
 
-            // Keep matches visible for 12 hours after start time (extended from 4)
+            // Keep matches visible for 12 hours after start time
             const matchEndInMs = matchTime + (720 * 60000);
             
             return now.getTime() < matchEndInMs;
@@ -240,30 +235,32 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
     // --- TEAMS DEFINITIONS ---
     const topItalianTeams = ['juventus', 'napoli', 'roma', 'lazio', 'atalanta', 'fiorentina', 'bologna', 'torino', 'inter', 'milan'];
     const topGlobalTeams = ['man city', 'arsenal', 'liverpool', 'chelsea', 'man utd', 'tottenham', 'real madrid', 'barcelona', 'atletico', 'bayern', 'dortmund', 'psg', 'benfica', 'porto'];
-    const allowedOtherTeams = [...topItalianTeams, ...topGlobalTeams, 'leipzig', 'newcastle', 'aston villa', 'brighton', 'ajax', 'psv', 'feyenoord', 'sporting'];
+    const allowedOtherTeams = [...topItalianTeams, ...topGlobalTeams, 'leipzig', 'newcastle', 'aston villa', 'brighton', 'ajax', 'psv', 'feyenoord', 'sporting', 'malmö', 'malmo', 'mff'];
 
     // --- STRICT FILTERING ---
     let filteredMatches = validMatches.filter(m => {
         const text = (m.match + " " + m.league).toLowerCase();
         
-        // Always keep Top Tier
+        // Priority Leagues
         if (text.includes('inter ') || text.includes('internazionale')) return true;
         if (text.includes('ac milan') || (text.includes('milan') && !text.includes('inter'))) return true;
-
-        // Keep Major Leagues
         if (text.includes('serie a') || text.includes('calcio')) return true;
         if (text.includes('premier league') || text.includes('epl')) return true;
         if (text.includes('primera division') || text.includes('la liga')) return true;
-        if (text.includes('champions league') || text.includes('europa')) return true;
+        if (text.includes('champions league') || text.includes('europa') || text.includes('conference')) return true;
         if (text.includes('bundesliga')) return true;
+        
+        // Local Leagues (Sweden)
+        if (text.includes('allsvenskan') || text.includes('superettan') || text.includes('svenska')) return true;
 
-        // Keep if teams are interesting
+        // Teams
         if (allowedOtherTeams.some(t => text.includes(t))) return true;
 
         return false;
     });
 
-    // FALLBACK
+    // FALLBACK: If strict filter returns nothing, show everything we found (up to 15)
+    // This fixes the issue where valid API data was hidden because it wasn't "Top Tier"
     if (filteredMatches.length === 0 && validMatches.length > 0) {
         filteredMatches = validMatches.slice(0, 15);
     }
@@ -278,11 +275,17 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
         if (text.includes('inter ') || text.includes('internazionale')) return 5000000;
         if (text.includes('ac milan') || (text.includes('milan') && !text.includes('inter'))) return 4900000;
 
+        // Malmö check
+        if (text.includes('malmö') || text.includes('malmo') || text.includes('mff')) score += 100000;
+
         // BASE LEAGUE SCORES
         if (text.includes('serie a') || text.includes('calcio') || text.includes('coppa italia')) score += 50000;
         else if (text.includes('champions league')) score += 60000; 
+        else if (text.includes('europa league')) score += 45000;
+        else if (text.includes('conference league')) score += 40000;
         else if (text.includes('premier league') || text.includes('epl')) score += 40000;
         else if (text.includes('primera division') || text.includes('la liga')) score += 30000;
+        else if (text.includes('allsvenskan')) score += 35000;
         else score += 10000;
 
         // TEAM BONUSES
@@ -305,28 +308,30 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
 
   } catch (error) {
     console.error("Failed to fetch highlights:", error);
-    return [];
+    // Attempt fallback to cache one last time
+    const fallback = getFromCache<HighlightMatch[]>(CACHE_KEY, true);
+    return fallback || [];
   }
 };
 
 export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise<{ events: GoalEvent[], updatedMatches: HighlightMatch[] }> => {
-  // If previousMatches is empty (e.g. initially or due to expired cache logic in parent), 
-  // try to hydrate from cache IGNORING TTL to establish a baseline.
-  // This prevents the "Silent Update" bug where new goals aren't notified because we had no prior state.
   let baselineMatches = previousMatches;
   if (!baselineMatches || baselineMatches.length === 0) {
-      const cached = getFromCache<HighlightMatch[]>(CACHE_KEY, true); // ignoreTTL = true
+      const cached = getFromCache<HighlightMatch[]>(CACHE_KEY, true); 
       if (cached) {
           baselineMatches = cached;
       }
   }
 
   const apiKey = FOOTBALL_API_KEY;
-  if (!apiKey) return { events: [], updatedMatches: baselineMatches };
-
+  // Note: We attempt polling even without a key, though it may fail rate limiting
+  
   try {
+    const headers: HeadersInit = {};
+    if (apiKey) headers['X-Auth-Token'] = apiKey;
+
     const response = await fetch(`https://api.football-data.org/v4/matches?status=IN_PLAY`, {
-        headers: { 'X-Auth-Token': apiKey }
+        headers: headers
     });
 
     if (!response.ok) return { events: [], updatedMatches: baselineMatches };
@@ -356,7 +361,6 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
                 minute: 'LIVE'
             });
         } else if (newHomeScore < oldHomeScore || newAwayScore < oldAwayScore) {
-            // VAR Decision - Goal Disallowed
             goalEvents.push({
                 matchId: prevMatch.id,
                 matchTitle: prevMatch.match,
@@ -374,14 +378,11 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
         };
     });
 
-    // Fetch details for scorer
     for (const event of goalEvents) {
-        // Skip fetching scorer details for VAR events, as the API might return old goal data
         if (event.minute === 'VAR') continue;
-
         try {
             const detailRes = await fetch(`https://api.football-data.org/v4/matches/${event.matchId}`, {
-                headers: { 'X-Auth-Token': apiKey }
+                headers: headers
             });
             if (detailRes.ok) {
                 const detailData = await detailRes.json();
