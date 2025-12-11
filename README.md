@@ -1,6 +1,15 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="3800" height="1808" alt="image" src="https://github.com/user-attachments/assets/85896b80-29bb-4a50-a535-18f6e97b5fa5" />
+
+
 </div>
+
+A very light-weight modern IPTV-app for WebOS, optimized for LG C5(WebOS 25).
+
+*Focused on football streaming with highlighted games taken from football-data.org. Interactive list with EPG search to find the right channel streaming it. 
+
+Goal Alert System:
+Pings football-data.org once a minute for change in scoreline with an alert for a goal scored. Works for rescinding goals as well.
 
 # Run and deploy your AI Studio app
 
@@ -15,6 +24,6 @@ View your app in AI Studio: https://ai.studio/apps/drive/1BNSgy5ccUO9vNbn0OIy0y1
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+2. Setup the necessary URL for EPG and playlist URL and API for bringing highlighted games from football-data.org in [.env.local](.env.local)
 3. Run the app:
    `npm run dev`
