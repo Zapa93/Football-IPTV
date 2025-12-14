@@ -88,7 +88,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
 
   // Load cache for tracking
   useEffect(() => {
-    const cached = getFromCache<HighlightMatch[]>('football_data_highlights_v2');
+    const cached = getFromCache<HighlightMatch[]>('football_data_highlights_v5');
     if (cached) {
         lastKnownMatchesRef.current = cached;
     }
