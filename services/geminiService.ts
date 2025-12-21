@@ -332,11 +332,6 @@ export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
         return false;
     });
 
-    // FALLBACK: If strict filter returns nothing, show everything we found (up to 30)
-    if (filteredMatches.length === 0 && validMatches.length > 0) {
-        filteredMatches = validMatches.slice(0, 30);
-    }
-
     // --- PRIORITY SCORING SYSTEM ---
     filteredMatches.sort((a, b) => {
       const getScore = (m: HighlightMatch) => {
@@ -451,17 +446,11 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
       }
   }
 
-  // 4. Smart Delay (15 Seconds)
-  // This allows the API time to correct VAR decisions or update metadata (Scorers)
-  if (candidates.length > 0) {
-      await new Promise(r => setTimeout(r, 15000));
-  }
-
-  // 5. Verify & Build Events
+  // 4. Verify & Build Events (Refactored with Retry Loop)
   const goalEvents: GoalEvent[] = [];
   const verifiedMap = new Map<string, HighlightMatch>();
 
-  for (const cid of candidates) {
+  const processCandidate = async (cid: string) => {
       const prev = baselineMatches.find(m => m.id === cid)!;
 
       // Secondary (TSDB) - Accept without re-fetch (no detail endpoint available on free tier)
@@ -475,59 +464,94 @@ export const pollLiveScores = async (previousMatches: HighlightMatch[]): Promise
               minute: fresh.status === 'IN_PLAY' ? 'LIVE' : 'FT'
           });
           verifiedMap.set(cid, fresh);
-          continue;
+          return;
       }
 
-      // Primary - Re-verify via Detail Endpoint
-      try {
-          const res = await fetch(`https://api.football-data.org/v4/matches/${cid}`, { headers });
-          if (res.ok) {
-              const d = await res.json();
-              const newHome = d.score?.fullTime?.home ?? 0;
-              const newAway = d.score?.fullTime?.away ?? 0;
-              const oldHome = prev.homeScore ?? 0;
-              const oldAway = prev.awayScore ?? 0;
+      // Primary - Re-verify via Detail Endpoint with Retry Loop
+      let matchData: any = null;
+      let scorerName: string | null = null;
+      let minuteStr = "LIVE";
+      const maxAttempts = 3;
 
-              // Compare vs Baseline (Prevent Zombies / confirm change)
-              if (newHome !== oldHome || newAway !== oldAway) {
-                  let scorer = "Goal!";
-                  let minute = "LIVE";
-                  
-                  // VAR Check: If score decreased, it's a disallowed goal
-                  if (newHome < oldHome || newAway < oldAway) {
-                      scorer = "Goal Disallowed (VAR)";
-                      minute = "VAR";
-                  } else if (d.goals && d.goals.length > 0) {
-                      const last = d.goals[d.goals.length - 1];
-                      if (last.scorer?.name) scorer = last.scorer.name;
-                      if (last.minute) minute = `${last.minute}'`;
+      for (let attempt = 0; attempt < maxAttempts; attempt++) {
+          // Wait 10 seconds before each check
+          await new Promise(r => setTimeout(r, 10000));
+
+          try {
+              const res = await fetch(`https://api.football-data.org/v4/matches/${cid}`, { headers });
+              if (res.ok) {
+                  const d = await res.json();
+                  matchData = d;
+
+                  // Check for goals and scorer name
+                  if (d.goals && d.goals.length > 0) {
+                      const lastGoal = d.goals[d.goals.length - 1];
+                      if (lastGoal.scorer && lastGoal.scorer.name) {
+                          scorerName = lastGoal.scorer.name;
+                          if (lastGoal.minute) minuteStr = `${lastGoal.minute}'`;
+                          // Found the name, break the loop early
+                          break;
+                      }
                   }
-
-                  goalEvents.push({
-                      matchId: cid,
-                      matchTitle: prev.match,
-                      score: `${newHome} - ${newAway}`,
-                      scorer: scorer,
-                      minute: minute
-                  });
-
-                  verifiedMap.set(cid, {
-                      ...prev,
-                      status: d.status,
-                      homeScore: newHome,
-                      awayScore: newAway
-                  });
-              } else {
-                  // Reverted/False Alarm - Update status but no event
-                   verifiedMap.set(cid, {
-                      ...prev,
-                      status: d.status,
-                      homeScore: newHome,
-                      awayScore: newAway
-                  });
               }
+          } catch(e) { 
+              console.error(`Verification attempt ${attempt + 1} failed for ${cid}`, e); 
           }
-      } catch(e) { console.error("Verification failed", e); }
+      }
+
+      // After loop finishes (either success or max attempts)
+      if (matchData) {
+          const newHome = matchData.score?.fullTime?.home ?? 0;
+          const newAway = matchData.score?.fullTime?.away ?? 0;
+          const oldHome = prev.homeScore ?? 0;
+          const oldAway = prev.awayScore ?? 0;
+
+          // Compare vs Baseline (Prevent Zombies / confirm change)
+          if (newHome !== oldHome || newAway !== oldAway) {
+              let displayScorer = "Goal!";
+              let displayMinute = "LIVE";
+              
+              // VAR Check: If score decreased, it's a disallowed goal
+              if (newHome < oldHome || newAway < oldAway) {
+                  displayScorer = "Goal Disallowed (VAR)";
+                  displayMinute = "VAR";
+              } else {
+                  // Use found name or fallback
+                  if (scorerName) {
+                      displayScorer = scorerName;
+                      displayMinute = minuteStr;
+                  }
+              }
+
+              goalEvents.push({
+                  matchId: cid,
+                  matchTitle: prev.match,
+                  score: `${newHome} - ${newAway}`,
+                  scorer: displayScorer,
+                  minute: displayMinute
+              });
+
+              verifiedMap.set(cid, {
+                  ...prev,
+                  status: matchData.status,
+                  homeScore: newHome,
+                  awayScore: newAway
+              });
+          } else {
+              // Reverted/False Alarm - Update status but no event
+               verifiedMap.set(cid, {
+                  ...prev,
+                  status: matchData.status,
+                  homeScore: newHome,
+                  awayScore: newAway
+              });
+          }
+      }
+  };
+
+  // Run all candidates concurrently
+  if (candidates.length > 0) {
+      await Promise.all(candidates.map(cid => processCandidate(cid)));
   }
 
   // 6. Construct Updated List

@@ -211,7 +211,7 @@ export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, o
                                     <div className="w-5 h-5 rounded-full bg-gray-600"></div>
                                 )}
                             </div>
-                            <span className="text-2xl font-bold text-gray-200 leading-tight">{match.homeTeam}</span>
+                            <span className="text-3xl font-bold text-gray-200 leading-tight">{match.homeTeam}</span>
                         </div>
                         {showScore && match.homeScore !== null && (
                             <span className={`text-xl font-bold ${isLive ? 'text-green-400' : 'text-gray-300'}`}>{match.homeScore}</span>
@@ -228,7 +228,7 @@ export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, o
                                     <div className="w-5 h-5 rounded-full bg-gray-600"></div>
                                 )}
                             </div>
-                            <span className="text-2xl font-bold text-gray-200 leading-tight">{match.awayTeam}</span>
+                            <span className="text-3xl font-bold text-gray-200 leading-tight">{match.awayTeam}</span>
                         </div>
                         {showScore && match.awayScore !== null && (
                             <span className={`text-xl font-bold ${isLive ? 'text-green-400' : 'text-gray-300'}`}>{match.awayScore}</span>
