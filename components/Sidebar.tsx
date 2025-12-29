@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useEffect, useState, useRef, useImperativeHandle, forwardRef, useCallback } from 'react';
 import { Category, EPGData, Channel, HighlightMatch, LocalMatchChannel } from '../types';
 import { fetchFootballHighlights } from '../services/geminiService';
 import { findLocalMatches } from '../services/epgService';
@@ -9,13 +8,14 @@ interface SidebarProps {
   activeCategory: Category;
   onSelectCategory: (category: Category) => void;
   allChannels: Channel[];
-  globalChannels: Channel[]; // New Prop for Global Search
+  globalChannels: Channel[]; 
   epgData: EPGData;
   onChannelSelect: (channel: Channel) => void;
 }
 
 export interface SidebarRef {
     closeDrawer: () => void;
+    refresh: () => void; // <--- NYTT: Metod för att uppdatera listan
 }
 
 export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, onSelectCategory, allChannels, globalChannels, epgData, onChannelSelect }, ref) => {
@@ -31,6 +31,15 @@ export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, o
   
   const drawerCloseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // --- NYTT: Fristående funktion för att hämta matcher ---
+  // 'silent' argumentet gör att vi kan uppdatera i bakgrunden utan att visa skelettet igen
+  const fetchMatches = useCallback(async (silent = false) => {
+      if (!silent) setLoading(true);
+      const matches = await fetchFootballHighlights();
+      setHighlights(matches.slice(0, 30)); 
+      setLoading(false);
+  }, []);
+
   useImperativeHandle(ref, () => ({
       closeDrawer: () => {
           setActiveMatchId(null);
@@ -38,18 +47,18 @@ export const Sidebar = forwardRef<SidebarRef, SidebarProps>(({ activeCategory, o
               clearTimeout(drawerCloseTimerRef.current);
               drawerCloseTimerRef.current = null;
           }
+      },
+      // --- NYTT: Exponera refresh-funktionen utåt ---
+      refresh: () => {
+          console.log("Refreshing highlights...");
+          fetchMatches(true); // Kör en 'tyst' uppdatering (ingen loading-spinner)
       }
   }));
 
+  // Körs en gång vid start
   useEffect(() => {
-    const loadHighlights = async () => {
-      setLoading(true);
-      const matches = await fetchFootballHighlights();
-      setHighlights(matches.slice(0, 30)); 
-      setLoading(false);
-    };
-    loadHighlights();
-  }, []);
+    fetchMatches(false); 
+  }, [fetchMatches]);
 
   // Handle Back Button specifically for closing the drawer
   useEffect(() => {

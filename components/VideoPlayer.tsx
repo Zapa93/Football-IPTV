@@ -22,8 +22,13 @@ declare global {
 }
 
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategory, allChannels, globalChannels, playlist, epgData, onClose, onChannelSelect }) => {
+  
+	
   const videoRef = useRef<HTMLVideoElement>(null);
   const listContainerRef = useRef<HTMLDivElement>(null);
+  
+  const snapshotRef = useRef<HTMLCanvasElement>(null); // <--- NY
+  const [showSnapshot, setShowSnapshot] = useState(false); // <--- NY
   
   const [showControls, setShowControls] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -83,6 +88,23 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
      setStreamSwitchToast(null);
      setIsListOpen(false); // Ensure list is closed on channel switch
   }
+  const captureSnapshot = useCallback(() => {
+      const video = videoRef.current;
+      const canvas = snapshotRef.current;
+      if (video && canvas && !video.paused && !video.ended) {
+          try {
+              canvas.width = video.videoWidth;
+              canvas.height = video.videoHeight;
+              const ctx = canvas.getContext('2d');
+              if (ctx) {
+                  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                  setShowSnapshot(true);
+              }
+          } catch (e) {
+              console.warn("Could not capture snapshot", e);
+          }
+      }
+  }, []);
 
   // Update EPG info periodically
   useEffect(() => {
@@ -189,7 +211,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     const video = videoRef.current;
     if (!video) return;
 
-    if (hlsRef.current) { hlsRef.current.destroy(); hlsRef.current = null; }
+    if (hlsRef.current) { 
+        captureSnapshot(); 
+        hlsRef.current.destroy(); 
+        hlsRef.current = null; 
+    }
     if (retryTimeoutRef.current) clearTimeout(retryTimeoutRef.current);
     if (stallTimeoutRef.current) clearTimeout(stallTimeoutRef.current);
     
@@ -236,7 +262,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     };
 
     const handleStreamReady = () => { 
-        setIsLoading(false); 
+        setIsLoading(false);
+		setShowSnapshot(false);
         if (stallTimeoutRef.current) clearTimeout(stallTimeoutRef.current);
         if (video.paused) video.play().catch(() => {}); 
         updateResolution();
@@ -286,6 +313,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   }, [isListOpen]);
 
   useEffect(() => {
+	resetControls();
     window.addEventListener('mousemove', resetControls);
     return () => {
       window.removeEventListener('mousemove', resetControls);
@@ -594,10 +622,20 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   const showGroupBtn = viewMode === 'channels' && hasGroups;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black flex items-center justify-center overflow-hidden">
+      
+      {/* --- NYTT: CANVAS (Last Frame Freeze) --- */}
+      {/* Ligger ovanpå videon (z-20) men är osynlig tills vi säger till */}
+      <canvas 
+        ref={snapshotRef}
+        className={`absolute inset-0 w-full h-full object-contain pointer-events-none z-20 transition-opacity duration-500 ${showSnapshot ? 'opacity-100' : 'opacity-0'}`}
+      />
+
+      {/* --- UPPDATERAD VIDEO --- */}
+      {/* bg-transparent (istället för black) och z-10 så den ligger under canvasen */}
       <video 
         ref={videoRef} 
-        className="w-full h-full object-contain bg-black cursor-pointer" 
+        className="relative z-10 w-full h-full object-contain bg-transparent cursor-pointer" 
         autoPlay 
         playsInline 
         onClick={() => {
@@ -607,6 +645,8 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         }}
       />
       
+      {/* --- RESTEN ÄR SAMMA SOM FÖRUT --- */}
+
       {/* TELETEXT VIEWER */}
       {showTeletext && (
           <TeletextViewer onClose={() => setShowTeletext(false)} />
@@ -640,6 +680,126 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
           </div>
         </div>
       )}
+
+      {/* LIST MODAL WRAPPER */}
+      <div 
+        className={`fixed inset-0 z-40 items-center justify-center ${isListOpen && !showTeletext ? 'flex' : 'hidden'}`}
+        onClick={() => setIsListOpen(false)}
+      >
+        <div 
+            className="flex gap-6 items-start"
+            onClick={(e) => e.stopPropagation()}
+        >
+             {/* LEFT CARD - Sidebar */}
+             <div 
+                className={`w-[160px] p-1.5 bg-[#111] rounded-2xl border border-white/10 shadow-2xl flex flex-col gap-2 shrink-0 ${focusArea === 'sidebar' ? 'border-white ring-1 ring-white/50' : 'opacity-90'}`}
+             >
+                {showGroupBtn && (
+                    <div 
+                        className={`w-full p-4 rounded-xl text-center cursor-pointer ${focusArea === 'sidebar' && selectedIndex === 0 ? 'bg-purple-600 text-white shadow-lg' : 'bg-white/5 text-gray-400 hover:bg-white/10'}`}
+                        onClick={() => {
+                            setViewMode('groups');
+                            setFocusArea('list');
+                            setSelectedIndex(0);
+                        }}
+                        onMouseEnter={() => {
+                            setFocusArea('sidebar');
+                            setSelectedIndex(0);
+                        }}
+                    >
+                        <div className="text-[10px] uppercase font-bold tracking-wider mb-1">Current Group</div>
+                        <div className="font-bold text-sm leading-tight line-clamp-2">{currentGroup?.title || 'All'}</div>
+                        <div className="mt-2 text-[10px] opacity-75 flex items-center justify-center gap-1">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" /></svg>
+                            Change
+                        </div>
+                    </div>
+                )}
+                <div 
+                    className={`w-full p-4 rounded-xl text-center cursor-pointer ${focusArea === 'sidebar' && ((showGroupBtn && selectedIndex === 1) || (!showGroupBtn && selectedIndex === 0)) ? 'bg-red-600 text-white shadow-lg' : 'bg-white/5 text-gray-400 hover:bg-white/10'}`}
+                    onClick={onClose}
+                    onMouseEnter={() => {
+                        setFocusArea('sidebar');
+                        setSelectedIndex(showGroupBtn ? 1 : 0);
+                    }}
+                >
+                     <div className="flex justify-center my-1">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <div className="font-bold text-sm leading-tight">Exit to Home</div>
+                </div>
+             </div>
+
+            {/* RIGHT CARD - List */}
+            <div className="w-[950px] h-[900px] bg-black/60 backdrop-blur-none rounded-3xl border border-white/10 shadow-2xl flex flex-col overflow-hidden">
+                {renderVirtualList()}
+            </div>
+        </div>
+      </div>
+
+      {/* CONTROLS OVERLAY */}
+      <div className={`absolute inset-0 pointer-events-none ${showControls && !isListOpen && !showTeletext ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-12 flex items-end justify-between">
+          <div className="flex items-end gap-6 w-3/4">
+            <div className="h-28 w-28 rounded-xl bg-gray-300 p-2 border border-white/10 shrink-0 flex items-center justify-center">
+              <img src={channel.logo} alt={channel.name} className="w-full h-full object-contain" onError={(e) => (e.target as HTMLImageElement).src = DEFAULT_LOGO} />
+            </div>
+            <div className="mb-1 flex-1">
+               <div className="flex items-center gap-4 mb-3">
+                   <h1 className="text-4xl font-bold text-white">{channel.name}</h1>
+                   
+                   {/* Resolution Badge */}
+                   {resolution && (
+                       <div className="px-3 py-1.5 rounded-md bg-white/20 border border-white/30 text-sm font-mono text-white font-bold backdrop-blur-md">
+                           {resolution}
+                       </div>
+                   )}
+
+                   {/* Current Quality Badge - Made Bigger */}
+                   {channel.streams && channel.streams.length > 1 && (
+                       <div className="px-4 py-2 rounded-lg bg-purple-600 border-2 border-purple-400 text-xl font-black text-white uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                           {channel.streams[activeStreamIndex]?.quality || 'Multi-Stream'}
+                       </div>
+                   )}
+               </div>
+
+               {currentProgram ? (
+                   <div className="mb-3">
+                       <div className="flex items-baseline gap-2 mb-1">
+                           <span className="text-xs font-bold bg-red-600 text-white px-2 py-0.5 rounded uppercase">Just nu</span>
+                           <span className="text-4xl text-white font-medium">{currentProgram.title}</span>
+                           <span className="text-lg text-gray-300 ml-2">
+                               {currentProgram.start.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', hour12: false})} - {currentProgram.end.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', hour12: false})}
+                           </span>
+                       </div>
+                       <div className="w-2/3 h-1.5 bg-gray-700 rounded-full overflow-hidden mb-1">
+                          <div className="h-full bg-purple-500" style={{ width: `${progress}%` }}></div>
+                       </div>
+                       {currentProgram.description && (
+                           <p className="text-gray-300 text-lg line-clamp-2">{currentProgram.description}</p>
+                       )}
+                   </div>
+               ) : (
+                   <p className="text-xl text-gray-400 mb-2">No Program Information</p>
+               )}
+
+               {nextProgram && (
+                   <div className="flex items-center gap-2 opacity-80">
+                        <span className="text-xs font-bold bg-gray-700 text-gray-300 px-2 py-0.5 rounded uppercase">Nästa</span>
+                        <span className="text-lg text-gray-300 truncate">{nextProgram.title}</span>
+                        <span className="text-xs text-gray-500">
+                             {nextProgram.start.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', hour12: false})}
+                        </span>
+                   </div>
+               )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
       {/* LIST MODAL WRAPPER */}
       <div 

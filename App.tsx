@@ -478,7 +478,12 @@ const App: React.FC = () => {
     });
   };
 
-  const handleClosePlayer = useCallback(() => setSelectedChannel(null), []);
+  // Uppdaterad handleClosePlayer med refresh-trigger
+  const handleClosePlayer = useCallback(() => {
+    setSelectedChannel(null);
+    // Trigga en refresh av sidebar-highlights när spelaren stängs
+    sidebarRef.current?.refresh();
+  }, []);
 
   return (
     <div className="flex h-screen w-screen bg-[#050505] text-white font-sans overflow-hidden">
