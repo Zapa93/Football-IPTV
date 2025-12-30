@@ -1,12 +1,11 @@
-
 import { HighlightMatch } from '../types';
-import { FOOTBALL_API_KEY } from '../constants';
 
 export type HighlightsResult = HighlightMatch[];
 
-const CACHE_KEY = 'football_data_highlights_v6'; // Bumped version for API-Football
+// Nyckeln för backup-cachen
+const CACHE_KEY = 'football_data_highlights_live_v1'; 
 
-// --- CACHING UTILITIES ---
+// --- CACHING UTILITIES (Endast för backup vid fel) ---
 
 interface CacheEntry<T> {
   date: string;
@@ -14,70 +13,22 @@ interface CacheEntry<T> {
   data: T;
 }
 
-const CACHE_DURATION_DEFAULT = 15 * 60 * 1000; // 15 minutes
-const CACHE_DURATION_LIVE = 60 * 1000; // 1 minute
-
-// Helper to get local date string YYYY-MM-DD
 const getLocalDateString = (date: Date = new Date()): string => {
   const offset = date.getTimezoneOffset();
   const local = new Date(date.getTime() - (offset * 60 * 1000));
   return local.toISOString().split('T')[0];
 };
 
-export const getFromCache = <T>(key: string, ignoreTTL: boolean = false): T | null => {
+// Hämtar BARA om vi måste (backup)
+export const getFromCache = <T>(key: string): T | null => {
   try {
     const item = localStorage.getItem(key);
     if (!item) return null;
 
     const parsed = JSON.parse(item) as CacheEntry<T>;
     
-    // Check 1: Date (Matches must be from today)
-    if (parsed.date !== getLocalDateString()) {
-      return null;
-    }
-
-    // If ignoring TTL, return data immediately
-    if (ignoreTTL) return parsed.data;
-
-    const now = Date.now();
-    let effectiveTTL = CACHE_DURATION_DEFAULT;
-
-    // Analyze data if it is an array
-    if (Array.isArray(parsed.data)) {
-        const matches = parsed.data as any[];
-
-        // Check 2: Smart Kick-off
-        const hasPendingKickoff = matches.some(m => {
-            if (m && typeof m === 'object' && 'status' in m && 'rawDate' in m) {
-                const isScheduled = m.status === 'SCHEDULED' || m.status === 'TIMED';
-                if (isScheduled && m.rawDate) {
-                    const kickoff = new Date(m.rawDate).getTime();
-                    // If we passed the kick-off time, invalidate cache to fetch live status
-                    if (now >= kickoff) return true;
-                }
-            }
-            return false;
-        });
-
-        if (hasPendingKickoff) return null;
-
-        // Check 3: Live Activity
-        const hasLiveActivity = matches.some(m => {
-             if (m && typeof m === 'object' && 'status' in m) {
-                 return m.status === 'IN_PLAY' || m.status === 'PAUSED';
-             }
-             return false;
-        });
-
-        if (hasLiveActivity) {
-            effectiveTTL = CACHE_DURATION_LIVE;
-        }
-    }
-
-    const timestamp = parsed.timestamp || 0;
-    if (now - timestamp > effectiveTTL) {
-        return null;
-    }
+    // Måste vara från idag
+    if (parsed.date !== getLocalDateString()) return null;
 
     return parsed.data;
   } catch (e) {
@@ -94,303 +45,128 @@ const saveToCache = <T>(key: string, data: T): void => {
     };
     localStorage.setItem(key, JSON.stringify(entry));
   } catch (e) {
-    console.error("Failed to save to cache", e);
+    console.error("Failed to save backup cache", e);
   }
-};
-
-const cleanupOldCache = (): void => {
-  try {
-    const today = getLocalDateString();
-    const keysToRemove: string[] = [];
-
-    for (let i = 0; i < localStorage.length; i++) {
-      const key = localStorage.key(i);
-      if (key && (key.startsWith('broadcaster_') || key.includes('highlights'))) {
-        const item = localStorage.getItem(key);
-        if (item) {
-          try {
-            const parsed = JSON.parse(item) as CacheEntry<any>;
-            if (parsed.date !== today) {
-              keysToRemove.push(key);
-            }
-          } catch (e) {
-            keysToRemove.push(key);
-          }
-        }
-      }
-    }
-
-    keysToRemove.forEach(k => localStorage.removeItem(k));
-  } catch (e) {
-    console.error("Cache cleanup failed", e);
-  }
-};
-
-// --- SECONDARY API SERVICE (TheSportsDB) ---
-
-const fetchTheSportsDB = async (dateStr: string): Promise<HighlightMatch[]> => {
-    try {
-        // Using Free Tier Key '3'
-        const url = `https://www.thesportsdb.com/api/v1/json/3/eventsday.php?d=${dateStr}&s=Soccer`;
-        const res = await fetch(url);
-        const data = await res.json();
-
-        if (!data.events) return [];
-
-        const targetLeagues = [
-            'UEFA Europa League',
-            'UEFA Conference League',
-            'FA Cup',
-            'Carabao Cup', // EFL Cup
-            'Copa del Rey',
-            'Coppa Italia',
-            'DFB-Pokal',
-            'Coupe de France',
-            'Svenska Cupen'
-        ];
-
-        return data.events
-            .filter((e: any) => targetLeagues.some(l => e.strLeague && e.strLeague.includes(l)))
-            .map((e: any) => {
-                // Status Mapping
-                let status: any = 'SCHEDULED';
-                if (e.strStatus === 'Match Finished' || e.strStatus === 'FT') status = 'FINISHED';
-                else if (e.strStatus === 'Live' || e.strStatus === 'In Progress' || e.strStatus === 'HT') status = 'IN_PLAY';
-                else if (e.strStatus === 'Postponed') status = 'POSTPONED';
-
-                // Time formatting (HH:MM)
-                const timeStr = e.strTime ? e.strTime.substring(0, 5) : '00:00';
-
-                return {
-                    id: `tsdb_${e.idEvent}`, // ID Prefix to avoid collision
-                    league: e.strLeague,
-                    match: e.strEvent,
-                    time: timeStr,
-                    rawDate: `${e.dateEvent}T${e.strTime}`, // Construct ISO-like string
-                    homeTeam: e.strHomeTeam,
-                    awayTeam: e.strAwayTeam,
-                    homeLogo: e.strHomeTeamBadge || '',
-                    awayLogo: e.strAwayTeamBadge || '',
-                    status: status,
-                    homeScore: e.intHomeScore ? parseInt(e.intHomeScore) : null,
-                    awayScore: e.intAwayScore ? parseInt(e.intAwayScore) : null
-                };
-            });
-    } catch (err) {
-        console.warn("TheSportsDB Secondary Fetch failed (Non-critical):", err);
-        return [];
-    }
 };
 
 // --- MAIN SERVICE ---
 
 export const fetchFootballHighlights = async (): Promise<HighlightsResult> => {
-  cleanupOldCache();
-
   let matches: HighlightMatch[] = [];
 
+  // 1. FÖRSÖK ALLTID MED API FÖRST (Live-uppdatering)
+  const apiKey = import.meta.env.VITE_FOOTBALL_API_KEY; 
+  const todayStr = getLocalDateString(new Date());
+  
   try {
-    // 1. Check Cache
-    const cachedMatches = getFromCache<HighlightMatch[]>(CACHE_KEY);
-    
-    if (cachedMatches && cachedMatches.length > 0) {
-        matches = cachedMatches;
-    } else {
-        const apiKey = FOOTBALL_API_KEY;
-        
-        // Date Logic
-        const todayDate = new Date();
-        const tomorrowDate = new Date();
-        tomorrowDate.setDate(tomorrowDate.getDate() + 1);
-        
-        const todayStr = getLocalDateString(todayDate);
-        const tomorrowStr = getLocalDateString(tomorrowDate);
-        
-        console.log(`Fetching matches for ${todayStr}...`);
-        
-        // --- STEP 1: PRIMARY API (API-Football) ---
-        let mainMatches: HighlightMatch[] = [];
-        try {
-            const headers: HeadersInit = {};
-            if (apiKey) headers['x-apisports-key'] = apiKey;
+      console.log(`🔄 Hämtar LIVE-data för ${todayStr}...`);
+      
+      const response = await fetch(`https://v3.football.api-sports.io/fixtures?date=${todayStr}&timezone=Europe/Stockholm`, {
+          headers: {
+              'x-apisports-key': apiKey, 
+          }
+      });
 
-            // Fetching matches for today and tomorrow
-            // Endpoint: https://v3.football.api-sports.io/fixtures
-            const response = await fetch(`https://v3.football.api-sports.io/fixtures?from=${todayStr}&to=${tomorrowStr}`, {
-                headers: headers
-            });
+      const data = await response.json();
 
-            if (response.ok) {
-                const data = await response.json();
-                if (data.response && Array.isArray(data.response)) {
-                    mainMatches = data.response.map((item: any) => {
-                        const f = item.fixture;
-                        const l = item.league;
-                        const t = item.teams;
-                        const g = item.goals;
-                        
-                        const date = new Date(f.date);
-                        const timeStr = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-                        const matchDay = date.getDate();
-                        const currentDay = new Date().getDate();
-                        const timeLabel = matchDay !== currentDay ? `Tom ${timeStr}` : timeStr;
+      if (data.errors && Object.keys(data.errors).length > 0) {
+          console.error("API Error:", data.errors);
+          throw new Error("API Limit Reached or Error"); // Kasta fel för att trigga backup
+      }
 
-                        // Map Status from API-Football to internal types
-                        let status: HighlightMatch['status'] = 'SCHEDULED';
-                        const s = f.status.short; // NS, 1H, 2H, HT, FT, ET, PEN, BT, P, SUSP, INT, PST, CANC, ABD, AWD, WO
-                        
-                        if (['1H', '2H', 'ET', 'BT', 'P', 'LIVE'].includes(s)) status = 'IN_PLAY';
-                        else if (s === 'HT') status = 'PAUSED';
-                        else if (['FT', 'AET', 'PEN'].includes(s)) status = 'FINISHED';
-                        else if (s === 'PST') status = 'POSTPONED';
-                        else if (s === 'CANC') status = 'CANCELLED';
-                        else if (s === 'ABD') status = 'SUSPENDED';
-                        else if (s === 'AWD' || s === 'WO') status = 'AWARDED';
-                        else if (['NS', 'TBD'].includes(s)) status = 'SCHEDULED';
+      if (data.response && Array.isArray(data.response)) {
+          matches = data.response.map((item: any) => {
+              const f = item.fixture;
+              const l = item.league;
+              const t = item.teams;
+              const g = item.goals;
+              
+              const date = new Date(f.date);
+              const timeStr = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+              
+              // Status Mapping
+              let status: HighlightMatch['status'] = 'SCHEDULED';
+              const s = f.status.short;
+              
+              if (['1H', '2H', 'ET', 'BT', 'P', 'LIVE'].includes(s)) status = 'IN_PLAY';
+              else if (s === 'HT') status = 'PAUSED';
+              else if (['FT', 'AET', 'PEN'].includes(s)) status = 'FINISHED';
+              else if (s === 'PST') status = 'POSTPONED';
+              else if (s === 'CANC') status = 'CANCELLED';
+              else if (s === 'ABD') status = 'SUSPENDED';
 
-                        return {
-                            id: String(f.id),
-                            league: l.name || 'Unknown',
-                            match: `${t.home.name} vs ${t.away.name}`,
-                            time: timeLabel,
-                            rawDate: f.date,
-                            homeTeam: t.home.name,
-                            awayTeam: t.away.name,
-                            homeLogo: t.home.logo || '',
-                            awayLogo: t.away.logo || '',
-                            status: status,
-                            homeScore: g.home,
-                            awayScore: g.away
-                        };
-                    });
-                }
-            } else {
-                console.warn(`Primary API Error: ${response.status}`);
-            }
-        } catch (e) {
-            console.error("Primary API Failed", e);
-        }
+              return {
+                  id: String(f.id),
+                  leagueId: l.id,
+                  league: l.name || 'Unknown',
+                  match: `${t.home.name} vs ${t.away.name}`,
+                  time: timeStr,
+                  rawDate: f.date,
+                  homeTeam: t.home.name,
+                  awayTeam: t.away.name,
+                  homeLogo: t.home.logo || '',
+                  awayLogo: t.away.logo || '',
+                  status: status,
+                  homeScore: g.home,
+                  awayScore: g.away
+              };
+          });
 
-        // --- STEP 2: SECONDARY API (TheSportsDB) ---
-        // We fetch missing leagues from here (keeping original logic)
-        let extraMatches: HighlightMatch[] = [];
-        try {
-            extraMatches = await fetchTheSportsDB(todayStr);
-            console.log(`Fetched ${extraMatches.length} extra matches from Secondary API`);
-        } catch (e) {
-            console.warn("Secondary API Failed completely", e);
-        }
+          // Om lyckat: Spara som backup inför framtiden
+          if (matches.length > 0) {
+              saveToCache(CACHE_KEY, matches);
+          }
+      }
 
-        // --- STEP 3: MERGE ---
-        matches = [...mainMatches, ...extraMatches];
-
-        // Save if we got anything
-        if (matches.length > 0) {
-            saveToCache(CACHE_KEY, matches);
-        } else {
-             // If both failed, try stale cache
-             const staleCache = getFromCache<HighlightMatch[]>(CACHE_KEY, true);
-             if (staleCache) return staleCache;
-        }
-    }
-
-    // --- PROCESSING ---
-
-    const now = new Date();
-    
-    // 1. Filter out old matches (keep live and upcoming)
-    const validMatches = matches.filter(m => {
-        try {
-            if (m.status === 'IN_PLAY' || m.status === 'PAUSED') return true;
-
-            let matchTime = 0;
-            if (m.rawDate) {
-                matchTime = new Date(m.rawDate).getTime();
-            } else {
-                return true; 
-            }
-
-            // Keep matches visible for 12 hours after start time
-            const matchEndInMs = matchTime + (720 * 60000);
-            return now.getTime() < matchEndInMs;
-        } catch (e) {
-            return true;
-        }
-    });
-
-    // --- TEAMS DEFINITIONS ---
-    const topItalianTeams = ['juventus', 'napoli', 'roma', 'lazio', 'atalanta', 'fiorentina', 'bologna', 'torino', 'inter', 'milan'];
-    const topGlobalTeams = ['man city', 'arsenal', 'liverpool', 'chelsea', 'man utd', 'tottenham', 'real madrid', 'barcelona', 'atletico', 'bayern', 'dortmund', 'psg', 'benfica', 'porto'];
-    const allowedOtherTeams = [...topItalianTeams, ...topGlobalTeams, 'leipzig', 'newcastle', 'aston villa', 'brighton', 'ajax', 'psv', 'feyenoord', 'sporting', 'malmö', 'malmo', 'mff'];
-
-    // --- STRICT FILTERING ---
-    let filteredMatches = validMatches.filter(m => {
-        // ALWAYS allow Secondary API matches
-        if (m.id.startsWith('tsdb_')) return true;
-
-        const text = (m.match + " " + m.league).toLowerCase();
-        
-        // Priority Leagues
-        if (text.includes('inter ') || text.includes('internazionale')) return true;
-        if (text.includes('ac milan') || (text.includes('milan') && !text.includes('inter'))) return true;
-        if (text.includes('serie a') || text.includes('calcio')) return true;
-        if (text.includes('premier league') || text.includes('epl')) return true;
-        if (text.includes('primera division') || text.includes('la liga')) return true;
-        if (text.includes('champions league') || text.includes('europa') || text.includes('conference')) return true;
-        if (text.includes('bundesliga')) return true;
-        if (text.includes('cup') || text.includes('pokal')) return true; // Allow cups
-        
-        // Local Leagues (Sweden)
-        if (text.includes('allsvenskan') || text.includes('superettan') || text.includes('svenska')) return true;
-
-        // Teams
-        if (allowedOtherTeams.some(t => text.includes(t))) return true;
-
-        return false;
-    });
-
-    // --- PRIORITY SCORING SYSTEM ---
-    filteredMatches.sort((a, b) => {
-      const getScore = (m: HighlightMatch) => {
-        let score = 0;
-        const text = (m.match + " " + m.league).toLowerCase();
-        
-        // TIER 0: GOD TIER (Inter & Milan & Malmo)
-        if (text.includes('inter ') || text.includes('internazionale')) return 5000000;
-        if (text.includes('ac milan') || (text.includes('milan') && !text.includes('inter'))) return 4900000;
-        if (text.includes('malmö') || text.includes('malmo') || text.includes('mff')) return 4800000;
-
-        // BASE LEAGUE SCORES
-        if (text.includes('serie a') || text.includes('calcio')) score += 50000;
-        else if (text.includes('champions league')) score += 60000; 
-        else if (text.includes('europa') || text.includes('conference')) score += 55000; 
-        else if (text.includes('premier league') || text.includes('epl')) score += 40000;
-        else if (text.includes('primera division') || text.includes('la liga')) score += 30000;
-        else if (text.includes('allsvenskan')) score += 35000;
-        else if (text.includes('cup') || text.includes('pokal') || text.includes('coppa')) score += 25000; 
-        else score += 10000;
-
-        // TEAM BONUSES
-        const italianCount = topItalianTeams.filter(t => text.includes(t)).length;
-        score += (italianCount * 500000); 
-
-        const globalCount = topGlobalTeams.filter(t => text.includes(t)).length;
-        score += (globalCount * 200000);
-
-        // LIVE BOOST
-        if (m.status === 'IN_PLAY' || m.status === 'PAUSED') score += 5000;
-
-        return score;
-      };
-
-      return getScore(b) - getScore(a);
-    });
-
-    return filteredMatches;
-
-  } catch (error) {
-    console.error("Failed to fetch highlights:", error);
-    const fallback = getFromCache<HighlightMatch[]>(CACHE_KEY, true);
-    return fallback || [];
+  } catch (e) {
+      console.error("Nätverksfel eller API-fel, använder backup:", e);
+      // 2. BACKUP: Om API misslyckas (t.ex. inget internet), hämta från cache
+      const cachedMatches = getFromCache<HighlightMatch[]>(CACHE_KEY);
+      if (cachedMatches) {
+          console.log("⚠️ Visar cachad backup-data.");
+          matches = cachedMatches;
+      }
   }
+
+  // --- FILTRERING ---
+  const WANTED_LEAGUES = [
+      39, 45, 48, 135, 137, 140, 143, 78, 529, 61, 66, 2, 3, 848, 113, 114, 119
+  ];
+  const allowedOtherTeams = ['inter', 'milan', 'liverpool', 'arsenal', 'man city', 'chelsea', 'real madrid', 'barcelona', 'bayern', 'psg', 'malmö', 'aik', 'djurgården', 'hammarby', 'häcken'];
+
+  let filteredMatches = matches.filter(m => {
+      if (m.leagueId && WANTED_LEAGUES.includes(m.leagueId)) return true;
+      const text = (m.match + " " + m.league).toLowerCase();
+      if (allowedOtherTeams.some(t => text.includes(t))) return true;
+      return false;
+  });
+
+  // --- SORTERING ---
+  filteredMatches.sort((a, b) => {
+    const getScore = (m: HighlightMatch) => {
+      let score = 0;
+      const text = (m.match + " " + m.league).toLowerCase();
+      
+      // Prioritera dina lag
+      if (text.includes('inter ') || text.includes('internazionale')) return 5000000;
+      if (text.includes('ac milan') || (text.includes('milan') && !text.includes('inter'))) return 4900000;
+      if (text.includes('malmö') || text.includes('mff')) return 4800000;
+
+      // Prioritera ligor
+      if (m.leagueId === 135) score += 50000; // Serie A
+      else if (m.leagueId === 39) score += 40000; // PL
+      else if (m.leagueId === 2) score += 60000; // CL
+      else if (m.leagueId === 113) score += 35000; // Allsvenskan
+      else score += 10000;
+
+      // Live matcher alltid högst upp bland resten
+      if (m.status === 'IN_PLAY' || m.status === 'PAUSED') score += 5000;
+
+      return score;
+    };
+
+    return getScore(b) - getScore(a);
+  });
+
+  return filteredMatches;
 };

@@ -40,6 +40,7 @@ export interface EPGData {
 
 export interface HighlightMatch {
   id: string;
+  leagueId: number; // <--- NYTT FÄLT
   league: string;
   match: string; // "Home vs Away" (kept for compat)
   time: string;

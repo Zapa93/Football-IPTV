@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Channel, EPGData, EPGProgram, ChannelGroup, Category } from '../types';
 import { DEFAULT_LOGO } from '../constants';
@@ -9,9 +8,9 @@ import { TeletextViewer } from './TeletextViewer';
 interface VideoPlayerProps {
   channel: Channel;
   activeCategory: Category;
-  allChannels: Channel[]; // Default list (if needed)
-  globalChannels: Channel[]; // For Global Search on Goal Alerts (Legacy prop, might be used elsewhere)
-  playlist: ChannelGroup[]; // All groups for switching
+  allChannels: Channel[];
+  globalChannels: Channel[];
+  playlist: ChannelGroup[];
   epgData: EPGData;
   onClose: () => void;
   onChannelSelect: (channel: Channel) => void;
@@ -23,12 +22,11 @@ declare global {
 
 export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategory, allChannels, globalChannels, playlist, epgData, onClose, onChannelSelect }) => {
   
-	
   const videoRef = useRef<HTMLVideoElement>(null);
   const listContainerRef = useRef<HTMLDivElement>(null);
   
-  const snapshotRef = useRef<HTMLCanvasElement>(null); // <--- NY
-  const [showSnapshot, setShowSnapshot] = useState(false); // <--- NY
+  const snapshotRef = useRef<HTMLCanvasElement>(null);
+  const [showSnapshot, setShowSnapshot] = useState(false);
   
   const [showControls, setShowControls] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -83,15 +81,16 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         }
         setPrevChannelId(channel.id);
      }
-     // Reset states when channel changes
      setActiveStreamIndex(0);
      setStreamSwitchToast(null);
-     setIsListOpen(false); // Ensure list is closed on channel switch
+     setIsListOpen(false); 
   }
+
+  // --- SNAPSHOT LOGIC ---
   const captureSnapshot = useCallback(() => {
       const video = videoRef.current;
       const canvas = snapshotRef.current;
-      if (video && canvas && !video.paused && !video.ended) {
+      if (video && canvas && !video.paused && !video.ended && video.readyState > 2) {
           try {
               canvas.width = video.videoWidth;
               canvas.height = video.videoHeight;
@@ -99,9 +98,12 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
               if (ctx) {
                   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                   setShowSnapshot(true);
+                  
+                  // FAILSAFE: Hide snapshot after 1.5s no matter what (prevents black screen stuck)
+                  setTimeout(() => setShowSnapshot(false), 1500);
               }
           } catch (e) {
-              console.warn("Could not capture snapshot", e);
+              setShowSnapshot(false);
           }
       }
   }, []);
@@ -163,7 +165,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   const stallTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hlsRef = useRef<any>(null);
 
-  // Auto-scroll logic (For when navigating inside the list)
+  // Auto-scroll logic
   useEffect(() => {
     if (isListOpen && listContainerRef.current && focusArea === 'list') {
       const currentScroll = listContainerRef.current.scrollTop;
@@ -224,7 +226,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
 
     const loadStream = () => {
         setIsLoading(true);
-        // Determine URL based on stream variants or fallback to default
         let url = channel.url;
         if (channel.streams && channel.streams.length > 0 && channel.streams[activeStreamIndex]) {
             url = channel.streams[activeStreamIndex].url;
@@ -263,7 +264,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
 
     const handleStreamReady = () => { 
         setIsLoading(false);
-		setShowSnapshot(false);
+        setShowSnapshot(false);
         if (stallTimeoutRef.current) clearTimeout(stallTimeoutRef.current);
         if (video.paused) video.play().catch(() => {}); 
         updateResolution();
@@ -302,24 +303,53 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       video.removeAttribute('src'); 
       video.load();
     };
-  }, [channel, activeStreamIndex]);
+  }, [channel, activeStreamIndex, captureSnapshot]); // Added captureSnapshot dependency
 
-  // Controls Logic
-  const resetControls = useCallback(() => {
-    if (isListOpen) { setShowControls(false); return; }
+// --- CONTROLS LOGIC (FIXED) ---
+
+  const startHideTimer = useCallback(() => {
+    // 1. Visa alltid kontrollerna först vid aktivitet
     setShowControls(true);
+    
+    // 2. Rensa gammal timer
     if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-    controlsTimeoutRef.current = setTimeout(() => setShowControls(false), 5000); 
-  }, [isListOpen]);
+    
+    // 3. Starta ny timer (HÄR ÄR SIFFRAN DU KAN ÄNDRA)
+    const HIDE_DELAY = 5000; // 5000 = 5 sekunder. Ändra till 8000 för 8 sekunder.
 
+    controlsTimeoutRef.current = setTimeout(() => {
+        // Dölj bara om listan är stängd (annars vill vi se listan)
+        if (!isListOpenRef.current) {
+            setShowControls(false);
+        }
+    }, HIDE_DELAY);
+  }, []);
+
+  // 1. KÖR VID KANALBYTE (Tvinga visning och nollställ timer)
   useEffect(() => {
-	resetControls();
-    window.addEventListener('mousemove', resetControls);
+    // Tvinga fram controls oavsett vad listan säger just nu
+    setShowControls(true);
+    
+    // Starta timern
+    startHideTimer();
+    
     return () => {
-      window.removeEventListener('mousemove', resetControls);
-      if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+        if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
     };
-  }, [resetControls]);
+  }, [channel.id, startHideTimer]);
+
+  // 2. KÖR VID INPUT (Mus/Tangentbord)
+  useEffect(() => {
+    const handleInput = () => startHideTimer();
+
+    window.addEventListener('mousemove', handleInput);
+    window.addEventListener('keydown', handleInput);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleInput);
+      window.removeEventListener('keydown', handleInput);
+    };
+  }, [startHideTimer]);
 
   // Handle Stream Switching Toast
   const showStreamToast = (quality: string) => {
@@ -330,7 +360,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       }, 2000);
   };
 
-  // Helper to open list at correct position (Center selection)
   const openChannelList = () => {
       const list = currentChannelListRef.current;
       const currentId = channelRef.current.id;
@@ -341,8 +370,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       setViewMode('channels');
       setFocusArea('list');
       
-      // Pre-calculate scroll position to ensure virtual list renders correct range immediately
-      // This prevents the list from showing the top items first
       const targetScroll = Math.max(0, targetIndex * ITEM_HEIGHT - LIST_HEIGHT / 2 + ITEM_HEIGHT / 2);
       setScrollTop(targetScroll);
       
@@ -353,23 +380,18 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       
-      // --- TELETEXT TOGGLE ---
       if (e.key === 'b' || e.key === 'a' || e.keyCode === 406 || e.key === 'Blue') {
           e.preventDefault();
           setShowTeletext(prev => !prev);
           return;
       }
 
-      // --- IF TELETEXT IS OPEN, BLOCK ALL PLAYER INPUTS ---
-      if (showTeletextRef.current) {
-          // Let the Teletext component handle its own inputs via its own listener
-          return;
-      }
+      if (showTeletextRef.current) return;
 
       const isEnter = e.key === 'Enter';
       const currentIsListOpen = isListOpenRef.current;
 
-      resetControls();
+      startHideTimer(); // Reset timer on interaction
       
       const isBack = e.key === 'Back' || e.key === 'Escape' || e.keyCode === 461;
       const isUp = e.key === 'ArrowUp';
@@ -384,21 +406,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       const currentView = viewModeRef.current;
       const currentFocus = focusAreaRef.current;
       const currentGroups = playlistRef.current;
-
-      // Find where the CURRENTLY PLAYING channel is in the current list
       const playingChannelId = channelRef.current.id;
       const playingIndex = currentList.findIndex(c => c.id === playingChannelId);
-      
-      // Determine effective index for navigation:
-      // If list is open: use the cursor position.
-      // If list is closed: use the playing channel position (or 0 if not found).
       const effectiveIndex = currentIsListOpen ? currentCursorIndex : (playingIndex !== -1 ? playingIndex : 0);
-
       const activeListLength = currentView === 'channels' ? currentList.length : currentGroups.length;
-      
-      // Sidebar button indices:
-      // If hasGroups: 0=Group, 1=Exit
-      // If !hasGroups: 0=Exit
       const hasGroups = currentGroups.length > 1;
       const showGroupBtn = currentView === 'channels' && hasGroups;
       const maxSidebarIndex = showGroupBtn ? 1 : 0;
@@ -420,13 +431,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         return;
       }
 
-      // --- STREAM SWITCHING (Left/Right) when List is CLOSED ---
       if (!currentIsListOpen && channelRef.current.streams && channelRef.current.streams.length > 1) {
           if (isLeft) {
               e.preventDefault(); e.stopPropagation();
               const streams = channelRef.current.streams;
               const currentIndex = activeStreamIndexRef.current;
-              // Cycle Previous
               const newIndex = (currentIndex - 1 + streams.length) % streams.length;
               setActiveStreamIndex(newIndex);
               showStreamToast(streams[newIndex].quality);
@@ -435,7 +444,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
               e.preventDefault(); e.stopPropagation();
               const streams = channelRef.current.streams;
               const currentIndex = activeStreamIndexRef.current;
-              // Cycle Next
               const newIndex = (currentIndex + 1) % streams.length;
               setActiveStreamIndex(newIndex);
               showStreamToast(streams[newIndex].quality);
@@ -498,13 +506,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         
         if (currentIsListOpen) {
           if (currentFocus === 'sidebar') {
-               // Handle Sidebar Clicks via Enter
                if (showGroupBtn && currentCursorIndex === 0) {
                    setViewMode('groups');
                    setFocusArea('list');
                    setSelectedIndex(0);
                } else {
-                   // This is the EXIT button (either index 0 or 1 depending on group presence)
                    onClose();
                }
                return;
@@ -530,7 +536,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onChannelSelect, resetControls, playlist.length, onClose]);
+  }, [onChannelSelect, startHideTimer, playlist.length, onClose]);
 
   const renderVirtualList = () => {
     if (!isListOpen) return null;
@@ -548,7 +554,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         ref={listContainerRef} 
         className="flex-1 overflow-y-auto no-scrollbar relative"
         onScroll={(e) => setScrollTop(e.currentTarget.scrollTop)}
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking scrollbar/list area
+        onClick={(e) => e.stopPropagation()}
       >
         <div style={{ height: `${totalHeight}px`, position: 'relative' }}>
           {dataList.slice(renderStart, renderEnd).map((item, i) => {
@@ -665,8 +671,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
              <div className="relative w-20 h-20">
                 <svg className="animate-satisfy-spin w-full h-full" viewBox="0 0 50 50">
                   <circle className="opacity-25" cx="25" cy="25" r="20" stroke="white" strokeWidth="4" fill="none" />
-                  <circle
-                    className="animate-satisfy-dash"
+                  <circle className="animate-satisfy-dash"
                     cx="25" cy="25" r="20"
                     stroke="white" strokeWidth="4"
                     fill="none" strokeLinecap="round"
@@ -678,7 +683,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         </div>
       )}
 
-      {/* LIST MODAL WRAPPER (Denna låg utanför förut!) */}
+      {/* LIST MODAL WRAPPER */}
       <div 
         className={`fixed inset-0 z-40 items-center justify-center ${isListOpen && !showTeletext ? 'flex' : 'hidden'}`}
         onClick={() => setIsListOpen(false)}
@@ -720,7 +725,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                         setSelectedIndex(showGroupBtn ? 1 : 0);
                     }}
                 >
-                     <div className="flex justify-center my-1">
+                      <div className="flex justify-center my-1">
                         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
@@ -736,7 +741,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         </div>
       </div>
 
-      {/* CONTROLS OVERLAY (Denna låg också utanför!) */}
+      {/* CONTROLS OVERLAY */}
       <div className={`absolute inset-0 pointer-events-none ${showControls && !isListOpen && !showTeletext ? 'opacity-100' : 'opacity-0'}`}>
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-12 flex items-end justify-between">
           <div className="flex items-end gap-6 w-3/4">
@@ -747,14 +752,12 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                <div className="flex items-center gap-4 mb-3">
                    <h1 className="text-4xl font-bold text-white">{channel.name}</h1>
                    
-                   {/* Resolution Badge */}
                    {resolution && (
                        <div className="px-3 py-1.5 rounded-md bg-white/20 border border-white/30 text-sm font-mono text-white font-bold backdrop-blur-md">
                            {resolution}
                        </div>
                    )}
 
-                   {/* Current Quality Badge */}
                    {channel.streams && channel.streams.length > 1 && (
                        <div className="px-4 py-2 rounded-lg bg-purple-600 border-2 border-purple-400 text-xl font-black text-white uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.5)]">
                            {channel.streams[activeStreamIndex]?.quality || 'Multi-Stream'}

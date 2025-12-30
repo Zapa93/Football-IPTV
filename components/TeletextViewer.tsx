@@ -1,188 +1,208 @@
-
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 interface TeletextViewerProps {
   onClose: () => void;
 }
 
 export const TeletextViewer: React.FC<TeletextViewerProps> = ({ onClose }) => {
-  const [page, setPage] = useState<string>("100");
-  const [htmlContent, setHtmlContent] = useState<string>("");
+  const [page, setPage] = useState('100');
+  const [content, setContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [inputBuffer, setInputBuffer] = useState<string>("");
-
-  const pageRef = useRef(page);
-  const bufferRef = useRef(inputBuffer);
+  const [inputBuffer, setInputBuffer] = useState('');
   
-  // Sync refs for event listener
-  useEffect(() => { pageRef.current = page; }, [page]);
-  useEffect(() => { bufferRef.current = inputBuffer; }, [inputBuffer]);
+  // Timeout för inmatning av sidnummer
+  const inputTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // Hämta sidan
   const fetchPage = useCallback(async (pageNum: string) => {
     setLoading(true);
-    setError(false);
-    
-    const targetUrl = `https://www.svt.se/text-tv/api/${pageNum}`;
-
     try {
-      // 1. Try Direct Fetch (Works if CORS is disabled on TV)
-      const res = await fetch(targetUrl, {
-          credentials: 'omit',
-          cache: 'no-store'
-      });
-      
-      if (!res.ok) throw new Error("Direct Fetch Failed");
-      
+      // Vi använder texttv.nu API som är mycket stabilare och CORS-vänligt
+      const res = await fetch(`https://api.texttv.nu/api/get/${pageNum}`);
       const data = await res.json();
-      if (data && data.content && data.content[0]) {
-          setHtmlContent(data.content[0].html);
-      } else {
-          throw new Error("Invalid Data");
-      }
 
-    } catch (directErr) {
-      console.warn("Direct SVT fetch failed, attempting proxy...", directErr);
-      
-      try {
-        // 2. Fallback to CORS Proxy (Works on PC/Strict Browsers)
-        const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
-        const proxyRes = await fetch(proxyUrl);
+      if (Array.isArray(data) && data.length > 0) {
+        // API:et returnerar en array med sidor. Vi tar content från den första.
+        // Vi måste rensa bort vissa länkar som APIet lägger till för att det ska se snyggt ut på TV
+        let rawHtml = data[0].content.join('\n');
         
-        if (!proxyRes.ok) throw new Error("Proxy Fetch Failed");
+        // Ta bort texttv.nu specifika länkar/banners om de finns
+        rawHtml = rawHtml.replace(/<a href="\/(\d+)">/g, '<span class="link" data-page="$1">');
+        rawHtml = rawHtml.replace(/<\/a>/g, '</span>');
         
-        const data = await proxyRes.json();
-        if (data && data.content && data.content[0]) {
-            setHtmlContent(data.content[0].html);
-        } else {
-            throw new Error("Invalid Data from Proxy");
-        }
-      } catch (proxyErr) {
-        console.error("Teletext Proxy Error:", proxyErr);
-        setError(true);
-        setHtmlContent("");
+        setContent(rawHtml);
+      } else {
+        setContent('<div class="error">Sidan saknas / Page not found</div>');
       }
+    } catch (err) {
+      console.error("TextTV Error:", err);
+      setContent('<div class="error">Kunde inte ladda Text-TV / Connection Error</div>');
     } finally {
       setLoading(false);
     }
   }, []);
 
+  // Ladda sida vid start och när page ändras
   useEffect(() => {
     fetchPage(page);
   }, [page, fetchPage]);
 
+  // Hantera tangentbordsinmatning (Fjärrkontroll)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-        const isNav = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', 'Backspace', 'Escape'].includes(e.key);
-        if (isNav) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
+      e.preventDefault();
+      e.stopPropagation();
 
-        const key = e.key;
-        const currentBuffer = bufferRef.current;
+      // Stäng med Back/Exit/Escape
+      if (e.key === 'Backspace' || e.key === 'Escape' || e.keyCode === 461) {
+        onClose();
+        return;
+      }
 
-        // --- CLOSING ---
-        if (key === 'Escape' || key === 'Backspace' || e.keyCode === 461) {
-            onClose();
-            return;
-        }
+      // Navigera +1 / -1
+      if (e.key === 'ArrowRight') {
+        setPage(p => String(parseInt(p) + 1));
+      } else if (e.key === 'ArrowLeft') {
+        setPage(p => String(Math.max(100, parseInt(p) - 1)));
+      } 
+      // Navigera +100 / -100 (Upp/Ner)
+      else if (e.key === 'ArrowUp') {
+        setPage(p => String(parseInt(p) + 100)); // Hoppa snabbt framåt
+      } else if (e.key === 'ArrowDown') {
+         setPage(p => String(Math.max(100, parseInt(p) - 100))); // Hoppa snabbt bakåt
+      }
 
-        // --- NAVIGATION ---
-        if (key === 'ArrowRight') {
-            const next = parseInt(pageRef.current) + 1;
-            setPage(next.toString());
-            return;
+      // Sifferinmatning (0-9)
+      if (/^[0-9]$/.test(e.key)) {
+        const digit = e.key;
+        
+        // Lägg till i buffern
+        const newBuffer = inputBuffer + digit;
+        
+        if (newBuffer.length === 3) {
+           // Vi har 3 siffror (t.ex. "377") -> Gå till sidan direkt
+           setPage(newBuffer);
+           setInputBuffer('');
+           if (inputTimeoutRef.current) clearTimeout(inputTimeoutRef.current);
+        } else {
+           // Vänta på fler siffror
+           setInputBuffer(newBuffer);
+           
+           if (inputTimeoutRef.current) clearTimeout(inputTimeoutRef.current);
+           inputTimeoutRef.current = setTimeout(() => {
+               setInputBuffer(''); // Rensa om man är för långsam
+           }, 3000);
         }
-        if (key === 'ArrowLeft') {
-            const prev = parseInt(pageRef.current) - 1;
-            if (prev >= 100) setPage(prev.toString());
-            return;
-        }
-
-        // --- NUMERIC INPUT ---
-        if (/^[0-9]$/.test(key)) {
-            const newBuffer = currentBuffer + key;
-            if (newBuffer.length === 3) {
-                setPage(newBuffer);
-                setInputBuffer("");
-            } else {
-                setInputBuffer(newBuffer);
-            }
-        }
+      }
+      
+      // Färgknappar (Genvägar)
+      // Röd (403), Grön (404), Gul (405), Blå (406) - Koderna varierar beroende på TV
+      if (e.key === 'Red' || e.key === 'r') setPage('100'); // Index
+      if (e.key === 'Green' || e.key === 'g') setPage('300'); // Sport
+      if (e.key === 'Yellow' || e.key === 'y') setPage('330'); // Resultatbörsen
+      if (e.key === 'Blue' || e.key === 'b') setPage('377'); // Målservice
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose]);
-
-  // Fallback Error Page Content (Simulated Teletext)
-  const errorHtml = `
-    <pre class="root"><span class="bgB W"> ${page} SVT Text </span><br/><br/><br/><span class="Y">     SIDAN SAKNAS / KAN EJ LADDAS</span><br/><br/><span class="W">     Kunde ej hämta sidan ${page}.</span><br/><span class="W">     Kontrollera nätverk eller prova igen.</span><br/><br/><br/><span class="G">     Gå till startsidan 100...</span></pre>
-  `;
-
-  // Loading Page Content
-  const loadingHtml = `
-    <pre class="root"><span class="bgB W"> ${page} SVT Text </span><br/><br/><br/><span class="G">     SÖKER...</span></pre>
-  `;
+    return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+        if (inputTimeoutRef.current) clearTimeout(inputTimeoutRef.current);
+    };
+  }, [inputBuffer, onClose]);
 
   return (
-    <div className="absolute inset-0 z-50 bg-black flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 z-[60] bg-black font-mono flex items-center justify-center">
+      {/* CSS STYLES FÖR TEXT-TV FÄRGER */}
+      <style>{`
+        .teletext-container {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #111; /* Lite mjukare svart */
+            color: #eee;
+            
+            /* --- VIKTIGA ÄNDRINGAR FÖR PROPORTIONER --- */
+            font-size: 3.8vh;     /* Större text så den fyller höjden (25 rader * 3.8 = 95vh) */
+            line-height: 1.0;     /* Inget extra utrymme mellan rader (viktigt för grafik!) */
+            letter-spacing: 0.05em; /* Lite luft mellan tecken */
+            
+            /* Simulera TV-format (dra ut den på bredden) */
+            transform: scaleX(1.3); 
+            transform-origin: center top;
+            
+            white-space: pre;
+            overflow: hidden;
+            display: inline-block;
+            padding: 20px 40px; /* Mer padding på sidorna pga scaleX */
+            border: 2px solid #333;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        }
         
-        {/* INPUT OVERLAY (Retro Style) */}
-        {inputBuffer && (
-            <div className="absolute top-[10%] left-[10%] z-50 bg-black border-2 border-white px-4 py-2">
-                <span className="font-mono text-yellow-400 text-4xl font-bold tracking-widest">
-                    P{inputBuffer}{"_".repeat(3 - inputBuffer.length)}
-                </span>
-            </div>
-        )}
+        /* TextTV.nu classes */
+        .Y { color: #ff0; }
+        .C { color: #0ff; }
+        .G { color: #0f0; }
+        .R { color: #f00; }
+        .W { color: #fff; }
+        .B { color: #00f; }
+        .M { color: #f0f; }
+        .dh { font-size: 1.2em; font-weight: bold; }
+        .bgB { background-color: #00f; }
+        .bgR { background-color: #f00; }
+        .bgG { background-color: #0f0; }
+        
+        .top-bar {
+            position: absolute;
+            top: 10px;
+            left: 0; 
+            right: 0;
+            text-align: center;
+            font-size: 2vh;
+            color: #888;
+            z-index: 10;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .input-overlay {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 4vh;
+            color: yellow;
+            font-family: monospace;
+            font-weight: bold;
+            background: rgba(0,0,0,0.8);
+            padding: 5px 15px;
+            border: 1px solid yellow;
+            z-index: 20;
+        }
 
-        {/* TELETEXT RENDERER */}
-        {/* We scale it up significantly because raw teletext HTML is tiny */}
-        <div className="teletext-container transform scale-[2.2] sm:scale-[1.5] md:scale-[2.5] origin-center">
-             <div dangerouslySetInnerHTML={{ __html: loading ? loadingHtml : error ? errorHtml : htmlContent }} />
-        </div>
+        /* Dölj scrollbars om de råkar dyka upp */
+        .teletext-container::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
 
-        {/* CSS MAPPING FOR SVT CLASSNAMES */}
-        <style>{`
-            .teletext-container {
-                font-family: 'Courier New', Courier, monospace;
-                font-weight: bold;
-                background-color: black;
-                color: white;
-                line-height: 1.25; /* Match typical teletext line height */
-                image-rendering: pixelated; /* Keep it blocky */
-            }
-            
-            .teletext-container pre {
-                margin: 0;
-                white-space: pre;
-                background-color: black;
-            }
+      {/* HEADER INFO */}
+      <div className="top-bar">
+         <span>SVT TEXT {page}</span>
+         <span className="ml-4 text-xs opacity-50">(Arrows to navigate, 0-9 to search)</span>
+      </div>
 
-            .teletext-container span { display: inline; }
-            .teletext-container a { text-decoration: none; color: inherit; }
+      {/* INPUT FEEDBACK (Visar siffrorna du skriver in, t.ex. "3..") */}
+      {inputBuffer && (
+          <div className="input-overlay">{inputBuffer}_</div>
+      )}
 
-            /* SVT API Colors */
-            .W { color: #ffffff; }
-            .Y { color: #ffff00; }
-            .C { color: #00ffff; }
-            .G { color: #00ff00; }
-            .M { color: #ff00ff; }
-            .R { color: #ff0000; }
-            .B { color: #0000ff; }
-            .Bl { color: #000000; }
-            
-            .bgW { background-color: #ffffff; }
-            .bgY { background-color: #ffff00; }
-            .bgC { background-color: #00ffff; }
-            .bgG { background-color: #00ff00; }
-            .bgM { background-color: #ff00ff; }
-            .bgR { background-color: #ff0000; }
-            .bgB { background-color: #0000ff; }
-            .bgBl { background-color: #000000; }
-        `}</style>
+      {/* MAIN CONTENT */}
+      {loading ? (
+        <div className="text-xl text-green-500 animate-pulse">Laddar sida {page}...</div>
+      ) : (
+        <div 
+            className="teletext-container shadow-2xl"
+            dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
     </div>
   );
 };
