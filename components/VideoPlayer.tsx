@@ -33,7 +33,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   const [resolution, setResolution] = useState<string | null>(null);
   
   const [activeStreamIndex, setActiveStreamIndex] = useState(0);
-  const [streamSwitchToast, setStreamSwitchToast] = useState<string | null>(null);
   
   const [scrollTop, setScrollTop] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -52,7 +51,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   });
 
   const controlsTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const streamToastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const retryTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hlsRef = useRef<any>(null);
   
@@ -66,9 +64,17 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   useEffect(() => { currentChannelListRef.current = currentChannelList; }, [currentChannelList]);
   useEffect(() => { playlistRef.current = playlist; }, [playlist]);
 
-  const ITEM_HEIGHT = 65; 
+  // --- SCROLL FIX (När listan öppnas/stängs) ---
+  useLayoutEffect(() => {
+      // Eftersom listan alltid finns i DOM (men är invisible) kan vi sätta scroll direkt
+      if (listContainerRef.current) {
+          listContainerRef.current.scrollTop = scrollTop;
+      }
+  }, [scrollTop, isListOpen]);
+
+  const ITEM_HEIGHT = 100; 
   const LIST_HEIGHT = 900; 
-  const RENDER_BUFFER = 10;
+  const RENDER_BUFFER = 40; 
 
   // --- SYNC CHANNEL ---
   if (channel.id !== prevChannelId) {
@@ -114,7 +120,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
   // --- EPG UPDATE ---
   useEffect(() => {
      const updateEPG = () => {
-        // Hämta EPG för den kanal vi tittar på just nu
         if (channel.tvgId && epgData[channel.tvgId]) {
            const prog = getCurrentProgram(epgData[channel.tvgId]);
            const next = getNextProgram(epgData[channel.tvgId]);
@@ -129,11 +134,10 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
             setCurrentProgram(null); setNextProgram(null); setProgress(0);
         }
      };
-     
-     updateEPG(); // Kör direkt
-     const interval = setInterval(updateEPG, 30000); // Uppdatera var 30e sekund
+     updateEPG(); 
+     const interval = setInterval(updateEPG, 30000);
      return () => clearInterval(interval);
-  }, [channel, epgData]); // Körs om kanal eller EPG-data ändras
+  }, [channel, epgData]); 
 
   // --- VIDEO LOGIC ---
   useEffect(() => {
@@ -144,7 +148,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     if (retryTimeoutRef.current) clearTimeout(retryTimeoutRef.current);
     
     setIsLoading(true);
-    setResolution(null);
+    setResolution(null); 
 
     const loadStream = () => {
         setIsLoading(true);
@@ -156,12 +160,25 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         if (video.canPlayType('application/vnd.apple.mpegurl')) {
           video.src = url;
           video.load();
+          const onResize = () => {
+             if (video.videoHeight) setResolution(`${video.videoHeight}p`);
+          };
+          video.addEventListener('resize', onResize);
+          return () => video.removeEventListener('resize', onResize);
+
         } else if (window.Hls && window.Hls.isSupported()) {
           const hls = new window.Hls({ enableWorker: true, lowLatencyMode: true });
           hlsRef.current = hls;
           hls.loadSource(url);
           hls.attachMedia(video);
+          
           hls.on(window.Hls.Events.MANIFEST_PARSED, () => { setIsLoading(false); video.play().catch(() => {}); });
+          
+          hls.on(window.Hls.Events.LEVEL_SWITCHED, (_: any, data: any) => {
+              const level = hls.levels[data.level];
+              if (level) setResolution(`${level.height}p`);
+          });
+
           hls.on(window.Hls.Events.ERROR, (_event: any, data: any) => {
             if (data.fatal) { hls.destroy(); retryTimeoutRef.current = setTimeout(loadStream, 3000); }
           });
@@ -170,7 +187,11 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         }
     };
 
-    const handleReady = () => { setIsLoading(false); if (video.paused) video.play().catch(() => {}); };
+    const handleReady = () => { 
+        setIsLoading(false); 
+        if (video.paused) video.play().catch(() => {});
+        if (video.videoHeight) setResolution(`${video.videoHeight}p`); 
+    };
     const handleError = () => { retryTimeoutRef.current = setTimeout(loadStream, 3000); };
 
     video.addEventListener('canplay', handleReady);
@@ -193,8 +214,13 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
     const handleKeyDown = (e: KeyboardEvent) => {
       resetTimer(); 
 
-      if (e.key === 'b' || e.key === 'Blue') {
-          e.preventDefault(); setShowTeletext(p => !p); return;
+      const isBlue = e.key === 'b' || e.key === 'Blue' || e.keyCode === 406;
+      const isTeletext = e.key === 'Teletext' || e.keyCode === 459; 
+      
+      if (isBlue || isTeletext) {
+          e.preventDefault(); 
+          setShowTeletext(p => !p); 
+          return;
       }
       if (showTeletext) return;
 
@@ -204,6 +230,18 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
       const isDown = e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === 'ChannelDown';
       const isLeft = e.key === 'ArrowLeft';
       const isRight = e.key === 'ArrowRight';
+
+      if (e.key === '0') {
+        if (prevChannelId && prevChannelId !== channel.id) {
+            const prevChannel = allChannels.find(c => c.id === prevChannelId) || 
+                                globalChannels.find(c => c.id === prevChannelId);
+            if (prevChannel) {
+                onChannelSelect(prevChannel);
+                setPrevChannelId(channel.id); 
+            }
+        }
+        return;
+      }
 
       if (isBack) {
           e.preventDefault();
@@ -232,29 +270,21 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
               if (prev !== idx) onChannelSelect(list[prev]);
           } else if (isEnter || isRight) {
               setSelectedIndex(idx !== -1 ? idx : 0);
+              const targetTop = Math.max(0, (idx !== -1 ? idx : 0) * ITEM_HEIGHT - LIST_HEIGHT / 2 + ITEM_HEIGHT / 2);
+              setScrollTop(targetTop);
               setViewMode('channels');
               setFocusArea('list');
               setIsListOpen(true);
-              // Auto-center scroll
-              setTimeout(() => {
-                  if (listContainerRef.current) {
-                      const top = Math.max(0, idx * ITEM_HEIGHT - LIST_HEIGHT / 2 + ITEM_HEIGHT / 2);
-                      listContainerRef.current.scrollTop = top;
-                      setScrollTop(top);
-                  }
-              }, 10);
           }
           return;
       }
 
-      // LIST NAVIGATION
       if (isListOpenRef.current) {
           const listLen = viewMode === 'channels' ? currentChannelListRef.current.length : playlistRef.current.length;
           
           if (isUp) {
               setSelectedIndex(prev => {
                   const n = Math.max(0, prev - 1);
-                  // Scroll logic: Keep selected item visible
                   if (listContainerRef.current) {
                       const itemTop = n * ITEM_HEIGHT;
                       if (itemTop < listContainerRef.current.scrollTop) {
@@ -266,7 +296,6 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
           } else if (isDown) {
               setSelectedIndex(prev => {
                   const n = Math.min(listLen - 1, prev + 1);
-                  // Scroll logic: Keep selected item visible at bottom
                   if (listContainerRef.current) {
                       const itemBottom = (n + 1) * ITEM_HEIGHT;
                       if (itemBottom > listContainerRef.current.scrollTop + LIST_HEIGHT) {
@@ -308,14 +337,17 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
 
   // --- RENDER LIST ---
   const renderList = () => {
-      if (!isListOpen) return null;
-      
       const list = viewMode === 'channels' ? currentChannelList : playlist;
       const totalHeight = list.length * ITEM_HEIGHT;
-      const start = Math.floor(scrollTop / ITEM_HEIGHT);
-      const end = Math.min(list.length, start + Math.ceil(LIST_HEIGHT / ITEM_HEIGHT) + RENDER_BUFFER);
-      const visible = list.slice(Math.max(0, start - 2), end); // Lite buffert uppåt
-      const paddingTop = Math.max(0, start - 2) * ITEM_HEIGHT;
+      
+      const visibleNodeCount = Math.ceil(LIST_HEIGHT / ITEM_HEIGHT);
+      const startNode = Math.floor(scrollTop / ITEM_HEIGHT);
+      
+      const renderStart = Math.max(0, startNode - RENDER_BUFFER);
+      const renderEnd = Math.min(list.length, startNode + visibleNodeCount + RENDER_BUFFER);
+      
+      const visible = list.slice(renderStart, renderEnd); 
+      const paddingTop = renderStart * ITEM_HEIGHT;
 
       return (
           <div 
@@ -326,7 +358,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
           >
               <div style={{ height: totalHeight, paddingTop }}>
                   {visible.map((item, i) => {
-                      const index = Math.max(0, start - 2) + i;
+                      const index = renderStart + i; 
                       const isSel = index === selectedIndex && focusArea === 'list';
                       
                       if (viewMode === 'groups') {
@@ -344,9 +376,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                           );
                       } else {
                           const c = item as Channel;
-                          // Hämta EPG för VARJE kanal i listan
                           const prog = c.tvgId ? getCurrentProgram(epgData[c.tvgId]) : null;
-                          // Beräkna progress för list-objektet
+                          const nextProg = c.tvgId ? getNextProgram(epgData[c.tvgId]) : null;
+
                           let itemProgress = 0;
                           if (prog) {
                               const t = prog.end.getTime() - prog.start.getTime();
@@ -358,8 +390,9 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                               <PlayerChannelItem 
                                 key={c.id} channel={c} index={index} itemHeight={ITEM_HEIGHT} isSelected={isSel}
                                 isActiveChannel={c.id === channel.id}
-                                currentProg={prog} // Skicka med programinfo här!
-                                progress={itemProgress} // Skicka med progressbar
+                                currentProg={prog} 
+                                nextProg={nextProg}
+                                progress={itemProgress} 
                                 onClick={() => { if (c.id !== channel.id) onChannelSelect(c); else setIsListOpen(false); }}
                                 onMouseEnter={() => { setSelectedIndex(index); if (focusArea==='sidebar') setFocusArea('list'); }}
                               />
@@ -394,12 +427,18 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
         </div>
       )}
 
-      {/* LIST MODAL */}
-      {isListOpen && !showTeletext && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50" onClick={() => setIsListOpen(false)}>
-              <div className="flex gap-4 h-[900px]" onClick={e => e.stopPropagation()}>
+      {/* LIST MODAL - ALWAYS RENDERED, VISIBILITY TOGGLED */}
+      {!showTeletext && (
+          <div 
+            className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/50 ${isListOpen ? 'visible' : 'invisible'}`}
+            onClick={() => setIsListOpen(false)}
+          >
+              <div 
+                className="flex gap-4 h-[900px]"
+                onClick={e => e.stopPropagation()}
+              >
                   {/* SIDEBAR */}
-                  <div className={`w-[160px] bg-[#111] rounded-xl border border-white/10 p-2 flex flex-col gap-2 ${focusArea === 'sidebar' ? 'border-white' : ''}`}>
+                  <div className={`w-[160px] bg-black/90 rounded-xl border border-white/10 p-2 flex flex-col gap-2 ${focusArea === 'sidebar' ? 'border-white' : ''}`}>
                       {viewMode === 'channels' && playlist.length > 1 && (
                           <div className={`p-4 rounded text-center cursor-pointer ${focusArea==='sidebar' && selectedIndex===0 ? 'bg-purple-600 text-white' : 'bg-white/10 text-gray-300'}`}
                                onMouseEnter={() => { setFocusArea('sidebar'); setSelectedIndex(0); }}
@@ -415,14 +454,14 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                   </div>
 
                   {/* LIST */}
-                  <div className="w-[950px] bg-[#151515] rounded-xl border border-white/10 flex flex-col overflow-hidden">
+                  <div className="w-[950px] bg-black/85 rounded-xl border border-white/10 flex flex-col overflow-hidden backdrop-grayscale">
                       {renderList()}
                   </div>
               </div>
           </div>
       )}
 
-      {/* CONTROLS OVERLAY (Nu med EPG!) */}
+      {/* CONTROLS OVERLAY */}
       {showControls && !isListOpen && !showTeletext && (
         <div className="absolute inset-0 pointer-events-none z-50 flex flex-col justify-end p-12 bg-gradient-to-t from-black/90 to-transparent">
             <div className="flex items-end gap-6">
@@ -432,11 +471,15 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                 <div className="flex-1">
                     <h1 className="text-5xl font-bold text-white mb-3 shadow-lg">{channel.name}</h1>
                     
-                    {/* EPG INFORMATION PÅ INFOBAREN */}
                     {currentProgram ? (
                         <div className="animate-fade-in-up">
                             <div className="flex items-center gap-3 mb-2">
                                 <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded uppercase">Live</span>
+                                {resolution && (
+                                    <span className="bg-white/20 text-white text-xs font-bold px-2 py-1 rounded uppercase border border-white/10">
+                                        {resolution}
+                                    </span>
+                                )}
                                 <div className="text-3xl text-gray-100 font-medium truncate">{currentProgram.title}</div>
                             </div>
                             <div className="flex items-center gap-3 text-lg text-gray-400 mb-2">
@@ -445,12 +488,17 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({ channel, activeCategor
                                     <span className="text-gray-500 pl-3 border-l border-gray-600">Next: {nextProgram.title}</span>
                                 )}
                             </div>
+                            
                             {/* Progress Bar */}
                             <div className="w-1/2 h-1.5 bg-gray-700 rounded-full overflow-hidden mt-1">
                                 <div className="h-full bg-purple-500" style={{ width: `${progress}%` }}></div>
                             </div>
+                            
+                            {/* BESKRIVNING */}
                             {currentProgram.description && (
-                                <p className="text-gray-400 text-sm mt-2 line-clamp-1 opacity-80">{currentProgram.description}</p>
+                                <p className="text-gray-300 text-2xl mt-4 leading-snug font-medium max-w-[80%] drop-shadow-md">
+                                    {currentProgram.description}
+                                </p>
                             )}
                         </div>
                     ) : (

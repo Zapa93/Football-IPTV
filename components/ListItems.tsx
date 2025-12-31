@@ -1,9 +1,7 @@
-
 import React, { memo } from 'react';
-import { Channel, ChannelGroup, EPGProgram } from '../types';
 import { DEFAULT_LOGO } from '../constants';
 
-// --- HOME SCREEN COMPONENTS ---
+// --- HOME SCREEN COMPONENTS (Huvudmenyn) ---
 
 export const GroupItem = memo(({ item, isFocused, onClick, onMouseEnter }: any) => {
   return (
@@ -15,7 +13,7 @@ export const GroupItem = memo(({ item, isFocused, onClick, onMouseEnter }: any) 
         width: '100%',
         height: `${item.height}px`,
         transform: `translateY(${item.top}px)`,
-        willChange: 'transform' // GPU Hint
+        willChange: 'transform'
       }}
       className={`group flex items-center px-8 cursor-pointer select-none ${isFocused ? 'z-10' : ''}`}
       onClick={onClick}
@@ -37,7 +35,6 @@ export const GroupItem = memo(({ item, isFocused, onClick, onMouseEnter }: any) 
 });
 
 export const ChannelItem = memo(({ item, currentProg, isFocused, onClick, onMouseEnter }: any) => {
-    // Progress calculation
     let progress = 0;
     if (currentProg) {
         const t = currentProg.end.getTime() - currentProg.start.getTime();
@@ -61,7 +58,6 @@ export const ChannelItem = memo(({ item, currentProg, isFocused, onClick, onMous
             onMouseEnter={onMouseEnter}
         >
             <div className={`w-full h-full flex items-center bg-[#111] rounded-xl overflow-hidden border-2 ${isFocused ? 'border-white' : 'border-white/5'}`}>
-                {/* Logo Section */}
                 <div className="h-full w-[140px] bg-gray-300 flex items-center justify-center shrink-0 border-r border-white/10 p-2">
                     <img 
                         src={item.data.logo} 
@@ -70,7 +66,6 @@ export const ChannelItem = memo(({ item, currentProg, isFocused, onClick, onMous
                     />
                 </div>
                 
-                {/* Info Section */}
                 <div className="flex-1 px-8 min-w-0 flex flex-col justify-center h-full">
                     <div className="flex items-baseline justify-between">
                         <div className="flex items-center gap-6 min-w-0">
@@ -84,7 +79,6 @@ export const ChannelItem = memo(({ item, currentProg, isFocused, onClick, onMous
                         )}
                     </div>
 
-                    {/* EPG Info */}
                     <div className="pl-[72px] mt-1.5 min-w-0">
                         {currentProg ? (
                             <div className="flex flex-col gap-1.5">
@@ -103,7 +97,7 @@ export const ChannelItem = memo(({ item, currentProg, isFocused, onClick, onMous
     );
 });
 
-// --- PLAYER COMPONENTS ---
+// --- PLAYER COMPONENTS (Overlay-listan i videospelaren) ---
 
 export const PlayerGroupItem = memo(({ group, index, itemHeight, isSelected, onClick, onMouseEnter }: any) => {
     return (
@@ -138,7 +132,7 @@ export const PlayerGroupItem = memo(({ group, index, itemHeight, isSelected, onC
     );
 });
 
-export const PlayerChannelItem = memo(({ channel, index, itemHeight, isSelected, isActiveChannel, currentProg, progress, onClick, onMouseEnter }: any) => {
+export const PlayerChannelItem = memo(({ channel, index, itemHeight, isSelected, isActiveChannel, currentProg, nextProg, progress, onClick, onMouseEnter }: any) => {
     return (
         <div 
             onMouseEnter={onMouseEnter}
@@ -149,40 +143,70 @@ export const PlayerChannelItem = memo(({ channel, index, itemHeight, isSelected,
                 left: 0, right: 0, 
                 height: `${itemHeight}px` 
             }}
-            className={`flex items-center gap-0 cursor-pointer overflow-hidden ${isSelected ? 'border-2 border-white z-10' : 'border-2 border-transparent'} ${isActiveChannel ? 'text-green-400' : 'text-gray-200'}`}
+            className={`flex items-center gap-0 cursor-pointer overflow-hidden ${isSelected ? 'border-2 border-white z-10 bg-white/10' : 'border-2 border-transparent'} ${isActiveChannel ? 'text-green-400' : 'text-gray-200'}`}
         >
-            <div className="h-full w-[100px] bg-gray-300 flex items-center justify-center flex-shrink-0 border-r border-white/5 p-2">
-            <img 
-                src={channel.logo} 
-                className="w-full h-full object-contain" 
-                onError={(e) => (e.target as HTMLImageElement).src = DEFAULT_LOGO} 
-            />
+            {/* LOGO */}
+            <div className="h-full w-[110px] bg-gray-300 flex items-center justify-center flex-shrink-0 border-r border-white/5 p-3">
+                <img 
+                    src={channel.logo} 
+                    className="w-full h-full object-contain" 
+                    onError={(e) => (e.target as HTMLImageElement).src = DEFAULT_LOGO} 
+                />
             </div>
-            <div className="flex-1 min-w-0 pl-5 flex flex-col justify-center h-full bg-black/20">
-            <div className="flex justify-between items-baseline pr-6">
-                <div className="flex items-center gap-4 overflow-hidden">
-                    <span 
-                        className="text-3xl font-mono font-bold text-white flex-shrink-0"
-                        style={{ textShadow: '2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}
-                    >
-                        {index + 1}
-                    </span>
-                    <p className={`font-bold truncate ${isSelected ? 'text-2xl text-white' : 'text-2xl text-gray-200'}`}>{channel.name}</p>
+
+            {/* INFO CONTENT */}
+            <div className="flex-1 min-w-0 pl-6 flex flex-col justify-center h-full relative">
+                
+                {/* RAD 1: Kanalnummer, Namn & Tid */}
+                <div className="flex justify-between items-end pr-8 mb-0">
+                    <div className="flex items-center gap-4 overflow-hidden">
+                        <span className="text-3xl font-mono font-bold text-white flex-shrink-0">
+                            {index + 1}
+                        </span>
+                        <p className={`font-bold truncate ${isSelected ? 'text-2xl text-white' : 'text-2xl text-gray-200'}`}>{channel.name}</p>
+                    </div>
+                    {currentProg && (
+                        <span className="text-base text-gray-400 shrink-0 font-medium bg-black/40 px-2 rounded">
+                            {currentProg.start.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', hour12: false})}
+                        </span>
+                    )}
                 </div>
-                {currentProg && <span className="text-base text-gray-400 shrink-0">{currentProg.start.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', hour12: false})}</span>}
+
+                {/* EPG Info - Tillbaka till rent utseende */}
+                {currentProg ? (
+                    <div className="flex flex-col gap-0 pr-8">
+                            
+                            {/* TITEL med fade */}
+                            <p 
+                                className={`text-xl font-medium leading-none mb-0.5 whitespace-nowrap overflow-hidden ${isSelected ? 'text-gray-100' : 'text-gray-300'}`}
+                                style={{ 
+                                    maskImage: 'linear-gradient(to right, black 85%, transparent 100%)',
+                                    WebkitMaskImage: 'linear-gradient(to right, black 85%, transparent 100%)' 
+                                }}
+                            >
+                                {currentProg.title}
+                            </p>
+                            
+                            {/* Progress Bar */}
+                            <div className="h-1 w-full bg-white/10 rounded-full overflow-hidden my-0.5">
+                                <div className="h-full bg-purple-500" style={{ width: `${progress}%` }}></div>
+                            </div>
+                            
+                            {/* Nästa program */}
+                            {nextProg && (
+                                <p className={`text-base truncate leading-tight ${isSelected ? 'text-gray-400' : 'text-gray-500'}`}>
+                                    <span className="opacity-70 font-bold tracking-wide text-[10px] uppercase mr-1">Next</span> 
+                                    {nextProg.start.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit', hour12: false})} - {nextProg.title}
+                                </p>
+                            )}
+                    </div>
+                ) : (
+                    <p className="text-lg text-gray-500 truncate mt-0.5 italic">Ingen programinformation</p>
+                )}
             </div>
-            {currentProg ? (
-                <div className="flex flex-col gap-1 mt-1 pr-6">
-                        <p className={`text-lg truncate leading-tight ${isSelected ? 'text-gray-300' : 'text-gray-400'}`}>{currentProg.title}</p>
-                        <div className="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-purple-500" style={{ width: `${progress}%` }}></div>
-                        </div>
-                </div>
-            ) : (
-                <p className="text-sm text-gray-500 truncate leading-tight pl-0.5 mt-1 italic">No Program Info</p>
-            )}
-            </div>
-            {isActiveChannel && <div className="w-3 h-3 rounded-full bg-green-500 shadow-lg shadow-green-500/50 mr-4 shrink-0"></div>}
+            
+            {/* Active Indicator */}
+            {isActiveChannel && <div className="w-3 h-3 rounded-full bg-green-500 mr-6 shrink-0"></div>}
         </div>
     );
 });

@@ -6,101 +6,142 @@ interface TeletextViewerProps {
 
 export const TeletextViewer: React.FC<TeletextViewerProps> = ({ onClose }) => {
   const [page, setPage] = useState('100');
-  const [content, setContent] = useState<string>('');
+  const [fullContent, setFullContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [inputBuffer, setInputBuffer] = useState('');
+  const [subPageCount, setSubPageCount] = useState(0);
   
-  // Timeout för inmatning av sidnummer
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const inputTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Hämta sidan
   const fetchPage = useCallback(async (pageNum: string) => {
     setLoading(true);
+    setFullContent('');
+    
+    // Återställ scroll när vi byter sida
+    if (scrollContainerRef.current) {
+        scrollContainerRef.current.scrollTop = 0;
+    }
+
     try {
-      // Vi använder texttv.nu API som är mycket stabilare och CORS-vänligt
       const res = await fetch(`https://api.texttv.nu/api/get/${pageNum}`);
       const data = await res.json();
 
       if (Array.isArray(data) && data.length > 0) {
-        // API:et returnerar en array med sidor. Vi tar content från den första.
-        // Vi måste rensa bort vissa länkar som APIet lägger till för att det ska se snyggt ut på TV
-        let rawHtml = data[0].content.join('\n');
+        setSubPageCount(data.length);
         
-        // Ta bort texttv.nu specifika länkar/banners om de finns
-        rawHtml = rawHtml.replace(/<a href="\/(\d+)">/g, '<span class="link" data-page="$1">');
-        rawHtml = rawHtml.replace(/<\/a>/g, '</span>');
-        
-        setContent(rawHtml);
+        const combinedHtml = data.map((subPage: any, index: number) => {
+            let html = Array.isArray(subPage.content) ? subPage.content.join('\n') : '';
+            
+            html = html.replace(/<a href="\/(\d+)">/g, '<span class="link" data-page="$1">');
+            html = html.replace(/<\/a>/g, '</span>');
+
+            if (index < data.length - 1) {
+                // Avdelare mellan sidor
+                html += '\n\n' + '─'.repeat(40) + '\n\n'; 
+            }
+            return html;
+        }).join('');
+
+        setFullContent(combinedHtml);
       } else {
-        setContent('<div class="error">Sidan saknas / Page not found</div>');
+        setFullContent('<div class="error">Sidan saknas / Page not found</div>');
+        setSubPageCount(0);
       }
     } catch (err) {
       console.error("TextTV Error:", err);
-      setContent('<div class="error">Kunde inte ladda Text-TV / Connection Error</div>');
+      setFullContent('<div class="error">Kunde inte ladda Text-TV / Connection Error</div>');
     } finally {
       setLoading(false);
     }
   }, []);
 
-  // Ladda sida vid start och när page ändras
   useEffect(() => {
     fetchPage(page);
   }, [page, fetchPage]);
 
-  // Hantera tangentbordsinmatning (Fjärrkontroll)
+  // Fokusera scrollcontainern för att tangenter ska funka säkert
+  useEffect(() => {
+      if (scrollContainerRef.current) {
+          scrollContainerRef.current.focus();
+      }
+  }, [loading]);
+
+  // --- NAVIGATION ---
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       e.preventDefault();
       e.stopPropagation();
 
-      // Stäng med Back/Exit/Escape
       if (e.key === 'Backspace' || e.key === 'Escape' || e.keyCode === 461) {
         onClose();
         return;
       }
 
-      // Navigera +1 / -1
-      if (e.key === 'ArrowRight') {
-        setPage(p => String(parseInt(p) + 1));
-      } else if (e.key === 'ArrowLeft') {
-        setPage(p => String(Math.max(100, parseInt(p) - 1)));
-      } 
-      // Navigera +100 / -100 (Upp/Ner)
-      else if (e.key === 'ArrowUp') {
-        setPage(p => String(parseInt(p) + 100)); // Hoppa snabbt framåt
-      } else if (e.key === 'ArrowDown') {
-         setPage(p => String(Math.max(100, parseInt(p) - 100))); // Hoppa snabbt bakåt
+      const scrollAmount = 300; // Mängd att scrolla (pixlar)
+
+      // SCROLL UPP (Pil Upp / P+ / PageUp / Kod 38)
+      if (
+          e.key === 'ArrowUp' || 
+          e.key === 'ChannelUp' || 
+          e.key === 'PageUp' || 
+          e.keyCode === 38 || 
+          e.keyCode === 33 || 
+          e.keyCode === 427
+      ) {
+          if (scrollContainerRef.current) {
+              scrollContainerRef.current.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+          }
+          return; // Viktigt: Avbryt här så vi inte gör något annat
       }
 
-      // Sifferinmatning (0-9)
+      // SCROLL NER (Pil Ner / P- / PageDown / Kod 40)
+      if (
+          e.key === 'ArrowDown' || 
+          e.key === 'ChannelDown' || 
+          e.key === 'PageDown' || 
+          e.keyCode === 40 || 
+          e.keyCode === 34 || 
+          e.keyCode === 428
+      ) {
+          if (scrollContainerRef.current) {
+              scrollContainerRef.current.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+          }
+          return;
+      }
+
+      // BYT SIDA (Vänster / Höger)
+      if (e.key === 'ArrowRight' || e.keyCode === 39) setPage(p => String(parseInt(p) + 1));
+      if (e.key === 'ArrowLeft' || e.keyCode === 37) setPage(p => String(Math.max(100, parseInt(p) - 1)));
+
+      // SIFFROR
+      let digit = '';
       if (/^[0-9]$/.test(e.key)) {
-        const digit = e.key;
-        
-        // Lägg till i buffern
+          digit = e.key;
+      } else if (e.keyCode >= 48 && e.keyCode <= 57) {
+          digit = String(e.keyCode - 48);
+      }
+
+      if (digit) {
         const newBuffer = inputBuffer + digit;
-        
         if (newBuffer.length === 3) {
-           // Vi har 3 siffror (t.ex. "377") -> Gå till sidan direkt
            setPage(newBuffer);
            setInputBuffer('');
            if (inputTimeoutRef.current) clearTimeout(inputTimeoutRef.current);
         } else {
-           // Vänta på fler siffror
            setInputBuffer(newBuffer);
-           
            if (inputTimeoutRef.current) clearTimeout(inputTimeoutRef.current);
            inputTimeoutRef.current = setTimeout(() => {
-               setInputBuffer(''); // Rensa om man är för långsam
-           }, 3000);
+               setInputBuffer(''); 
+           }, 4000); 
         }
       }
       
-      // Färgknappar (Genvägar)
-      // Röd (403), Grön (404), Gul (405), Blå (406) - Koderna varierar beroende på TV
-      if (e.key === 'Red' || e.key === 'r') setPage('100'); // Index
-      if (e.key === 'Green' || e.key === 'g') setPage('300'); // Sport
-      if (e.key === 'Yellow' || e.key === 'y') setPage('330'); // Resultatbörsen
-      if (e.key === 'Blue' || e.key === 'b') setPage('377'); // Målservice
+      // FÄRGER
+      if (e.key === 'Red' || e.key === 'r' || e.keyCode === 403) setPage('100'); 
+      if (e.key === 'Green' || e.key === 'g' || e.keyCode === 404) setPage('300'); 
+      if (e.key === 'Yellow' || e.key === 'y' || e.keyCode === 405) setPage('330'); 
+      if (e.key === 'Blue' || e.key === 'b' || e.keyCode === 406) setPage('377'); 
     };
 
     window.addEventListener('keydown', handleKeyDown);
@@ -108,101 +149,126 @@ export const TeletextViewer: React.FC<TeletextViewerProps> = ({ onClose }) => {
         window.removeEventListener('keydown', handleKeyDown);
         if (inputTimeoutRef.current) clearTimeout(inputTimeoutRef.current);
     };
-  }, [inputBuffer, onClose]);
+  }, [inputBuffer, onClose]); // Tog bort subPageCount dependency så scroll alltid är aktiv
 
   return (
-    <div className="fixed inset-0 z-[60] bg-black font-mono flex items-center justify-center">
-      {/* CSS STYLES FÖR TEXT-TV FÄRGER */}
+    <div className="fixed inset-0 z-[60] bg-black font-mono">
       <style>{`
-        .teletext-container {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #111; /* Lite mjukare svart */
-            color: #eee;
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+        .scroll-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            outline: none;
             
-            /* --- VIKTIGA ÄNDRINGAR FÖR PROPORTIONER --- */
-            font-size: 3.8vh;     /* Större text så den fyller höjden (25 rader * 3.8 = 95vh) */
-            line-height: 1.0;     /* Inget extra utrymme mellan rader (viktigt för grafik!) */
-            letter-spacing: 0.05em; /* Lite luft mellan tecken */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .scroll-wrapper::-webkit-scrollbar { display: none; }
+
+        .teletext-content {
+            font-family: 'VT323', monospace; 
+            background-color: transparent;
+            color: #e0e0e0;
             
-            /* Simulera TV-format (dra ut den på bredden) */
-            transform: scaleX(1.3); 
-            transform-origin: center top;
+            display: block;
+            margin: 0 auto;
+            
+            /* Layout & Position */
+            margin-top: 1.5vh;
+            margin-bottom: 5vh;
+            
+            /* Skalning för 16:9 bredd */
+            transform: scale(1.7, 1.25); 
+            transform-origin: top center;
             
             white-space: pre;
-            overflow: hidden;
-            display: inline-block;
-            padding: 20px 40px; /* Mer padding på sidorna pga scaleX */
-            border: 2px solid #333;
-            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            text-align: left;
+            
+            font-size: 3.1vh;     
+            line-height: 1.05;     
+            letter-spacing: 0.5px;
+            
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            width: fit-content;
         }
         
-        /* TextTV.nu classes */
-        .Y { color: #ff0; }
-        .C { color: #0ff; }
-        .G { color: #0f0; }
-        .R { color: #f00; }
-        .W { color: #fff; }
-        .B { color: #00f; }
-        .M { color: #f0f; }
-        .dh { font-size: 1.2em; font-weight: bold; }
-        .bgB { background-color: #00f; }
-        .bgR { background-color: #f00; }
-        .bgG { background-color: #0f0; }
-        
+        /* Färger */
+        .Y { color: #ffff00; }
+        .C { color: #00ffff; }
+        .G { color: #00ff00; }
+        .R { color: #ff0000; }
+        .W { color: #ffffff; }
+        .B { color: #6666ff; }
+        .M { color: #ff00ff; }
+        .dh { font-weight: bold; color: #ffff00; }
+        .bgB { background-color: #0000aa; color: white; }
+        .bgR { background-color: #aa0000; color: white; }
+        .bgG { background-color: #00aa00; color: white; }
+        .link { border-bottom: 2px solid currentColor; }
+
         .top-bar {
-            position: absolute;
-            top: 10px;
-            left: 0; 
-            right: 0;
-            text-align: center;
-            font-size: 2vh;
-            color: #888;
-            z-index: 10;
-            font-family: sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .input-overlay {
-            position: absolute;
-            top: 20px;
-            right: 40px;
+            position: fixed;
+            top: 1.5vh;
+            right: 5vw;
             font-size: 4vh;
-            color: yellow;
-            font-family: monospace;
-            font-weight: bold;
+            color: #888;
+            z-index: 100;
+            font-family: 'VT323', monospace;
             background: rgba(0,0,0,0.8);
-            padding: 5px 15px;
-            border: 1px solid yellow;
-            z-index: 20;
+            padding: 5px 20px;
+            border-radius: 8px;
+            pointer-events: none;
         }
 
-        /* Dölj scrollbars om de råkar dyka upp */
-        .teletext-container::-webkit-scrollbar {
-          display: none;
+        .input-overlay {
+            position: fixed;
+            top: 5vh;
+            left: 5vw;
+            font-size: 8vh;
+            color: #ffff00;
+            font-family: 'VT323', monospace;
+            background: rgba(0,0,0,0.95);
+            padding: 15px 30px;
+            border: 3px solid #ffff00;
+            border-radius: 8px;
+            z-index: 200;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
         }
       `}</style>
 
       {/* HEADER INFO */}
       <div className="top-bar">
          <span>SVT TEXT {page}</span>
-         <span className="ml-4 text-xs opacity-50">(Arrows to navigate, 0-9 to search)</span>
+         {subPageCount > 1 && (
+             <span className="text-gray-500 ml-4 text-2xl tracking-widest">[SCROLL]</span>
+         )}
       </div>
 
-      {/* INPUT FEEDBACK (Visar siffrorna du skriver in, t.ex. "3..") */}
       {inputBuffer && (
-          <div className="input-overlay">{inputBuffer}_</div>
+          <div className="input-overlay">
+              SID: {inputBuffer}<span className="animate-pulse">_</span>
+          </div>
       )}
 
-      {/* MAIN CONTENT */}
-      {loading ? (
-        <div className="text-xl text-green-500 animate-pulse">Laddar sida {page}...</div>
-      ) : (
-        <div 
-            className="teletext-container shadow-2xl"
-            dangerouslySetInnerHTML={{ __html: content }}
-        />
-      )}
+      {/* SCROLL CONTAINER - Nu med fokus och eventhantering */}
+      <div className="scroll-wrapper" ref={scrollContainerRef} tabIndex={0}>
+        {loading ? (
+            <div className="flex h-full items-center justify-center">
+                <div className="text-4xl font-mono text-green-500 animate-pulse">Hämtar sid {page}...</div>
+            </div>
+        ) : (
+            <div 
+                className="teletext-content"
+                dangerouslySetInnerHTML={{ __html: fullContent }}
+            />
+        )}
+      </div>
     </div>
   );
 };
