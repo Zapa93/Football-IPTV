@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <tv generator-info-name="WebGrab+Plus/w MDB &amp; REX Postprocess -- version  V5.5.0.0 -- Jan van Straaten" generator-info-url="http://www.webgrabplus.com">
   <channel id="CMoreFotboll.se">
     <display-name lang="sv">TV4 Fotboll</display-name>
@@ -608,10 +608,10 @@
   <programme start="20260222145500 +0100" stop="20260222165500 +0100" channel="v sport extra">
     <title lang="sv">Premier League: Nottingham-Liverpool</title>
   </programme>
-  <programme start="20260222165500 +0100" stop="20260222172000 +0100" channel="v sport extra">
+  <programme start="20260222165500 +0100" stop="20260222172100 +0100" channel="v sport extra">
     <title lang="sv">Premier League Stories</title>
   </programme>
-  <programme start="20260222172000 +0100" stop="20260222193000 +0100" channel="v sport extra">
+  <programme start="20260222172100 +0100" stop="20260222193000 +0100" channel="v sport extra">
     <title lang="sv">Bundesliga: St. Pauli-Werder Bremen</title>
   </programme>
   <programme start="20260222193000 +0100" stop="20260222200000 +0100" channel="v sport extra">
@@ -833,19 +833,19 @@
   <programme start="20260221141500 +0100" stop="20260221144500 +0100" channel="v sport 1">
     <title lang="sv">Premier League Stories</title>
   </programme>
-  <programme start="20260221144500 +0100" stop="20260221152000 +0100" channel="v sport 1">
+  <programme start="20260221144500 +0100" stop="20260221152100 +0100" channel="v sport 1">
     <title lang="sv">FA-Cupen</title>
   </programme>
-  <programme start="20260221152000 +0100" stop="20260221172500 +0100" channel="v sport 1">
+  <programme start="20260221152100 +0100" stop="20260221172500 +0100" channel="v sport 1">
     <title lang="sv">Bundesliga: Bayern München-Frankfurt</title>
   </programme>
   <programme start="20260221172500 +0100" stop="20260221175000 +0100" channel="v sport 1">
     <title lang="sv">Champions League Magazine</title>
   </programme>
-  <programme start="20260221175000 +0100" stop="20260221182000 +0100" channel="v sport 1">
+  <programme start="20260221175000 +0100" stop="20260221182100 +0100" channel="v sport 1">
     <title lang="sv">Ligue 1 Highlights (SE)</title>
   </programme>
-  <programme start="20260221182000 +0100" stop="20260221203000 +0100" channel="v sport 1">
+  <programme start="20260221182100 +0100" stop="20260221203000 +0100" channel="v sport 1">
     <title lang="sv">Bundesliga: Leipzig-Dortmund</title>
   </programme>
   <programme start="20260221203000 +0100" stop="20260221210000 +0100" channel="v sport 1">
@@ -1598,10 +1598,10 @@
   <programme start="20260222013500 +0100" stop="20260222050000 +0100" channel="Sportkanalen.se">
     <title lang="sv">Höjdpunkter</title>
   </programme>
-  <programme start="20260222050000 +0100" stop="20260222120000 +0100" channel="Sportkanalen.se">
+  <programme start="20260222050000 +0100" stop="20260222115500 +0100" channel="Sportkanalen.se">
     <title lang="sv">Höjdpunkter</title>
   </programme>
-  <programme start="20260222120000 +0100" stop="20260222123000 +0100" channel="Sportkanalen.se">
+  <programme start="20260222115500 +0100" stop="20260222123000 +0100" channel="Sportkanalen.se">
     <title lang="sv">Inside Serie A</title>
   </programme>
   <programme start="20260222123000 +0100" stop="20260222133000 +0100" channel="Sportkanalen.se">
@@ -1611,7 +1611,7 @@
     <title lang="sv">The WRC Magazine</title>
   </programme>
   <programme start="20260222140000 +0100" stop="20260222141500 +0100" channel="Sportkanalen.se">
-    <title lang="sv">Journey to Jeddah</title>
+    <title lang="sv">Höjdpunkter</title>
   </programme>
   <programme start="20260222141500 +0100" stop="20260222145000 +0100" channel="Sportkanalen.se">
     <title lang="sv">ATP Tour This Week</title>
@@ -1829,13 +1829,10 @@
   <programme start="20260226003000 +0100" stop="20260226010000 +0100" channel="Sportkanalen.se">
     <title lang="sv">ATP Tour This Week</title>
   </programme>
-  <programme start="20260219070000 +0100" stop="20260219113000 +0100" channel="CMoreLive.se">
+  <programme start="20260219070000 +0100" stop="20260219130000 +0100" channel="CMoreLive.se">
     <title lang="sv">ATP Tour</title>
   </programme>
-  <programme start="20260219113000 +0100" stop="20260219150000 +0100" channel="CMoreLive.se">
-    <title lang="sv">ATP Tour</title>
-  </programme>
-  <programme start="20260219150000 +0100" stop="20260219185000 +0100" channel="CMoreLive.se">
+  <programme start="20260219130000 +0100" stop="20260219185000 +0100" channel="CMoreLive.se">
     <title lang="sv">ATP Tour</title>
   </programme>
   <programme start="20260219185000 +0100" stop="20260220050000 +0100" channel="CMoreLive.se">
@@ -3077,9 +3074,6 @@
   <programme start="20260225232500 +0100" stop="20260225235500 +0100" channel="SVT2.se">
     <title lang="sv">Ekonomibyrån</title>
   </programme>
-  <programme start="20260219060000 +0100" stop="20260219063000 +0100" channel="TV3.se">
-    <title lang="sv">Vänner</title>
-  </programme>
   <programme start="20260219063000 +0100" stop="20260219070000 +0100" channel="TV3.se">
     <title lang="sv">Vänner</title>
   </programme>
@@ -3155,8 +3149,11 @@
   <programme start="20260220033000 +0100" stop="20260220043000 +0100" channel="TV3.se">
     <title lang="sv">Frusna vägar</title>
   </programme>
-  <programme start="20260220043000 +0100" stop="20260220060000 +0100" channel="TV3.se">
+  <programme start="20260220043000 +0100" stop="20260220053000 +0100" channel="TV3.se">
     <title lang="sv">Högspänning</title>
+  </programme>
+  <programme start="20260220053000 +0100" stop="20260220060000 +0100" channel="TV3.se">
+    <title lang="sv">Vänner</title>
   </programme>
   <programme start="20260220060000 +0100" stop="20260220063000 +0100" channel="TV3.se">
     <title lang="sv">Vänner</title>
@@ -3650,41 +3647,41 @@
   <programme start="20260220053500 +0100" stop="20260220054500 +0100" channel="TV4.se">
     <title lang="sv">Kökets helgtips</title>
   </programme>
-  <programme start="20260220054500 +0100" stop="20260220111500 +0100" channel="TV4.se">
+  <programme start="20260220054500 +0100" stop="20260220113000 +0100" channel="TV4.se">
     <title lang="sv">Nyhetsmorgon</title>
-  </programme>
-  <programme start="20260220111500 +0100" stop="20260220113000 +0100" channel="TV4.se">
-    <title lang="sv">Kökets helgtips</title>
   </programme>
   <programme start="20260220113000 +0100" stop="20260220134500 +0100" channel="TV4.se">
     <title lang="sv">Vinter-OS 2026: Skicross</title>
   </programme>
-  <programme start="20260220134500 +0100" stop="20260220153500 +0100" channel="TV4.se">
+  <programme start="20260220134500 +0100" stop="20260220153000 +0100" channel="TV4.se">
     <title lang="sv">Vinter-OS 2026: Skidskytte Studio</title>
   </programme>
-  <programme start="20260220153500 +0100" stop="20260220170000 +0100" channel="TV4.se">
+  <programme start="20260220153000 +0100" stop="20260220170500 +0100" channel="TV4.se">
     <title lang="sv">Vinter-OS 2026: Curling</title>
   </programme>
-  <programme start="20260220170000 +0100" stop="20260220175000 +0100" channel="TV4.se">
-    <title lang="sv">Efter fem</title>
-  </programme>
-  <programme start="20260220175000 +0100" stop="20260220175500 +0100" channel="TV4.se">
-    <title lang="sv">Äntligen V85</title>
-  </programme>
-  <programme start="20260220175500 +0100" stop="20260220190000 +0100" channel="TV4.se">
-    <title lang="sv">Efter fem</title>
-  </programme>
-  <programme start="20260220190000 +0100" stop="20260220192000 +0100" channel="TV4.se">
-    <title lang="sv">TV4 Nyheterna</title>
-  </programme>
-  <programme start="20260220192000 +0100" stop="20260220193000 +0100" channel="TV4.se">
-    <title lang="sv">TV4 Vädret</title>
+  <programme start="20260220170500 +0100" stop="20260220193000 +0100" channel="TV4.se">
+    <title lang="sv">Vinter-OS 2026: Ishockey</title>
   </programme>
   <programme start="20260220193000 +0100" stop="20260220200000 +0100" channel="TV4.se">
     <title lang="sv">Postkodmiljonären</title>
   </programme>
-  <programme start="20260220200000 +0100" stop="20260221000000 +0100" channel="TV4.se">
-    <title lang="sv">Vinter-OS 2026: Ishockey Studio</title>
+  <programme start="20260220200000 +0100" stop="20260220213000 +0100" channel="TV4.se">
+    <title lang="sv">Bäst i test</title>
+  </programme>
+  <programme start="20260220213000 +0100" stop="20260220220000 +0100" channel="TV4.se">
+    <title lang="sv">Tills Frank skiljer oss åt</title>
+  </programme>
+  <programme start="20260220220000 +0100" stop="20260220221000 +0100" channel="TV4.se">
+    <title lang="sv">TV4 Nyheterna och Sporten</title>
+  </programme>
+  <programme start="20260220221000 +0100" stop="20260220221500 +0100" channel="TV4.se">
+    <title lang="sv">TV4 Vädret</title>
+  </programme>
+  <programme start="20260220221500 +0100" stop="20260220223500 +0100" channel="TV4.se">
+    <title lang="sv">Vinter-OS idag: höjdpunkter</title>
+  </programme>
+  <programme start="20260220223500 +0100" stop="20260221000000 +0100" channel="TV4.se">
+    <title lang="sv">Tills Frank skiljer oss åt</title>
   </programme>
   <programme start="20260221000000 +0100" stop="20260221020000 +0100" channel="TV4.se">
     <title lang="sv">Crocodile Dundee - En storviltjägare i New York</title>
@@ -4400,14 +4397,8 @@
   <programme start="20260225033000 +0100" stop="20260225042000 +0100" channel="Kanal5.se">
     <title lang="sv">Law &amp; Order: Special Victims Unit</title>
   </programme>
-  <programme start="20260225042000 +0100" stop="20260225052000 +0100" channel="Kanal5.se">
+  <programme start="20260225042000 +0100" stop="20260225060000 +0100" channel="Kanal5.se">
     <title lang="sv">Gränsbevakarna Sverige</title>
-  </programme>
-  <programme start="20260225052000 +0100" stop="20260225055000 +0100" channel="Kanal5.se">
-    <title lang="sv">Sommaren med släkten</title>
-  </programme>
-  <programme start="20260225055000 +0100" stop="20260225060000 +0100" channel="Kanal5.se">
-    <title lang="sv">Parterapi</title>
   </programme>
   <programme start="20260225060000 +0100" stop="20260225062000 +0100" channel="Kanal5.se">
     <title lang="sv">House Hunters International</title>
@@ -4556,11 +4547,8 @@
   <programme start="20260220031500 +0100" stop="20260220043000 +0100" channel="TV6.se">
     <title lang="sv">Top Gear</title>
   </programme>
-  <programme start="20260220043000 +0100" stop="20260220053000 +0100" channel="TV6.se">
+  <programme start="20260220043000 +0100" stop="20260220060000 +0100" channel="TV6.se">
     <title lang="sv">Without a Trace</title>
-  </programme>
-  <programme start="20260220053000 +0100" stop="20260220060000 +0100" channel="TV6.se">
-    <title lang="sv">Family Guy</title>
   </programme>
   <programme start="20260220060000 +0100" stop="20260220063000 +0100" channel="TV6.se">
     <title lang="sv">Våra värsta år</title>
@@ -4775,7 +4763,10 @@
   <programme start="20260223035500 +0100" stop="20260223045500 +0100" channel="TV6.se">
     <title lang="sv">The Blacklist</title>
   </programme>
-  <programme start="20260223045500 +0100" stop="20260223060000 +0100" channel="TV6.se">
+  <programme start="20260223045500 +0100" stop="20260223052500 +0100" channel="TV6.se">
+    <title lang="sv">Family Guy</title>
+  </programme>
+  <programme start="20260223052500 +0100" stop="20260223060000 +0100" channel="TV6.se">
     <title lang="sv">Family Guy</title>
   </programme>
   <programme start="20260223060000 +0100" stop="20260223063000 +0100" channel="TV6.se">
@@ -5051,10 +5042,10 @@
   <programme start="20260219130000 +0100" stop="20260219140000 +0100" channel="Sjuan.se">
     <title lang="sv">Chrysalis</title>
   </programme>
-  <programme start="20260219140000 +0100" stop="20260219140000 +0100" channel="Sjuan.se">
+  <programme start="20260219140000 +0100" stop="20260219142000 +0100" channel="Sjuan.se">
     <title lang="sv">Nyhetsdagen</title>
   </programme>
-  <programme start="20260219140000 +0100" stop="20260219170000 +0100" channel="Sjuan.se">
+  <programme start="20260219142000 +0100" stop="20260219170000 +0100" channel="Sjuan.se">
     <title lang="sv">Nyhetsdagen</title>
   </programme>
   <programme start="20260219170000 +0100" stop="20260219173000 +0100" channel="Sjuan.se">
@@ -5111,10 +5102,10 @@
   <programme start="20260220090000 +0100" stop="20260220100000 +0100" channel="Sjuan.se">
     <title lang="sv">Downton Abbey</title>
   </programme>
-  <programme start="20260220100000 +0100" stop="20260220112000 +0100" channel="Sjuan.se">
+  <programme start="20260220100000 +0100" stop="20260220113000 +0100" channel="Sjuan.se">
     <title lang="sv">Hela England bakar</title>
   </programme>
-  <programme start="20260220112000 +0100" stop="20260220120000 +0100" channel="Sjuan.se">
+  <programme start="20260220113000 +0100" stop="20260220120000 +0100" channel="Sjuan.se">
     <title lang="sv">Nyhetsmorgon</title>
   </programme>
   <programme start="20260220120000 +0100" stop="20260220170000 +0100" channel="Sjuan.se">
@@ -5717,8 +5708,14 @@
   <programme start="20260222023500 +0100" stop="20260222040000 +0100" channel="TV8.se">
     <title lang="sv">Outlander</title>
   </programme>
-  <programme start="20260222040000 +0100" stop="20260222060000 +0100" channel="TV8.se">
+  <programme start="20260222040000 +0100" stop="20260222050000 +0100" channel="TV8.se">
     <title lang="sv">NCIS</title>
+  </programme>
+  <programme start="20260222050000 +0100" stop="20260222053000 +0100" channel="TV8.se">
+    <title lang="sv">Idas Fristelser</title>
+  </programme>
+  <programme start="20260222053000 +0100" stop="20260222060000 +0100" channel="TV8.se">
+    <title lang="sv">Idas Fristelser</title>
   </programme>
   <programme start="20260222060000 +0100" stop="20260222065500 +0100" channel="TV8.se">
     <title lang="sv">McLeods döttrar</title>
@@ -6140,14 +6137,8 @@
   <programme start="20260221012000 +0100" stop="20260221040000 +0100" channel="Kanal9.se">
     <title lang="sv">Jagad</title>
   </programme>
-  <programme start="20260221040000 +0100" stop="20260221050000 +0100" channel="Kanal9.se">
+  <programme start="20260221040000 +0100" stop="20260221060000 +0100" channel="Kanal9.se">
     <title lang="sv">Fångat på polisens kamera Danmark</title>
-  </programme>
-  <programme start="20260221050000 +0100" stop="20260221053000 +0100" channel="Kanal9.se">
-    <title lang="sv">How Do They Do It?</title>
-  </programme>
-  <programme start="20260221053000 +0100" stop="20260221060000 +0100" channel="Kanal9.se">
-    <title lang="sv">How Do They Do It?</title>
   </programme>
   <programme start="20260221060000 +0100" stop="20260221064500 +0100" channel="Kanal9.se">
     <title lang="sv">Wheeler Dealers</title>
@@ -6488,10 +6479,7 @@
   <programme start="20260225033000 +0100" stop="20260225040000 +0100" channel="Kanal9.se">
     <title lang="sv">Gränsbevakarna Australien</title>
   </programme>
-  <programme start="20260225040000 +0100" stop="20260225050000 +0100" channel="Kanal9.se">
-    <title lang="sv">Fångat på polisens kamera Danmark</title>
-  </programme>
-  <programme start="20260225050000 +0100" stop="20260225060000 +0100" channel="Kanal9.se">
+  <programme start="20260225040000 +0100" stop="20260225060000 +0100" channel="Kanal9.se">
     <title lang="sv">Fångat på polisens kamera Danmark</title>
   </programme>
   <programme start="20260225060000 +0100" stop="20260225060500 +0100" channel="Kanal9.se">
