@@ -1,0 +1,29 @@
+name: Update EPG
+on:
+  schedule:
+    - cron: '0 5 * * *' # Runs every day at 05:00 UTC
+  workflow_dispatch:   # Allows you to run it manually with a button
+
+jobs:
+  scrape-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run WebGrab+Plus (Docker)
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/config \
+            -v ${{ github.workspace }}:/data \
+            -e TZ=Europe/Stockholm \
+            lscr.io/linuxserver/webgrabplus:latest \
+            /app/wg++/bin/WebGrab+Plus.exe /config
+
+      - name: Commit and Push guide.xml
+        run: |
+          git config --global user.name "EPG-Bot"
+          git config --global user.email "bot@github.com"
+          git add guide.xml
+          git commit -m "Automated update: $(date)" || exit 0
+          git push
