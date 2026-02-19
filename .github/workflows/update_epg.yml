@@ -29,12 +29,12 @@ jobs:
 
       - name: Run Scraper
         run: |
-          # 1. Search for the exact location of the DLL file automatically
           DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
           echo "Found DLL at: $DLL_PATH"
-          
-          # 2. Run the DLL using .NET, and tell it to use the current folder for the config file
           dotnet "$DLL_PATH" "$(pwd)"
+
+      - name: Read the Log
+        run: cat WebGrab++.log.txt
 
       - name: Commit and Push
         run: |
