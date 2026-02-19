@@ -7,18 +7,18 @@ on:
 jobs:
   scrape-epg:
     runs-on: ubuntu-latest
-    # These variables fix the "No Internet" bug on GitHub servers
-    env:
-      DOTNET_SYSTEM_NET_DISABLEIPV6: 1
-      TZ: Europe/Stockholm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET 8 (LTS)
+      # THIS IS THE MAGIC FIX FOR "NO INTERNET"
+      - name: Fix Ping Permissions for WebGrab+Plus
+        run: sudo sysctl -w net.ipv4.ping_group_range="0 2147483647"
+
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '9.0.x'
 
       - name: Download and Extract WebGrab+Plus
         run: |
