@@ -11,17 +11,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run WebGrab+Plus
+      - name: Setup Mono
+        uses: mono/setup-mono@v1
+
+      - name: Download WebGrab+Plus Binary
         run: |
-          chmod -R 777 ${{ github.workspace }}
-          # We use the 'lsio-config' style which is more reliable
-          docker run --rm \
-            -v ${{ github.workspace }}:/config \
-            -v ${{ github.workspace }}:/data \
-            -e TZ=Europe/Stockholm \
-            lscr.io/linuxserver/webgrabplus:latest \
-            /defaults/update.sh  # This is the built-in trigger script
-            
+          wget http://www.webgrabplus.com/sites/default/files/downloads/sw/v5.3.0/WebGrabPlus_V5.3.0_install.tar.gz
+          tar -xzf WebGrabPlus_V5.3.0_install.tar.gz
+          # Move the necessary binary to your root
+          mv WebGrabPlus/bin/WebGrab+Plus.exe .
+
+      - name: Run Scraper
+        run: |
+          mono WebGrab+Plus.exe "."
+
       - name: Commit and Push
         run: |
           git config --global user.name "EPG-Bot"
