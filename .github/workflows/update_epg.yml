@@ -11,18 +11,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Mono
-        uses: mono/setup-mono@v1
+      - name: Install Mono
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mono-complete
 
       - name: Download WebGrab+Plus Binary
         run: |
           wget http://www.webgrabplus.com/sites/default/files/downloads/sw/v5.3.0/WebGrabPlus_V5.3.0_install.tar.gz
           tar -xzf WebGrabPlus_V5.3.0_install.tar.gz
-          # Move the necessary binary to your root
+          # Moves the executable to the root so it can find your config
           mv WebGrabPlus/bin/WebGrab+Plus.exe .
 
       - name: Run Scraper
         run: |
+          # The "." tells it to use the current folder for config and siteinis
           mono WebGrab+Plus.exe "."
 
       - name: Commit and Push
@@ -30,5 +33,6 @@ jobs:
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
+          # Only commit if guide.xml actually changed
           git commit -m "Automated update: $(date)" || exit 0
           git push
