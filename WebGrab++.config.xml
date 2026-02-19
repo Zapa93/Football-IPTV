@@ -3,6 +3,7 @@
   <!-- for detailed info about the settings see http://webgrabplus.com/documentation/configuration/webgrabconfigxml 
   and http://webgrabplus.com/sites/default/files/downloads/Misc/Documented_Configuration_Files_0.zip -->
   <filename>guide.xml</filename>
+  <siteini>./</siteini>
   <mode>n</mode>
   <postprocess grab="y" run="n">rex</postprocess>
   <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0</user-agent>
@@ -57,4 +58,5 @@
   <channel update="i" site="allatvkanaler.se" site_id="discovery-channel" xmltv_id="DiscoveryChannel.se">Discovery Channel</channel>
   <channel update="i" site="allatvkanaler.se" site_id="discovery-investigation" xmltv_id="InvestigationDiscovery.se">Discovery Investigation</channel>
   <channel update="i" site="allatvkanaler.se" site_id="discovery-science" xmltv_id="DiscoveryScience.se">Discovery Science</channel>
+
 </settings>
