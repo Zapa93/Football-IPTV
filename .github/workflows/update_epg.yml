@@ -43,6 +43,9 @@ jobs:
 
       - name: Run Scraper
         run: |
+          # Kasta den gamla datan för att tvinga fram en 100% fräsch skrapning
+          rm -f guide.xml
+          
           DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
           dotnet "$DLL_PATH" "$(pwd)"
 
