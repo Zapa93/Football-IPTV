@@ -13,17 +13,15 @@ jobs:
 
       - name: Run WebGrab+Plus
         run: |
-          # Ensure the workspace is writable
           chmod -R 777 ${{ github.workspace }}
-          
-          # Run the container with the corrected path
+          # We use the 'lsio-config' style which is more reliable
           docker run --rm \
             -v ${{ github.workspace }}:/config \
             -v ${{ github.workspace }}:/data \
             -e TZ=Europe/Stockholm \
             lscr.io/linuxserver/webgrabplus:latest \
-            /app/WebGrab+Plus.exe /config
-
+            /defaults/update.sh  # This is the built-in trigger script
+            
       - name: Commit and Push
         run: |
           git config --global user.name "EPG-Bot"
