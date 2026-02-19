@@ -11,28 +11,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Mono
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y mono-complete
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
 
-      - name: Download WebGrab+Plus Binary
+      - name: Download WebGrab+Plus
         run: |
-          wget http://www.webgrabplus.com/sites/default/files/downloads/sw/v5.3.0/WebGrabPlus_V5.3.0_install.tar.gz
-          tar -xzf WebGrabPlus_V5.3.0_install.tar.gz
-          # Moves the executable to the root so it can find your config
-          mv WebGrabPlus/bin/WebGrab+Plus.exe .
+          # Use the 2026 stable .NET version
+          wget https://webgrabplus.com/sites/default/files/download/SW/V5.5.0/WebGrabPlus_5.5_install.tar.gz
+          tar -xzf WebGrabPlus_5.5_install.tar.gz
+          # Prepare the environment
+          mkdir -p bin
+          cp -r WebGrabPlus/bin.net/* bin/
+          cp WebGrabPlus/WebGrab+Plus.dll .
 
       - name: Run Scraper
         run: |
-          # The "." tells it to use the current folder for config and siteinis
-          mono WebGrab+Plus.exe "."
+          # Run using dotnet instead of mono
+          dotnet WebGrab+Plus.dll "."
 
       - name: Commit and Push
         run: |
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          # Only commit if guide.xml actually changed
           git commit -m "Automated update: $(date)" || exit 0
           git push
