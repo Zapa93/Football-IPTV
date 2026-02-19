@@ -18,23 +18,23 @@ jobs:
 
       - name: Download and Install WebGrab+Plus
         run: |
-          # Download the 5.5 stable version
+          # 1. Download
           wget https://webgrabplus.com/sites/default/files/download/SW/V5.5.0/WebGrabPlus_5.5_install.tar.gz
           
-          # Extract the files (this creates a .wg++ folder)
+          # 2. Extract
           tar -xzf WebGrabPlus_5.5_install.tar.gz
           
-          # Move everything from the hidden .wg++ folder to the root so it finds your config
-          cp -r .wg++/* .
+          # 3. Move EVERYTHING out of the hidden .wg++ folder to the root
+          # This ensures the .dll and the bin folder are exactly where dotnet expects them
+          cp -rp .wg++/* .
           
-          # Ensure the binary folder exists where WG++ expects it
+          # 4. Final check: Ensure the bin folder from bin.net is correctly placed
           mkdir -p bin
-          cp -r bin.net/* bin/ || true
+          cp -rp bin.net/* bin/ || true
 
       - name: Run Scraper
         run: |
-          # Use the dotnet command on the DLL in the current folder
-          # The "." tells it to look for WebGrab++.config.xml here
+          # We call the DLL directly. The "." tells it to use the current folder for your config.
           dotnet WebGrab+Plus.dll "."
 
       - name: Commit and Push
@@ -42,6 +42,5 @@ jobs:
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          # Only commit if the file was actually updated
           git commit -m "Automated update: $(date)" || exit 0
           git push
