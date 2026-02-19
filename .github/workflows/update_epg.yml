@@ -29,9 +29,12 @@ jobs:
 
       - name: Run Scraper
         run: |
+          # 1. Search for the exact location of the DLL file automatically
           DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
           echo "Found DLL at: $DLL_PATH"
-          dotnet "$DLL_PATH" "$(pwd)"
+          
+          # 2. Run the DLL as Administrator (sudo) so the Ping check isn't blocked by Linux
+          sudo $(which dotnet) "$DLL_PATH" "$(pwd)"
 
       - name: Read the Log
         run: cat WebGrab++.log.txt
