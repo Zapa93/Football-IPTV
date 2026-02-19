@@ -7,37 +7,33 @@ on:
 jobs:
   scrape-epg:
     runs-on: ubuntu-latest
+    # These variables fix the "No Internet" bug on GitHub servers
+    env:
+      DOTNET_SYSTEM_NET_DISABLEIPV6: 1
+      TZ: Europe/Stockholm
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: Setup .NET 8 (LTS)
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Download and Extract WebGrab+Plus
         run: |
-          # Download the 5.5 stable version
           wget https://webgrabplus.com/sites/default/files/download/SW/V5.5.0/WebGrabPlus_5.5_install.tar.gz
-          
-          # Extract the files (creates a hidden .wg++ folder)
           tar -xzf WebGrabPlus_5.5_install.tar.gz
-          
-          # Move everything from the hidden .wg++ folder to our working space
           cp -rp .wg++/* .
 
       - name: Run Scraper
         run: |
-          # 1. Search for the exact location of the DLL file automatically
           DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
           echo "Found DLL at: $DLL_PATH"
-          
-          # 2. Run the DLL as Administrator (sudo) so the Ping check isn't blocked by Linux
-          sudo $(which dotnet) "$DLL_PATH" "$(pwd)"
+          dotnet "$DLL_PATH" "$(pwd)"
 
       - name: Read the Log
-        run: cat WebGrab++.log.txt
+        run: cat WebGrab++.log.txt || true
 
       - name: Commit and Push
         run: |
