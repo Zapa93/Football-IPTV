@@ -64,6 +64,7 @@ jobs:
           wget -qO uk.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
           wget -qO rs.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_RS1.xml.gz"
           wget -qO bein.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz"
+          wget -qO it.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
           gunzip *.gz
 
       - name: Merge all guides and fix Titles for App Sidebar
@@ -97,8 +98,8 @@ jobs:
                               sub_text = subtitle_elem.text.strip()
                               
                               if sub_text:
-                                  # Om det ser ut som en match (innehåller 'v' eller '-')
-                                  if ' v ' in sub_text.lower() or '-' in sub_text:
+                                  # Om det ser ut som en match (innehåller 'v', 'vs' eller '-')
+                                  if ' v ' in sub_text.lower() or ' vs ' in sub_text.lower() or '-' in sub_text:
                                       title_elem.text = f'{sub_text} ({orig_title})'
                                   else:
                                       title_elem.text = f'{orig_title}: {sub_text}'
@@ -116,6 +117,7 @@ jobs:
           process_file('uk.xml', is_epgshare=True)
           process_file('rs.xml', is_epgshare=True)
           process_file('bein.xml', is_epgshare=True)
+          process_file('it.xml', is_epgshare=True)
 
           # 3. Bygg den slutgiltiga super-filen
           new_root = ET.Element('tv')
@@ -134,5 +136,5 @@ jobs:
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          git commit -m "Automated update (Svenska + EPGShare01): $(date)" || exit 0
+          git commit -m "Automated update (Svenska + Sport): $(date)" || exit 0
           git push
