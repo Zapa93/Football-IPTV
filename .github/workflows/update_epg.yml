@@ -73,6 +73,19 @@ jobs:
           import xml.etree.ElementTree as ET
           import os
 
+          # === LÄGG TILL DINA SPORT-ID:N HÄR ===
+          # Exakt de ID:n du använder i din M3U-fil för de utländska kanalerna.
+          wanted_sport_channels = [
+              'TNT.Sports.1.HD.uk',
+              'DAZN.1.it.it',
+              'DAZN.2.it.it',
+              'SkySportCalcio.it',
+              'SkySport252.it'
+              # Lägg till dina Arena Sport, beIN och fler engelska kanaler här...
+              # Se till att de är inom 'fnuttar' och separerade med kommatecken.
+          ]
+          # ======================================
+
           all_channels = []
           all_programmes = []
 
@@ -83,43 +96,46 @@ jobs:
                   temp_tree = ET.parse(filename)
                   temp_root = temp_tree.getroot()
                   
-                  # Spara alla kanaler
+                  # Spara kanaler (Filtrera om det är EPGShare)
                   for ch in temp_root.findall('channel'):
-                      all_channels.append(ch)
+                      ch_id = ch.get('id')
+                      if not is_epgshare or ch_id in wanted_sport_channels:
+                          all_channels.append(ch)
                       
-                  # Spara alla program och fixa titlarna!
+                  # Spara program (Filtrera om det är EPGShare, och fixa titlar!)
                   for prog in temp_root.findall('programme'):
-                      if is_epgshare:
-                          title_elem = prog.find('title')
-                          subtitle_elem = prog.find('sub-title')
-                          
-                          if title_elem is not None and subtitle_elem is not None and subtitle_elem.text:
-                              orig_title = title_elem.text.strip() if title_elem.text else ''
-                              sub_text = subtitle_elem.text.strip()
+                      ch_id = prog.get('channel')
+                      if not is_epgshare or ch_id in wanted_sport_channels:
+                          if is_epgshare:
+                              title_elem = prog.find('title')
+                              subtitle_elem = prog.find('sub-title')
                               
-                              if sub_text:
-                                  # Om det ser ut som en match (innehåller 'v', 'vs' eller '-')
-                                  if ' v ' in sub_text.lower() or ' vs ' in sub_text.lower() or '-' in sub_text:
-                                      title_elem.text = f'{sub_text} ({orig_title})'
-                                  else:
-                                      title_elem.text = f'{orig_title}: {sub_text}'
-                                      
-                      all_programmes.append(prog)
+                              if title_elem is not None and subtitle_elem is not None and subtitle_elem.text:
+                                  orig_title = title_elem.text.strip() if title_elem.text else ''
+                                  sub_text = subtitle_elem.text.strip()
+                                  
+                                  if sub_text:
+                                      if ' v ' in sub_text.lower() or ' vs ' in sub_text.lower() or '-' in sub_text:
+                                          title_elem.text = f'{sub_text} ({orig_title})'
+                                      else:
+                                          title_elem.text = f'{orig_title}: {sub_text}'
+                                          
+                          all_programmes.append(prog)
               except Exception as e:
                   print(f'Kunde inte läsa {filename}: {e}')
 
-          # 1. Läs in dina egna svenska WG++ skrapningar
+          # 1. Läs in dina egna svenska WG++ skrapningar (Dessa filtreras INTE)
           process_file('guide.xml', is_epgshare=False)
           process_file('part1/guide.xml', is_epgshare=False)
           process_file('part2/guide.xml', is_epgshare=False)
 
-          # 2. Läs in de nya sport-guiderna (Där vi applicerar magin)
+          # 2. Läs in de nya sport-guiderna (Dessa FILTRERAS stenhårt)
           process_file('uk.xml', is_epgshare=True)
           process_file('rs.xml', is_epgshare=True)
           process_file('bein.xml', is_epgshare=True)
           process_file('it.xml', is_epgshare=True)
 
-          # 3. Bygg den slutgiltiga super-filen
+          # 3. Bygg den slutgiltiga, bimmade super-filen
           new_root = ET.Element('tv')
           for ch in all_channels:
               new_root.append(ch)
@@ -128,7 +144,7 @@ jobs:
               
           tree = ET.ElementTree(new_root)
           tree.write('guide.xml', encoding='utf-8', xml_declaration=True)
-          print('Succé! Alla filer är ihopsydda och titlarna är anpassade för appen.')
+          print('Succé! Skräpet är bortstädat och titlarna är fixade.')
           "
 
       - name: Commit and Push
