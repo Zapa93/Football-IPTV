@@ -44,19 +44,7 @@
   <channel update="i" site="allatvkanaler.se" site_id="kanal-5" xmltv_id="Kanal5.se">Kanal 5</channel>
   <channel update="i" site="allatvkanaler.se" site_id="tv6" xmltv_id="TV6.se">TV6</channel>
   <channel update="i" site="allatvkanaler.se" site_id="sjuan" xmltv_id="Sjuan.se">Sjuan</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv8" xmltv_id="TV8.se">TV8</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="kanal-9" xmltv_id="Kanal9.se">Kanal 9</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv10" xmltv_id="TV10.se">TV10</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="kanal-11" xmltv_id="Kanal11.se">Kanal 11</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv12" xmltv_id="TV12.se">TV12</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="svt1-hd" xmltv_id="SVT1 HD">SVT1 HD</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="svt2-hd" xmltv_id="SVT2 HD">SVT2 HD</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="svt24" xmltv_id="SVTB.se">SVT24</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="kunskapskanalen" xmltv_id="Kunskapskanalen.se">Kunskapskanalen</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv4-fakta" xmltv_id="TV4Fakta.se">TV4 Fakta</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="discovery-channel" xmltv_id="DiscoveryChannel.se">Discovery Channel</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="discovery-investigation" xmltv_id="InvestigationDiscovery.se">Discovery Investigation</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="discovery-science" xmltv_id="DiscoveryScience.se">Discovery Science</channel>
 
 </settings>
+
 
