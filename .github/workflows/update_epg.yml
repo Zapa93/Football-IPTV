@@ -36,41 +36,97 @@ jobs:
           tar -xzf WebGrabPlus_5.5_install.tar.gz
           cp -rp .wg++/* .
 
-      - name: Prepare Split Configs
+      - name: Prepare Split Configs (For Swedish Channels)
         run: |
-          # Skapa två mappar för att köra programmet två gånger utan att filerna krockar
-          mkdir part1 part2
-          cp WebGrab++.config1.xml part1/WebGrab++.config.xml
-          cp WebGrab++.config2.xml part2/WebGrab++.config.xml
-          # Kopiera dina .ini filer till båda mapparna
-          cp *.ini part1/ || true
-          cp *.ini part2/ || true
+          mkdir part1 part2 || true
+          cp WebGrab++.config1.xml part1/WebGrab++.config.xml || true
+          cp WebGrab++.config2.xml part2/WebGrab++.config.xml || true
+          cp *.ini part1/ 2>/dev/null || true
+          cp *.ini part2/ 2>/dev/null || true
 
-      - name: Run Scraper Part 1 (First 20 channels)
+      - name: Run Scraper Part 1
         run: |
-          DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
-          dotnet "$DLL_PATH" "$(pwd)/part1"
+          if [ -f "part1/WebGrab++.config.xml" ]; then
+            DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
+            dotnet "$DLL_PATH" "$(pwd)/part1" || true
+          fi
 
-      - name: Run Scraper Part 2 (Remaining channels)
+      - name: Run Scraper Part 2
         run: |
-          DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
-          dotnet "$DLL_PATH" "$(pwd)/part2"
+          if [ -f "part2/WebGrab++.config.xml" ]; then
+            DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
+            dotnet "$DLL_PATH" "$(pwd)/part2" || true
+          fi
 
-      - name: Merge both guides into one
+      - name: Download EPGShare01 Sports Guides
         run: |
-          # Använder Python (som redan finns på servern) för att sy ihop båda XML-filerna till en stor guide.xml
+          echo "Laddar ner sportguider från EPGShare01..."
+          wget -qO uk.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
+          wget -qO rs.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_RS1.xml.gz"
+          wget -qO bein.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz"
+          gunzip *.gz
+
+      - name: Merge all guides and fix Titles for App Sidebar
+        run: |
           python3 -c "
           import xml.etree.ElementTree as ET
-          try:
-              tree1 = ET.parse('part1/guide.xml')
-              root1 = tree1.getroot()
-              tree2 = ET.parse('part2/guide.xml')
-              for child in tree2.getroot():
-                  root1.append(child)
-              tree1.write('guide.xml', encoding='utf-8', xml_declaration=True)
-              print('Filerna har slagits ihop framgångsrikt!')
-          except Exception as e:
-              print('Kunde inte slå ihop filerna:', e)
+          import os
+
+          all_channels = []
+          all_programmes = []
+
+          def process_file(filename, is_epgshare=False):
+              if not os.path.exists(filename): return
+              print(f'Läser in {filename}...')
+              try:
+                  temp_tree = ET.parse(filename)
+                  temp_root = temp_tree.getroot()
+                  
+                  # Spara alla kanaler
+                  for ch in temp_root.findall('channel'):
+                      all_channels.append(ch)
+                      
+                  # Spara alla program och fixa titlarna!
+                  for prog in temp_root.findall('programme'):
+                      if is_epgshare:
+                          title_elem = prog.find('title')
+                          subtitle_elem = prog.find('sub-title')
+                          
+                          if title_elem is not None and subtitle_elem is not None and subtitle_elem.text:
+                              orig_title = title_elem.text.strip() if title_elem.text else ''
+                              sub_text = subtitle_elem.text.strip()
+                              
+                              if sub_text:
+                                  # Om det ser ut som en match (innehåller 'v' eller '-')
+                                  if ' v ' in sub_text.lower() or '-' in sub_text:
+                                      title_elem.text = f'{sub_text} ({orig_title})'
+                                  else:
+                                      title_elem.text = f'{orig_title}: {sub_text}'
+                                      
+                      all_programmes.append(prog)
+              except Exception as e:
+                  print(f'Kunde inte läsa {filename}: {e}')
+
+          # 1. Läs in dina egna svenska WG++ skrapningar
+          process_file('guide.xml', is_epgshare=False)
+          process_file('part1/guide.xml', is_epgshare=False)
+          process_file('part2/guide.xml', is_epgshare=False)
+
+          # 2. Läs in de nya sport-guiderna (Där vi applicerar magin)
+          process_file('uk.xml', is_epgshare=True)
+          process_file('rs.xml', is_epgshare=True)
+          process_file('bein.xml', is_epgshare=True)
+
+          # 3. Bygg den slutgiltiga super-filen
+          new_root = ET.Element('tv')
+          for ch in all_channels:
+              new_root.append(ch)
+          for prog in all_programmes:
+              new_root.append(prog)
+              
+          tree = ET.ElementTree(new_root)
+          tree.write('guide.xml', encoding='utf-8', xml_declaration=True)
+          print('Succé! Alla filer är ihopsydda och titlarna är anpassade för appen.')
           "
 
       - name: Commit and Push
@@ -78,5 +134,5 @@ jobs:
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          git commit -m "Automated update (Merged configs): $(date)" || exit 0
+          git commit -m "Automated update (Svenska + EPGShare01): $(date)" || exit 0
           git push
