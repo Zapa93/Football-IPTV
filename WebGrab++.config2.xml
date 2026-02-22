@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <!-- for detailed info about the settings see http://webgrabplus.com/documentation/configuration/webgrabconfigxml 
+  and http://webgrabplus.com/sites/default/files/downloads/Misc/Documented_Configuration_Files_0.zip -->
+  <filename>guide.xml</filename>
+  <mode>n</mode>
+  <postprocess grab="y" run="n">rex</postprocess>
+  <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0</user-agent>
+  <!-- to get access to sites which require your credentials -->
+  <credentials user="your username for the site" password="your password for the site">site name</credentials>
+  <!-- for siteini's that need a decrypt_userkey-->
+  <decryptkey site="site-name">decrypt_userkey</decryptkey>
+  <!-- add the correct license id values in the next line -->
+  <license wg-username="your webgrab+plus username" registered-email="your registered email address" password="your license password">To force a license update; replace this text with the letter f</license>
+  <logging>on</logging>
+  <retry time-out="15">4</retry>
+  <!-- timespan 0 is one day -->
+  <timespan>7</timespan>
+  <update>f</update>
+  <!--
+            Replace the next dummy channel entry with the channels you want.
+			You can look into the installed siteini.pack folder on your computer
+  
+            For the latest version,
+            see http://webgrabplus.com/epg-channels for the available sites/channels
+			or https://github.com/SilentButeo2/webgrabplus-siteinipack/tree/master/siteini.pack
+			or run SiteIni.Pack.Update.exe which is in the bin folder
+  -->
+  <channel update="i" site="allatvkanaler.se" site_id="tv8" xmltv_id="TV8.se">TV8</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="kanal-9" xmltv_id="Kanal9.se">Kanal 9</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="tv10" xmltv_id="TV10.se">TV10</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="kanal-11" xmltv_id="Kanal11.se">Kanal 11</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="tv12" xmltv_id="TV12.se">TV12</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="svt1-hd" xmltv_id="SVT1 HD">SVT1 HD</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="svt2-hd" xmltv_id="SVT2 HD">SVT2 HD</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="svt24" xmltv_id="SVTB.se">SVT24</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="kunskapskanalen" xmltv_id="Kunskapskanalen.se">Kunskapskanalen</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="tv4-fakta" xmltv_id="TV4Fakta.se">TV4 Fakta</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="discovery-channel" xmltv_id="DiscoveryChannel.se">Discovery Channel</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="discovery-investigation" xmltv_id="InvestigationDiscovery.se">Discovery Investigation</channel>
+  <channel update="i" site="allatvkanaler.se" site_id="discovery-science" xmltv_id="DiscoveryScience.se">Discovery Science</channel>
+
+</settings>
+
+
