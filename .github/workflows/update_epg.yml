@@ -76,11 +76,36 @@ jobs:
           # === LÄGG TILL DINA SPORT-ID:N HÄR ===
           # Exakt de ID:n du använder i din M3U-fil för de utländska kanalerna.
           wanted_sport_channels = [
-              'TNT.Sports.1.HD.uk',
               'DAZN.1.it.it',
               'DAZN.2.it.it',
               'SkySportCalcio.it',
-              'SkySport252.it'
+              'SkySport252.it',
+              'TNT.Sports.1.HD.uk',
+              'TNT.Sports.2.HD.uk',
+              'TNT.Sports.3.HD.uk',
+              'TNT.Sports.4.HD.uk',
+              'TNT.Sports.5.HD.uk',
+              'TNT.Sports.6.HD.uk',
+              'TNT.Sports.7.HD.uk',
+              'TNT.Sports.8.HD.uk',
+              'TNT.Sports.9.HD.uk',
+              'TNT.Sports.10.HD.uk',
+              'TNT.Sports.1.HD.uk',
+              'Premier.Sports.1.HD.uk',
+              'Premier.Sports.2.HD.uk',
+              'Premier.Sports.3.HD.uk',
+              'beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein',
+              'beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein',
+              'beIN_SPORTS3_ENGLISH_Digital_Mono_AR.bein',
+              'beIN_SPORTS4_ENGLISH_Digital_Mono_AR.bein',
+              'beIN_SPORTS5_ENGLISH_Digital_Mono_AR.bein',
+              'beIN_SPORTS6_ENGLISH_Digital_Mono_AR.bein',
+              'Arena.Sport.1.HD.(RS).rs',
+              'Arena.Sport.2.HD.(RS).rs',
+              'Arena.Sport.3.HD.(RS).rs',
+              'Arena.Sport.4.HD.(RS).rs',
+              'Arena.Sport.5.HD.(RS).rs',
+              'Arena.Sport.6.HD.(RS).rs',
               # Lägg till dina Arena Sport, beIN och fler engelska kanaler här...
               # Se till att de är inom 'fnuttar' och separerade med kommatecken.
           ]
