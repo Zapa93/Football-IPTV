@@ -18,21 +18,11 @@ jobs:
 
       - name: Spoof Ping to Bypass Azure Firewall
         run: |
-          # 1. Move the real ping command out of the way
           sudo mv /bin/ping /bin/ping_backup
-          
-          # 2. Create a fake ping command that outputs a perfect success message
           sudo tee /bin/ping > /dev/null << 'EOF'
           #!/bin/bash
-          TARGET="${@: -1}"
-          echo "PING $TARGET ($TARGET) 56(84) bytes of data."
-          echo "64 bytes from $TARGET: icmp_seq=1 ttl=115 time=0.1 ms"
-          echo "--- $TARGET ping statistics ---"
-          echo "1 packets transmitted, 1 received, 0% packet loss, time 0ms"
           exit 0
           EOF
-          
-          # 3. Make the fake ping executable
           sudo chmod +x /bin/ping
 
       - name: Download and Extract WebGrab+Plus
@@ -41,21 +31,47 @@ jobs:
           tar -xzf WebGrabPlus_5.5_install.tar.gz
           cp -rp .wg++/* .
 
-      - name: Run Scraper
+      - name: Prepare Split Configs
         run: |
-          # Kasta den gamla datan för att tvinga fram en 100% fräsch skrapning
-          rm -f guide.xml
-          
-          DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
-          dotnet "$DLL_PATH" "$(pwd)"
+          # Skapa två mappar för att köra programmet två gånger utan att filerna krockar
+          mkdir part1 part2
+          cp WebGrab++.config1.xml part1/WebGrab++.config.xml
+          cp WebGrab++.config2.xml part2/WebGrab++.config.xml
+          # Kopiera dina .ini filer till båda mapparna
+          cp *.ini part1/ || true
+          cp *.ini part2/ || true
 
-      - name: Read the Log
-        run: cat WebGrab++.log.txt || true
+      - name: Run Scraper Part 1 (First 20 channels)
+        run: |
+          DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
+          dotnet "$DLL_PATH" "$(pwd)/part1"
+
+      - name: Run Scraper Part 2 (Remaining channels)
+        run: |
+          DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
+          dotnet "$DLL_PATH" "$(pwd)/part2"
+
+      - name: Merge both guides into one
+        run: |
+          # Använder Python (som redan finns på servern) för att sy ihop båda XML-filerna till en stor guide.xml
+          python3 -c "
+          import xml.etree.ElementTree as ET
+          try:
+              tree1 = ET.parse('part1/guide.xml')
+              root1 = tree1.getroot()
+              tree2 = ET.parse('part2/guide.xml')
+              for child in tree2.getroot():
+                  root1.append(child)
+              tree1.write('guide.xml', encoding='utf-8', xml_declaration=True)
+              print('Filerna har slagits ihop framgångsrikt!')
+          except Exception as e:
+              print('Kunde inte slå ihop filerna:', e)
+          "
 
       - name: Commit and Push
         run: |
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          git commit -m "Automated update: $(date)" || exit 0
+          git commit -m "Automated update (Merged configs): $(date)" || exit 0
           git push
