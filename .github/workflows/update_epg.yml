@@ -150,7 +150,6 @@ jobs:
                   print(f'Kunde inte läsa {filename}: {e}')
 
           # 1. Läs in dina egna svenska WG++ skrapningar (Dessa filtreras INTE)
-          process_file('guide.xml', is_epgshare=False)
           process_file('part1/guide.xml', is_epgshare=False)
           process_file('part2/guide.xml', is_epgshare=False)
 
