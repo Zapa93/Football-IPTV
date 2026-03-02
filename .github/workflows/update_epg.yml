@@ -126,10 +126,10 @@ jobs:
               '[VIASPOH].V.Sport.Premium.HD.se',
               '[SPORTK].TV4.Sportkanalen.se',
               '[TV4FOSV].TV4.Fotboll.se',
-              '[TV4SPL3].TV4.Sport.Live.1.se',
-              '[TV4SPL3].TV4.Sport.Live.2.se',
+              '[TV4SPL1].TV4.Sport.Live.1.se',
+              '[TV4SPL2].TV4.Sport.Live.2.se',
               '[TV4SPL3].TV4.Sport.Live.3.se',
-              '[TV4SPL3].TV4.Sport.Live.4.se',
+              '[TV4SPL4].TV4.Sport.Live.4.se',
               # Lägg till dina Arena Sport, beIN och fler engelska kanaler här...
               # Se till att de är inom 'fnuttar' och separerade med kommatecken.
           ]
