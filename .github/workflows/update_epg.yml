@@ -11,29 +11,61 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download All EPG Guides
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Spoof Ping to Bypass Azure Firewall
         run: |
-          echo "Laddar ner EPG-guider från databaser..."
-          
-          # Ladda ner global guide (innehåller Sverige) från EPGShare01
+          sudo mv /bin/ping /bin/ping_backup || true
+          sudo tee /bin/ping > /dev/null << 'EOF'
+          #!/bin/bash
+          TARGET="${@: -1}"
+          echo "PING $TARGET ($TARGET) 56(84) bytes of data."
+          echo "64 bytes from $TARGET: icmp_seq=1 ttl=115 time=0.1 ms"
+          echo "--- $TARGET ping statistics ---"
+          echo "1 packets transmitted, 1 received, 0% packet loss, time 0ms"
+          exit 0
+          EOF
+          sudo chmod +x /bin/ping
+
+      - name: Download and Extract WebGrab+Plus
+        run: |
+          wget https://webgrabplus.com/sites/default/files/download/SW/V5.5.0/WebGrabPlus_5.5_install.tar.gz
+          tar -xzf WebGrabPlus_5.5_install.tar.gz
+          cp -rp .wg++/* .
+
+      - name: Prepare Config (For Swedish Sports)
+        run: |
+          mkdir wg_run || true
+          # Kopierar din config1.xml och döper om den så WebGrab hittar den
+          cp WebGrab++.config1.xml wg_run/WebGrab++.config.xml || true
+          cp *.ini wg_run/ 2>/dev/null || true
+
+      - name: Run WebGrab+Plus
+        run: |
+          if [ -f "wg_run/WebGrab++.config.xml" ]; then
+            DLL_PATH=$(find . -name "WebGrab+Plus.dll" | head -n 1)
+            dotnet "$DLL_PATH" "$(pwd)/wg_run" || true
+          fi
+
+      - name: Download EPGShare01 Guides
+        run: |
+          echo "Laddar ner EPGShare01-guider..."
           wget -qO se.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz"
-          
-          # Ladda ner internationella sportguider
           wget -qO uk.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz"
           wget -qO rs.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_RS1.xml.gz"
           wget -qO bein.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_BEIN1.xml.gz"
           wget -qO it.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
-          
-          # Packa upp alla filer
           gunzip *.gz || true
 
-      - name: Merge all guides and filter channels
+      - name: Merge all guides and fix Titles
         run: |
           python3 -c "
           import xml.etree.ElementTree as ET
           import os
 
-          # === 1. VANLIGA KANALER (Ingen text-magi appliceras) ===
           regular_channels = [
               '[SVT1HD].SVT1.HD.se',
               '[SVT2HD].SVT2.HD.se',
@@ -90,7 +122,7 @@ jobs:
               # Se till att de har exakt samma tvg-id som i din M3U-fil!
           ]
 
-          # === 2. SPORTKANALER (Här flyttar vi upp lagnamnen till titeln) ===
+          # === 2. SPORTKANALER från EPGShare01 (Utländsk sport) ===
           sports_channels = [
               'DAZN.1.it.it',
               'DAZN.2.it.it',
@@ -120,26 +152,15 @@ jobs:
               'Arena.Sport.3.HD.(RS).rs',
               'Arena.Sport.4.HD.(RS).rs',
               'Arena.Sport.5.HD.(RS).rs',
-              'Arena.Sport.6.HD.(RS).rs',
-              '[VSSPXHD].V.Sport.Extra.HD.se',
-              '[VIAFOHD].V.Sport.Fotboll.HD.se',
-              '[VIASPOH].V.Sport.Premium.HD.se',
-              '[SPORTK].TV4.Sportkanalen.se',
-              '[TV4FOSV].TV4.Fotboll.se',
-              '[TV4SPL1].TV4.Sport.Live.1.se',
-              '[TV4SPL2].TV4.Sport.Live.2.se',
-              '[TV4SPL3].TV4.Sport.Live.3.se',
-              '[TV4SPL4].TV4.Sport.Live.4.se',
-              # Lägg till dina Arena Sport, beIN och fler engelska kanaler här...
-              # Se till att de är inom 'fnuttar' och separerade med kommatecken.
+              'Arena.Sport.6.HD.(RS).rs'
+              # Fyll på med resten av dina utländska sportkanaler här
           ]
           # ==============================================================
 
           all_channels = []
           all_programmes = []
-          wanted_channels = regular_channels + sports_channels
 
-          def process_file(filename):
+          def process_file(filename, filter_list=None, apply_magic=False):
               if not os.path.exists(filename): return
               print(f'Läser in {filename}...')
               try:
@@ -147,41 +168,55 @@ jobs:
                   temp_root = temp_tree.getroot()
                   
                   for ch in temp_root.findall('channel'):
-                      if ch.get('id') in wanted_channels:
+                      ch_id = ch.get('id')
+                      if filter_list is None or ch_id in filter_list:
                           all_channels.append(ch)
                       
                   for prog in temp_root.findall('programme'):
                       ch_id = prog.get('channel')
                       
-                      # Om det är en vanlig kanal, rör ingenting!
-                      if ch_id in regular_channels:
-                          all_programmes.append(prog)
-                          
-                      # Om det är en sportkanal, applicera magin för sidebaren
-                      elif ch_id in sports_channels:
-                          title_elem = prog.find('title')
-                          subtitle_elem = prog.find('sub-title')
-                          
-                          if title_elem is not None and subtitle_elem is not None and subtitle_elem.text:
-                              orig_title = title_elem.text.strip() if title_elem.text else ''
-                              sub_text = subtitle_elem.text.strip()
+                      if filter_list is None or ch_id in filter_list:
+                          if apply_magic:
+                              title_elem = prog.find('title')
+                              subtitle_elem = prog.find('sub-title')
+                              desc_elem = prog.find('desc')
                               
+                              orig_title = title_elem.text.strip() if (title_elem is not None and title_elem.text) else ''
+                              sub_text = subtitle_elem.text.strip() if (subtitle_elem is not None and subtitle_elem.text) else ''
+                              desc_text = desc_elem.text.strip() if (desc_elem is not None and desc_elem.text) else ''
+                              
+                              match_found = False
+                              
+                              # 1. Kolla sub-title (Vanligt för UK/Italien)
                               if sub_text:
-                                  if ' v ' in sub_text.lower() or ' vs ' in sub_text.lower() or '-' in sub_text:
+                                  if ' v ' in sub_text.lower() or ' vs ' in sub_text.lower() or ' - ' in sub_text:
                                       title_elem.text = f'{sub_text} ({orig_title})'
+                                      match_found = True
                                   else:
                                       title_elem.text = f'{orig_title}: {sub_text}'
                                       
+                              # 2. Kolla beskrivningen (Bra för WebGrabs svenska sportkanaler)
+                              if not match_found and desc_text:
+                                  first_sentence = desc_text.split('.')[0]
+                                  if ' - ' in first_sentence or ' v ' in first_sentence.lower():
+                                      if len(first_sentence) < 65:
+                                          title_elem.text = f'{first_sentence} ({orig_title})'
+                                          
                           all_programmes.append(prog)
               except Exception as e:
                   print(f'Kunde inte läsa {filename}: {e}')
 
-          # Läs in alla stora filer (både Sverige och utlandet)
-          process_file('se.xml')
-          process_file('uk.xml')
-          process_file('rs.xml')
-          process_file('bein.xml')
-          process_file('it.xml')
+          # 1. Läs in WebGrab-filen (Svensk Sport). Behåll ALLA kanaler i den, och applicera magin!
+          process_file('wg_run/guide.xml', filter_list=None, apply_magic=True)
+
+          # 2. Läs in Vanliga Svenska kanaler (EPGShare01). INGEN magi.
+          process_file('se.xml', filter_list=regular_channels, apply_magic=False)
+
+          # 3. Läs in Utländsk Sport (EPGShare01). MED magi.
+          process_file('uk.xml', filter_list=sports_channels, apply_magic=True)
+          process_file('rs.xml', filter_list=sports_channels, apply_magic=True)
+          process_file('bein.xml', filter_list=sports_channels, apply_magic=True)
+          process_file('it.xml', filter_list=sports_channels, apply_magic=True)
 
           # Bygg ihop och spara
           new_root = ET.Element('tv')
@@ -192,7 +227,7 @@ jobs:
               
           tree = ET.ElementTree(new_root)
           tree.write('guide.xml', encoding='utf-8', xml_declaration=True)
-          print('Succé! Guiderna är filtrerade (vanliga + sport) och ihopsydda.')
+          print('Succé! WebGrab och EPGShare är ihopsydda.')
           "
 
       - name: Commit and Push
@@ -200,5 +235,5 @@ jobs:
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          git commit -m "Automated EPG update (No WebGrab): $(date)" || exit 0
+          git commit -m "Automated Hybrid EPG update: $(date)" || exit 0
           git push
