@@ -27,7 +27,7 @@
 			or run SiteIni.Pack.Update.exe which is in the bin folder
   -->
   <channel update="i" site="allatvkanaler.se" site_id="tv4-fotboll" xmltv_id="[TV4FOSV].TV4.Fotboll.se">TV4 Fotboll</channel>
-  <channel offset="0" same_as="CMoreFotboll.se" xmltv_id="[TV4FOSV].TV4.Fotboll.se">TV4 Fotboll HD</channel>
+  <channel offset="0" same_as="[TV4FOSV].TV4.Fotboll.se" xmltv_id="[TV4FOSV].TV4.Fotboll.se.hd">TV4 Fotboll HD</channel>
   <channel update="i" site="allatvkanaler.se" site_id="v-sport-extra" xmltv_id="[VSSPXHD].V.Sport.Extra.HD.se">Viaplay Sport Extra</channel>
   <channel update="i" site="allatvkanaler.se" site_id="v-sport-fotball" xmltv_id="[VIAFOHD].V.Sport.Fotboll.HD.se">Viaplay Sport Fotboll</channel>
   <channel update="i" site="allatvkanaler.se" site_id="v-sport-premium" xmltv_id="[VIASPOH].V.Sport.Premium.HD.se">Viaplay Sport Premium</channel>
@@ -38,6 +38,7 @@
   <channel update="i" site="allatvkanaler.se" site_id="tv4-sport-live-4" xmltv_id="[TV4SPL4].TV4.Sport.Live.4.se">TV4 Sport Live 4</channel>
 
 </settings>
+
 
 
 
