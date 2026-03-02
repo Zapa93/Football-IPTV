@@ -1,5 +1,54 @@
 <?xml version='1.0' encoding='utf-8'?>
-<tv><channel id="[TV4TESV].TV4.Tennis.se">
+<tv><channel id="[TV4FOSV].TV4.Fotboll.se">
+    <display-name lang="sv">TV4 Fotboll</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/tv4-fotboll-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[TV4FOSV].TV4.Fotboll.se.hd">
+    <display-name lang="sv">TV4 Fotboll HD</display-name>
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[VSSPXHD].V.Sport.Extra.HD.se">
+    <display-name lang="sv">Viaplay Sport Extra</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/v-sport-extra-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <display-name lang="sv">Viaplay Sport Fotboll</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/v-sport-football-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[VIASPOH].V.Sport.Premium.HD.se">
+    <display-name lang="sv">Viaplay Sport Premium</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/v-sport-premium-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[SPORTK].TV4.Sportkanalen.se">
+    <display-name lang="sv">TV4 Sportkanalen</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/sportkanalen-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[TV4SPL1].TV4.Sport.Live.1.se">
+    <display-name lang="sv">TV4 Sport Live 1</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/tv4-sport-live-1-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[TV4SPL2].TV4.Sport.Live.2.se">
+    <display-name lang="sv">TV4 Sport Live 2</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/tv4-sport-live-2-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[TV4SPL3].TV4.Sport.Live.3.se">
+    <display-name lang="sv">TV4 Sport Live 3</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/tv4-sport-live-3-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[TV4SPL4].TV4.Sport.Live.4.se">
+    <display-name lang="sv">TV4 Sport Live 4</display-name>
+    <icon src="https://www.allatvkanaler.se/assets/65/logo-sm/tv4-sport-live-4-tabla_sm.webp" />
+    <url>http://www.allatvkanaler.se</url>
+  </channel>
+  <channel id="[TV4TESV].TV4.Tennis.se">
     <icon src="http://dshm.tmsimg.com/assets/s101756_ll_h15_aa.png?w=360&amp;h=270" />
     <icon src="http://dshm.tmsimg.com/assets/s101756_ll_h15_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
@@ -427,7 +476,1870 @@
     <icon src="https://guidatv.sky.it/logo/535dazn2_Light_Fit.png?checksum=af9c8e0f-77ec-4da7-913c-af23e2519823?tr=n-logo_80" />
     <url>http://www.guidatv.sky.it</url>
   </channel>
-  <programme channel="[SVT1HD].SVT1.HD.se" start="20260302050000 +0000" stop="20260302090000 +0000">
+  <programme start="20260302080000 +0100" stop="20260302101000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260302101000 +0100" stop="20260302124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260302124000 +0100" stop="20260302150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260302150000 +0100" stop="20260302171500 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Sassuolo-Atalanta</title>
+  </programme>
+  <programme start="20260302171500 +0100" stop="20260302205000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260302205000 +0100" stop="20260302233000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Madrid-Getafe</title>
+  </programme>
+  <programme start="20260302233000 +0100" stop="20260303050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Madrid-Getafe</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303080000 +0100" stop="20260303102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Parma-Cagliari</title>
+  </programme>
+  <programme start="20260303102000 +0100" stop="20260303124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260303124000 +0100" stop="20260303150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260303150000 +0100" stop="20260303171500 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260303171500 +0100" stop="20260303194000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Mallorca-Real Sociedad</title>
+  </programme>
+  <programme start="20260303194000 +0100" stop="20260303215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260303215000 +0100" stop="20260304000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260304000000 +0100" stop="20260304050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260304050000 +0100" stop="20260304080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304080000 +0100" stop="20260304102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Sassuolo-Atalanta</title>
+  </programme>
+  <programme start="20260304102000 +0100" stop="20260304124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Valencia-Osasuna</title>
+  </programme>
+  <programme start="20260304124000 +0100" stop="20260304150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260304150000 +0100" stop="20260304185500 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Girona-Celta Vigo</title>
+  </programme>
+  <programme start="20260304185500 +0100" stop="20260304215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Real Oviedo</title>
+  </programme>
+  <programme start="20260304215000 +0100" stop="20260305000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260305000000 +0100" stop="20260305050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305080000 +0100" stop="20260305102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260305102000 +0100" stop="20260305124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260305124000 +0100" stop="20260305150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260305150000 +0100" stop="20260305171500 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260305171500 +0100" stop="20260305194000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260305194000 +0100" stop="20260305215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260305215000 +0100" stop="20260306000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Girona-Celta Vigo</title>
+  </programme>
+  <programme start="20260306000000 +0100" stop="20260306050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260306050000 +0100" stop="20260306080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260306080000 +0100" stop="20260306102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260306102000 +0100" stop="20260306124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Parma-Cagliari</title>
+  </programme>
+  <programme start="20260306124000 +0100" stop="20260306150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260306150000 +0100" stop="20260306172000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260306172000 +0100" stop="20260306193500 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260306193500 +0100" stop="20260306214000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Mallorca-Real Sociedad</title>
+  </programme>
+  <programme start="20260306214000 +0100" stop="20260307000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260307000000 +0100" stop="20260307050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260307050000 +0100" stop="20260307102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260307102000 +0100" stop="20260307124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260307124000 +0100" stop="20260307150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260307150000 +0100" stop="20260307172000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260307172000 +0100" stop="20260307193500 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Mallorca-Real Sociedad</title>
+  </programme>
+  <programme start="20260307193500 +0100" stop="20260307214000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260307214000 +0100" stop="20260308000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260308000000 +0100" stop="20260308050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260308050000 +0100" stop="20260308080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260308080000 +0100" stop="20260308102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Sassuolo-Atalanta</title>
+  </programme>
+  <programme start="20260308102000 +0100" stop="20260308124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Valencia-Osasuna</title>
+  </programme>
+  <programme start="20260308124000 +0100" stop="20260308150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260308150000 +0100" stop="20260308172000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Girona-Celta Vigo</title>
+  </programme>
+  <programme start="20260308172000 +0100" stop="20260308193000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Udinese-Fiorentina</title>
+  </programme>
+  <programme start="20260308193000 +0100" stop="20260308215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">La Liga: Real Madrid-Getafe</title>
+  </programme>
+  <programme start="20260308215000 +0100" stop="20260309000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Parma-Cagliari</title>
+  </programme>
+  <programme start="20260302080000 +0100" stop="20260302101000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260302101000 +0100" stop="20260302124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260302124000 +0100" stop="20260302150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260302150000 +0100" stop="20260302171500 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Sassuolo-Atalanta</title>
+  </programme>
+  <programme start="20260302171500 +0100" stop="20260302205000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260302205000 +0100" stop="20260302233000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Madrid-Getafe</title>
+  </programme>
+  <programme start="20260302233000 +0100" stop="20260303050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Madrid-Getafe</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303080000 +0100" stop="20260303102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Parma-Cagliari</title>
+  </programme>
+  <programme start="20260303102000 +0100" stop="20260303124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260303124000 +0100" stop="20260303150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260303150000 +0100" stop="20260303171500 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260303171500 +0100" stop="20260303194000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Mallorca-Real Sociedad</title>
+  </programme>
+  <programme start="20260303194000 +0100" stop="20260303215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260303215000 +0100" stop="20260304000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260304000000 +0100" stop="20260304050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260304050000 +0100" stop="20260304080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304080000 +0100" stop="20260304102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Sassuolo-Atalanta</title>
+  </programme>
+  <programme start="20260304102000 +0100" stop="20260304124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Valencia-Osasuna</title>
+  </programme>
+  <programme start="20260304124000 +0100" stop="20260304150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260304150000 +0100" stop="20260304185500 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Girona-Celta Vigo</title>
+  </programme>
+  <programme start="20260304185500 +0100" stop="20260304215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Real Oviedo</title>
+  </programme>
+  <programme start="20260304215000 +0100" stop="20260305000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260305000000 +0100" stop="20260305050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305080000 +0100" stop="20260305102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260305102000 +0100" stop="20260305124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260305124000 +0100" stop="20260305150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260305150000 +0100" stop="20260305171500 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260305171500 +0100" stop="20260305194000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260305194000 +0100" stop="20260305215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260305215000 +0100" stop="20260306000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Girona-Celta Vigo</title>
+  </programme>
+  <programme start="20260306000000 +0100" stop="20260306050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260306050000 +0100" stop="20260306080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260306080000 +0100" stop="20260306102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260306102000 +0100" stop="20260306124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Parma-Cagliari</title>
+  </programme>
+  <programme start="20260306124000 +0100" stop="20260306150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260306150000 +0100" stop="20260306172000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260306172000 +0100" stop="20260306193500 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260306193500 +0100" stop="20260306214000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Mallorca-Real Sociedad</title>
+  </programme>
+  <programme start="20260306214000 +0100" stop="20260307000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260307000000 +0100" stop="20260307050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260307050000 +0100" stop="20260307102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260307102000 +0100" stop="20260307124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Rayo Vallecano-Athlethic Bilbao</title>
+  </programme>
+  <programme start="20260307124000 +0100" stop="20260307150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Barcelona-Villarreal</title>
+  </programme>
+  <programme start="20260307150000 +0100" stop="20260307172000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Verona-Napoli</title>
+  </programme>
+  <programme start="20260307172000 +0100" stop="20260307193500 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Mallorca-Real Sociedad</title>
+  </programme>
+  <programme start="20260307193500 +0100" stop="20260307214000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Inter-Genoa</title>
+  </programme>
+  <programme start="20260307214000 +0100" stop="20260308000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Cremonese-Milan</title>
+  </programme>
+  <programme start="20260308000000 +0100" stop="20260308050000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Elche-Espanyol</title>
+  </programme>
+  <programme start="20260308050000 +0100" stop="20260308080000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260308080000 +0100" stop="20260308102000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Sassuolo-Atalanta</title>
+  </programme>
+  <programme start="20260308102000 +0100" stop="20260308124000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Valencia-Osasuna</title>
+  </programme>
+  <programme start="20260308124000 +0100" stop="20260308150000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Betis-Sevilla</title>
+  </programme>
+  <programme start="20260308150000 +0100" stop="20260308172000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Girona-Celta Vigo</title>
+  </programme>
+  <programme start="20260308172000 +0100" stop="20260308193000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Udinese-Fiorentina</title>
+  </programme>
+  <programme start="20260308193000 +0100" stop="20260308215000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">La Liga: Real Madrid-Getafe</title>
+  </programme>
+  <programme start="20260308215000 +0100" stop="20260309000000 +0100" channel="[TV4FOSV].TV4.Fotboll.se.hd">
+    <title lang="sv">Serie A: Parma-Cagliari</title>
+  </programme>
+  <programme start="20260302133000 +0100" stop="20260302140000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260302140000 +0100" stop="20260302143000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260302143000 +0100" stop="20260302150000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260302150000 +0100" stop="20260302170000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260302170000 +0100" stop="20260302190000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260302190000 +0100" stop="20260302200000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260302200000 +0100" stop="20260302203000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260302203000 +0100" stop="20260302210000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260302210000 +0100" stop="20260302230000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260302230000 +0100" stop="20260303000000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260303000000 +0100" stop="20260303003000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260303003000 +0100" stop="20260303130000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260303130000 +0100" stop="20260303140000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260303140000 +0100" stop="20260303143000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260303143000 +0100" stop="20260303150000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260303150000 +0100" stop="20260303170000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260303170000 +0100" stop="20260303175500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260303175500 +0100" stop="20260303182500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260303182500 +0100" stop="20260303185500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260303185500 +0100" stop="20260303192500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260303192500 +0100" stop="20260303195500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260303195500 +0100" stop="20260303202500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260303202500 +0100" stop="20260303223000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League: Bournemouth-Brentford</title>
+  </programme>
+  <programme start="20260303223000 +0100" stop="20260303230000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260303230000 +0100" stop="20260303233000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260303233000 +0100" stop="20260304000000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260304000000 +0100" stop="20260304010500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260304010500 +0100" stop="20260304130000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL: Boston Bruins-Pittsburgh Penguins</title>
+  </programme>
+  <programme start="20260304130000 +0100" stop="20260304133000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260304133000 +0100" stop="20260304140000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260304140000 +0100" stop="20260304143000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260304143000 +0100" stop="20260304150000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260304150000 +0100" stop="20260304170000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260304170000 +0100" stop="20260304173000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260304173000 +0100" stop="20260304180000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260304180000 +0100" stop="20260304185500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260304185500 +0100" stop="20260304195500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">IndyCar Highlights</title>
+  </programme>
+  <programme start="20260304195500 +0100" stop="20260304202500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260304202500 +0100" stop="20260304223000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League: Fulham-West Ham</title>
+  </programme>
+  <programme start="20260304223000 +0100" stop="20260304230000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260304230000 +0100" stop="20260304233000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260304233000 +0100" stop="20260305000000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260305000000 +0100" stop="20260305010000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260305010000 +0100" stop="20260305040500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20260305040500 +0100" stop="20260305130000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL: Seattle Kraken-St.Louis Blues</title>
+  </programme>
+  <programme start="20260305130000 +0100" stop="20260305140000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">IndyCar Highlights</title>
+  </programme>
+  <programme start="20260305140000 +0100" stop="20260305143000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260305143000 +0100" stop="20260305150000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260305150000 +0100" stop="20260305170000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260305170000 +0100" stop="20260305173000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260305173000 +0100" stop="20260305180000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260305180000 +0100" stop="20260305190000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260305190000 +0100" stop="20260305210000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260305210000 +0100" stop="20260305230000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260305230000 +0100" stop="20260306000000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">IndyCar Highlights</title>
+  </programme>
+  <programme start="20260306000000 +0100" stop="20260306003000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260306003000 +0100" stop="20260306010000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260306010000 +0100" stop="20260306020500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20260306020500 +0100" stop="20260306130000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL: Winnipeg Jets-Tampa Bay Lightning</title>
+  </programme>
+  <programme start="20260306130000 +0100" stop="20260306150000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260306150000 +0100" stop="20260306170000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260306170000 +0100" stop="20260306175500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">IndyCar Highlights</title>
+  </programme>
+  <programme start="20260306175500 +0100" stop="20260306182500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260306182500 +0100" stop="20260306185500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260306185500 +0100" stop="20260306192500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260306192500 +0100" stop="20260306195500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260306195500 +0100" stop="20260306202500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260306202500 +0100" stop="20260306205500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260306205500 +0100" stop="20260306230000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260306230000 +0100" stop="20260307010000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260307010000 +0100" stop="20260307030500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20260307030500 +0100" stop="20260307124500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL: Anaheim Ducks-Montreal Canadiens</title>
+  </programme>
+  <programme start="20260307124500 +0100" stop="20260307131500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260307131500 +0100" stop="20260307134500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260307134500 +0100" stop="20260307141500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260307141500 +0100" stop="20260307144500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260307144500 +0100" stop="20260307155500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260307155500 +0100" stop="20260307180000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260307180000 +0100" stop="20260307183000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260307183000 +0100" stop="20260307190000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260307190000 +0100" stop="20260307193000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260307193000 +0100" stop="20260307200000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260307200000 +0100" stop="20260307210000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">IndyCar Highlights</title>
+  </programme>
+  <programme start="20260307210000 +0100" stop="20260307233000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">IndyCar</title>
+  </programme>
+  <programme start="20260307233000 +0100" stop="20260308003000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260308003000 +0100" stop="20260308010500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260308010500 +0100" stop="20260308040500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL: Toronto Maple Leafs-Tampa Bay Lightning</title>
+  </programme>
+  <programme start="20260308040500 +0100" stop="20260308130000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL: Calgary Flames-Carolina Hurricanes</title>
+  </programme>
+  <programme start="20260308130000 +0100" stop="20260308133000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260308133000 +0100" stop="20260308140000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260308140000 +0100" stop="20260308163000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20260308163000 +0100" stop="20260308171000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DP World Tour Highlights</title>
+  </programme>
+  <programme start="20260308171000 +0100" stop="20260308192000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260308192000 +0100" stop="20260308195000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260308195000 +0100" stop="20260308202000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260308202000 +0100" stop="20260308205000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260308205000 +0100" stop="20260308225000 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260308225000 +0100" stop="20260309000500 +0100" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">NHL on the Fly</title>
+  </programme>
+  <programme start="20260302140000 +0100" stop="20260302160000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260302160000 +0100" stop="20260302180000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260302180000 +0100" stop="20260302200000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260302200000 +0100" stop="20260302220000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260302220000 +0100" stop="20260302223000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260302223000 +0100" stop="20260302230000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260302230000 +0100" stop="20260303000000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260303000000 +0100" stop="20260303120000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260303120000 +0100" stop="20260303140000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260303140000 +0100" stop="20260303160000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260303160000 +0100" stop="20260303180000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260303180000 +0100" stop="20260303182500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260303182500 +0100" stop="20260303202500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Dortmund-Bayern München</title>
+  </programme>
+  <programme start="20260303202500 +0100" stop="20260303223000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League: Leeds-Sunderland</title>
+  </programme>
+  <programme start="20260303223000 +0100" stop="20260303230000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260303230000 +0100" stop="20260304000000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260304000000 +0100" stop="20260304120000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260304120000 +0100" stop="20260304123000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260304123000 +0100" stop="20260304132500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260304132500 +0100" stop="20260304142500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260304142500 +0100" stop="20260304162500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260304162500 +0100" stop="20260304182500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260304182500 +0100" stop="20260304202500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260304202500 +0100" stop="20260304223000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League: Manchester City-Nottingham</title>
+  </programme>
+  <programme start="20260304223000 +0100" stop="20260304230000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260304230000 +0100" stop="20260305000000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260305000000 +0100" stop="20260305120000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260305120000 +0100" stop="20260305140000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Frankfurt-Freiburg</title>
+  </programme>
+  <programme start="20260305140000 +0100" stop="20260305160000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260305160000 +0100" stop="20260305180000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260305180000 +0100" stop="20260305200000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Dortmund-Bayern München</title>
+  </programme>
+  <programme start="20260305200000 +0100" stop="20260305203000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260305203000 +0100" stop="20260305210000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260305210000 +0100" stop="20260305230000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Hoffenheim-St. Pauli</title>
+  </programme>
+  <programme start="20260305230000 +0100" stop="20260306115000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260306115000 +0100" stop="20260306135000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Hoffenheim-St. Pauli</title>
+  </programme>
+  <programme start="20260306135000 +0100" stop="20260306155000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Dortmund-Bayern München</title>
+  </programme>
+  <programme start="20260306155000 +0100" stop="20260306175000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260306175000 +0100" stop="20260306185000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260306185000 +0100" stop="20260306192000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260306192000 +0100" stop="20260306195000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260306195000 +0100" stop="20260306202000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260306202000 +0100" stop="20260306223000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Bayern München-Mönchengladbach</title>
+  </programme>
+  <programme start="20260306223000 +0100" stop="20260306230000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260306230000 +0100" stop="20260307112000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260307112000 +0100" stop="20260307132500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Bayern München-Mönchengladbach</title>
+  </programme>
+  <programme start="20260307132500 +0100" stop="20260307155500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260307155500 +0100" stop="20260307181000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260307181000 +0100" stop="20260307185500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260307185500 +0100" stop="20260307210000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260307210000 +0100" stop="20260307230500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260307230500 +0100" stop="20260308000500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260308000500 +0100" stop="20260308003500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260308003500 +0100" stop="20260308102000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260308102000 +0100" stop="20260308105000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260308105000 +0100" stop="20260308112000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260308112000 +0100" stop="20260308115000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260308115000 +0100" stop="20260308125500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260308125500 +0100" stop="20260308145500 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">League One</title>
+  </programme>
+  <programme start="20260308145500 +0100" stop="20260308172000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260308172000 +0100" stop="20260308193000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Union Berlin-Werder Bremen</title>
+  </programme>
+  <programme start="20260308193000 +0100" stop="20260308200000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260308200000 +0100" stop="20260308220000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260308220000 +0100" stop="20260308223000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260308223000 +0100" stop="20260308230000 +0100" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260302140000 +0100" stop="20260302160000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Liverpool-West Ham</title>
+  </programme>
+  <programme start="20260302160000 +0100" stop="20260302180000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Burnley-Brentford</title>
+  </programme>
+  <programme start="20260302180000 +0100" stop="20260302200000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Brighton-Nottingham</title>
+  </programme>
+  <programme start="20260302200000 +0100" stop="20260302203000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260302203000 +0100" stop="20260302210000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260302210000 +0100" stop="20260302220000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260302220000 +0100" stop="20260302230000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260302230000 +0100" stop="20260303010500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Wolverhampton-Aston Villa</title>
+  </programme>
+  <programme start="20260303010500 +0100" stop="20260303040500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Rangers-Columbus Blue Jackets</title>
+  </programme>
+  <programme start="20260303040500 +0100" stop="20260303120000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Vancouver Canucks-Dallas Stars</title>
+  </programme>
+  <programme start="20260303120000 +0100" stop="20260303140000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Leeds-Manchester City</title>
+  </programme>
+  <programme start="20260303140000 +0100" stop="20260303160000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Brighton-Nottingham</title>
+  </programme>
+  <programme start="20260303160000 +0100" stop="20260303180000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Liverpool-West Ham</title>
+  </programme>
+  <programme start="20260303180000 +0100" stop="20260303183000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20260303183000 +0100" stop="20260303193000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260303193000 +0100" stop="20260303203000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260303203000 +0100" stop="20260303211000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260303211000 +0100" stop="20260303232500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Wolverhampton-Liverpool</title>
+  </programme>
+  <programme start="20260303232500 +0100" stop="20260304010500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Tiki-Taka</title>
+  </programme>
+  <programme start="20260304010500 +0100" stop="20260304040500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: New Jersey Devils-Florida Panthers</title>
+  </programme>
+  <programme start="20260304040500 +0100" stop="20260304120000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: San Jose Sharks-Montreal Canadiens</title>
+  </programme>
+  <programme start="20260304120000 +0100" stop="20260304130000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260304130000 +0100" stop="20260304150000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Bournemouth-Brentford</title>
+  </programme>
+  <programme start="20260304150000 +0100" stop="20260304170000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Everton-Burnley</title>
+  </programme>
+  <programme start="20260304170000 +0100" stop="20260304190000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Leeds-Sunderland</title>
+  </programme>
+  <programme start="20260304190000 +0100" stop="20260304193000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260304193000 +0100" stop="20260304202500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260304202500 +0100" stop="20260304223000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Brighton-Arsenal</title>
+  </programme>
+  <programme start="20260304223000 +0100" stop="20260304230000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260304230000 +0100" stop="20260305000000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260305000000 +0100" stop="20260305003000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260305003000 +0100" stop="20260305010500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260305010500 +0100" stop="20260305040500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: New Jersey Devils-Toronto Maple Leafs</title>
+  </programme>
+  <programme start="20260305040500 +0100" stop="20260305120000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Vancouver Canucks-Carolina Hurricanes</title>
+  </programme>
+  <programme start="20260305120000 +0100" stop="20260305130000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260305130000 +0100" stop="20260305150000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Aston Villa-Chelsea</title>
+  </programme>
+  <programme start="20260305150000 +0100" stop="20260305170000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Brighton-Arsenal</title>
+  </programme>
+  <programme start="20260305170000 +0100" stop="20260305190000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Fulham-West Ham</title>
+  </programme>
+  <programme start="20260305190000 +0100" stop="20260305193000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Stories</title>
+  </programme>
+  <programme start="20260305193000 +0100" stop="20260305202500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260305202500 +0100" stop="20260305205500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+  </programme>
+  <programme start="20260305205500 +0100" stop="20260305230000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Tottenham-Crystal Palace</title>
+  </programme>
+  <programme start="20260305230000 +0100" stop="20260306003000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Tiki-Taka</title>
+  </programme>
+  <programme start="20260306003000 +0100" stop="20260306010500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Championship Highlights</title>
+  </programme>
+  <programme start="20260306010500 +0100" stop="20260306120000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Pittsburgh Penguins-Buffalo Sabres</title>
+  </programme>
+  <programme start="20260306120000 +0100" stop="20260306140000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Tottenham-Crystal Palace</title>
+  </programme>
+  <programme start="20260306140000 +0100" stop="20260306160000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Manchester City-Nottingham</title>
+  </programme>
+  <programme start="20260306160000 +0100" stop="20260306180000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Bournemouth-Brentford</title>
+  </programme>
+  <programme start="20260306180000 +0100" stop="20260306183000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260306183000 +0100" stop="20260306190000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20260306190000 +0100" stop="20260306200000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260306200000 +0100" stop="20260306204000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20260306204000 +0100" stop="20260306225000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260306225000 +0100" stop="20260306232000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20260306232000 +0100" stop="20260307020500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League: Everton-Burnley</title>
+  </programme>
+  <programme start="20260307020500 +0100" stop="20260307104000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Dallas Stars-Colorado Avalanche</title>
+  </programme>
+  <programme start="20260307104000 +0100" stop="20260307114000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260307114000 +0100" stop="20260307121000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260307121000 +0100" stop="20260307124000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20260307124000 +0100" stop="20260307131000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20260307131000 +0100" stop="20260307152000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20260307152000 +0100" stop="20260307155500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260307155500 +0100" stop="20260307182000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260307182000 +0100" stop="20260307203000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga: Köln-Dortmund</title>
+  </programme>
+  <programme start="20260307203000 +0100" stop="20260307210000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20260307210000 +0100" stop="20260307233500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20260307233500 +0100" stop="20260308023000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Pittsburgh Penguins-Philadelphia Flyers</title>
+  </programme>
+  <programme start="20260308023000 +0100" stop="20260308040500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ingen sändning</title>
+  </programme>
+  <programme start="20260308040500 +0100" stop="20260308102500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: San Jose Sharks-New York Islanders</title>
+  </programme>
+  <programme start="20260308102500 +0100" stop="20260308112500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Review</title>
+  </programme>
+  <programme start="20260308112500 +0100" stop="20260308115500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Netbusters</title>
+  </programme>
+  <programme start="20260308115500 +0100" stop="20260308122500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Champions League Magazine</title>
+  </programme>
+  <programme start="20260308122500 +0100" stop="20260308125500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League Big Interview</title>
+  </programme>
+  <programme start="20260308125500 +0100" stop="20260308152000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">FA-Cupen</title>
+  </programme>
+  <programme start="20260308152000 +0100" stop="20260308173000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga: St. Pauli-Frankfurt</title>
+  </programme>
+  <programme start="20260308173000 +0100" stop="20260308193000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">EFL Championship</title>
+  </programme>
+  <programme start="20260308193000 +0100" stop="20260308204000 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+  </programme>
+  <programme start="20260308204000 +0100" stop="20260308230500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Ligue 1</title>
+  </programme>
+  <programme start="20260308230500 +0100" stop="20260309023500 +0100" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Buffalo Sabres-Tampa Bay Lightning</title>
+  </programme>
+  <programme start="20260302122000 +0100" stop="20260302130500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260302130500 +0100" stop="20260302133000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260302133000 +0100" stop="20260302135500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260302135500 +0100" stop="20260302141500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302141500 +0100" stop="20260302144000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302144000 +0100" stop="20260302150000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302150000 +0100" stop="20260302152500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302152500 +0100" stop="20260302161000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260302161000 +0100" stop="20260302165500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260302165500 +0100" stop="20260302171500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260302171500 +0100" stop="20260302174000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260302174000 +0100" stop="20260302180500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302180500 +0100" stop="20260302182500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302182500 +0100" stop="20260302203000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A: Pisa-Bologna</title>
+  </programme>
+  <programme start="20260302203000 +0100" stop="20260302204000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302204000 +0100" stop="20260302210500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260302210500 +0100" stop="20260302213000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302213000 +0100" stop="20260302220000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260302220000 +0100" stop="20260302223000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20260302223000 +0100" stop="20260302231500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260302231500 +0100" stop="20260303000000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260303000000 +0100" stop="20260303010000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260303010000 +0100" stop="20260303050000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303110000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303110000 +0100" stop="20260303114500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260303114500 +0100" stop="20260303123500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20260303123500 +0100" stop="20260303130000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260303130000 +0100" stop="20260303132500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303132500 +0100" stop="20260303134500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303134500 +0100" stop="20260303141000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303141000 +0100" stop="20260303143000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303143000 +0100" stop="20260303151500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260303151500 +0100" stop="20260303160000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260303160000 +0100" stop="20260303165500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20260303165500 +0100" stop="20260303172000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260303172000 +0100" stop="20260303174000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303174000 +0100" stop="20260303180500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303180500 +0100" stop="20260303182500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303182500 +0100" stop="20260303185000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303185000 +0100" stop="20260303193500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260303193500 +0100" stop="20260303195500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">The Swedish Jump Set - Åhman &amp; Hellvig</title>
+  </programme>
+  <programme start="20260303195500 +0100" stop="20260303205000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20260303205000 +0100" stop="20260303211500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260303211500 +0100" stop="20260303213500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303213500 +0100" stop="20260303220000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303220000 +0100" stop="20260303223000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20260303223000 +0100" stop="20260303225000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260303225000 +0100" stop="20260303234500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20260303234500 +0100" stop="20260304003000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260304003000 +0100" stop="20260304011500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260304011500 +0100" stop="20260304050000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304050000 +0100" stop="20260304113500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304113500 +0100" stop="20260304121500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260304121500 +0100" stop="20260304130500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20260304130500 +0100" stop="20260304133000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260304133000 +0100" stop="20260304135500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304135500 +0100" stop="20260304141500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304141500 +0100" stop="20260304144000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304144000 +0100" stop="20260304150000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304150000 +0100" stop="20260304154500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260304154500 +0100" stop="20260304163000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260304163000 +0100" stop="20260304165500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260304165500 +0100" stop="20260304171500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304171500 +0100" stop="20260304174000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304174000 +0100" stop="20260304180000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304180000 +0100" stop="20260304182500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260304182500 +0100" stop="20260304213000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260304213000 +0100" stop="20260304215500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260304215500 +0100" stop="20260304225000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">SailGP Highlights</title>
+  </programme>
+  <programme start="20260304225000 +0100" stop="20260304233500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260304233500 +0100" stop="20260305000000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260305000000 +0100" stop="20260305002500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260305002500 +0100" stop="20260305011500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260305011500 +0100" stop="20260305050000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305121500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305121500 +0100" stop="20260305130000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260305130000 +0100" stop="20260305132500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260305132500 +0100" stop="20260305135000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260305135000 +0100" stop="20260305141000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305141000 +0100" stop="20260305143500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305143500 +0100" stop="20260305150000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305150000 +0100" stop="20260305152000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305152000 +0100" stop="20260305160500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260305160500 +0100" stop="20260305165000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260305165000 +0100" stop="20260305171500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260305171500 +0100" stop="20260305174500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260305174500 +0100" stop="20260305181000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260305181000 +0100" stop="20260305183000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305183000 +0100" stop="20260305185500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305185500 +0100" stop="20260305194000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260305194000 +0100" stop="20260305202500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260305202500 +0100" stop="20260305204500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260305204500 +0100" stop="20260305211000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260305211000 +0100" stop="20260305213500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305213500 +0100" stop="20260305220000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260305220000 +0100" stop="20260305223000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20260305223000 +0100" stop="20260305225500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260305225500 +0100" stop="20260305232000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260305232000 +0100" stop="20260306000500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260306000500 +0100" stop="20260306005500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260306005500 +0100" stop="20260306050000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260306050000 +0100" stop="20260306115000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260306115000 +0100" stop="20260306123500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260306123500 +0100" stop="20260306130000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260306130000 +0100" stop="20260306132500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260306132500 +0100" stop="20260306135000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306135000 +0100" stop="20260306141000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306141000 +0100" stop="20260306143500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306143500 +0100" stop="20260306150000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306150000 +0100" stop="20260306154500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260306154500 +0100" stop="20260306163000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260306163000 +0100" stop="20260306165500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260306165500 +0100" stop="20260306172000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260306172000 +0100" stop="20260306174500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306174500 +0100" stop="20260306180500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306180500 +0100" stop="20260306183000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306183000 +0100" stop="20260306185000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306185000 +0100" stop="20260306194000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260306194000 +0100" stop="20260306202000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260306202000 +0100" stop="20260306205000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260306205000 +0100" stop="20260306211000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260306211000 +0100" stop="20260306213500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306213500 +0100" stop="20260306220000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260306220000 +0100" stop="20260306223000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Vinnare V64</title>
+  </programme>
+  <programme start="20260306223000 +0100" stop="20260306231500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Svenska äventyr</title>
+  </programme>
+  <programme start="20260306231500 +0100" stop="20260306234000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260306234000 +0100" stop="20260307000500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260307000500 +0100" stop="20260307003000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260307003000 +0100" stop="20260307012000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260307012000 +0100" stop="20260307050000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260307050000 +0100" stop="20260307111000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260307111000 +0100" stop="20260307115000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260307115000 +0100" stop="20260307121500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260307121500 +0100" stop="20260307124500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260307124500 +0100" stop="20260307131000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260307131000 +0100" stop="20260307133500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307133500 +0100" stop="20260307135500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307135500 +0100" stop="20260307142000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307142000 +0100" stop="20260307144500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307144500 +0100" stop="20260307151000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260307151000 +0100" stop="20260307155500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260307155500 +0100" stop="20260307164000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260307164000 +0100" stop="20260307170000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260307170000 +0100" stop="20260307172500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307172500 +0100" stop="20260307175000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307175000 +0100" stop="20260307181000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307181000 +0100" stop="20260307184000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260307184000 +0100" stop="20260307190500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260307190500 +0100" stop="20260307195000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260307195000 +0100" stop="20260307203000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260307203000 +0100" stop="20260307205500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260307205500 +0100" stop="20260307212000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307212000 +0100" stop="20260307214500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307214500 +0100" stop="20260307220500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307220500 +0100" stop="20260307223000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Serie A Full Impact</title>
+  </programme>
+  <programme start="20260307223000 +0100" stop="20260307230000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260307230000 +0100" stop="20260307232500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260307232500 +0100" stop="20260308001000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260308001000 +0100" stop="20260308005500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260308005500 +0100" stop="20260308012500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260308012500 +0100" stop="20260308050000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260308050000 +0100" stop="20260308110000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260308110000 +0100" stop="20260308114500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260308114500 +0100" stop="20260308121000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260308121000 +0100" stop="20260308123000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">The Swedish Jump Set - Åhman &amp; Hellvig</title>
+  </programme>
+  <programme start="20260308123000 +0100" stop="20260308130000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260308130000 +0100" stop="20260308132500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260308132500 +0100" stop="20260308134500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308134500 +0100" stop="20260308141000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308141000 +0100" stop="20260308143500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308143500 +0100" stop="20260308145500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308145500 +0100" stop="20260308154000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260308154000 +0100" stop="20260308162500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260308162500 +0100" stop="20260308165500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260308165500 +0100" stop="20260308172000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260308172000 +0100" stop="20260308174500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308174500 +0100" stop="20260308180500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308180500 +0100" stop="20260308183000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308183000 +0100" stop="20260308185000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308185000 +0100" stop="20260308194000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260308194000 +0100" stop="20260308201000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260308201000 +0100" stop="20260308203500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">ATP Tour This Week</title>
+  </programme>
+  <programme start="20260308203500 +0100" stop="20260308210000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs</title>
+  </programme>
+  <programme start="20260308210000 +0100" stop="20260308212500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308212500 +0100" stop="20260308214500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308214500 +0100" stop="20260308220500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308220500 +0100" stop="20260308223500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+  </programme>
+  <programme start="20260308223500 +0100" stop="20260308230000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">The Swedish Jump Set - Åhman &amp; Hellvig</title>
+  </programme>
+  <programme start="20260308230000 +0100" stop="20260308232500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Inside Serie A</title>
+  </programme>
+  <programme start="20260308232500 +0100" stop="20260309001000 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Matti Nykänen - Livet är livet</title>
+  </programme>
+  <programme start="20260309001000 +0100" stop="20260309005500 +0100" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+  </programme>
+  <programme start="20260302060000 +0100" stop="20260302204000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20260302204000 +0100" stop="20260303003000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Serie A: Udinese-Fiorentina</title>
+  </programme>
+  <programme start="20260303003000 +0100" stop="20260303050000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303061000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303061000 +0100" stop="20260303144000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303065900 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303144000 +0100" stop="20260303185500 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20260303185500 +0100" stop="20260303213000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Karlskoga-Kalmar HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260303213000 +0100" stop="20260304070500 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Karlskoga-Kalmar HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260304070500 +0100" stop="20260304073000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304073000 +0100" stop="20260304183000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">ATP Tour</title>
+  </programme>
+  <programme start="20260304183000 +0100" stop="20260304185000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260304185000 +0100" stop="20260304211500 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Malmö-Färjestad SHL</title>
+  </programme>
+  <programme start="20260304211500 +0100" stop="20260305050000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305185500 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305185500 +0100" stop="20260305213000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260305213000 +0100" stop="20260306050000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260306050000 +0100" stop="20260306050000 +0100" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302050000 +0100" stop="20260302050000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302050000 +0100" stop="20260302185500 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302185500 +0100" stop="20260302213000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">AIK-Östersund HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260302213000 +0100" stop="20260303050000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">AIK-Östersund HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303183000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303183000 +0100" stop="20260303185000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260303185000 +0100" stop="20260303211500 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Växjö-Skellefteå SHL</title>
+  </programme>
+  <programme start="20260303211500 +0100" stop="20260303220000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260303220000 +0100" stop="20260304050000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Växjö-Skellefteå SHL</title>
+  </programme>
+  <programme start="20260304050000 +0100" stop="20260304185500 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304185500 +0100" stop="20260304213000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260304213000 +0100" stop="20260305050000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305143000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305143000 +0100" stop="20260305150500 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Hockeylördag</title>
+  </programme>
+  <programme start="20260305150500 +0100" stop="20260305175000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Linköping-Brynäs SHL</title>
+  </programme>
+  <programme start="20260305175000 +0100" stop="20260305201500 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Frölunda-Timrå SHL</title>
+  </programme>
+  <programme start="20260305201500 +0100" stop="20260305210000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Hockeylördag</title>
+  </programme>
+  <programme start="20260305210000 +0100" stop="20260306000000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Linköping-Brynäs SHL</title>
+  </programme>
+  <programme start="20260306000000 +0100" stop="20260306050000 +0100" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Frölunda-Timrå SHL</title>
+  </programme>
+  <programme start="20260302050000 +0100" stop="20260302050000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302050000 +0100" stop="20260302185500 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302185500 +0100" stop="20260302213000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Troja/Ljungby-Björklöven HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260302213000 +0100" stop="20260303050000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Troja/Ljungby-Björklöven HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303183000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303183000 +0100" stop="20260303185000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260303185000 +0100" stop="20260303211500 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Timrå-Brynäs SHL</title>
+  </programme>
+  <programme start="20260303211500 +0100" stop="20260303220000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260303220000 +0100" stop="20260304050000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Timrå-Brynäs SHL</title>
+  </programme>
+  <programme start="20260304050000 +0100" stop="20260304185500 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304185500 +0100" stop="20260304213000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260304213000 +0100" stop="20260305050000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305143000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305143000 +0100" stop="20260305150500 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Hockeylördag</title>
+  </programme>
+  <programme start="20260305150500 +0100" stop="20260305175000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Malmö-Skellefteå SHL</title>
+  </programme>
+  <programme start="20260305175000 +0100" stop="20260305201500 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Växjö-Örebro SHL</title>
+  </programme>
+  <programme start="20260305201500 +0100" stop="20260305210000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Hockeylördag</title>
+  </programme>
+  <programme start="20260305210000 +0100" stop="20260306000000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Malmö-Skellefteå SHL</title>
+  </programme>
+  <programme start="20260306000000 +0100" stop="20260306050000 +0100" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Växjö-Örebro SHL</title>
+  </programme>
+  <programme start="20260302050000 +0100" stop="20260302050000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302050000 +0100" stop="20260302185500 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260302185500 +0100" stop="20260302213000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Mora-Västerås HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260302213000 +0100" stop="20260303050000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Mora-Västerås HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260303050000 +0100" stop="20260303183000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260303183000 +0100" stop="20260303185000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260303185000 +0100" stop="20260303211500 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Örebro-Djurgården SHL</title>
+  </programme>
+  <programme start="20260303211500 +0100" stop="20260303220000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">SHL: Hockeytorsdag</title>
+  </programme>
+  <programme start="20260303220000 +0100" stop="20260304050000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Örebro-Djurgården SHL</title>
+  </programme>
+  <programme start="20260304050000 +0100" stop="20260304185500 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260304185500 +0100" stop="20260304213000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260304213000 +0100" stop="20260305050000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">HockeyAllsvenskan</title>
+  </programme>
+  <programme start="20260305050000 +0100" stop="20260305143000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+  </programme>
+  <programme start="20260305143000 +0100" stop="20260305150500 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Hockeylördag</title>
+  </programme>
+  <programme start="20260305150500 +0100" stop="20260305174500 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Leksand-HV71 SHL</title>
+  </programme>
+  <programme start="20260305174500 +0100" stop="20260306050000 +0100" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Leksand-HV71 SHL</title>
+  </programme>
+<programme channel="[SVT1HD].SVT1.HD.se" start="20260302050000 +0000" stop="20260302090000 +0000">
     <title lang="sv">Live: Morgonstudion</title>
     <desc lang="sv">Dagens viktigaste nyheter och analyser med ständiga uppdateringar. Vi sänder direkt inrikes- och utrikesnyheter inklusive sport, kultur och nöje. Dessutom intervjuer med aktuella gäster. Nyhetssammanfattningar varje kvart med start kl 06.00.</desc>
     <credits>
