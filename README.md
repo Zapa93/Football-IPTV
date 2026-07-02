@@ -28,4 +28,4 @@ Teletext added for Swedish SVT, both in fullscreen and side-by-side mode.
 ## Build App
 
 
-`ares-package to build the app .ipk file then proceed to install through [WebOS Dev Manager.](https://github.com/webosbrew/dev-manager-desktop)
+`ares-package dist´ to build the app .ipk file then proceed to install through [WebOS Dev Manager.](https://github.com/webosbrew/dev-manager-desktop)
