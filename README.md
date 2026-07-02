@@ -1,8 +1,15 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-A WebOS app customized for the football experience with features such as EPG-related match channel lookup and teletext support.
+A WebOS app customized for the football experience.
 
+## Features:
+
+**Live score**
+Sidebar with minute by minute live score of Europe's biggest leagues and team, customizable through geminiService.tsx with a priority system to place the followed or big leagues up front.
+
+**Match channel lookup**
+Look-up system with EPG search to find the channel showing the game with a click.
+
+**Teletext**
+Teletext added for Swedish SVT, both in fullscreen and side-by-side mode. 
 
 ## Run Locally
 
@@ -14,5 +21,8 @@ A WebOS app customized for the football experience with features such as EPG-rel
 2. Set the API-keys to different functions in [.env.local](.env.local)
 3. Run the app:
    `npm run dev`
-4. Build the app:
-   `ares-package dist´
+
+## Build App
+
+
+`ares-package to build the app .ipk file then proceed to install through [WebOS Dev Manager.](https://github.com/webosbrew/dev-manager-desktop)
