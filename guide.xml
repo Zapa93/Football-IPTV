@@ -39,11 +39,11 @@
     <display-name lang="sv">TV4 Sport Live 4</display-name>
     <url>http://www.allatvkanaler.se</url>
   </channel>
-<channel id="[TV6HD].TV6.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s83524_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s83524_ll_h15_aa.png?w=360&amp;h=270" />
+<channel id="[VIAFAMI].V.Film.Family.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77688_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77688_ll_h15_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV6HD] TV6 HD</display-name>
+    <display-name lang="en">[VIAFAMI] V Film Family</display-name>
   </channel>
   <channel id="[EURSP2H].Eurosport.2.HD.se">
     <icon src="http://dtil.tmsimg.com/assets/s87661_ll_h15_aa.png?w=360&amp;h=270" />
@@ -51,219 +51,11 @@
     <url>http://www.tmsapi.com</url>
     <display-name lang="en">[EURSP2H] Eurosport 2 HD</display-name>
   </channel>
-  <channel id="[VIASMHD].V.Sport.Motor.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77712_ll_h9_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77712_ll_h9_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIASMHD] V Sport Motor HD</display-name>
-  </channel>
   <channel id="[KANL11H].Kanal.11.HD.se">
     <icon src="http://dtil.tmsimg.com/assets/s98336_ll_h15_ab.png?w=360&amp;h=270" />
     <icon src="http://dtil.tmsimg.com/assets/s98336_ll_h15_ab.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
     <display-name lang="en">[KANL11H] Kanal 11 HD</display-name>
-  </channel>
-  <channel id="[FMACTHD].V.Film.Action.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s82275_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s82275_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[FMACTHD] V Film Action HD</display-name>
-  </channel>
-  <channel id="[VIAEXPL].Viasat.Explore.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77700_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77700_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIAEXPL] Viasat Explore</display-name>
-  </channel>
-  <channel id="[MTVSWHD].MTV.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s102773_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s102773_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[MTVSWHD] MTV HD</display-name>
-  </channel>
-  <channel id="[CNBCEHD].CNBC.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG002NFJQJ.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG002NFJQJ.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[CNBCEHD] CNBC HD</display-name>
-  </channel>
-  <channel id="[TV4TESV].TV4.Tennis.se">
-    <icon src="http://dtil.tmsimg.com/assets/s101756_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s101756_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4TESV] TV4 Tennis</display-name>
-  </channel>
-  <channel id="[MATKANS].Godare.se">
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[MATKANS] Godare</display-name>
-  </channel>
-  <channel id="[TV10HD].TV10.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s108965_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s108965_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV10HD] TV10 HD</display-name>
-  </channel>
-  <channel id="[TV12HD].TV12.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s98728_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s98728_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV12HD] TV12 HD</display-name>
-  </channel>
-  <channel id="[EUROSHD].Eurosport.1.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77725_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77725_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[EUROSHD] Eurosport 1 HD</display-name>
-  </channel>
-  <channel id="[KUNSKHD].Kunskapskanalen.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s99333_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s99333_ll_h15_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[KUNSKHD] Kunskapskanalen HD</display-name>
-  </channel>
-  <channel id="[TV8HD].TV8.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s108964_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s108964_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV8HD] TV8 HD</display-name>
-  </channel>
-  <channel id="[SKYS2SV].SkyShowtime.2.se">
-    <icon src="http://dtil.tmsimg.com/assets/s122288_ll_h15_as.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s122288_ll_h15_as.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[SKYS2SV] SkyShowtime 2</display-name>
-  </channel>
-  <channel id="[SPEXTV].Sport.Expressen.TV.se">
-    <icon src="http://dtil.tmsimg.com/sources/generic/generic_sources_h3.png" />
-    <icon src="http://dtil.tmsimg.com/sources/generic/generic_sources_h3.png" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[SPEXTV] Sport Expressen TV</display-name>
-  </channel>
-  <channel id="[VGOLFHD].V.Sport.Golf.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s83504_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s83504_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VGOLFHD] V Sport Golf HD</display-name>
-  </channel>
-  <channel id="[ANIPLHD].Animal.Planet.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77397_ll_h9_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77397_ll_h9_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[ANIPLHD] Animal Planet HD</display-name>
-  </channel>
-  <channel id="[DISCSCI].Discovery.Science.se">
-    <icon src="http://dtil.tmsimg.com/assets/s69425_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s69425_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[DISCSCI] Discovery Science</display-name>
-  </channel>
-  <channel id="[DISCOHD].Discovery.Channel.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s87852_ll_h9_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s87852_ll_h9_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[DISCOHD] Discovery Channel HD</display-name>
-  </channel>
-  <channel id="[TV4FAKT].TV4.Fakta.se">
-    <icon src="http://dtil.tmsimg.com/assets/s69434_ll_h9_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s69434_ll_h9_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4FAKT] TV4 Fakta</display-name>
-  </channel>
-  <channel id="[VIANAT].Viasat.Nature.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76844_ll_h9_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76844_ll_h9_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIANAT] Viasat Nature</display-name>
-  </channel>
-  <channel id="[VIAHIST].Viasat.History.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76843_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76843_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIAHIST] Viasat History</display-name>
-  </channel>
-  <channel id="[TV4HOSV].TV4.Hockey.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77718_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77718_ll_h15_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4HOSV] TV4 Hockey</display-name>
-  </channel>
-  <channel id="[VIAFILHD].V.Film.Premiere.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77689_ll_h9_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77689_ll_h9_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIAFILHD] V Film Premiere HD</display-name>
-  </channel>
-  <channel id="[VIASEHD].V.Series.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s82273_ll_h9_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s82273_ll_h9_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIASEHD] V Series HD</display-name>
-  </channel>
-  <channel id="[NATGWHD].National.Geographic.Wild.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76857_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76857_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[NATGWHD] National Geographic Wild HD</display-name>
-  </channel>
-  <channel id="[TV4MOSV].TV4.Motor.se">
-    <icon src="http://dtil.tmsimg.com/assets/s97327_ll_h15_ad.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s97327_ll_h15_ad.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4MOSV] TV4 Motor</display-name>
-  </channel>
-  <channel id="[VIAHTHD].V.Film.Hits.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s102328_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s102328_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIAHTHD] V Film Hits HD</display-name>
-  </channel>
-  <channel id="[SFKANAL].SF.Kanalen.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77678_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77678_ll_h15_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[SFKANAL] SF Kanalen</display-name>
-  </channel>
-  <channel id="[COMSVHD].SVTB/SVT24.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s100984_ll_h15_ac.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s100984_ll_h15_ac.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[COMSVHD] SVTB/SVT24 HD</display-name>
-  </channel>
-  <channel id="[SVT1HD].SVT1.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s69429_ll_h9_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s69429_ll_h9_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[SVT1HD] SVT1 HD</display-name>
-  </channel>
-  <channel id="[VIAFAMI].V.Film.Family.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77688_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77688_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[VIAFAMI] V Film Family</display-name>
-  </channel>
-  <channel id="[CNNEU].CNN.International.se">
-    <icon src="http://dtil.tmsimg.com/assets/s17664_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s17664_ll_h15_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[CNNEU] CNN International</display-name>
-  </channel>
-  <channel id="[TLCSWHD].TLC.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s98339_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s98339_ll_h15_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TLCSWHD] TLC HD</display-name>
-  </channel>
-  <channel id="[NATGEHD].National.Geographic.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77693_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77693_ll_h15_aa.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[NATGEHD] National Geographic HD</display-name>
-  </channel>
-  <channel id="[SVT2HD].SVT2.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76804_ll_h9_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76804_ll_h9_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[SVT2HD] SVT2 HD</display-name>
   </channel>
   <channel id="[TV3HD].TV3.HD.se">
     <icon src="http://dtil.tmsimg.com/assets/s76806_ll_h15_aa.png?w=360&amp;h=270" />
@@ -271,53 +63,47 @@
     <url>http://www.tmsapi.com</url>
     <display-name lang="en">[TV3HD] TV3 HD</display-name>
   </channel>
-  <channel id="[KANL5HD].KANAL.5.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s83127_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s83127_ll_h15_ab.png?w=360&amp;h=270" />
+  <channel id="[VGOLFHD].V.Sport.Golf.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s83504_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s83504_ll_h15_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[KANL5HD] KANAL 5 HD</display-name>
+    <display-name lang="en">[VGOLFHD] V Sport Golf HD</display-name>
   </channel>
-  <channel id="[TV4HD].TV4.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76807_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76807_ll_h15_aa.png?w=360&amp;h=270" />
+  <channel id="[TV8HD].TV8.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s108964_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s108964_ll_h15_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4HD] TV4 HD</display-name>
+    <display-name lang="en">[TV8HD] TV8 HD</display-name>
   </channel>
-  <channel id="[TV4HISV].TV4.Hits.se">
-    <icon src="http://dtil.tmsimg.com/assets/s77662_ll_h15_ac.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s77662_ll_h15_ac.png?w=360&amp;h=270" />
+  <channel id="[DISCOHD].Discovery.Channel.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s87852_ll_h9_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s87852_ll_h9_ab.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4HISV] TV4 Hits</display-name>
+    <display-name lang="en">[DISCOHD] Discovery Channel HD</display-name>
   </channel>
-  <channel id="[H2HDSWE].H2.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s98727_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s98727_ll_h15_aa.png?w=360&amp;h=270" />
+  <channel id="[VIAFILHD].V.Film.Premiere.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77689_ll_h9_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77689_ll_h9_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[H2HDSWE] H2 HD</display-name>
+    <display-name lang="en">[VIAFILHD] V Film Premiere HD</display-name>
   </channel>
-  <channel id="[HISTOSD].History.se">
-    <icon src="http://dtil.tmsimg.com/assets/s104951_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s104951_ll_h15_aa.png?w=360&amp;h=270" />
+  <channel id="[SKYS2SV].SkyShowtime.2.se">
+    <icon src="http://dtil.tmsimg.com/assets/s122288_ll_h15_as.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s122288_ll_h15_as.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[HISTOSD] History</display-name>
+    <display-name lang="en">[SKYS2SV] SkyShowtime 2</display-name>
   </channel>
-  <channel id="[TV4FILM].TV4.Film.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76831_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76831_ll_h15_ab.png?w=360&amp;h=270" />
+  <channel id="[CNBCEHD].CNBC.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG002NFJQJ.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/GNLZZGG002NFJQJ.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4FILM] TV4 Film</display-name>
+    <display-name lang="en">[CNBCEHD] CNBC HD</display-name>
   </channel>
-  <channel id="[TV4GULD].TV4.Guld.se">
-    <icon src="http://dtil.tmsimg.com/assets/s76827_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s76827_ll_h15_ab.png?w=360&amp;h=270" />
+  <channel id="[NATGEHD].National.Geographic.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77693_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77693_ll_h15_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[TV4GULD] TV4 Guld</display-name>
-  </channel>
-  <channel id="[KANAL9H].Kanal.9.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s98333_ll_h15_ab.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s98333_ll_h15_ab.png?w=360&amp;h=270" />
-    <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[KANAL9H] Kanal 9 HD</display-name>
+    <display-name lang="en">[NATGEHD] National Geographic HD</display-name>
   </channel>
   <channel id="[TV4STSV].TV4.Stars.se">
     <icon src="http://dtil.tmsimg.com/assets/s100235_ll_h15_ab.png?w=360&amp;h=270" />
@@ -325,11 +111,149 @@
     <url>http://www.tmsapi.com</url>
     <display-name lang="en">[TV4STSV] TV4 Stars</display-name>
   </channel>
-  <channel id="[SJUHD].Sjuan.HD.se">
-    <icon src="http://dtil.tmsimg.com/assets/s106567_ll_h15_aa.png?w=360&amp;h=270" />
-    <icon src="http://dtil.tmsimg.com/assets/s106567_ll_h15_aa.png?w=360&amp;h=270" />
+  <channel id="[VIAEXPL].Viasat.Explore.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77700_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77700_ll_h15_aa.png?w=360&amp;h=270" />
     <url>http://www.tmsapi.com</url>
-    <display-name lang="en">[SJUHD] Sjuan HD</display-name>
+    <display-name lang="en">[VIAEXPL] Viasat Explore</display-name>
+  </channel>
+  <channel id="[HISTOSD].History.se">
+    <icon src="http://dtil.tmsimg.com/assets/s104951_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s104951_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[HISTOSD] History</display-name>
+  </channel>
+  <channel id="[TV4MOSV].TV4.Motor.se">
+    <icon src="http://dtil.tmsimg.com/assets/s97327_ll_h15_ad.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s97327_ll_h15_ad.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4MOSV] TV4 Motor</display-name>
+  </channel>
+  <channel id="[H2HDSWE].H2.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s98727_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s98727_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[H2HDSWE] H2 HD</display-name>
+  </channel>
+  <channel id="[TV4TESV].TV4.Tennis.se">
+    <icon src="http://dtil.tmsimg.com/assets/s101756_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s101756_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4TESV] TV4 Tennis</display-name>
+  </channel>
+  <channel id="[DISCSCI].Discovery.Science.se">
+    <icon src="http://dtil.tmsimg.com/assets/s69425_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s69425_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[DISCSCI] Discovery Science</display-name>
+  </channel>
+  <channel id="[TV4HD].TV4.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76807_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76807_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4HD] TV4 HD</display-name>
+  </channel>
+  <channel id="[EUROSHD].Eurosport.1.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77725_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77725_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[EUROSHD] Eurosport 1 HD</display-name>
+  </channel>
+  <channel id="[VIANAT].Viasat.Nature.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76844_ll_h9_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76844_ll_h9_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[VIANAT] Viasat Nature</display-name>
+  </channel>
+  <channel id="[TV6HD].TV6.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s83524_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s83524_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV6HD] TV6 HD</display-name>
+  </channel>
+  <channel id="[TV4HOSV].TV4.Hockey.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77718_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77718_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4HOSV] TV4 Hockey</display-name>
+  </channel>
+  <channel id="[SPEXTV].Sport.Expressen.TV.se">
+    <icon src="http://dtil.tmsimg.com/sources/generic/generic_sources_h3.png" />
+    <icon src="http://dtil.tmsimg.com/sources/generic/generic_sources_h3.png" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[SPEXTV] Sport Expressen TV</display-name>
+  </channel>
+  <channel id="[KANL5HD].KANAL.5.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s83127_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s83127_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[KANL5HD] KANAL 5 HD</display-name>
+  </channel>
+  <channel id="[SVT2HD].SVT2.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76804_ll_h9_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76804_ll_h9_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[SVT2HD] SVT2 HD</display-name>
+  </channel>
+  <channel id="[MTVSWHD].MTV.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s102773_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s102773_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[MTVSWHD] MTV HD</display-name>
+  </channel>
+  <channel id="[TLCSWHD].TLC.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s98339_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s98339_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TLCSWHD] TLC HD</display-name>
+  </channel>
+  <channel id="[KANAL9H].Kanal.9.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s98333_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s98333_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[KANAL9H] Kanal 9 HD</display-name>
+  </channel>
+  <channel id="[SFKANAL].SF.Kanalen.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77678_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77678_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[SFKANAL] SF Kanalen</display-name>
+  </channel>
+  <channel id="[SVT1HD].SVT1.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s69429_ll_h9_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s69429_ll_h9_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[SVT1HD] SVT1 HD</display-name>
+  </channel>
+  <channel id="[TV12HD].TV12.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s98728_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s98728_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV12HD] TV12 HD</display-name>
+  </channel>
+  <channel id="[VIASMHD].V.Sport.Motor.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77712_ll_h9_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77712_ll_h9_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[VIASMHD] V Sport Motor HD</display-name>
+  </channel>
+  <channel id="[TV4HISV].TV4.Hits.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77662_ll_h15_ac.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77662_ll_h15_ac.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4HISV] TV4 Hits</display-name>
+  </channel>
+  <channel id="[COMSVHD].SVTB/SVT24.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s100984_ll_h15_ac.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s100984_ll_h15_ac.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[COMSVHD] SVTB/SVT24 HD</display-name>
+  </channel>
+  <channel id="[NATGWHD].National.Geographic.Wild.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76857_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76857_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[NATGWHD] National Geographic Wild HD</display-name>
   </channel>
   <channel id="[VSPOVIS].V.Sport.Vinter.se">
     <icon src="http://dtil.tmsimg.com/assets/s77732_ll_h15_ab.png?w=360&amp;h=270" />
@@ -337,17 +261,111 @@
     <url>http://www.tmsapi.com</url>
     <display-name lang="en">[VSPOVIS] V Sport Vinter</display-name>
   </channel>
-  <channel id="TNT.Sports.8.HD.uk">
-    <icon src="https://tv.assets.pressassociation.io/e3cb5ec6-42ce-5031-bc76-83e46cbe3652.png" />
-    <icon src="https://tv.assets.pressassociation.io/e3cb5ec6-42ce-5031-bc76-83e46cbe3652.png" />
+  <channel id="[TV4GULD].TV4.Guld.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76827_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76827_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4GULD] TV4 Guld</display-name>
+  </channel>
+  <channel id="[KUNSKHD].Kunskapskanalen.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s99333_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s99333_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[KUNSKHD] Kunskapskanalen HD</display-name>
+  </channel>
+  <channel id="[VIAHIST].Viasat.History.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76843_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76843_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[VIAHIST] Viasat History</display-name>
+  </channel>
+  <channel id="[FMACTHD].V.Film.Action.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s82275_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s82275_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[FMACTHD] V Film Action HD</display-name>
+  </channel>
+  <channel id="[CNNEU].CNN.International.se">
+    <icon src="http://dtil.tmsimg.com/assets/s17664_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s17664_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[CNNEU] CNN International</display-name>
+  </channel>
+  <channel id="[MATKANS].Godare.se">
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[MATKANS] Godare</display-name>
+  </channel>
+  <channel id="[VIASEHD].V.Series.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s82273_ll_h9_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s82273_ll_h9_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[VIASEHD] V Series HD</display-name>
+  </channel>
+  <channel id="[TV4FILM].TV4.Film.se">
+    <icon src="http://dtil.tmsimg.com/assets/s76831_ll_h15_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s76831_ll_h15_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4FILM] TV4 Film</display-name>
+  </channel>
+  <channel id="[TV4FAKT].TV4.Fakta.se">
+    <icon src="http://dtil.tmsimg.com/assets/s69434_ll_h9_ab.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s69434_ll_h9_ab.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV4FAKT] TV4 Fakta</display-name>
+  </channel>
+  <channel id="[SJUHD].Sjuan.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s106567_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s106567_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[SJUHD] Sjuan HD</display-name>
+  </channel>
+  <channel id="[VIAHTHD].V.Film.Hits.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s102328_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s102328_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[VIAHTHD] V Film Hits HD</display-name>
+  </channel>
+  <channel id="[ANIPLHD].Animal.Planet.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s77397_ll_h9_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s77397_ll_h9_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[ANIPLHD] Animal Planet HD</display-name>
+  </channel>
+  <channel id="[TV10HD].TV10.HD.se">
+    <icon src="http://dtil.tmsimg.com/assets/s108965_ll_h15_aa.png?w=360&amp;h=270" />
+    <icon src="http://dtil.tmsimg.com/assets/s108965_ll_h15_aa.png?w=360&amp;h=270" />
+    <url>http://www.tmsapi.com</url>
+    <display-name lang="en">[TV10HD] TV10 HD</display-name>
+  </channel>
+  <channel id="TNT.Sports.1.HD.uk">
+    <icon src="https://tv.assets.pressassociation.io/f55b110f-8046-5273-a249-badfe915e918.png" />
+    <icon src="https://tv.assets.pressassociation.io/f55b110f-8046-5273-a249-badfe915e918.png" />
     <url>http://www.tvguide.co.uk</url>
-    <display-name lang="en">TNT Sports 8 HD</display-name>
+    <display-name lang="en">TNT Sports 1 HD</display-name>
+  </channel>
+  <channel id="TNT.Sports.10.HD.uk">
+    <icon src="https://tv.assets.pressassociation.io/8cf3d59b-125d-53e7-af17-3ca837d02c9d.png" />
+    <icon src="https://tv.assets.pressassociation.io/8cf3d59b-125d-53e7-af17-3ca837d02c9d.png" />
+    <url>http://www.tvguide.co.uk</url>
+    <display-name lang="en">TNT Sports 10 HD</display-name>
+  </channel>
+  <channel id="Premier.Sports.1.HD.uk">
+    <icon src="https://cdn.tv-guide.future.sensi.link/images/channel/02fe4bd6-cea9-5696-8025-d81cdb571639/logo.png" />
+    <icon src="https://cdn.tv-guide.future.sensi.link/images/channel/02fe4bd6-cea9-5696-8025-d81cdb571639/logo.png" />
+    <url>http://www.whattowatch.com_uk</url>
+    <display-name lang="en">Premier Sports 1 HD</display-name>
   </channel>
   <channel id="TNT.Sports.9.HD.uk">
     <icon src="https://tv.assets.pressassociation.io/34a9289d-1e34-50f8-8e43-a651223345c8.png" />
     <icon src="https://tv.assets.pressassociation.io/34a9289d-1e34-50f8-8e43-a651223345c8.png" />
     <url>http://www.tvguide.co.uk</url>
     <display-name lang="en">TNT Sports 9 HD</display-name>
+  </channel>
+  <channel id="TNT.Sports.3.HD.uk">
+    <icon src="https://tv.assets.pressassociation.io/75c9df5d-d2d8-5d04-92ac-d9973c082c72.png" />
+    <icon src="https://tv.assets.pressassociation.io/75c9df5d-d2d8-5d04-92ac-d9973c082c72.png" />
+    <url>http://www.tvguide.co.uk</url>
+    <display-name lang="en">TNT Sports 3 HD</display-name>
   </channel>
   <channel id="TNT.Sports.2.HD.uk">
     <icon src="https://tv.assets.pressassociation.io/77f422fa-d4a2-5687-953c-34f4da7d8b91.png" />
@@ -361,23 +379,11 @@
     <url>http://www.tvguide.co.uk</url>
     <display-name lang="en">TNT Sports 6 HD</display-name>
   </channel>
-  <channel id="TNT.Sports.10.HD.uk">
-    <icon src="https://tv.assets.pressassociation.io/8cf3d59b-125d-53e7-af17-3ca837d02c9d.png" />
-    <icon src="https://tv.assets.pressassociation.io/8cf3d59b-125d-53e7-af17-3ca837d02c9d.png" />
+  <channel id="TNT.Sports.8.HD.uk">
+    <icon src="https://tv.assets.pressassociation.io/e3cb5ec6-42ce-5031-bc76-83e46cbe3652.png" />
+    <icon src="https://tv.assets.pressassociation.io/e3cb5ec6-42ce-5031-bc76-83e46cbe3652.png" />
     <url>http://www.tvguide.co.uk</url>
-    <display-name lang="en">TNT Sports 10 HD</display-name>
-  </channel>
-  <channel id="TNT.Sports.7.HD.uk">
-    <icon src="https://tv.assets.pressassociation.io/f0a3e89f-2f7e-5176-a574-33dc6ec6efaf.png" />
-    <icon src="https://tv.assets.pressassociation.io/f0a3e89f-2f7e-5176-a574-33dc6ec6efaf.png" />
-    <url>http://www.tvguide.co.uk</url>
-    <display-name lang="en">TNT Sports 7 HD</display-name>
-  </channel>
-  <channel id="TNT.Sports.5.HD.uk">
-    <icon src="https://tv.assets.pressassociation.io/dbf92dca-857c-5522-bbc6-2bda4e23ff31.png" />
-    <icon src="https://tv.assets.pressassociation.io/dbf92dca-857c-5522-bbc6-2bda4e23ff31.png" />
-    <url>http://www.tvguide.co.uk</url>
-    <display-name lang="en">TNT Sports 5 HD</display-name>
+    <display-name lang="en">TNT Sports 8 HD</display-name>
   </channel>
   <channel id="TNT.Sports.4.HD.uk">
     <icon src="https://tv.assets.pressassociation.io/056d00c0-1629-5388-857c-f1a9ebdec5b8.png" />
@@ -385,29 +391,23 @@
     <url>http://www.tvguide.co.uk</url>
     <display-name lang="en">TNT Sports 4 HD</display-name>
   </channel>
-  <channel id="Premier.Sports.1.HD.uk">
-    <icon src="https://cdn.tv-guide.future.sensi.link/images/channel/02fe4bd6-cea9-5696-8025-d81cdb571639/logo.png" />
-    <icon src="https://cdn.tv-guide.future.sensi.link/images/channel/02fe4bd6-cea9-5696-8025-d81cdb571639/logo.png" />
-    <url>http://www.whattowatch.com_uk</url>
-    <display-name lang="en">Premier Sports 1 HD</display-name>
-  </channel>
-  <channel id="TNT.Sports.3.HD.uk">
-    <icon src="https://tv.assets.pressassociation.io/75c9df5d-d2d8-5d04-92ac-d9973c082c72.png" />
-    <icon src="https://tv.assets.pressassociation.io/75c9df5d-d2d8-5d04-92ac-d9973c082c72.png" />
+  <channel id="TNT.Sports.5.HD.uk">
+    <icon src="https://tv.assets.pressassociation.io/dbf92dca-857c-5522-bbc6-2bda4e23ff31.png" />
+    <icon src="https://tv.assets.pressassociation.io/dbf92dca-857c-5522-bbc6-2bda4e23ff31.png" />
     <url>http://www.tvguide.co.uk</url>
-    <display-name lang="en">TNT Sports 3 HD</display-name>
-  </channel>
-  <channel id="TNT.Sports.1.HD.uk">
-    <icon src="https://tv.assets.pressassociation.io/f55b110f-8046-5273-a249-badfe915e918.png" />
-    <icon src="https://tv.assets.pressassociation.io/f55b110f-8046-5273-a249-badfe915e918.png" />
-    <url>http://www.tvguide.co.uk</url>
-    <display-name lang="en">TNT Sports 1 HD</display-name>
+    <display-name lang="en">TNT Sports 5 HD</display-name>
   </channel>
   <channel id="Premier.Sports.2.HD.uk">
     <icon src="https://cdn.tv-guide.future.sensi.link/images/channel/3ea27dc2-561b-5932-8aad-cc26b53ae3f8/logo.png" />
     <icon src="https://cdn.tv-guide.future.sensi.link/images/channel/3ea27dc2-561b-5932-8aad-cc26b53ae3f8/logo.png" />
     <url>http://www.whattowatch.com_uk</url>
     <display-name lang="en">Premier Sports 2 HD</display-name>
+  </channel>
+  <channel id="TNT.Sports.7.HD.uk">
+    <icon src="https://tv.assets.pressassociation.io/f0a3e89f-2f7e-5176-a574-33dc6ec6efaf.png" />
+    <icon src="https://tv.assets.pressassociation.io/f0a3e89f-2f7e-5176-a574-33dc6ec6efaf.png" />
+    <url>http://www.tvguide.co.uk</url>
+    <display-name lang="en">TNT Sports 7 HD</display-name>
   </channel>
   <channel id="Arena.Sport.1.HD.(RS).rs">
     <display-name lang="sl">Arena Sport 1 HD (RS)</display-name>
@@ -151564,686 +151564,440 @@
     <category lang="sl">Rukomet</category>
     <icon src="https://images-web.ug-be.cdn.united.cloud/4762a8b8/2025/10/25/59384102-36bc-4aaf-8a37-7c5129b8d288_xl.jpg" />
   </programme>
-  <programme start="20260921120000 +0100" stop="20260921123000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Karate: W/M</title>
-    <sub-title lang="ar">W/M</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921123000 +0100" stop="20260921151900 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Bournemouth vs Liverpool: Week 5</title>
-    <sub-title lang="ar">Week 5</sub-title>
-    <category lang="ar">الدوري الإنجليزي الممتاز</category>
-  </programme>
-  <programme start="20260921151900 +0100" stop="20260921183000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Fulham vs Machester United: Week 5</title>
-    <sub-title lang="ar">Week 5</sub-title>
-    <category lang="ar">الدوري الإنجليزي الممتاز</category>
-  </programme>
-  <programme start="20260921183000 +0100" stop="20260921210000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Gymnastics: Final</title>
-    <sub-title lang="ar">Final</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921210000 +0100" stop="20260922003000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Karate: W/M</title>
-    <sub-title lang="ar">W/M</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922003000 +0100" stop="20260922030000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Dallas Cowboys @ New York Giants: 2026/27</title>
-    <sub-title lang="ar">2026/27</sub-title>
-    <category lang="ar">دوري كرة القدم الأمريكية</category>
-  </programme>
-  <programme start="20260922030000 +0100" stop="20260922043000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Pakistan vs Uzbekistan: Nagoya 2026</title>
-    <sub-title lang="ar">Nagoya 2026</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922043000 +0100" stop="20260922070000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Gymnastics: Final</title>
-    <sub-title lang="ar">Final</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922070000 +0100" stop="20260922073000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN UCL Magazine 2026/27: E4</title>
-    <sub-title lang="ar">E4</sub-title>
-    <category lang="ar">مسلسلات</category>
-  </programme>
-  <programme start="20260922073000 +0100" stop="20260922080000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN EPL Match Officials Mic'd Up 2026/27: E1</title>
-    <sub-title lang="ar">E1</sub-title>
-    <category lang="ar">مسلسلات</category>
-  </programme>
-  <programme start="20260922080000 +0100" stop="20260922100000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Philippines vs Kuwait: FBL00</title>
-    <sub-title lang="ar">FBL00</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922100000 +0100" stop="20260922103000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922000000 +0100" stop="20260922004500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEFA Nations League: Preview Show 2026</title>
     <sub-title lang="ar">Preview Show 2026</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260922103000 +0100" stop="20260922110000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN EPL The Big Interview 2026/27: E5</title>
-    <sub-title lang="ar">E5</sub-title>
+  <programme start="20260922004500 +0100" stop="20260922013000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN This is Paris 2026/27: E6</title>
+    <sub-title lang="ar">E6</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260922110000 +0100" stop="20260922132000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Swimming: Finals</title>
-    <sub-title lang="ar">Finals</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922132000 +0100" stop="20260922153000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Volleyball Women's: Final</title>
-    <sub-title lang="ar">Final</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922153000 +0100" stop="20260922170000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Pakistan vs Uzbekistan: Nagoya 2026</title>
-    <sub-title lang="ar">Nagoya 2026</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922170000 +0100" stop="20260922190000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Philippines vs Kuwait: FBL00</title>
-    <sub-title lang="ar">FBL00</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922190000 +0100" stop="20260922193500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">UEFA Nations League: Preview Show 2026</title>
-    <sub-title lang="ar">Preview Show 2026</sub-title>
-    <category lang="ar">الرياضة العام</category>
-  </programme>
-  <programme start="20260922193500 +0100" stop="20260922215000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Inter vs Hacken: UEFA Women’s Champions League 2026/2027</title>
-    <sub-title lang="ar">UEFA Women’s Champions League 2026/2027</sub-title>
-    <category lang="ar">دوري أبطال أوروبا - سيدات</category>
-  </programme>
-  <programme start="20260922215000 +0100" stop="20260923000000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Juventus vs Benfica: UEFA Women’s Champions League 2026/2027</title>
-    <sub-title lang="ar">UEFA Women’s Champions League 2026/2027</sub-title>
-    <category lang="ar">دوري أبطال أوروبا - سيدات</category>
-  </programme>
-  <programme start="20260923000000 +0100" stop="20260923013000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Pakistan vs Uzbekistan: Nagoya 2026</title>
-    <sub-title lang="ar">Nagoya 2026</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260923013000 +0100" stop="20260923053000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922013000 +0100" stop="20260922053000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Race Walk Half Marathon Walk M: W/M</title>
     <sub-title lang="ar">W/M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923053000 +0100" stop="20260923060000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922053000 +0100" stop="20260922060000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEFA Nations League: Preview Show 2026</title>
     <sub-title lang="ar">Preview Show 2026</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260923060000 +0100" stop="20260923070000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922060000 +0100" stop="20260922070000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEL &amp; UECL Magazine 2026/27: E2</title>
     <sub-title lang="ar">E2</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260923070000 +0100" stop="20260923094500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922070000 +0100" stop="20260922100000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Artistic Gymnastics: Nagoya 2026</title>
     <sub-title lang="ar">Nagoya 2026</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923094500 +0100" stop="20260923101500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EFL Highlights 2026/27: E6</title>
-    <sub-title lang="ar">E6</sub-title>
-    <category lang="ar">مسلسلات</category>
-  </programme>
-  <programme start="20260923101500 +0100" stop="20260923111500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922100000 +0100" stop="20260922110000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN EPL Generation xG 2026/27: E5</title>
     <sub-title lang="ar">E5</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260923111500 +0100" stop="20260923130000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922110000 +0100" stop="20260922130000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Swimming: Nagoya 2026  W/M</title>
     <sub-title lang="ar">Nagoya 2026  W/M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923130000 +0100" stop="20260923153000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922130000 +0100" stop="20260922153000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Gymnastics: Nagoya 2026</title>
     <sub-title lang="ar">Nagoya 2026</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923153000 +0100" stop="20260923193000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922153000 +0100" stop="20260922193000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Race Walk Half Marathon Walk M: W/M</title>
     <sub-title lang="ar">W/M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923193000 +0100" stop="20260923200000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922193000 +0100" stop="20260922200000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEFA Nations League: Preview Show 2026</title>
     <sub-title lang="ar">Preview Show 2026</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260923200000 +0100" stop="20260923230000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922200000 +0100" stop="20260922230000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">WSH vs DET: 2026 /27</title>
     <sub-title lang="ar">2026 /27</sub-title>
     <category lang="ar">كرة القاعدة</category>
   </programme>
-  <programme start="20260923230000 +0100" stop="20260924014500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922230000 +0100" stop="20260923014500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Artistic Gymnastics: Nagoya 2026</title>
     <sub-title lang="ar">Nagoya 2026</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924014500 +0100" stop="20260924033000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923014500 +0100" stop="20260923033000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Swimming: Nagoya 2026  W/M</title>
     <sub-title lang="ar">Nagoya 2026  W/M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924033000 +0100" stop="20260924040000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923033000 +0100" stop="20260923040000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEFA Nations League: Preview Show 2026</title>
     <sub-title lang="ar">Preview Show 2026</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260924040000 +0100" stop="20260924063000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923040000 +0100" stop="20260923063000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Athletics: W/M/X</title>
     <sub-title lang="ar">W/M/X</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924063000 +0100" stop="20260924070000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923063000 +0100" stop="20260923070000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">French Ligue 1 Highlights 2026/27: E5</title>
     <sub-title lang="ar">E5</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260924070000 +0100" stop="20260924083000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923070000 +0100" stop="20260923083000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Oman vs Uzbekistan: Nagoya 2026</title>
     <sub-title lang="ar">Nagoya 2026</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924083000 +0100" stop="20260924090000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923083000 +0100" stop="20260923090000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN EPL Netbusters 2026/27: E5</title>
     <sub-title lang="ar">E5</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260924090000 +0100" stop="20260924094000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923090000 +0100" stop="20260923094000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEFA Nations League: Preview Show 2026</title>
     <sub-title lang="ar">Preview Show 2026</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260924094000 +0100" stop="20260924113000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923094000 +0100" stop="20260923113000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Shooting: M</title>
     <sub-title lang="ar">M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924113000 +0100" stop="20260924124500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923113000 +0100" stop="20260923124500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Practice 1: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">بطولة العالم للفورمولا وان</category>
   </programme>
-  <programme start="20260924124500 +0100" stop="20260924163000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923124500 +0100" stop="20260923163000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Athletics: W/M</title>
     <sub-title lang="ar">W/M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924163000 +0100" stop="20260924170000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923163000 +0100" stop="20260923170000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN EPL Review 2026/27: E5</title>
     <sub-title lang="ar">E5</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260924170000 +0100" stop="20260924173000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923170000 +0100" stop="20260923173000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN Ligue 1 Show 2026/27: E6</title>
     <sub-title lang="ar">E6</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260924173000 +0100" stop="20260924180000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923173000 +0100" stop="20260923180000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN EPL Rewind 2026/27: E3</title>
     <sub-title lang="ar">E3</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260924180000 +0100" stop="20260924184500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923180000 +0100" stop="20260923184500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">UEFA Nations League: Preview Show 2026</title>
     <sub-title lang="ar">Preview Show 2026</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260924184500 +0100" stop="20260924210000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923184500 +0100" stop="20260923210000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Andorra vs Malta: Match Day 1</title>
     <sub-title lang="ar">Match Day 1</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260924210000 +0100" stop="20260925003000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923210000 +0100" stop="20260924003000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Netherlands vs Germany: Match Day 1</title>
     <sub-title lang="ar">Match Day 1</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260921023000 +0100" stop="20260921030000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN Spirit of Sport 2026: E11</title>
-    <sub-title lang="ar">E11</sub-title>
+  <programme start="20260924003000 +0100" stop="20260924033000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Seattle Seahawks @ Arizona Cardinals: 2026/27</title>
+    <sub-title lang="ar">2026/27</sub-title>
+    <category lang="ar">دوري كرة القدم الأمريكية</category>
+  </programme>
+  <programme start="20260924033000 +0100" stop="20260924040000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN EPL Goats 2026/27: E1</title>
+    <sub-title lang="ar">E1</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260921030000 +0100" stop="20260921033000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN Fast Zone 2026: Ep 23</title>
-    <sub-title lang="ar">Ep 23</sub-title>
-    <category lang="ar">الرياضة العام</category>
+  <programme start="20260924040000 +0100" stop="20260924050000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Skateboarding: W</title>
+    <sub-title lang="ar">W</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921033000 +0100" stop="20260921040000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN MLB Plays of the Week 2026: E24</title>
-    <sub-title lang="ar">E24</sub-title>
+  <programme start="20260924050000 +0100" stop="20260924055500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN Ligue 1 Show 2026/27: E6</title>
+    <sub-title lang="ar">E6</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260921040000 +0100" stop="20260921053000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Swimming: Heats</title>
-    <sub-title lang="ar">Heats</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921053000 +0100" stop="20260921060000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN ATP Tour: This Week 2026 Ep.36: EN ATP Tour: This Week 2026 Ep.36</title>
-    <sub-title lang="ar">EN ATP Tour: This Week 2026 Ep.36</sub-title>
-    <category lang="ar">الرياضة العام</category>
-  </programme>
-  <programme start="20260921060000 +0100" stop="20260921063000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN MLB Plays of the Week 2026: E24</title>
-    <sub-title lang="ar">E24</sub-title>
-    <category lang="ar">مسلسلات</category>
-  </programme>
-  <programme start="20260921063000 +0100" stop="20260921083000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Shooting: Final's</title>
-    <sub-title lang="ar">Final's</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921083000 +0100" stop="20260921110000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Swimming: Finals</title>
-    <sub-title lang="ar">Finals</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921110000 +0100" stop="20260921133000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Swimming: Finals</title>
-    <sub-title lang="ar">Finals</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921133000 +0100" stop="20260921140000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN Fast Zone 2026: Ep 23</title>
-    <sub-title lang="ar">Ep 23</sub-title>
-    <category lang="ar">الرياضة العام</category>
-  </programme>
-  <programme start="20260921140000 +0100" stop="20260921154100 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Korea Republic vs Italy: 2026</title>
-    <sub-title lang="ar">2026</sub-title>
-    <category lang="ar">كأس العالم للسيدات</category>
-  </programme>
-  <programme start="20260921154100 +0100" stop="20260921172500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Brazil vs Spain: 2026</title>
-    <sub-title lang="ar">2026</sub-title>
-    <category lang="ar">كأس العالم للسيدات</category>
-  </programme>
-  <programme start="20260921172500 +0100" stop="20260921181500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Race 3: 2026</title>
-    <sub-title lang="ar">2026</sub-title>
-    <category lang="ar">رياضة السيارات</category>
-  </programme>
-  <programme start="20260921181500 +0100" stop="20260921191500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Main Race: Austria GP 2026</title>
-    <sub-title lang="ar">Austria GP 2026</sub-title>
-    <category lang="ar">بطولة العالم للدراجات النارية</category>
-  </programme>
-  <programme start="20260921191500 +0100" stop="20260921201500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Main Race: Austria GP 2026</title>
-    <sub-title lang="ar">Austria GP 2026</sub-title>
-    <category lang="ar">بطولة العالم للدراجات النارية</category>
-  </programme>
-  <programme start="20260921201500 +0100" stop="20260921223000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Swimming: Finals</title>
-    <sub-title lang="ar">Finals</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260921223000 +0100" stop="20260922003000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Shooting: Final's</title>
-    <sub-title lang="ar">Final's</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922003000 +0100" stop="20260922033000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">STL vs LAD: 2026 /27</title>
-    <sub-title lang="ar">2026 /27</sub-title>
-    <category lang="ar">كرة القاعدة</category>
-  </programme>
-  <programme start="20260922033000 +0100" stop="20260922040000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN ATP Tour: This Week 2026 Ep.36: EN ATP Tour: This Week 2026 Ep.36</title>
-    <sub-title lang="ar">EN ATP Tour: This Week 2026 Ep.36</sub-title>
-    <category lang="ar">الرياضة العام</category>
-  </programme>
-  <programme start="20260922040000 +0100" stop="20260922101000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Table Tennis: W/M</title>
+  <programme start="20260924055500 +0100" stop="20260924073000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Shooting: W/M</title>
     <sub-title lang="ar">W/M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260922101000 +0100" stop="20260922103500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN MLB Plays of the Week 2026: E24</title>
-    <sub-title lang="ar">E24</sub-title>
+  <programme start="20260924073000 +0100" stop="20260924100000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Weightlifting Final: W</title>
+    <sub-title lang="ar">W</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
+  </programme>
+  <programme start="20260924100000 +0100" stop="20260924103000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN EPL Stories 2026/27: E17</title>
+    <sub-title lang="ar">E17</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260922103500 +0100" stop="20260922110000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Premier Padel Highlights 2026: Paris Major</title>
-    <sub-title lang="ar">Paris Major</sub-title>
-    <category lang="ar">ترفيه</category>
+  <programme start="20260924103000 +0100" stop="20260924113000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN EPL Catchup 2026/27: E5</title>
+    <sub-title lang="ar">E5</sub-title>
+    <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260922110000 +0100" stop="20260922113000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">EN One Weekly 2026: Ep 39</title>
-    <sub-title lang="ar">Ep 39</sub-title>
+  <programme start="20260924113000 +0100" stop="20260924122000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN EPL Rewind 2026/27: E3</title>
+    <sub-title lang="ar">E3</sub-title>
+    <category lang="ar">مسلسلات</category>
+  </programme>
+  <programme start="20260924122000 +0100" stop="20260924170000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Athletics: W/M</title>
+    <sub-title lang="ar">W/M</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
+  </programme>
+  <programme start="20260924170000 +0100" stop="20260924184500 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Shooting: M</title>
+    <sub-title lang="ar">M</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
+  </programme>
+  <programme start="20260924184500 +0100" stop="20260924210000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Georgia vs Northern Ireland: Match Day 1</title>
+    <sub-title lang="ar">Match Day 1</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260922113000 +0100" stop="20260922134500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Gymnastics: Final</title>
-    <sub-title lang="ar">Final</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
+  <programme start="20260924210000 +0100" stop="20260925040000 +0100" channel="beIN_SPORTS1_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Türkiye vs France: Match Day 1</title>
+    <sub-title lang="ar">Match Day 1</sub-title>
+    <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260922134500 +0100" stop="20260922153500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Shooting: Final's</title>
-    <sub-title lang="ar">Final's</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260922153500 +0100" stop="20260922173000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Nigeria vs Colombia: 2026</title>
-    <sub-title lang="ar">2026</sub-title>
-    <category lang="ar">كأس العالم للسيدات</category>
-  </programme>
-  <programme start="20260922173000 +0100" stop="20260922200000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922011500 +0100" stop="20260922033000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Swimming: Finals</title>
     <sub-title lang="ar">Finals</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260922200000 +0100" stop="20260922230000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">TB vs NYY: 2026 /27</title>
-    <sub-title lang="ar">2026 /27</sub-title>
-    <category lang="ar">كرة القاعدة</category>
-  </programme>
-  <programme start="20260922230000 +0100" stop="20260923011500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Gymnastics: Final</title>
-    <sub-title lang="ar">Final</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260923011500 +0100" stop="20260923033000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
-    <title lang="ar">Swimming: Finals</title>
-    <sub-title lang="ar">Finals</sub-title>
-    <category lang="ar">دورة الألعاب الآسيوية</category>
-  </programme>
-  <programme start="20260923033000 +0100" stop="20260923040000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922033000 +0100" stop="20260922040000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Premier Padel Highlights 2026: Paris Major</title>
     <sub-title lang="ar">Paris Major</sub-title>
     <category lang="ar">ترفيه</category>
   </programme>
-  <programme start="20260923040000 +0100" stop="20260923060000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922040000 +0100" stop="20260922060000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Weightlifting: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923060000 +0100" stop="20260923073000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922060000 +0100" stop="20260922073000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Shooting: W/M/X</title>
     <sub-title lang="ar">W/M/X</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923073000 +0100" stop="20260923093000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922073000 +0100" stop="20260922093000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Weightlifting: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923093000 +0100" stop="20260923102000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922093000 +0100" stop="20260922102000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Premier Padel Highlights 2026: Paris Major</title>
     <sub-title lang="ar">Paris Major</sub-title>
     <category lang="ar">ترفيه</category>
   </programme>
-  <programme start="20260923102000 +0100" stop="20260923110000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922102000 +0100" stop="20260922110000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">FOIL Indv SF: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923110000 +0100" stop="20260923114000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922110000 +0100" stop="20260922114000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Sabre Ind SF: M</title>
     <sub-title lang="ar">M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923114000 +0100" stop="20260923120000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922114000 +0100" stop="20260922120000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Foil Final: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923120000 +0100" stop="20260923131000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922120000 +0100" stop="20260922131000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Sabre Final: M</title>
     <sub-title lang="ar">M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923131000 +0100" stop="20260923151500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922131000 +0100" stop="20260922151500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Weightlifting: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923151500 +0100" stop="20260923155000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922151500 +0100" stop="20260922155000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN Fast Zone 2026: Ep 24</title>
     <sub-title lang="ar">Ep 24</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260923155000 +0100" stop="20260923180000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922155000 +0100" stop="20260922180000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Italy vs Spain: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">كأس العالم للسيدات</category>
   </programme>
-  <programme start="20260923180000 +0100" stop="20260923192000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922180000 +0100" stop="20260922192000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Shooting: W/M/X</title>
     <sub-title lang="ar">W/M/X</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923192000 +0100" stop="20260923213000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922192000 +0100" stop="20260922213000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">DPR Korea vs Colombia: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">كأس العالم للسيدات</category>
   </programme>
-  <programme start="20260923213000 +0100" stop="20260923233000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922213000 +0100" stop="20260922233000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Weightlifting: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260923233000 +0100" stop="20260924000000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260922233000 +0100" stop="20260923000000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN ATP Tour: This Week 2026 Ep.37: EN ATP Tour: This Week 2026 Ep.37</title>
     <sub-title lang="ar">EN ATP Tour: This Week 2026 Ep.37</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260924000000 +0100" stop="20260924030000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923000000 +0100" stop="20260923030000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">NYY vs SD: 2026 /27</title>
     <sub-title lang="ar">2026 /27</sub-title>
     <category lang="ar">كرة القاعدة</category>
   </programme>
-  <programme start="20260924030000 +0100" stop="20260924060000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923030000 +0100" stop="20260923060000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Sepaktakraw: M</title>
     <sub-title lang="ar">M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924060000 +0100" stop="20260924065500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923060000 +0100" stop="20260923065500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN T100 2026 Highlights: French Riviera</title>
     <sub-title lang="ar">French Riviera</sub-title>
     <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260924065500 +0100" stop="20260924072500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923065500 +0100" stop="20260923072500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">EN ATP Tour: This Week 2026 Ep.37: EN ATP Tour: This Week 2026 Ep.37</title>
     <sub-title lang="ar">EN ATP Tour: This Week 2026 Ep.37</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260924072500 +0100" stop="20260924130000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923072500 +0100" stop="20260923130000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Weightlifting: M</title>
     <sub-title lang="ar">M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924130000 +0100" stop="20260924133000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923130000 +0100" stop="20260923133000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Qualifying 1: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">رياضة السيارات</category>
   </programme>
-  <programme start="20260924133000 +0100" stop="20260924133000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923133000 +0100" stop="20260923133000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Shooting: W</title>
     <sub-title lang="ar">W</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924133000 +0100" stop="20260924150000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923133000 +0100" stop="20260923150000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Qualifying 2: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">رياضة السيارات</category>
   </programme>
-  <programme start="20260924150000 +0100" stop="20260924160000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923150000 +0100" stop="20260923160000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Practice 2: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">بطولة العالم للفورمولا وان</category>
   </programme>
-  <programme start="20260924160000 +0100" stop="20260924174500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923160000 +0100" stop="20260923174500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">DPR Korea vs Colombia: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">كأس العالم للسيدات</category>
   </programme>
-  <programme start="20260924174500 +0100" stop="20260924193000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923174500 +0100" stop="20260923193000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Italy vs Spain: 2026</title>
     <sub-title lang="ar">2026</sub-title>
     <category lang="ar">كأس العالم للسيدات</category>
   </programme>
-  <programme start="20260924193000 +0100" stop="20260924214000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923193000 +0100" stop="20260923214000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Weightlifting: M</title>
     <sub-title lang="ar">M</sub-title>
     <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260924214000 +0100" stop="20260925000000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+  <programme start="20260923214000 +0100" stop="20260924000000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
     <title lang="ar">Austria vs Israel: Match Day 1</title>
     <sub-title lang="ar">Match Day 1</sub-title>
     <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260921060000 +0000" stop="20260921074700 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Bologna - Torino</title>
-    <desc lang="it">Entrambe reduci da una sconfitta rispettivamente contro Napoli e Roma. Bologna con un solo punto. Il Torino non vince al Dall’Ara da 10 anni, 6 pari e 4 ko. TC: Antonio Nucera.</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/301eb7f3-a9c3-4580-93f3-fdbbfec15385/cover?territory=IT&amp;md5ChecksumParam=fe754d4817b237a11b4646444144f326&amp;sid=566.it" />
-    <country lang="it">ITA</country>
-    <episode-num system="onscreen">S2026 E42</episode-num>
+  <programme start="20260924000000 +0100" stop="20260924023000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Swimming: Nagoya 2026  W/M</title>
+    <sub-title lang="ar">Nagoya 2026  W/M</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921074700 +0000" stop="20260921080000 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Stag. 2026 - Bordocam Inter - Monza</title>
-    <desc lang="it">Pio Esposito, con un gol di tacco e tre maglie strappate dai giocatori del Monza, e' stato protagonista a San Siro. Rivivi le immagini piu' curiose di Inter-Monza con il Bordocam di Davide Bernardi.</desc>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  <programme start="20260924023000 +0100" stop="20260924030000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN MLB Plays of the Week 2026: E25</title>
+    <sub-title lang="ar">E25</sub-title>
+    <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260921080000 +0000" stop="20260921081600 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Bordocam Napoli - Como 2026/27</title>
-    <desc lang="it">Al Maradona, Napoli e Como si sono affrontate nella prima grande sfida di questo campionato. Rivivi le immagini piu' curiose da una posizione privilegiata con il Bordocam di Davide Bernardi.</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/18463661-a4b3-46c6-8132-8440357b0286/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=232afbff8c5319da2c0e472eb16ee235&amp;sid=566.it" />
-    <country lang="it">ITA</country>
+  <programme start="20260924030000 +0100" stop="20260924063000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Sepaktakraw: W</title>
+    <sub-title lang="ar">W</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921081600 +0000" stop="20260921100200 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Igor - L'eroe romantico del calcio</title>
-    <desc lang="it">Un documentario sulla carriera unica di Igor Protti: l'umanita' di un campione capace di incarnare i sogni e la rivalsa delle province. Una storia fatta di gol, cuore e passione.</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/7a7f4240-1ef1-4e43-87f6-7c49e427813e/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=2b0ad3548ae00f0663825a53221b77a5&amp;sid=566.it" />
-    <country lang="it">ITA</country>
+  <programme start="20260924063000 +0100" stop="20260924071500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Skateboarding: M</title>
+    <sub-title lang="ar">M</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921100200 +0000" stop="20260921103100 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Bordocam corsa Champions MD37</title>
-    <desc lang="it">Tutto quello che e' accaduto nel mezzogiorno di fuoco del 17 maggio: rivivi la domenica della corsa Champions con il nostro BordoCam.</desc>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  <programme start="20260924071500 +0100" stop="20260924083000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Sprint Race: 2026</title>
+    <sub-title lang="ar">2026</sub-title>
+    <category lang="ar">رياضة السيارات</category>
   </programme>
-  <programme start="20260921103100 +0000" stop="20260921121800 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Fiorentina - Napoli</title>
-    <desc lang="it">Viola con i primi 3 punti dopo il 4-2 al Venezia. Napoli reduce dall’ 1-0 al Bologna, dopo 2 ko di fila. Imbattuto al Franchi da 8 stagioni, 5 vittorie e 3 pari. TC: Manuel Favia.</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <country lang="it">ITA</country>
-    <episode-num system="onscreen">S2026 E46</episode-num>
+  <programme start="20260924083000 +0100" stop="20260924110000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Swimming: Nagoya 2026  W/M</title>
+    <sub-title lang="ar">Nagoya 2026  W/M</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921121800 +0000" stop="20260921130400 +0000" channel="DAZN.1.it.it">
-    <title lang="it">1a g - Guarda tutte le azioni salienti della giornata di Serie A (1a g.)</title>
-    <desc lang="it">1a g - Guarda tutte le azioni salienti della giornata di Serie A. Segui la Serie A Enilive su DAZN!</desc>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  <programme start="20260924110000 +0100" stop="20260924113000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN Fast Zone 2026: Ep 24</title>
+    <sub-title lang="ar">Ep 24</sub-title>
+    <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260921130400 +0000" stop="20260921134500 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Stag. 2026 - Here We Go: Storia di Fabrizio Romano</title>
-    <desc lang="it">Un'intervista con il punto di riferimento del calciomercato internazionale.</desc>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  <programme start="20260924113000 +0100" stop="20260924123000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Practice 3: 2026</title>
+    <sub-title lang="ar">2026</sub-title>
+    <category lang="ar">بطولة العالم للفورمولا وان</category>
   </programme>
-  <programme start="20260921134500 +0000" stop="20260921160100 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Europei M: Belgio - Rep (Europei M 2026 Belgio - Rep. Ceca)</title>
-    <desc lang="it">Europei M: Belgio - Rep. Ceca. Ottavi - Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Volley</category>
-    <icon src="https://guidatv.sky.it/uuid/8b7df81a-8ff1-432d-ae29-8da965eb76ad/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
-    <country lang="it">ITA</country>
-    <episode-num system="onscreen">S2026 E5</episode-num>
-    <premiere />
+  <programme start="20260924123000 +0100" stop="20260924131500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Weightlifting: W</title>
+    <sub-title lang="ar">W</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921160100 +0000" stop="20260921174800 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Serie A: Roma - Inter (Roma - Inter)</title>
-    <desc lang="it">Serie A: Roma - Inter. 5a g. - Ogni weekend una nuova storia. Ogni partita un'emozione da vivere fino all'ultimo minuto. La stagione 2026-27 di Serie A Enilive ti aspetta su DAZN.</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/af871597-7f2d-440a-ae6e-5fa03bab6b3d/COVER_TITLE_TALL?territory=IT&amp;version=417f6524-2793-39eb-acf1-9767408490d8&amp;w=600&amp;h=800&amp;md5ChecksumParam=983d059c40576e5ac9206b5e5a5f387a&amp;sid=566.it" />
-    <country lang="it">ITA</country>
-    <episode-num system="onscreen">S2026 E48</episode-num>
+  <programme start="20260924131500 +0100" stop="20260924143000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Feature Race 1: 2026</title>
+    <sub-title lang="ar">2026</sub-title>
+    <category lang="ar">رياضة السيارات</category>
   </programme>
-  <programme start="20260921174800 +0000" stop="20260921182900 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Leonardo Pavoletti</title>
-    <desc lang="it">Gli intervistati vengono accompagnati in un viaggio interiore tra ferite, traumi, conti in sospeso, rinascite, segreti non detti. Nel settimo episodio l'ospite di Giorgia Rossi e' Leonardo Pavoletti.</desc>
-    <credits>
-      <presenter>Giorgia Rossi</presenter>
-    </credits>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
-    <country lang="it">ITA</country>
+  <programme start="20260924143000 +0100" stop="20260924150000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN ATP Tour: This Week 2026 Ep.37: EN ATP Tour: This Week 2026 Ep.37</title>
+    <sub-title lang="ar">EN ATP Tour: This Week 2026 Ep.37</sub-title>
+    <category lang="ar">الرياضة العام</category>
   </programme>
-  <programme start="20260921182900 +0000" stop="20260921184500 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Dimarco: Vincere non stanca</title>
-    <desc lang="it">Michele Dalai intervista Federico Dimarco, l'esterno dell'Inter reduce da una stagione da incorniciare con 7 gol, 18 assist, il premio di miglior giocatore del campionato e il double con i nerazzurri.</desc>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  <programme start="20260924150000 +0100" stop="20260924160000 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Main Race Qualifying: 2026</title>
+    <sub-title lang="ar">2026</sub-title>
+    <category lang="ar">بطولة العالم للفورمولا وان</category>
   </programme>
-  <programme start="20260921184500 +0000" stop="20260921210600 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Europei M: Slovenia - Serbia (Europei M 2026 Slovenia - Serbia)</title>
-    <desc lang="it">Europei M: Slovenia - Serbia. Ottavi - Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
-    <date>2026</date>
-    <category lang="it">Sport</category>
-    <category lang="it">Volley</category>
-    <icon src="https://guidatv.sky.it/uuid/08e32f69-c6dd-42af-8e42-ffdc2c5d4f9b/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
-    <country lang="it">ITA</country>
-    <episode-num system="onscreen">S2026 E6</episode-num>
-    <premiere />
+  <programme start="20260924160000 +0100" stop="20260924203500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Gymnastics: Nagoya 2026</title>
+    <sub-title lang="ar">Nagoya 2026</sub-title>
+    <category lang="ar">دورة الألعاب الآسيوية</category>
   </programme>
-  <programme start="20260921210600 +0000" stop="20260921230000 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Stag. 2026 - Chivu: La migliore versione di Noi</title>
-    <desc lang="it">Cristian Chivu, insieme ad Andrea Marinozzi, rivede al cinema la stagione dell'Inter campione d'Italia. Dal primo incontro con la squadra al campionato che verra'.</desc>
-    <category lang="it">Sport</category>
-    <category lang="it">Calcio</category>
-    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  <programme start="20260924203500 +0100" stop="20260924213500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">EN T100 2026 Highlights: French Riviera</title>
+    <sub-title lang="ar">French Riviera</sub-title>
+    <category lang="ar">مسلسلات</category>
   </programme>
-  <programme start="20260921230000 +0000" stop="20260922040000 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Stag. 2019 - DAZN 1</title>
-    <desc lang="it">DAZN 1.</desc>
-    <date>2019</date>
-    <category lang="it">Altri Programmi</category>
-    <category lang="it">Altri Canali</category>
-    <icon src="https://guidatv.sky.it/uuid/ef416285-a102-40e0-80a6-d4be94f81e66/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=566.it" />
-    <country lang="it">ITA</country>
-  </programme>
-  <programme start="20260922040000 +0000" stop="20260922060000 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Stag. 2019 - DAZN 1</title>
-    <desc lang="it">DAZN 1.</desc>
-    <date>2019</date>
-    <category lang="it">Altri Programmi</category>
-    <category lang="it">Altri Canali</category>
-    <icon src="https://guidatv.sky.it/uuid/ef416285-a102-40e0-80a6-d4be94f81e66/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=566.it" />
-    <country lang="it">ITA</country>
+  <programme start="20260924213500 +0100" stop="20260925014500 +0100" channel="beIN_SPORTS2_ENGLISH_Digital_Mono_AR.bein">
+    <title lang="ar">Sweden vs Romania: Match Day 1</title>
+    <sub-title lang="ar">Match Day 1</sub-title>
+    <category lang="ar">الرياضة العام</category>
   </programme>
   <programme start="20260922060000 +0000" stop="20260922075500 +0000" channel="DAZN.1.it.it">
     <title lang="it">Fiorentina - Napoli</title>
@@ -152391,13 +152145,14 @@
     <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
   </programme>
   <programme start="20260923140000 +0000" stop="20260923162500 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Europei M</title>
-    <desc lang="it">Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
+    <title lang="it">Europei M: Belgio - Slovenia (Europei M 2026 Belgio - Slovenia)</title>
+    <desc lang="it">Europei M: Belgio - Slovenia. Quarti - Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
     <date>2026</date>
     <category lang="it">Sport</category>
     <category lang="it">Volley</category>
-    <icon src="https://guidatv.sky.it/uuid/2796951f-32e8-477c-bbbd-d837e366da6c/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
+    <icon src="https://guidatv.sky.it/uuid/feabe269-9d4f-4f22-8d31-51adf640668d/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
     <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E8</episode-num>
     <premiere />
   </programme>
   <programme start="20260923162500 +0000" stop="20260923170500 +0000" channel="DAZN.1.it.it">
@@ -152423,14 +152178,14 @@
     <episode-num system="onscreen">S2026 E49</episode-num>
   </programme>
   <programme start="20260923190500 +0000" stop="20260923205000 +0000" channel="DAZN.1.it.it">
-    <title lang="it">Europei M: Italia - Finlandia (Europei M 2026 Italia - Finlandia)</title>
+    <title lang="it">Europei M: Italia - Finlandia (Italia - Finlandia)</title>
     <desc lang="it">Europei M: Italia - Finlandia. Quarti - Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
     <date>2026</date>
     <category lang="it">Sport</category>
     <category lang="it">Volley</category>
     <icon src="https://guidatv.sky.it/uuid/b601cfdf-daba-4f27-8ebc-1d35def65ad8/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
     <country lang="it">ITA</country>
-    <episode-num system="onscreen">S2026 E8</episode-num>
+    <episode-num system="onscreen">S2026 E9</episode-num>
     <premiere />
   </programme>
   <programme start="20260923205000 +0000" stop="20260923214000 +0000" channel="DAZN.1.it.it">
@@ -152606,40 +152361,136 @@
     <icon src="https://guidatv.sky.it/uuid/ef416285-a102-40e0-80a6-d4be94f81e66/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=566.it" />
     <country lang="it">ITA</country>
   </programme>
-  <programme start="20260921100000 +0000" stop="20260921160000 +0000" channel="DAZN.2.it.it">
-    <title lang="it">Nessun evento in onda</title>
-    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
-    <date>2022</date>
+  <programme start="20260925040000 +0000" stop="20260925060000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Stag. 2019 - DAZN 1</title>
+    <desc lang="it">DAZN 1.</desc>
+    <date>2019</date>
     <category lang="it">Altri Programmi</category>
     <category lang="it">Altri Canali</category>
-    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+    <icon src="https://guidatv.sky.it/uuid/ef416285-a102-40e0-80a6-d4be94f81e66/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=566.it" />
     <country lang="it">ITA</country>
   </programme>
-  <programme start="20260921160000 +0000" stop="20260921220000 +0000" channel="DAZN.2.it.it">
-    <title lang="it">Nessun evento in onda</title>
-    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
-    <date>2022</date>
-    <category lang="it">Altri Programmi</category>
-    <category lang="it">Altri Canali</category>
-    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+  <programme start="20260925060000 +0000" stop="20260925075500 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Serie A: Udinese - Cagliari (Udinese - Cagliari)</title>
+    <desc lang="it">Serie A: Udinese - Cagliari. 5a g. - Ogni weekend una nuova storia. Ogni partita un'emozione da vivere fino all'ultimo minuto. La stagione 2026-27 di Serie A Enilive ti aspetta su DAZN.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/af871597-7f2d-440a-ae6e-5fa03bab6b3d/COVER_TITLE_TALL?territory=IT&amp;version=417f6524-2793-39eb-acf1-9767408490d8&amp;w=600&amp;h=800&amp;md5ChecksumParam=983d059c40576e5ac9206b5e5a5f387a&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E49</episode-num>
+  </programme>
+  <programme start="20260925075500 +0000" stop="20260925083000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Cult - Collezionali tutti! 2026 - Stag. 2026 Ep. 8 - L'attimo fuggente Filippo Tortu</title>
+    <desc lang="it">Giovanni Barsotti, Omar Aamoum ed Emanuele Giaccherini ci portano alla scoperta di Filippo Tortu nell'ottava puntata di "Cult - Collezionali tutti!".</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <icon src="https://guidatv.sky.it/uuid/f0de2c79-c8a4-4982-ac79-85179fdc5837/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df4704397db9ae5f80119b989eaef13d&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E8</episode-num>
+  </programme>
+  <programme start="20260925083000 +0000" stop="20260925102000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Bologna - Torino</title>
+    <desc lang="it">Entrambe reduci da una sconfitta rispettivamente contro Napoli e Roma. Bologna con un solo punto. Il Torino non vince al Dall’Ara da 10 anni, 6 pari e 4 ko. TC: Antonio Nucera.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/301eb7f3-a9c3-4580-93f3-fdbbfec15385/cover?territory=IT&amp;md5ChecksumParam=fe754d4817b237a11b4646444144f326&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E42</episode-num>
+  </programme>
+  <programme start="20260925102000 +0000" stop="20260925105000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Cult - Collezionali tutti! 2026 - Stag. 2026 Ep. 7 - Tra Joga Bonito e Saudade Aldair</title>
+    <desc lang="it">Nella settima puntata, Giovanni Barsotti, Omar Aamoum ed Emanuele Giaccherini ci portano alla scoperta del Brasile e della "saudade" con il campione del mondo ex Roma Aldair.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <icon src="https://guidatv.sky.it/uuid/71fb1f3e-4e3c-4b00-bd24-fdd28692d768/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df4704397db9ae5f80119b989eaef13d&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E7</episode-num>
+  </programme>
+  <programme start="20260925105000 +0000" stop="20260925131500 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Europei M</title>
+    <desc lang="it">Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Volley</category>
+    <icon src="https://guidatv.sky.it/uuid/2796951f-32e8-477c-bbbd-d837e366da6c/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <premiere />
+  </programme>
+  <programme start="20260925131500 +0000" stop="20260925150500 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Serie A: Roma - Inter (Roma - Inter)</title>
+    <desc lang="it">Serie A: Roma - Inter. 5a g. - Ogni weekend una nuova storia. Ogni partita un'emozione da vivere fino all'ultimo minuto. La stagione 2026-27 di Serie A Enilive ti aspetta su DAZN.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/af871597-7f2d-440a-ae6e-5fa03bab6b3d/COVER_TITLE_TALL?territory=IT&amp;version=417f6524-2793-39eb-acf1-9767408490d8&amp;w=600&amp;h=800&amp;md5ChecksumParam=983d059c40576e5ac9206b5e5a5f387a&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E48</episode-num>
+  </programme>
+  <programme start="20260925150500 +0000" stop="20260925153500 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Come l'Inter ha vinto lo Scudetto</title>
+    <desc lang="it">I segreti dello Scudetto nerazzurro: con i nostri talent scopriamo le invenzioni tattiche che hanno fatto la differenza nella stagione.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/55535764-b773-418c-a26a-ba4fd3bc8c54/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=bc3a2de8f1fb2eb0bae7d8cad4cd364f&amp;sid=566.it" />
     <country lang="it">ITA</country>
   </programme>
-  <programme start="20260921220000 +0000" stop="20260922040000 +0000" channel="DAZN.2.it.it">
-    <title lang="it">Nessun evento in onda</title>
-    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
-    <date>2022</date>
-    <category lang="it">Altri Programmi</category>
-    <category lang="it">Altri Canali</category>
-    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+  <programme start="20260925153500 +0000" stop="20260925160000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Bordocam Como - Inter 2025/26</title>
+    <desc lang="it">Quella del "Giuseppe Sinigaglia" non solo e' stata una delle partite piu' divertenti della stagione, ma puo' aver avuto anche un peso incredibile sulla corsa Scudetto dei nerazzurri.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/eb642f7c-0ce7-45cc-90b2-a657d36144b6/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=a1e2960f944b16f4c1b026ecc9c5e955&amp;sid=566.it" />
     <country lang="it">ITA</country>
   </programme>
-  <programme start="20260922040000 +0000" stop="20260922100000 +0000" channel="DAZN.2.it.it">
-    <title lang="it">Nessun evento in onda</title>
-    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
-    <date>2022</date>
+  <programme start="20260925160000 +0000" stop="20260925181500 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Europei M</title>
+    <desc lang="it">Tutta la passione per l'Italvolley, protagonista sul palcoscenico europeo. Segui l'Italia e le sfide degli Europei su DAZN!</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Volley</category>
+    <icon src="https://guidatv.sky.it/uuid/2796951f-32e8-477c-bbbd-d837e366da6c/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=df0ecdddd823dd3e2eca02205e3e65da&amp;sid=566.it" />
+    <country lang="it">ITA</country>
+    <premiere />
+  </programme>
+  <programme start="20260925181500 +0000" stop="20260925190000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Giorgia's Secret - Stag. 2026 Ep. 3 - Alessandro Nesta</title>
+    <desc lang="it">Gli intervistati attraversano il proprio tunnel interiore. Un viaggio tra ferite, traumi, conti in sospeso, rinascite, segreti. Nel terzo episodio l'ospite di Giorgia Rossi e' Alessandro Nesta.</desc>
+    <credits>
+      <presenter>Giorgia Rossi</presenter>
+    </credits>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+    <country lang="it">ITA</country>
+  </programme>
+  <programme start="20260925190000 +0000" stop="20260925205500 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Fiorentina - Napoli</title>
+    <desc lang="it">Viola con i primi 3 punti dopo il 4-2 al Venezia. Napoli reduce dall’ 1-0 al Bologna, dopo 2 ko di fila. Imbattuto al Franchi da 8 stagioni, 5 vittorie e 3 pari. TC: Manuel Favia.</desc>
+    <date>2026</date>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <country lang="it">ITA</country>
+    <episode-num system="onscreen">S2026 E46</episode-num>
+  </programme>
+  <programme start="20260925205500 +0000" stop="20260925230000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">2a g - Guarda tutte le azioni salienti della giornata di Serie A (2a g.)</title>
+    <desc lang="it">2a g - Guarda tutte le azioni salienti della giornata di Serie A. Segui la Serie A Enilive su DAZN!</desc>
+    <category lang="it">Sport</category>
+    <category lang="it">Calcio</category>
+    <icon src="https://guidatv.sky.it/uuid/SportCalcio_Cover_JgZRMKTlp.png" />
+  </programme>
+  <programme start="20260925230000 +0000" stop="20260926040000 +0000" channel="DAZN.1.it.it">
+    <title lang="it">Stag. 2019 - DAZN 1</title>
+    <desc lang="it">DAZN 1.</desc>
+    <date>2019</date>
     <category lang="it">Altri Programmi</category>
     <category lang="it">Altri Canali</category>
-    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+    <icon src="https://guidatv.sky.it/uuid/ef416285-a102-40e0-80a6-d4be94f81e66/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=566.it" />
     <country lang="it">ITA</country>
   </programme>
   <programme start="20260922100000 +0000" stop="20260922160000 +0000" channel="DAZN.2.it.it">
@@ -152733,6 +152584,42 @@
     <country lang="it">ITA</country>
   </programme>
   <programme start="20260924220000 +0000" stop="20260925040000 +0000" channel="DAZN.2.it.it">
+    <title lang="it">Nessun evento in onda</title>
+    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
+    <date>2022</date>
+    <category lang="it">Altri Programmi</category>
+    <category lang="it">Altri Canali</category>
+    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+    <country lang="it">ITA</country>
+  </programme>
+  <programme start="20260925040000 +0000" stop="20260925100000 +0000" channel="DAZN.2.it.it">
+    <title lang="it">Nessun evento in onda</title>
+    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
+    <date>2022</date>
+    <category lang="it">Altri Programmi</category>
+    <category lang="it">Altri Canali</category>
+    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+    <country lang="it">ITA</country>
+  </programme>
+  <programme start="20260925100000 +0000" stop="20260925160000 +0000" channel="DAZN.2.it.it">
+    <title lang="it">Nessun evento in onda</title>
+    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
+    <date>2022</date>
+    <category lang="it">Altri Programmi</category>
+    <category lang="it">Altri Canali</category>
+    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+    <country lang="it">ITA</country>
+  </programme>
+  <programme start="20260925160000 +0000" stop="20260925220000 +0000" channel="DAZN.2.it.it">
+    <title lang="it">Nessun evento in onda</title>
+    <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
+    <date>2022</date>
+    <category lang="it">Altri Programmi</category>
+    <category lang="it">Altri Canali</category>
+    <icon src="https://guidatv.sky.it/uuid/304fda0e-2bca-4e43-a450-0185e3091f91/cover?cgid=90&amp;territory=IT&amp;md5ChecksumParam=290baf03a80c7aec58d960086d34c9bc&amp;sid=535.it" />
+    <country lang="it">ITA</country>
+  </programme>
+  <programme start="20260925220000 +0000" stop="20260926040000 +0000" channel="DAZN.2.it.it">
     <title lang="it">Nessun evento in onda</title>
     <desc lang="it">DAZN 2 si attivera' in occasione di eventi di Serie A Enilive trasmessi in contemporanea.</desc>
     <date>2022</date>
