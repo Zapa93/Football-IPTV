@@ -1,46 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <settings>
-  <!-- for detailed info about the settings see http://webgrabplus.com/documentation/configuration/webgrabconfigxml 
-  and http://webgrabplus.com/sites/default/files/downloads/Misc/Documented_Configuration_Files_0.zip -->
   <filename>guide.xml</filename>
   <mode>n</mode>
   <postprocess grab="y" run="n">rex</postprocess>
   <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0</user-agent>
-  <!-- to get access to sites which require your credentials -->
   <credentials user="your username for the site" password="your password for the site">site name</credentials>
-  <!-- for siteini's that need a decrypt_userkey-->
   <decryptkey site="site-name">decrypt_userkey</decryptkey>
-  <!-- add the correct license id values in the next line -->
   <license wg-username="your webgrab+plus username" registered-email="your registered email address" password="your license password">To force a license update; replace this text with the letter f</license>
   <logging>on</logging>
   <retry time-out="15">4</retry>
-  <!-- timespan 0 is one day -->
-  <timespan>7</timespan>
+  <!-- 3 dagar räcker perfekt för sport och gör körningen på GitHub mycket snabb -->
+  <timespan>3</timespan>
   <update>f</update>
-  <!--
-            Replace the next dummy channel entry with the channels you want.
-			You can look into the installed siteini.pack folder on your computer
-  
-            For the latest version,
-            see http://webgrabplus.com/epg-channels for the available sites/channels
-			or https://github.com/SilentButeo2/webgrabplus-siteinipack/tree/master/siteini.pack
-			or run SiteIni.Pack.Update.exe which is in the bin folder
-  -->
-  <channel update="i" site="allatvkanaler.se" site_id="tv4-fotboll" xmltv_id="[TV4FOSV].TV4.Fotboll.se">TV4 Fotboll</channel>
-  <channel offset="0" same_as="[TV4FOSV].TV4.Fotboll.se" xmltv_id="[TV4FOSV].TV4.Fotboll.se.hd">TV4 Fotboll HD</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="v-sport-extra" xmltv_id="[VSSPXHD].V.Sport.Extra.HD.se">Viaplay Sport Extra</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="v-sport-fotball" xmltv_id="[VIAFOHD].V.Sport.Fotboll.HD.se">Viaplay Sport Fotboll</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="v-sport-premium" xmltv_id="[VIASPOH].V.Sport.Premium.HD.se">Viaplay Sport Premium</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="sportkanalen" xmltv_id="[SPORTK].TV4.Sportkanalen.se">TV4 Sportkanalen</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv4-sport-live-1" xmltv_id="[TV4SPL1].TV4.Sport.Live.1.se">TV4 Sport Live 1</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv4-sport-live-2" xmltv_id="[TV4SPL2].TV4.Sport.Live.2.se">TV4 Sport Live 2</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv4-sport-live-3" xmltv_id="[TV4SPL3].TV4.Sport.Live.3.se">TV4 Sport Live 3</channel>
-  <channel update="i" site="allatvkanaler.se" site_id="tv4-sport-live-4" xmltv_id="[TV4SPL4].TV4.Sport.Live.4.se">TV4 Sport Live 4</channel>
 
+  <!-- SVENSKA SPORTKANALER VIA ALLENTE -->
+  <channel update="i" site="tv.allente.se" site_id="50060" xmltv_id="[TV4FOSV].TV4.Fotboll.se">TV4 Fotboll HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="20083" xmltv_id="[SPORTK].TV4.Sportkanalen.se">TV4 Sportkanalen HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="20092" xmltv_id="[VSSPXHD].V.Sport.Extra.HD.se">V sport extra HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="50056" xmltv_id="[VIAFOHD].V.Sport.Fotboll.HD.se">V sport football HD (S)</channel>
+  <channel update="i" site="tv.allente.se" site_id="50078" xmltv_id="[VIASPOH].V.Sport.Premium.HD.se">V sport premium HD (S)</channel>
+  <channel update="i" site="tv.allente.se" site_id="50053" xmltv_id="[TV4HOSV].TV4.Hockey.se">TV4 Hockey HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="50059" xmltv_id="[TV4MOSV].TV4.Motor.se">TV4 Motor HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="20063" xmltv_id="[TV4TESV].TV4.Tennis.se">TV4 Tennis HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="50061" xmltv_id="[TV4SPL1].TV4.Sport.Live.1.se">TV4 Sport Live 1 HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="50062" xmltv_id="[TV4SPL2].TV4.Sport.Live.2.se">TV4 Sport Live 2 HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="50063" xmltv_id="[TV4SPL3].TV4.Sport.Live.3.se">TV4 Sport Live 3 HD</channel>
+  <channel update="i" site="tv.allente.se" site_id="50064" xmltv_id="[TV4SPL4].TV4.Sport.Live.4.se">TV4 Sport Live 4 HD</channel>
 </settings>
-
-
-
-
-
-
