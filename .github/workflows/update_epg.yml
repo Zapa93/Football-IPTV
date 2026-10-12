@@ -38,8 +38,7 @@ jobs:
 
       - name: Prepare Config (For Swedish Sports)
         run: |
-          mkdir wg_run || true
-          # Kopierar din config1.xml och döper om den så WebGrab hittar den
+          mkdir -p wg_run
           cp WebGrab++.config1.xml wg_run/WebGrab++.config.xml || true
           cp *.ini wg_run/ 2>/dev/null || true
 
@@ -60,12 +59,13 @@ jobs:
           wget -qO it.xml.gz "https://epgshare01.online/epgshare01/epg_ripper_IT1.xml.gz"
           gunzip *.gz || true
 
-      - name: Merge all guides and fix Titles
+      - name: Merge all guides, fix Titles and Strip Junk Tags
         run: |
           python3 -c "
           import xml.etree.ElementTree as ET
           import os
 
+          # === 1. VANLIGA SVENSKA KANALER FRÅN EPGSHARE01 ===
           regular_channels = [
               '[SVT1HD].SVT1.HD.se',
               '[SVT2HD].SVT2.HD.se',
@@ -112,17 +112,12 @@ jobs:
               '[SKYS2SV].SkyShowtime.2.se',
               '[EUROSHD].Eurosport.1.HD.se',
               '[EURSP2H].Eurosport.2.HD.se',
-              '[TV4HOSV].TV4.Hockey.se',
-              '[TV4MOSV].TV4.Motor.se',
-              '[TV4TESV].TV4.Tennis.se',
               '[VGOLFHD].V.Sport.Golf.HD.se',
               '[VIASMHD].V.Sport.Motor.HD.se',
-              '[VSPOVIS].V.Sport.Vinter.se',
-              # Fyll på med dina vanliga svenska kanaler här. 
-              # Se till att de har exakt samma tvg-id som i din M3U-fil!
+              '[VSPOVIS].V.Sport.Vinter.se'
           ]
 
-          # === 2. SPORTKANALER från EPGShare01 (Utländsk sport) ===
+          # === 2. UTLÄNDSK SPORT FRÅN EPGSHARE01 ===
           sports_channels = [
               'DAZN.1.it.it',
               'DAZN.2.it.it',
@@ -153,12 +148,13 @@ jobs:
               'Arena.Sport.4.HD.(RS).rs',
               'Arena.Sport.5.HD.(RS).rs',
               'Arena.Sport.6.HD.(RS).rs'
-              # Fyll på med resten av dina utländska sportkanaler här
           ]
-          # ==============================================================
 
           all_channels = []
           all_programmes = []
+          
+          # Endast taggar som appen faktiskt använder sparas
+          KEEP_TAGS = {'title', 'desc', 'date'}
 
           def process_file(filename, filter_list=None, apply_magic=False):
               if not os.path.exists(filename): return
@@ -176,58 +172,70 @@ jobs:
                       ch_id = prog.get('channel')
                       
                       if filter_list is None or ch_id in filter_list:
+                          title_elem = prog.find('title')
+                          subtitle_elem = prog.find('sub-title')
+                          desc_elem = prog.find('desc')
+                          
                           if apply_magic:
-                              title_elem = prog.find('title')
-                              subtitle_elem = prog.find('sub-title')
-                              desc_elem = prog.find('desc')
-                              
                               orig_title = title_elem.text.strip() if (title_elem is not None and title_elem.text) else ''
                               sub_text = subtitle_elem.text.strip() if (subtitle_elem is not None and subtitle_elem.text) else ''
                               desc_text = desc_elem.text.strip() if (desc_elem is not None and desc_elem.text) else ''
                               
                               match_found = False
                               
-                              # 1. Kolla sub-title (Vanligt för UK/Italien)
+                              # 1. Undersök sub-title (typiskt för UK/Italien)
                               if sub_text:
                                   if ' v ' in sub_text.lower() or ' vs ' in sub_text.lower() or ' - ' in sub_text:
-                                      title_elem.text = f'{sub_text} ({orig_title})'
+                                      if title_elem is not None:
+                                          title_elem.text = f'{sub_text} ({orig_title})'
                                       match_found = True
                                   else:
-                                      title_elem.text = f'{orig_title}: {sub_text}'
+                                      if title_elem is not None:
+                                          title_elem.text = f'{orig_title}: {sub_text}'
                                       
-                              # 2. Kolla beskrivningen (Bra för WebGrabs svenska sportkanaler)
+                              # 2. Undersök beskrivning (bra för Allentes sportkanaler)
                               if not match_found and desc_text:
                                   first_sentence = desc_text.split('.')[0]
                                   if ' - ' in first_sentence or ' v ' in first_sentence.lower():
-                                      if len(first_sentence) < 65:
+                                      if len(first_sentence) < 65 and title_elem is not None:
                                           title_elem.text = f'{first_sentence} ({orig_title})'
-                                          
+
+                          # Rensa bort alla onödiga taggar (ratings, credits, icons etc.)
+                          for child in list(prog):
+                              if child.tag not in KEEP_TAGS:
+                                  prog.remove(child)
+
                           all_programmes.append(prog)
               except Exception as e:
                   print(f'Kunde inte läsa {filename}: {e}')
 
-          # 1. Läs in WebGrab-filen (Svensk Sport). Behåll ALLA kanaler i den, och applicera magin!
+          # 1. Läs in Allente-sportkanalerna från WebGrab
           process_file('wg_run/guide.xml', filter_list=None, apply_magic=True)
 
-          # 2. Läs in Vanliga Svenska kanaler (EPGShare01). INGEN magi.
+          # 2. Läs in vanliga svenska kanaler från EPGShare01 (utan match-omdöpning)
           process_file('se.xml', filter_list=regular_channels, apply_magic=False)
 
-          # 3. Läs in Utländsk Sport (EPGShare01). MED magi.
+          # 3. Läs in utländsk sport från EPGShare01 (med match-omdöpning)
           process_file('uk.xml', filter_list=sports_channels, apply_magic=True)
           process_file('rs.xml', filter_list=sports_channels, apply_magic=True)
           process_file('bein.xml', filter_list=sports_channels, apply_magic=True)
           process_file('it.xml', filter_list=sports_channels, apply_magic=True)
 
-          # Bygg ihop och spara
+          # Bygg ny ren XML och sortera bort ev. kanal-dubbletter
           new_root = ET.Element('tv')
+          seen_channels = set()
           for ch in all_channels:
-              new_root.append(ch)
+              ch_id = ch.get('id')
+              if ch_id not in seen_channels:
+                  seen_channels.add(ch_id)
+                  new_root.append(ch)
+
           for prog in all_programmes:
               new_root.append(prog)
               
           tree = ET.ElementTree(new_root)
           tree.write('guide.xml', encoding='utf-8', xml_declaration=True)
-          print('Succé! WebGrab och EPGShare är ihopsydda.')
+          print('Succé! XML är sammanslagen, sporten har matchtitlar och alla onödiga taggar är rensade.')
           "
 
       - name: Commit and Push
@@ -235,5 +243,5 @@ jobs:
           git config --global user.name "EPG-Bot"
           git config --global user.email "bot@github.com"
           git add guide.xml
-          git commit -m "Automated Hybrid EPG update: $(date)" || exit 0
+          git commit -m "Automated Hybrid EPG update (Allente + Clean): $(date)" || exit 0
           git push
