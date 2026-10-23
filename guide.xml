@@ -540,49 +540,9 @@
     <url>http://www.guidatv.sky.it</url>
   </channel>
   
-<programme start="20261022001500 +0000" stop="20261022030000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Serie A: Bologna - Inter</title>
-    <desc lang="sv">Fotboll från Stadio Renato Dall´Ara där Bologna ställs mot Inter i omgång 7 av Serie A. Kommentator: Adam Pinthorp.</desc>
-  </programme>
-  
-<programme start="20261022030000 +0000" stop="20261022040000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+<programme start="20261023030000 +0000" stop="20261023050000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261022040000 +0000" stop="20261022073000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan: AIK - Göteborg</title>
-    <desc lang="sv">Kommentatorer: Niklas Jarelind och Vicki Blommé.</desc>
-  </programme>
-  
-<programme start="20261022073000 +0000" stop="20261022110000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan: Sirius - Elfsborg</title>
-    <desc lang="sv">Kommentatorer: Petra Svensson och Nordin Gerzic.</desc>
-  </programme>
-  
-<programme start="20261022110000 +0000" stop="20261022140000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan: Degerfors - Kalmar</title>
-    <desc lang="sv">Fotboll från Stora Valla där Degerfors IF ställs mot Kalmar FF i omgång 24 av Allsvenskan. Kommentator: Niklas Jarelind.</desc>
-  </programme>
-  
-<programme start="20261022140000 +0000" stop="20261022170000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan</title>
-    <desc lang="sv">Fotboll från Eleda Stadion där Malmö FF ställs mot BK Häcken i omgång 24 av Allsvenskan. Kommentatorer: Åke Unger och Nordin Gerzic.</desc>
-  </programme>
-  
-<programme start="20261022170000 +0000" stop="20261022200000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan</title>
-    <desc lang="sv">Fotboll från Hitachi Energy Arena där Västerås SK ställs mot Mjällby AIF i omgång 24 av Allsvenskan. Kommentator: Peter Backe.</desc>
-  </programme>
-  
-<programme start="20261022200000 +0000" stop="20261022224500 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan: Brommapojkarna - Djurgården</title>
-    <desc lang="sv">Fotboll från Grimsta IP där IF Brommapojkarna ställs mot Djurgårdens IF i omgång 24 av Allsvenskan. Kommentatorer: Petra Svensson och Jiloan Hamad.</desc>
-  </programme>
-  
-<programme start="20261022224500 +0000" stop="20261023013300 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Allsvenskan</title>
-    <desc lang="sv">Fotboll från Örjans Vall där Halmstads BK ställs mot Hammarby IF i omgång 24 av Allsvenskan. Kommentatorer: Adam Pinthorp och Jens Fjellström.</desc>
   </programme>
   
 <programme start="20261023050000 +0000" stop="20261023073000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
@@ -615,24 +575,9 @@
     <desc lang="sv">Fotboll från Borås Arena där IF Elfsborg ställs mot Malmö FF i omgång 25 av Allsvenskan. Kommentatorer: Åke Unger och Simon Thern.</desc>
   </programme>
   
-<programme start="20261023221500 +0000" stop="20261023030000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+<programme start="20261023221500 +0000" stop="20261024030000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
     <title lang="sv">Allsvenskan: AIK - Göteborg</title>
     <desc lang="sv">Kommentatorer: Niklas Jarelind och Vicki Blommé.</desc>
-  </programme>
-  
-<programme start="20261023030000 +0000" stop="20261023050000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261024030000 +0000" stop="20261024034500 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261024034500 +0000" stop="20261024061500 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
-    <title lang="sv">Superettan: Norrköping - Örebro Superettan</title>
-    <desc lang="sv">Fotboll från Norrköpings idrottspark där IFK Norrköping ställs mot Örebro SK i omgång 27 av Superettan. Kommentator: Markus Sjöman.</desc>
   </programme>
   
 <programme start="20261024061500 +0000" stop="20261024090000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
@@ -665,8 +610,13 @@
     <desc lang="sv">Fotboll från Borås Arena där IF Elfsborg ställs mot Malmö FF i omgång 25 av Allsvenskan. Kommentatorer: Åke Unger och Simon Thern.</desc>
   </programme>
   
-<programme start="20261024235000 +0000" stop="20261025035000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+<programme start="20261024235000 +0000" stop="20261024034500 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
     <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261024034500 +0000" stop="20261024061500 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Superettan: Norrköping - Örebro Superettan</title>
+    <desc lang="sv">Fotboll från Norrköpings idrottspark där IFK Norrköping ställs mot Örebro SK i omgång 27 av Superettan. Kommentator: Markus Sjöman.</desc>
   </programme>
   
 <programme start="20261025035000 +0000" stop="20261025040000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
@@ -708,123 +658,53 @@
     <desc lang="sv">Kommentatorer: Adam Pinthorp och Vicki Blommé.</desc>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261022100000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
-  </programme>
-  
-<programme start="20261022100000 +0000" stop="20261022102000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Transalp: Att komma igång</title>
-    <desc lang="sv">Sportdokumentär från 2025.</desc>
-  </programme>
-  
-<programme start="20261022102000 +0000" stop="20261022104000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Transalp: Kaoset i Balkan</title>
-    <desc lang="sv">Sportdokumentär från 2025.</desc>
-  </programme>
-  
-<programme start="20261022104000 +0000" stop="20261022111000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261022111000 +0000" stop="20261022114000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261022114000 +0000" stop="20261022122500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Fiskedestination</title>
-    <desc lang="sv">Broman tar en nostalgitripp med båten in till Stora Värtan.</desc>
-  </programme>
-  
-<programme start="20261022122500 +0000" stop="20261022131000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Fiskedestination</title>
-    <desc lang="sv">Broman och några nya vänner fiskar artrika Rajastrands FVO i Dorotea.</desc>
-  </programme>
-  
-<programme start="20261022131000 +0000" stop="20261022133000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen</title>
-    <desc lang="sv">Travtränaren och kusken Adrian Kolgjini försöker, i skuggan av sin far.</desc>
-  </programme>
-  
-<programme start="20261022133000 +0000" stop="20261022135500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen</title>
-    <desc lang="sv">Travtränaren och Boden-löftet Sandra Eriksson gör en efterlängtad comeback.</desc>
-  </programme>
-  
-<programme start="20261022135500 +0000" stop="20261022141500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Transalp: Kaoset i Balkan</title>
-    <desc lang="sv">Sportdokumentär från 2025.</desc>
-  </programme>
-  
-<programme start="20261022141500 +0000" stop="20261022144000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261022144000 +0000" stop="20261022151000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261022151000 +0000" stop="20261022155500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Fiskedestination</title>
-    <desc lang="sv">Broman tar en nostalgitripp med båten in till Stora Värtan.</desc>
-  </programme>
-  
-<programme start="20261022155500 +0000" stop="20261022164500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Fiskedestination</title>
-    <desc lang="sv">Broman och några nya vänner fiskar artrika Rajastrands FVO i Dorotea.</desc>
-  </programme>
-  
-<programme start="20261022164500 +0000" stop="20261022192200 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Skellefteå Kraft Arena där Skellefteå AIK ställs mot Djurgårdens IF i SHL. Kommentatorer: Johan Edlund och Staffan Kronwall.</desc>
-  </programme>
-  
-<programme start="20261022192200 +0000" stop="20261022193500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
-  </programme>
-  
-<programme start="20261022193500 +0000" stop="20261022200000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261022200000 +0000" stop="20261022204500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Fiskedestination</title>
-    <desc lang="sv">Broman och några nya vänner fiskar artrika Rajastrands FVO i Dorotea.</desc>
-  </programme>
-  
-<programme start="20261022204500 +0000" stop="20261022210500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Transalp: Att komma igång</title>
-    <desc lang="sv">Sportdokumentär från 2025.</desc>
-  </programme>
-  
-<programme start="20261022210500 +0000" stop="20261022213000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Transalp: Kaoset i Balkan</title>
-    <desc lang="sv">Sportdokumentär från 2025.</desc>
-  </programme>
-  
-<programme start="20261022213000 +0000" stop="20261022215000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen</title>
-    <desc lang="sv">Travtränaren och kusken Adrian Kolgjini försöker, i skuggan av sin far.</desc>
-  </programme>
-  
-<programme start="20261022215000 +0000" stop="20261022230000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen</title>
-    <desc lang="sv">Travtränaren och Boden-löftet Sandra Eriksson gör en efterlängtad comeback.</desc>
-  </programme>
-  
-<programme start="20261022230000 +0000" stop="20261022230500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
-  </programme>
-  
-<programme start="20261022230500 +0000" stop="20261023030000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261026010000 +0000" stop="20261026040000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
     <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026040000 +0000" stop="20261026050000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+  </programme>
+  
+<programme start="20261026050000 +0000" stop="20261026080000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Allsvenskan: Kalmar - Brommapojkarna</title>
+    <desc lang="sv">Fotboll från Guldfågeln Arena där Kalmar FF ställs mot IF Brommapojkarna i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
+  </programme>
+  
+<programme start="20261026080000 +0000" stop="20261026110000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Allsvenskan</title>
+    <desc lang="sv">Fotboll från 3Arena där Djurgårdens IF ställs mot Örgryte IS i omgång 25 av Allsvenskan. Kommentatorer: Adam Pinthorp och Jiloan Hamad.</desc>
+  </programme>
+  
+<programme start="20261026110000 +0000" stop="20261026140000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Allsvenskan</title>
+    <desc lang="sv">Kommentatorer: Petra Svensson och Nordin Gerzic.</desc>
+  </programme>
+  
+<programme start="20261026140000 +0000" stop="20261026170000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Allsvenskan</title>
+    <desc lang="sv">Kommentatorer: Adam Pinthorp och Vicki Blommé.</desc>
+  </programme>
+  
+<programme start="20261026170000 +0000" stop="20261026193000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Serie A: Atalanta - Frosinone</title>
+    <desc lang="sv">Fotboll från Gewiss Stadium där Atalanta ställs mot Frosinone i omgång 8 av Serie A. Engelsk kommentering.</desc>
+  </programme>
+  
+<programme start="20261026193000 +0000" stop="20261026223000 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Allsvenskan</title>
+    <desc lang="sv">Kommentatorer: Niklas Jarelind och Jens Fjellström.</desc>
+  </programme>
+  
+<programme start="20261026223000 +0000" stop="20261027003500 +0000" channel="[TV4FOSV].TV4.Fotboll.se">
+    <title lang="sv">Superettan: Helsingborg - Ljungskile Superettan</title>
+    <desc lang="sv">Sändningar med superettan i fotboll.</desc>
+  </programme>
+  
+<programme start="20261023030000 +0000" stop="20261023095500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
 <programme start="20261023095500 +0000" stop="20261023101500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
@@ -911,7 +791,6 @@
     <title lang="sv">Fiskedestination: Gädda i Handsjön</title>
     <desc lang="sv">Broman ger sig ut på lattjolajban-fiske efter gädda i Handsjön.</desc>
   </programme>
-  
 <programme start="20261023204000 +0000" stop="20261023210000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Transalp: Kärleken till bergen</title>
     <desc lang="sv">Sportdokumentär från 2025.</desc>
@@ -937,17 +816,98 @@
     <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
-<programme start="20261023221000 +0000" stop="20261023030000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261023221000 +0000" stop="20261024021000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023030000 +0000" stop="20261023095500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261024094000 +0000" stop="20261024100000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: 600 timmars träning börjar nu!</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261024100000 +0000" stop="20261024102500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Mitt liv som skidskytt: På hemmaplan</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261024102500 +0000" stop="20261024105000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs: Wikegård vs Nicklas Lidström</title>
+    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
+  </programme>
+  
+<programme start="20261024105000 +0000" stop="20261024111000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: 600 timmars träning börjar nu!</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261024111000 +0000" stop="20261024113500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Mitt liv som skidskytt: På hemmaplan</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261024113500 +0000" stop="20261024115500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Hela vägen: Familjeband och vinnarskallar</title>
+    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
+  </programme>
+  
+<programme start="20261024115500 +0000" stop="20261024122000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
-<programme start="20261024021000 +0000" stop="20261024030000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261024122000 +0000" stop="20261024150000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Global Champions Tour: Global Champions Tour: Kairo</title>
+    <desc lang="sv">Se världens bästa ryttare och hästar göra upp på GCT.</desc>
+  </programme>
+  
+<programme start="20261024150000 +0000" stop="20261024151500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
+  </programme>
+  
+<programme start="20261024151500 +0000" stop="20261024174500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Allsvenskan: Kalmar - Brommapojkarna</title>
+    <desc lang="sv">Fotboll från Guldfågeln Arena där Kalmar FF ställs mot IF Brommapojkarna i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
+  </programme>
+  
+<programme start="20261024174500 +0000" stop="20261024181000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs: Wikegård vs Tommy Boustedt</title>
+    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
+  </programme>
+  
+<programme start="20261024181000 +0000" stop="20261024183500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Hela vägen: Drömmen fortsätter</title>
+    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
+  </programme>
+  
+<programme start="20261024183500 +0000" stop="20261024185500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Hög höjd</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261024185500 +0000" stop="20261024192500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Kraftmätning</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261024192500 +0000" stop="20261024212500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Portugisiska Ligan: Gil Vicente - Porto</title>
+    <desc lang="sv">Fotboll från Estádio Cidade de Barcelos där Gil Vicente ställs mot Porto i omgång 9 av Liga Portugal. Engelsk kommentering.</desc>
+  </programme>
+  
+<programme start="20261024212500 +0000" stop="20261024215000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Hela vägen: Allt att bevisa</title>
+    <desc lang="sv">Efter en tuff start på säsongen har Adrian Kolgjini nu mycket att bevisa.</desc>
+  </programme>
+  
+<programme start="20261024215000 +0000" stop="20261024221000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Hela vägen: Familjeband och vinnarskallar</title>
+    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
+  </programme>
+  
+<programme start="20261024221000 +0000" stop="20261024030000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
 <programme start="20261024030000 +0000" stop="20261024094000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
@@ -955,115 +915,17 @@
     <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
-<programme start="20261024094000 +0000" stop="20261024100500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: 600 timmars träning börjar nu!</title>
-    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
-  </programme>
-  
-<programme start="20261024100500 +0000" stop="20261024102500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Mitt liv som skidskytt: På hemmaplan</title>
-    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
-  </programme>
-  
-<programme start="20261024102500 +0000" stop="20261024105500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs: Wikegård vs Nicklas Lidström</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261024105500 +0000" stop="20261024112000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: 600 timmars träning börjar nu!</title>
-    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
-  </programme>
-  
-<programme start="20261024112000 +0000" stop="20261024114500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Mitt liv som skidskytt: På hemmaplan</title>
-    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
-  </programme>
-  
-<programme start="20261024114500 +0000" stop="20261024121000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen: Familjeband och vinnarskallar</title>
-    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
-  </programme>
-  
-<programme start="20261024121000 +0000" stop="20261024122000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
-  </programme>
-  
-<programme start="20261024122000 +0000" stop="20261024150500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Global Champions Tour: Global Champions Tour: Kairo</title>
-    <desc lang="sv">Se världens bästa ryttare och hästar göra upp på GCT.</desc>
-  </programme>
-  
-<programme start="20261024150500 +0000" stop="20261024151500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
-  </programme>
-  
-<programme start="20261024151500 +0000" stop="20261024175000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Allsvenskan: Kalmar - Brommapojkarna</title>
-    <desc lang="sv">Fotboll från Guldfågeln Arena där Kalmar FF ställs mot IF Brommapojkarna i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
-  </programme>
-  
-<programme start="20261024175000 +0000" stop="20261024181500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Wikegård vs: Wikegård vs Tommy Boustedt</title>
-    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
-  </programme>
-  
-<programme start="20261024181500 +0000" stop="20261024184000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen: Drömmen fortsätter</title>
-    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
-  </programme>
-  
-<programme start="20261024184000 +0000" stop="20261024190000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Hög höjd</title>
-    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
-  </programme>
-  
-<programme start="20261024190000 +0000" stop="20261024192500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Kraftmätning</title>
-    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
-  </programme>
-  
-<programme start="20261024192500 +0000" stop="20261024213500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Portugisiska Ligan: Gil Vicente - Porto</title>
-    <desc lang="sv">Fotboll från Estádio Cidade de Barcelos där Gil Vicente ställs mot Porto i omgång 9 av Liga Portugal. Engelsk kommentering.</desc>
-  </programme>
-  
-<programme start="20261024213500 +0000" stop="20261024215500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen: Allt att bevisa</title>
-    <desc lang="sv">Efter en tuff start på säsongen har Adrian Kolgjini nu mycket att bevisa.</desc>
-  </programme>
-  
-<programme start="20261024215500 +0000" stop="20261024221500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen: Familjeband och vinnarskallar</title>
-    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
-  </programme>
-  
-<programme start="20261024221500 +0000" stop="20261024222000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
-  </programme>
-  
-<programme start="20261024222000 +0000" stop="20261025022000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025022000 +0000" stop="20261025040000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
 <programme start="20261025040000 +0000" stop="20261025100000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
-<programme start="20261025100000 +0000" stop="20261025110500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025100000 +0000" stop="20261025110000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Rally-EM: Portugal</title>
     <desc lang="sv">Motorsport från Braga, Portugal, och den sjunde och sista deltävlingen i Rally-EM 2026. Med TV Live Stage 1. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025110500 +0000" stop="20261025112500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025110000 +0000" stop="20261025112500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Hög höjd</title>
     <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
   </programme>
@@ -1072,17 +934,18 @@
     <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Kraftmätning</title>
     <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
   </programme>
-<programme start="20261025115000 +0000" stop="20261025141500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+  
+<programme start="20261025115000 +0000" stop="20261025142000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Superettan: Norrby - Norrköping</title>
     <desc lang="sv">Fotboll från Borås Arena där Norrby IF ställs mot IFK Norrköping i omgång 28 av Superettan. Kommentator: Evelina Back.</desc>
   </programme>
   
-<programme start="20261025141500 +0000" stop="20261025144000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025142000 +0000" stop="20261025144500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Hela vägen: Drömmen fortsätter</title>
     <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
   </programme>
   
-<programme start="20261025144000 +0000" stop="20261025150500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025144500 +0000" stop="20261025150500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Hög höjd</title>
     <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
   </programme>
@@ -1092,90 +955,157 @@
     <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
   </programme>
   
-<programme start="20261025153000 +0000" stop="20261025173000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025153000 +0000" stop="20261025175500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">ATP TOUR: Grand Prix Lyon</title>
     <desc lang="sv">Tennis från Lyon, Frankrike, och finalen i Grand Prix Lyon på ATP Tour. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025173000 +0000" stop="20261025175500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
-    <title lang="sv">Hela vägen: Mellan relation och prestation</title>
-    <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
-  </programme>
-  
-<programme start="20261025175500 +0000" stop="20261025200500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025175500 +0000" stop="20261025200000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Womens Super League</title>
     <desc lang="sv">Fotboll från Progress with Unity Stadium där Manchester United ställs mot Manchester City i omgång 7 i Women's Super League. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025200500 +0000" stop="20261025202500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025200000 +0000" stop="20261025202500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Hög höjd</title>
     <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
   </programme>
   
-<programme start="20261025202500 +0000" stop="20261025224000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025202500 +0000" stop="20261025222500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Portugisiska Ligan: Sporting Lissabon - Academico Viseu</title>
     <desc lang="sv">Fotboll från Estádio José Alvalade där Sporting ställs mot Académico Viseu i omgång 9 av Liga Portugal. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025224000 +0000" stop="20261025230000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025222500 +0000" stop="20261025224500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Hela vägen: Drömmen fortsätter</title>
     <desc lang="sv">I Hela vägen sätter vi ansikten på hjältarna bakom varje häst.</desc>
   </programme>
   
-<programme start="20261025230000 +0000" stop="20261025230500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261025224500 +0000" stop="20261026040000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
   </programme>
   
-<programme start="20261025230500 +0000" stop="20261026030500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+<programme start="20261026040000 +0000" stop="20261026105500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
+  </programme>
+  
+<programme start="20261026105500 +0000" stop="20261026112000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Konkurrensen hårdnar</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026112000 +0000" stop="20261026114000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Äntligen dags</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026114000 +0000" stop="20261026120500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs: Wikegård vs Bert Robertsson</title>
+    <desc lang="sv">Niklas Wikegård besöker Skellefteåtränaren Bert Robertsson. Del 5 av 6.</desc>
+  </programme>
+  
+<programme start="20261026120500 +0000" stop="20261026123000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs: Wikegård vs Daniel Rahimi</title>
+    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
+  </programme>
+  
+<programme start="20261026123000 +0000" stop="20261026131000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+    <desc lang="sv">Broman åker till Bergs kommun för att kolla in Storsjötrollingen.</desc>
+  </programme>
+  
+<programme start="20261026131000 +0000" stop="20261026140000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination: Pike Challenge</title>
+    <desc lang="sv">Broman besöker Örnsköldsvik för att tävla i 2023 års Pike Challenge.</desc>
+  </programme>
+  
+<programme start="20261026140000 +0000" stop="20261026144500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+    <desc lang="sv">Svensk underhållningsserie från 2015 med Jessica Almenäs.</desc>
+  </programme>
+  
+<programme start="20261026144500 +0000" stop="20261026150500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Konkurrensen hårdnar</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026150500 +0000" stop="20261026153000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Äntligen dags</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026153000 +0000" stop="20261026155500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs: Wikegård vs Bert Robertsson</title>
+    <desc lang="sv">Niklas Wikegård besöker Skellefteåtränaren Bert Robertsson. Del 5 av 6.</desc>
+  </programme>
+  
+<programme start="20261026155500 +0000" stop="20261026161500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Wikegård vs: Wikegård vs Daniel Rahimi</title>
+    <desc lang="sv">Niklas Wikegård besöker de mest intressanta svenska hockeyprofilerna.</desc>
+  </programme>
+  
+<programme start="20261026161500 +0000" stop="20261026170000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination</title>
+    <desc lang="sv">Broman åker till Bergs kommun för att kolla in Storsjötrollingen.</desc>
+  </programme>
+  
+<programme start="20261026170000 +0000" stop="20261026174500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Fiskedestination: Pike Challenge</title>
+    <desc lang="sv">Broman besöker Örnsköldsvik för att tävla i 2023 års Pike Challenge.</desc>
+  </programme>
+  
+<programme start="20261026174500 +0000" stop="20261026183000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+    <desc lang="sv">Svensk underhållningsserie från 2015 med Jessica Almenäs.</desc>
+  </programme>
+  
+<programme start="20261026183000 +0000" stop="20261026184000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
+  </programme>
+  
+<programme start="20261026184000 +0000" stop="20261026205000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Portugisiska Ligan: Santa Clara - Benfica</title>
+    <desc lang="sv">Fotboll från Estádio de São Miguel där Santa Clara ställs mot Benfica i omgång 9 av Liga Portugal. Engelsk kommentering.</desc>
+  </programme>
+  
+<programme start="20261026205000 +0000" stop="20261026211500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Konkurrensen hårdnar</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026211500 +0000" stop="20261026214000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Äntligen dags</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026214000 +0000" stop="20261026215000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
+  </programme>
+  
+<programme start="20261026215000 +0000" stop="20261026221500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Mitt liv som skidskytt: Dubbelseger för Sverige: Äntligen dags</title>
+    <desc lang="sv">Följ med det svenska skidskyttelandslaget under träningssäsongen 2023.</desc>
+  </programme>
+  
+<programme start="20261026221500 +0000" stop="20261026230000 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Stjärnkusken</title>
+    <desc lang="sv">Svensk underhållningsserie från 2015 med Jessica Almenäs.</desc>
+  </programme>
+  
+<programme start="20261026230000 +0000" stop="20261026230500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">De senaste höjdpunkterna från bland annat SHL, HockeyAllsvenskan, UEFA Champions League, NBA, La Liga och mycket mer.</desc>
+  </programme>
+  
+<programme start="20261026230500 +0000" stop="20261027030500 +0000" channel="[SPORTK].TV4.Sportkanalen.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022003000 +0000" stop="20261022040000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+<programme start="20261023020500 +0000" stop="20261023040000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022040000 +0000" stop="20261022080000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022080000 +0000" stop="20261022110000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022110000 +0000" stop="20261022130000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Estadio Santiago Bernabéu, Madrid. Kommentator: Henrik Strömblad. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022130000 +0000" stop="20261022150000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Kommentering: Gustav Karlsson. Plats: Decathlon Arena - Stade Pierre-Mauroy.</desc>
-  </programme>
-  
-<programme start="20261022150000 +0000" stop="20261022170000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Stadio Giuseppe Sinigaglia, Como. Kommentatorer: Niklas Holmgren &amp; Johanna Frisk. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022170000 +0000" stop="20261022190000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Estadio Santiago Bernabéu, Madrid. Kommentator: Henrik Strömblad. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022190000 +0000" stop="20261022210000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Allianz Arena, München. Kommentatorer: Anders Bjuhr &amp; Fredrik Ljungberg. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022210000 +0000" stop="20261022230500 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Stadio Giuseppe Meazza, Milano. Kommentator: Gustav Karlsson. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022230500 +0000" stop="20261023020500 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">NHL: Boston Bruins - Nashville Predators</title>
-    <desc lang="sv">Från TD Garden, Boston. (22/10-26).</desc>
   </programme>
   
 <programme start="20261023040000 +0000" stop="20261023080000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
@@ -1231,15 +1161,7 @@
     <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
   </programme>
   
-<programme start="20261023230000 +0000" stop="20261023020500 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261023020500 +0000" stop="20261023040000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261024030000 +0000" stop="20261024040000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+<programme start="20261023230000 +0000" stop="20261024030000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -1252,7 +1174,7 @@
   </programme>
   
 <programme start="20261024081500 +0000" stop="20261024101500 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">EFL Championship: Bolton - Middlesbrough</title>
+    <title lang="sv">EFL Championship</title>
     <desc lang="sv">Omgång 12. Från Toughsheet Community Stadium, Horwich. (23/10-26).</desc>
   </programme>
   
@@ -1296,9 +1218,13 @@
     <desc lang="sv">Omgång 12. Från London Stadium, London. (24/10-26).</desc>
   </programme>
   
-<programme start="20261024230500 +0000" stop="20261025030500 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+<programme start="20261024230500 +0000" stop="20261024030000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">NHL: Washington Capitals - Buffalo Sabres</title>
     <desc lang="sv">Från Capital One Arena, Washington. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261024030000 +0000" stop="20261024040000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
 <programme start="20261025030500 +0000" stop="20261025050000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
@@ -1330,7 +1256,7 @@
   </programme>
   
 <programme start="20261025130000 +0000" stop="20261025135500 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">Formel 1 Highlights</title>
+    <title lang="sv">Formel 1: Formel 1 Highlights</title>
     <desc lang="sv">Höjdpunkter från Marina Bay Street Circuit i Marina Bay, Singapore. Kommentatorer: Janne Blomqvist &amp; Björn Wirdheim. (11/10-26).</desc>
   </programme>
   
@@ -1345,7 +1271,7 @@
   </programme>
   
 <programme start="20261025181000 +0000" stop="20261025220000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
-    <title lang="sv">European Dart Championship: European Championship - Finaler</title>
+    <title lang="sv">European Dart Championship</title>
     <desc lang="sv">Från Westfalenhalle i Dortmund, Tyskland. (25/10-26).</desc>
   </programme>
   
@@ -1354,64 +1280,78 @@
     <desc lang="sv">Omgång 7. Från Europa-Park Stadion, Freiburg. Kommentator: Gustav Karlsson. (25/10-26).</desc>
   </programme>
   
-<programme start="20261022033000 +0000" stop="20261022040000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261026000000 +0000" stop="20261026040000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022040000 +0000" stop="20261022080000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261026040000 +0000" stop="20261026050000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022080000 +0000" stop="20261022100000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022100000 +0000" stop="20261022120000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Bundesliga</title>
-    <desc lang="sv">Omgång 6. Från Borussia-Park, Mönchengladbach. (18/10-26).</desc>
+<programme start="20261026090000 +0000" stop="20261026120000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022120000 +0000" stop="20261022140000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Ligue 1: Angers - Marseille</title>
-    <desc lang="sv">Omgång 7. Från Stade Raymond-Kopa, Angers. (18/10-26).</desc>
+<programme start="20261026120000 +0000" stop="20261026140000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship</title>
+    <desc lang="sv">Omgång 12. Från Toughsheet Community Stadium, Horwich. (23/10-26).</desc>
   </programme>
   
-<programme start="20261022140000 +0000" stop="20261022160000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Ligue 1: Le Havre - Auxerre</title>
-    <desc lang="sv">Omgång 7. Från Stade Océane, Le Havre. (18/10-26).</desc>
+<programme start="20261026140000 +0000" stop="20261026160000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship: Charlton - Norwich</title>
+    <desc lang="sv">Omgång 12. Från The Valley, London. (24/10-26).</desc>
   </programme>
   
-<programme start="20261022160000 +0000" stop="20261022170000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Premier League Review</title>
-    <desc lang="sv">Magasin från den senaste omgången i Premier League.</desc>
+<programme start="20261026160000 +0000" stop="20261026180000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">EFL Championship: Portsmouth - Millwall</title>
+    <desc lang="sv">Omgång 12. Från Fratton Park, Portsmouth. (24/10-26).</desc>
   </programme>
   
-<programme start="20261022170000 +0000" stop="20261022173000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261026180000 +0000" stop="20261026190000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+    <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
+  </programme>
+  
+<programme start="20261026190000 +0000" stop="20261026193000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+    <desc lang="sv">Fotbollsmagasin med höjdpunkter från Ligue 1.</desc>
+  </programme>
+  
+<programme start="20261026193000 +0000" stop="20261026200000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
     <title lang="sv">Championship Highlights</title>
     <desc lang="sv">Höjdpunkter från EFL Championship, Englands näst högsta division i fotboll.</desc>
   </programme>
   
-<programme start="20261022173000 +0000" stop="20261022183000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Premier League Stories</title>
-    <desc lang="sv">Premier League Stories.</desc>
+<programme start="20261026200000 +0000" stop="20261026210000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Formel 1 Highlights: USA GP</title>
+    <desc lang="sv">Höjdpunkter från Circuit of the Americas utanför Austin, Texas. Kommentatorer: Janne Blomqvist &amp; Björn Wirdheim. (25/10-26).</desc>
   </programme>
   
-<programme start="20261022183000 +0000" stop="20261022203000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Ligue 1: Paris FC - Rennes</title>
-    <desc lang="sv">Omgång 7. Från Stade Jean Bouin, Paris. (18/10-26).</desc>
+<programme start="20261026210000 +0000" stop="20261026220000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">DTM Highlights: Season Review</title>
+    <desc lang="sv">Tillbakablick på säsongen.</desc>
   </programme>
   
-<programme start="20261022203000 +0000" stop="20261022213000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Premier League Review</title>
-    <desc lang="sv">Magasin från den senaste omgången i Premier League.</desc>
+<programme start="20261026220000 +0000" stop="20261026230000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+    <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
   </programme>
   
-<programme start="20261022213000 +0000" stop="20261022233000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">EFL Championship: Middlesbrough - Cardiff</title>
-    <desc lang="sv">Omgång 11. Från Riverside Stadium, Middlesbrough. (17/10-26).</desc>
+<programme start="20261026230000 +0000" stop="20261026233000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Championship Highlights</title>
+    <desc lang="sv">Höjdpunkter från EFL Championship, Englands näst högsta division i fotboll.</desc>
   </programme>
   
-<programme start="20261022233000 +0000" stop="20261023033000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261026233000 +0000" stop="20261027000000 +0000" channel="[VSSPXHD].V.Sport.Extra.HD.se">
+    <title lang="sv">Ligue 1 Highlights (SE)</title>
+    <desc lang="sv">Fotbollsmagasin med höjdpunkter från Ligue 1.</desc>
+  </programme>
+  
+<programme start="20261023033000 +0000" stop="20261023040000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -1427,7 +1367,6 @@
     <title lang="sv">EFL Championship: Millwall - Lincoln</title>
     <desc lang="sv">Omgång 11. Från The Den, London. (17/10-26).</desc>
   </programme>
-  
 <programme start="20261023115000 +0000" stop="20261023135000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">EFL Championship: Swansea - West Ham</title>
     <desc lang="sv">Omgång 11. Från Swansea.com Stadium, Swansea. (17/10-26).</desc>
@@ -1448,12 +1387,12 @@
     <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
   </programme>
   
-<programme start="20261023172000 +0000" stop="20261023182000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261023172000 +0000" stop="20261023182100 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">Premier League Stories</title>
     <desc lang="sv">Premier League Stories.</desc>
   </programme>
   
-<programme start="20261023182000 +0000" stop="20261023203000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261023182100 +0000" stop="20261023203000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">Bundesliga</title>
     <desc lang="sv">Omgång 7. Från MHPArena, Stuttgart. (23/10-26).</desc>
   </programme>
@@ -1473,15 +1412,7 @@
     <desc lang="sv">Omgång 7. Från Stade Raymond-Kopa, Angers. (18/10-26).</desc>
   </programme>
   
-<programme start="20261023233000 +0000" stop="20261023033000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261023033000 +0000" stop="20261023040000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261024033000 +0000" stop="20261024040000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261023233000 +0000" stop="20261024033000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -1499,7 +1430,7 @@
   </programme>
   
 <programme start="20261024092000 +0000" stop="20261024112000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
-    <title lang="sv">EFL Championship: Bolton - Middlesbrough</title>
+    <title lang="sv">EFL Championship</title>
     <desc lang="sv">Omgång 12. Från Toughsheet Community Stadium, Horwich. (23/10-26).</desc>
   </programme>
   
@@ -1547,7 +1478,11 @@
     <desc lang="sv">Höjdpunkter från EFL Championship, Englands näst högsta division i fotboll.</desc>
   </programme>
   
-<programme start="20261024233000 +0000" stop="20261025033000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+<programme start="20261024233000 +0000" stop="20261024033000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261024033000 +0000" stop="20261024040000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -1623,71 +1558,70 @@
     <desc lang="sv">Omgång 8. Från Stade Raymond-Kopa, Angers. (25/10-26).</desc>
   </programme>
   
-<programme start="20261022023500 +0000" stop="20261022040000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022040000 +0000" stop="20261022080000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022080000 +0000" stop="20261022100000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022100000 +0000" stop="20261022120000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Anfield, Liverpool. Kommentatorer: Niklas Holmgren &amp; Martin Åslund. (20/10-26).</desc>
-  </programme>
-  
-<programme start="20261022120000 +0000" stop="20261022130000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Bundesliga Highlights</title>
-    <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
-  </programme>
-  
-<programme start="20261022130000 +0000" stop="20261022150000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Estadio Santiago Bernabéu, Madrid. Kommentator: Henrik Strömblad. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022150000 +0000" stop="20261022170000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Kommentering: Gustav Karlsson. Plats: Decathlon Arena - Stade Pierre-Mauroy.</desc>
-  </programme>
-  
-<programme start="20261022170000 +0000" stop="20261022190000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">UEFA Champions League</title>
-    <desc lang="sv">Omgång 3. Från Allianz Arena, München. Kommentatorer: Anders Bjuhr &amp; Fredrik Ljungberg. (21/10-26).</desc>
-  </programme>
-  
-<programme start="20261022190000 +0000" stop="20261022193000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Premier League Netbusters</title>
-    <desc lang="sv">En tillbakablick på omgångens alla mål.</desc>
-  </programme>
-  
-<programme start="20261022193000 +0000" stop="20261022200000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+<programme start="20261026001500 +0000" stop="20261026004500 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
     <title lang="sv">Ligue 1 Highlights (SE)</title>
     <desc lang="sv">Fotbollsmagasin med höjdpunkter från Ligue 1.</desc>
   </programme>
   
-<programme start="20261022200000 +0000" stop="20261022203000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Bundesliga Weekly</title>
-    <desc lang="sv">Uppdateringar och det senaste från Bundesliga.</desc>
+<programme start="20261026004500 +0000" stop="20261026044500 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022203000 +0000" stop="20261022213000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Premier League Stories</title>
-    <desc lang="sv">Premier League Stories.</desc>
+<programme start="20261026044500 +0000" stop="20261026050000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022213000 +0000" stop="20261022230500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Tiki-Taka</title>
-    <desc lang="sv">Tiki-Taka är ett studioprogram som innehåller diskussioner och analyser med intervjuer och gäster samt det senaste från hela fotbollsvärlden.</desc>
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022230500 +0000" stop="20261023020500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">NHL: Ottawa Senators - San Jose Sharks</title>
-    <desc lang="sv">Från Canadian Tire Centre, Ottawa. (22/10-26).</desc>
+<programme start="20261026090000 +0000" stop="20261026110000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026110000 +0000" stop="20261026130000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Dortmund - Frankfurt</title>
+    <desc lang="sv">Omgång 7. Från Signal Iduna Park, Dortmund. Kommentator: Magnus Dahlborn. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261026130000 +0000" stop="20261026150000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship: Charlton - Norwich</title>
+    <desc lang="sv">Omgång 12. Från The Valley, London. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261026150000 +0000" stop="20261026170000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1: Lens - Paris FC</title>
+    <desc lang="sv">Omgång 8. Från Stade Bollaert-Delelis, Lens. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261026170000 +0000" stop="20261026190000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">EFL Championship: Portsmouth - Millwall</title>
+    <desc lang="sv">Omgång 12. Från Fratton Park, Portsmouth. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261026190000 +0000" stop="20261026193000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Championship Highlights</title>
+    <desc lang="sv">Höjdpunkter från EFL Championship, Englands näst högsta division i fotboll.</desc>
+  </programme>
+  
+<programme start="20261026193000 +0000" stop="20261026213000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga: Freiburg - Bayern München</title>
+    <desc lang="sv">Omgång 7. Från Europa-Park Stadion, Freiburg. Kommentator: Gustav Karlsson. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026213000 +0000" stop="20261026233000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Ligue 1: Angers - Lorient</title>
+    <desc lang="sv">Omgång 8. Från Stade Raymond-Kopa, Angers. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026233000 +0000" stop="20261027003000 +0000" channel="[VIAFOHD].V.Sport.Fotboll.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+    <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
+  </programme>
+  
+<programme start="20261023020500 +0000" stop="20261023050500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Seattle Kraken - Utah Mammoth</title>
+    <desc lang="sv">Från Climate Pledge Arena, Seattle. (22/10-26).</desc>
   </programme>
   
 <programme start="20261023050500 +0000" stop="20261023090500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
@@ -1753,21 +1687,7 @@
     <desc lang="sv">Omgång 3. Från Parc des Princes, Paris. Kommentatorer: Anders Bjuhr Fredrik Ljungberg. (20/10-26).</desc>
   </programme>
   
-<programme start="20261023233000 +0000" stop="20261023020500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261023020500 +0000" stop="20261023050500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">NHL: Seattle Kraken - Utah Mammoth</title>
-    <desc lang="sv">Från Climate Pledge Arena, Seattle. (22/10-26).</desc>
-  </programme>
-  
-<programme start="20261024000500 +0000" stop="20261024030500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
-    <title lang="sv">NHL: Chicago Blackhawks - Montréal Canadiens</title>
-    <desc lang="sv">Från United Center, Chicago. (23/10-26).</desc>
-  </programme>
-  
-<programme start="20261024030500 +0000" stop="20261024040000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+<programme start="20261023233000 +0000" stop="20261024000500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -1795,12 +1715,12 @@
     <desc lang="sv">UEFA Champions League Magazine.</desc>
   </programme>
   
-<programme start="20261024105000 +0000" stop="20261024112000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+<programme start="20261024105000 +0000" stop="20261024112200 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
     <title lang="sv">Premier League Preview</title>
     <desc lang="sv">Magasin inför kommande omgång i Premier League.</desc>
   </programme>
   
-<programme start="20261024112000 +0000" stop="20261024134500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+<programme start="20261024112200 +0000" stop="20261024134500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
     <title lang="sv">EFL Championship: Portsmouth - Millwall</title>
     <desc lang="sv">Omgång 12. Från Fratton Park, Portsmouth. (24/10-26).</desc>
   </programme>
@@ -1855,9 +1775,18 @@
     <desc lang="sv">En djuplodande intervjuserie med aktuella spelare från Englands högsta liga.</desc>
   </programme>
   
-<programme start="20261024230500 +0000" stop="20261025030000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+<programme start="20261024230500 +0000" stop="20261024000500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
     <title lang="sv">NHL: Boston Bruins  - San Jose Sharks</title>
     <desc lang="sv">Från TD Garden, Boston. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261024000500 +0000" stop="20261024030500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">NHL: Chicago Blackhawks - Montréal Canadiens</title>
+    <desc lang="sv">Från United Center, Chicago. (23/10-26).</desc>
+  </programme>
+  
+<programme start="20261024030500 +0000" stop="20261024040000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
 <programme start="20261025030000 +0000" stop="20261025050000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
@@ -1943,58 +1872,65 @@
     <desc lang="sv">Magasin från den senaste omgången i Premier League.</desc>
   </programme>
   
-<programme start="20261022003500 +0000" stop="20261022030000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">Hockeyallsvenskan: Mora - Almtuna</title>
-    <desc lang="sv">Ishockey från Wibe Arena där Mora IK ställs mot Almtuna IS i HockeyAllsvenskan. Kommentator: Andreas Hanson.</desc>
+<programme start="20261026004500 +0000" stop="20261026044500 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261022063000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+<programme start="20261026044500 +0000" stop="20261026050000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026090000 +0000" stop="20261026110000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026110000 +0000" stop="20261026130000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League</title>
+    <desc lang="sv">Från Stadium of Light, Sunderland. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026130000 +0000" stop="20261026150000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League</title>
+    <desc lang="sv">Omgång 8. Från Old Trafford, Manchester. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026150000 +0000" stop="20261026170000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League</title>
+    <desc lang="sv">Omgång 8. Från Anfield, Liverpool. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026170000 +0000" stop="20261026190000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League</title>
+    <desc lang="sv">Omgång 8. Från MKM Stadium, Hull. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026190000 +0000" stop="20261026200000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Bundesliga Highlights</title>
+    <desc lang="sv">Höjdpunkter från den senaste omgången av Bundesliga.</desc>
+  </programme>
+  
+<programme start="20261026200000 +0000" stop="20261026203000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Championship Highlights</title>
+    <desc lang="sv">Höjdpunkter från EFL Championship, Englands näst högsta division i fotboll.</desc>
+  </programme>
+  
+<programme start="20261026203000 +0000" stop="20261026223000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League</title>
+    <desc lang="sv">Omgång 8. Från Selhurst Park, London. (25/10-26).</desc>
+  </programme>
+  
+<programme start="20261026223000 +0000" stop="20261027003000 +0000" channel="[VIASPOH].V.Sport.Premium.HD.se">
+    <title lang="sv">Premier League</title>
+    <desc lang="sv">Omgång 8. Från Coventry Building Society Arena, Coventry. (24/10-26).</desc>
+  </programme>
+  
+<programme start="20261023030000 +0000" stop="20261023050000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261022063000 +0000" stop="20261022090000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">SHL: Frölunda - Djurgården</title>
-    <desc lang="sv">Ishockey från Scandinavium där Frölunda HC ställs mot Djurgårdens IF i SHL. Kommentatorer: Johan Edlund och Sanny Lindström.</desc>
-  </programme>
-  
-<programme start="20261022090000 +0000" stop="20261022113000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">Hockeyallsvenskan: Södertälje - Karlskoga</title>
-    <desc lang="sv">Ishockey från Scaniarinken där Södertälje SK ställs mot BIK Karlskoga i HockeyAllsvenskan. Kommentatorer: Peter Backe och Per Svartvadet.</desc>
-  </programme>
-  
-<programme start="20261022113000 +0000" stop="20261022140000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">Hockeyallsvenskan: Modo - Oskarshamn</title>
-    <desc lang="sv">Ishockey från Hägglunds Arena där MoDo ställs mot IK Oskarshamn i HockeyAllsvenskan. Kommentator: Linus Eklund.</desc>
-  </programme>
-  
-<programme start="20261022140000 +0000" stop="20261022163000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">Hockeyallsvenskan: Nybro - Visby Roma</title>
-    <desc lang="sv">Sändningar från HockeyAllsvenskan.</desc>
-  </programme>
-  
-<programme start="20261022163000 +0000" stop="20261022165000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">SHL: Hockeytorsdag: Hockeytorsdag</title>
-    <desc lang="sv">Studioprogram med fokus på torsdagskvällens hetaste match i SHL. Dessutom med höjdpunkter och summerande intryck från övriga matcher under kvällen.</desc>
-  </programme>
-  
-<programme start="20261022165000 +0000" stop="20261022191500 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">SHL: Örebro - Brynäs</title>
-    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
-  </programme>
-  
-<programme start="20261022191500 +0000" stop="20261022200000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">SHL: Hockeytorsdag: Hockeytorsdag</title>
-    <desc lang="sv">Studioprogram med fokus på torsdagskvällens hetaste match i SHL. Dessutom med höjdpunkter och summerande intryck från övriga matcher under kvällen.</desc>
-  </programme>
-  
-<programme start="20261022200000 +0000" stop="20261022223000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">SHL: Örebro - Brynäs</title>
-    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
-  </programme>
-<programme start="20261022223000 +0000" stop="20261023030000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">SHL: Rögle - Frölunda</title>
-    <desc lang="sv">Ishockey från Catena Arena där Rögle BK ställs mot Frölunda HC i SHL. Kommentatorer: Åke Unger och Almen Bibic.</desc>
   </programme>
   
 <programme start="20261023050000 +0000" stop="20261023073000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
@@ -2037,19 +1973,9 @@
     <desc lang="sv">Kommentatorer: Adam Johansson och Per Svartvadet.</desc>
   </programme>
   
-<programme start="20261023235800 +0000" stop="20261023030000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+<programme start="20261023235800 +0000" stop="20261024030000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
     <title lang="sv">Hockeyallsvenskan: Kalmar - Leksand</title>
     <desc lang="sv">Ishockey från Hatstore Arena där Kalmar HC ställs mot Leksands IF i HockeyAllsvenskan. Kommentatorer: Stefan Klemetz och Robin Figren.</desc>
-  </programme>
-  
-<programme start="20261023030000 +0000" stop="20261023050000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261024030000 +0000" stop="20261024050000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261024050000 +0000" stop="20261024073000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
@@ -2097,9 +2023,14 @@
     <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
   </programme>
   
-<programme start="20261024212500 +0000" stop="20261025000000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+<programme start="20261024212500 +0000" stop="20261024030000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
     <title lang="sv">SHL: Hockeytorsdag: Luleå - Djurgården</title>
     <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
+  </programme>
+  
+<programme start="20261024030000 +0000" stop="20261024050000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261025000000 +0000" stop="20261025040000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
@@ -2147,47 +2078,54 @@
     <desc lang="sv">Ishockey från Löfbergs Arena där Färjestad BK ställs mot Växjö Lakers i SHL. Kommentator: Andreas Åberg.</desc>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261022040000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">RALLY-TV PGM WON</title>
-    <desc lang="sv">Få de senaste nyheterna, programmen och reportagen från rallyvärlden i denna fullmatade kanal.</desc>
+<programme start="20261026013000 +0000" stop="20261026040000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
   </programme>
   
-<programme start="20261022040000 +0000" stop="20261022080000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026040000 +0000" stop="20261026055500 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261022080000 +0000" stop="20261022120000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026055500 +0000" stop="20261026083000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL: Hockeytorsdag: Luleå - Djurgården</title>
+    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
   </programme>
   
-<programme start="20261022120000 +0000" stop="20261022160000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026083000 +0000" stop="20261026110000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Ishockey från Husqvarna Garden där HV71 ställs mot Frölunda HC i SHL. Kommentator: Patrik Westberg.</desc>
   </programme>
   
-<programme start="20261022160000 +0000" stop="20261022200000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026110000 +0000" stop="20261026133000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Ishockey från Saab Arena där Linköping HC ställs mot Örebro HK i SHL. Kommentator: Stefan Klemetz.</desc>
   </programme>
   
-<programme start="20261022200000 +0000" stop="20261023000000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026133000 +0000" stop="20261026160000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Ishockey från Löfbergs Arena där Färjestad BK ställs mot Växjö Lakers i SHL. Kommentator: Andreas Åberg.</desc>
   </programme>
   
-<programme start="20261023174500 +0000" stop="20261023193000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Rally-EM: Portugal</title>
-    <desc lang="sv">Motorsport från Braga, Portugal, och den sjunde och sista deltävlingen i Rally-EM 2026. Med sträcka 1. Engelsk kommentering.</desc>
+<programme start="20261026160000 +0000" stop="20261026182500 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
   </programme>
   
-<programme start="20261023193000 +0000" stop="20261023205000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Rally-EM: Portugal</title>
-    <desc lang="sv">Motorsport från Braga, Portugal, och den sjunde och sista deltävlingen i Rally-EM 2026. Med sträcka 1. Engelsk kommentering.</desc>
+<programme start="20261026182500 +0000" stop="20261026210000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL: Hockeytorsdag: Luleå - Djurgården</title>
+    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
   </programme>
   
-<programme start="20261023205000 +0000" stop="20261023000000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026210000 +0000" stop="20261026233000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Ishockey från Saab Arena där Linköping HC ställs mot Örebro HK i SHL. Kommentator: Stefan Klemetz.</desc>
   </programme>
   
-<programme start="20261023000000 +0000" stop="20261023030000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026233000 +0000" stop="20261027040000 +0000" channel="[TV4HOSV].TV4.Hockey.se">
+    <title lang="sv">SHL</title>
+    <desc lang="sv">Sändningar från SHL, Sveriges högstaliga i ishockey för herrar.</desc>
   </programme>
   
 <programme start="20261023030000 +0000" stop="20261023174500 +0000" channel="[TV4MOSV].TV4.Motor.se">
@@ -2195,13 +2133,18 @@
     <desc lang="sv">Få de senaste nyheterna, programmen och reportagen från rallyvärlden i denna fullmatade kanal.</desc>
   </programme>
   
-<programme start="20261024005000 +0000" stop="20261024030000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261023174500 +0000" stop="20261023193000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Rally-EM: Portugal</title>
+    <desc lang="sv">Motorsport från Braga, Portugal, och den sjunde och sista deltävlingen i Rally-EM 2026. Med sträcka 1. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261024030000 +0000" stop="20261024053000 +0000" channel="[TV4MOSV].TV4.Motor.se">
-    <title lang="sv">RALLY-TV PGM WON</title>
-    <desc lang="sv">Få de senaste nyheterna, programmen och reportagen från rallyvärlden i denna fullmatade kanal.</desc>
+<programme start="20261023193000 +0000" stop="20261023205100 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Rally-EM: Portugal</title>
+    <desc lang="sv">Motorsport från Braga, Portugal, och den sjunde och sista deltävlingen i Rally-EM 2026. Med sträcka 1. Engelsk kommentering.</desc>
+  </programme>
+  
+<programme start="20261023205100 +0000" stop="20261024005100 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
 <programme start="20261024053000 +0000" stop="20261024070000 +0000" channel="[TV4MOSV].TV4.Motor.se">
@@ -2234,8 +2177,17 @@
     <desc lang="sv">Motorsport från Braga, Portugal, och den sjunde och sista deltävlingen i Rally-EM 2026. Med sträcka 7-9. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261024200400 +0000" stop="20261025000400 +0000" channel="[TV4MOSV].TV4.Motor.se">
+<programme start="20261024200400 +0000" stop="20261024005100 +0000" channel="[TV4MOSV].TV4.Motor.se">
     <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261024005100 +0000" stop="20261024030000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261024030000 +0000" stop="20261024053000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">RALLY-TV PGM WON</title>
+    <desc lang="sv">Få de senaste nyheterna, programmen och reportagen från rallyvärlden i denna fullmatade kanal.</desc>
   </programme>
   
 <programme start="20261025000400 +0000" stop="20261025040000 +0000" channel="[TV4MOSV].TV4.Motor.se">
@@ -2275,29 +2227,42 @@
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261022063000 +0000" channel="[TV4TESV].TV4.Tennis.se">
+<programme start="20261026012900 +0000" stop="20261026040000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026040000 +0000" stop="20261026040500 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">RALLY-TV PGM WON</title>
+    <desc lang="sv">Få de senaste nyheterna, programmen och reportagen från rallyvärlden i denna fullmatade kanal.</desc>
+  </programme>
+  
+<programme start="20261026040500 +0000" stop="20261026050000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026090000 +0000" stop="20261026130000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026130000 +0000" stop="20261026170000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026170000 +0000" stop="20261026210000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026210000 +0000" stop="20261027010000 +0000" channel="[TV4MOSV].TV4.Motor.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261023030000 +0000" stop="20261023063000 +0000" channel="[TV4TESV].TV4.Tennis.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261022063000 +0000" stop="20261022123000 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">ATP TOUR: Almaty Open 250</title>
-    <desc lang="sv">Tennis från Almaty, Kazakstan, och den andra omgången i Almaty Open på ATP Tour. Engelsk kommentering.</desc>
-  </programme>
-  
-<programme start="20261022123000 +0000" stop="20261022170000 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">ATP TOUR: Grand Prix Lyon</title>
-    <desc lang="sv">Tennis från Lyon, Frankrike, och den andra omgången i Grand Prix Lyon på ATP Tour. Engelsk kommentering.</desc>
-  </programme>
-  
-<programme start="20261022170000 +0000" stop="20261022211500 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">ATP TOUR: Grand Prix Lyon</title>
-    <desc lang="sv">Tennis från Lyon, Frankrike, och den andra omgången i Grand Prix Lyon på ATP Tour. Engelsk kommentering.</desc>
-  </programme>
-  
-<programme start="20261022211500 +0000" stop="20261023011500 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">ATP TOUR: Grand Prix Lyon</title>
-    <desc lang="sv">Tennis från Lyon, Frankrike, och den andra omgången i Grand Prix Lyon på ATP Tour. Engelsk kommentering.</desc>
   </programme>
   
 <programme start="20261023063000 +0000" stop="20261023123000 +0000" channel="[TV4TESV].TV4.Tennis.se">
@@ -2310,27 +2275,9 @@
     <desc lang="sv">Tennis från Bryssel, Belgien, och kvartsfinaler i European Open på ATP Tour. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261023200900 +0000" stop="20261023011500 +0000" channel="[TV4TESV].TV4.Tennis.se">
+<programme start="20261023200900 +0000" stop="20261024030000 +0000" channel="[TV4TESV].TV4.Tennis.se">
     <title lang="sv">ATP TOUR: Almaty Open 250</title>
     <desc lang="sv">Tennis från Almaty, Kazakstan, och kvartsfinaler i Almaty Open på ATP Tour. Engelsk kommentering.</desc>
-  </programme>
-  
-<programme start="20261023011500 +0000" stop="20261023030000 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261023030000 +0000" stop="20261023063000 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261024020900 +0000" stop="20261024030000 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261024030000 +0000" stop="20261024100000 +0000" channel="[TV4TESV].TV4.Tennis.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261024100000 +0000" stop="20261024120000 +0000" channel="[TV4TESV].TV4.Tennis.se">
@@ -2358,8 +2305,13 @@
     <desc lang="sv">Tennis från Bryssel, Belgien, och semifinal i European Open på ATP Tour. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261024225000 +0000" stop="20261025025000 +0000" channel="[TV4TESV].TV4.Tennis.se">
+<programme start="20261024225000 +0000" stop="20261024030000 +0000" channel="[TV4TESV].TV4.Tennis.se">
     <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261024030000 +0000" stop="20261024100000 +0000" channel="[TV4TESV].TV4.Tennis.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261025025000 +0000" stop="20261025040000 +0000" channel="[TV4TESV].TV4.Tennis.se">
@@ -2396,33 +2348,33 @@
     <desc lang="sv">Tennis från Lyon, Frankrike, och semifinaler i Grand Prix Lyon på ATP Tour. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261022164500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+<programme start="20261026001400 +0000" stop="20261026021400 +0000" channel="[TV4TESV].TV4.Tennis.se">
+    <title lang="sv">ATP TOUR: Almaty Open 250</title>
+    <desc lang="sv">Tennis från Almaty, Kazakstan, och semifinal i Almaty Open på ATP Tour. Engelsk kommentering.</desc>
+  </programme>
+  
+<programme start="20261026021400 +0000" stop="20261026040000 +0000" channel="[TV4TESV].TV4.Tennis.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026040000 +0000" stop="20261026055900 +0000" channel="[TV4TESV].TV4.Tennis.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261022164500 +0000" stop="20261022193000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Catena Arena där Rögle BK ställs mot Frölunda HC i SHL. Kommentatorer: Åke Unger och Almen Bibic.</desc>
+<programme start="20261026055900 +0000" stop="20261026123000 +0000" channel="[TV4TESV].TV4.Tennis.se">
+    <title lang="sv">ATP TOUR: Almaty Open 250</title>
+    <desc lang="sv">Sändningar från ATP Tour - där världens bästa tennisspelare gör upp.</desc>
   </programme>
   
-<programme start="20261022193000 +0000" stop="20261023030000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Catena Arena där Rögle BK ställs mot Frölunda HC i SHL. Kommentatorer: Åke Unger och Almen Bibic.</desc>
+<programme start="20261026123000 +0000" stop="20261026210900 +0000" channel="[TV4TESV].TV4.Tennis.se">
+    <title lang="sv">ATP TOUR: Erste Bank Open Wien 500</title>
+    <desc lang="sv">Sändningar från ATP Tour - där världens bästa tennisspelare gör upp.</desc>
   </programme>
   
-<programme start="20261023164500 +0000" stop="20261023194500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Allsvenskan</title>
-    <desc lang="sv">Fotboll från Hitachi Energy Arena där Västerås SK ställs mot Halmstads BK i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
-  </programme>
-  
-<programme start="20261023194500 +0000" stop="20261023221500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Allsvenskan</title>
-    <desc lang="sv">Fotboll från Hitachi Energy Arena där Västerås SK ställs mot Halmstads BK i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
-  </programme>
-  
-<programme start="20261023221500 +0000" stop="20261023030000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261026210900 +0000" stop="20261027010900 +0000" channel="[TV4TESV].TV4.Tennis.se">
+    <title lang="sv">ATP TOUR: Grand Prix Lyon</title>
+    <desc lang="sv">Sändningar från ATP Tour - där världens bästa tennisspelare gör upp.</desc>
   </programme>
   
 <programme start="20261023030000 +0000" stop="20261023164500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
@@ -2430,13 +2382,14 @@
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261024021500 +0000" stop="20261024030000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261023164500 +0000" stop="20261023194500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Allsvenskan</title>
+    <desc lang="sv">Fotboll från Hitachi Energy Arena där Västerås SK ställs mot Halmstads BK i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
   </programme>
   
-<programme start="20261024030000 +0000" stop="20261024151500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+<programme start="20261023194500 +0000" stop="20261024030000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Allsvenskan</title>
+    <desc lang="sv">Fotboll från Hitachi Energy Arena där Västerås SK ställs mot Halmstads BK i omgång 25 av Allsvenskan. Kommentator: Peter Backe.</desc>
   </programme>
   
 <programme start="20261024151500 +0000" stop="20261024181000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
@@ -2444,17 +2397,14 @@
     <desc lang="sv">Fotboll från 3Arena där Djurgårdens IF ställs mot Örgryte IS i omgång 25 av Allsvenskan. Kommentatorer: Adam Pinthorp och Jiloan Hamad.</desc>
   </programme>
   
-<programme start="20261024181000 +0000" stop="20261024204000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+<programme start="20261024181000 +0000" stop="20261024030000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
     <title lang="sv">Allsvenskan</title>
     <desc lang="sv">Fotboll från 3Arena där Djurgårdens IF ställs mot Örgryte IS i omgång 25 av Allsvenskan. Kommentatorer: Adam Pinthorp och Jiloan Hamad.</desc>
   </programme>
   
-<programme start="20261024204000 +0000" stop="20261025004000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025004000 +0000" stop="20261025040000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261024030000 +0000" stop="20261024151500 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261025040000 +0000" stop="20261025112000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
@@ -2481,32 +2431,36 @@
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261022164500 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+<programme start="20261026003000 +0000" stop="20261026040000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026040000 +0000" stop="20261026043000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261022164500 +0000" stop="20261022193000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Visionite Arena där IF Björklöven ställs mot Malmö Redhawks i SHL. Kommentator: Lars Lindberg.</desc>
+<programme start="20261026043000 +0000" stop="20261026050000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022193000 +0000" stop="20261023030000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Visionite Arena där IF Björklöven ställs mot Malmö Redhawks i SHL. Kommentator: Lars Lindberg.</desc>
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023165500 +0000" stop="20261023193000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Hockeyallsvenskan</title>
-    <desc lang="sv">Ishockey från Be-Ge Hockey Center där IK Oskarshamn ställs mot Mora IK i HockeyAllsvenskan. Kommentator: Daniel Kristiansson.</desc>
+<programme start="20261026090000 +0000" stop="20261026130000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023193000 +0000" stop="20261023214500 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Hockeyallsvenskan</title>
-    <desc lang="sv">Ishockey från Be-Ge Hockey Center där IK Oskarshamn ställs mot Mora IK i HockeyAllsvenskan. Kommentator: Daniel Kristiansson.</desc>
+<programme start="20261026130000 +0000" stop="20261026170000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023214500 +0000" stop="20261023030000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+<programme start="20261026170000 +0000" stop="20261026210000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026210000 +0000" stop="20261027010000 +0000" channel="[TV4SPL1].TV4.Sport.Live.1.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -2515,13 +2469,14 @@
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261024014500 +0000" stop="20261024030000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261023165500 +0000" stop="20261023193000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Hockeyallsvenskan</title>
+    <desc lang="sv">Ishockey från Be-Ge Hockey Center där IK Oskarshamn ställs mot Mora IK i HockeyAllsvenskan. Kommentator: Daniel Kristiansson.</desc>
   </programme>
   
-<programme start="20261024030000 +0000" stop="20261024130000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+<programme start="20261023193000 +0000" stop="20261024030000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Hockeyallsvenskan</title>
+    <desc lang="sv">Ishockey från Be-Ge Hockey Center där IK Oskarshamn ställs mot Mora IK i HockeyAllsvenskan. Kommentator: Daniel Kristiansson.</desc>
   </programme>
   
 <programme start="20261024130000 +0000" stop="20261024154500 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
@@ -2539,17 +2494,14 @@
     <desc lang="sv">Ishockey från Saab Arena där Linköping HC ställs mot Örebro HK i SHL. Kommentator: Stefan Klemetz.</desc>
   </programme>
   
-<programme start="20261024213000 +0000" stop="20261024234500 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+<programme start="20261024213000 +0000" stop="20261024030000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
     <title lang="sv">SHL</title>
     <desc lang="sv">Ishockey från Monitor ERP Arena där Brynäs IF ställs mot Rögle BK i SHL. Kommentator: Tobias Ekberg.</desc>
   </programme>
   
-<programme start="20261024234500 +0000" stop="20261025034500 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025034500 +0000" stop="20261025040000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261024030000 +0000" stop="20261024130000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261025040000 +0000" stop="20261025135500 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
@@ -2562,45 +2514,37 @@
     <desc lang="sv">Fotboll från Gewiss Stadium där Atalanta ställs mot Frosinone i omgång 8 av Serie A. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025163500 +0000" stop="20261025184000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+<programme start="20261025163500 +0000" stop="20261026040000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
     <title lang="sv">Serie A</title>
     <desc lang="sv">Fotboll från Gewiss Stadium där Atalanta ställs mot Frosinone i omgång 8 av Serie A. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025184000 +0000" stop="20261025224000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025224000 +0000" stop="20261026024000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261022030000 +0000" stop="20261022164500 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+<programme start="20261026040000 +0000" stop="20261026043000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261022164500 +0000" stop="20261022193000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Vida Arena där Växjö Lakers ställs mot Luleå HF i SHL. Kommentator: Albin Skur.</desc>
+<programme start="20261026043000 +0000" stop="20261026050000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022193000 +0000" stop="20261023030000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">SHL</title>
-    <desc lang="sv">Ishockey från Vida Arena där Växjö Lakers ställs mot Luleå HF i SHL. Kommentator: Albin Skur.</desc>
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023165500 +0000" stop="20261023193000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">Hockeyallsvenskan</title>
-    <desc lang="sv">Ishockey från Liljas Arena där Nybro Vikings IF ställs mot Södertälje SK i HockeyAllsvenskan. Kommentator: Leon Hallén.</desc>
+<programme start="20261026090000 +0000" stop="20261026130000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023193000 +0000" stop="20261023214500 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">Hockeyallsvenskan</title>
-    <desc lang="sv">Ishockey från Liljas Arena där Nybro Vikings IF ställs mot Södertälje SK i HockeyAllsvenskan. Kommentator: Leon Hallén.</desc>
+<programme start="20261026130000 +0000" stop="20261026170000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261023214500 +0000" stop="20261023030000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+<programme start="20261026170000 +0000" stop="20261026210000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026210000 +0000" stop="20261027010000 +0000" channel="[TV4SPL2].TV4.Sport.Live.2.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
@@ -2609,13 +2553,14 @@
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261024014500 +0000" stop="20261024030000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261023165500 +0000" stop="20261023193000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Hockeyallsvenskan</title>
+    <desc lang="sv">Ishockey från Liljas Arena där Nybro Vikings IF ställs mot Södertälje SK i HockeyAllsvenskan. Kommentator: Leon Hallén.</desc>
   </programme>
   
-<programme start="20261024030000 +0000" stop="20261024130000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+<programme start="20261023193000 +0000" stop="20261024030000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Hockeyallsvenskan</title>
+    <desc lang="sv">Ishockey från Liljas Arena där Nybro Vikings IF ställs mot Södertälje SK i HockeyAllsvenskan. Kommentator: Leon Hallén.</desc>
   </programme>
   
 <programme start="20261024130000 +0000" stop="20261024154500 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
@@ -2633,17 +2578,14 @@
     <desc lang="sv">Ishockey från Malmö Arena där Malmö Redhawks ställs mot Timrå IK i SHL. Kommentator: Albin Skur.</desc>
   </programme>
   
-<programme start="20261024213000 +0000" stop="20261024234500 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+<programme start="20261024213000 +0000" stop="20261024030000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
     <title lang="sv">SHL</title>
     <desc lang="sv">Ishockey från Löfbergs Arena där Färjestad BK ställs mot Växjö Lakers i SHL. Kommentator: Andreas Åberg.</desc>
   </programme>
   
-<programme start="20261024234500 +0000" stop="20261025034500 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025034500 +0000" stop="20261025040000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
-    <title lang="sv">Sändningsuppehåll</title>
+<programme start="20261024030000 +0000" stop="20261024130000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261025040000 +0000" stop="20261025135500 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
@@ -2656,20 +2598,41 @@
     <desc lang="sv">Fotboll från Stadio Luigi Ferraris där Genoa ställs mot Venezia i omgång 8 av Serie A. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025163500 +0000" stop="20261025184000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+<programme start="20261025163500 +0000" stop="20261026040000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
     <title lang="sv">Serie A</title>
     <desc lang="sv">Fotboll från Stadio Luigi Ferraris där Genoa ställs mot Venezia i omgång 8 av Serie A. Engelsk kommentering.</desc>
   </programme>
   
-<programme start="20261025184000 +0000" stop="20261025224000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+<programme start="20261026040000 +0000" stop="20261026043000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+  </programme>
+  
+<programme start="20261026043000 +0000" stop="20261026050000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261025224000 +0000" stop="20261026024000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261022030000 +0000" stop="20261023030000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261026090000 +0000" stop="20261026130000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026130000 +0000" stop="20261026170000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026170000 +0000" stop="20261026210000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261026210000 +0000" stop="20261027010000 +0000" channel="[TV4SPL3].TV4.Sport.Live.3.se">
+    <title lang="sv">Sändningsuppehåll</title>
+  </programme>
+  
+<programme start="20261023030000 +0000" stop="20261023165500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
@@ -2679,27 +2642,9 @@
     <desc lang="sv">Ishockey från Östersund Arena där Östersunds IK ställs mot Västerås IK i HockeyAllsvenskan. Kommentator: Richard Hermansson.</desc>
   </programme>
   
-<programme start="20261023193000 +0000" stop="20261023214500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261023193000 +0000" stop="20261024030000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Hockeyallsvenskan</title>
     <desc lang="sv">Ishockey från Östersund Arena där Östersunds IK ställs mot Västerås IK i HockeyAllsvenskan. Kommentator: Richard Hermansson.</desc>
-  </programme>
-  
-<programme start="20261023214500 +0000" stop="20261023030000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261023030000 +0000" stop="20261023165500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
-  </programme>
-  
-<programme start="20261024014500 +0000" stop="20261024030000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261024030000 +0000" stop="20261024124500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
-    <title lang="sv">Höjdpunkter</title>
-    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
 <programme start="20261024124500 +0000" stop="20261024154500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
@@ -2712,45 +2657,47 @@
     <desc lang="sv">Ishockey från Husqvarna Garden där HV71 ställs mot Frölunda HC i SHL. Kommentator: Patrik Westberg.</desc>
   </programme>
   
-<programme start="20261024190000 +0000" stop="20261024211500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261024190000 +0000" stop="20261024030000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">SHL</title>
     <desc lang="sv">Ishockey från Husqvarna Garden där HV71 ställs mot Frölunda HC i SHL. Kommentator: Patrik Westberg.</desc>
   </programme>
   
-<programme start="20261024211500 +0000" stop="20261025001500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025001500 +0000" stop="20261025040000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
-    <title lang="sv">Sändningsuppehåll</title>
-  </programme>
-  
-<programme start="20261025040000 +0000" stop="20261025043000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261024030000 +0000" stop="20261024124500 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Höjdpunkter</title>
     <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
   </programme>
   
-<programme start="20261025043000 +0000" stop="20261025050000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261025040000 +0000" stop="20261026040000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+  </programme>
+  
+<programme start="20261026040000 +0000" stop="20261026043000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+    <title lang="sv">Höjdpunkter</title>
+    <desc lang="sv">Höjdpunkter från bland annat SHL, La Liga och UEFA Champions League.</desc>
+  </programme>
+  
+<programme start="20261026043000 +0000" stop="20261026050000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261025050000 +0000" stop="20261025090000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261026050000 +0000" stop="20261026090000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261025090000 +0000" stop="20261025130000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261026090000 +0000" stop="20261026130000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261025130000 +0000" stop="20261025170000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261026130000 +0000" stop="20261026170000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261025170000 +0000" stop="20261025210000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261026170000 +0000" stop="20261026210000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
   
-<programme start="20261025210000 +0000" stop="20261026010000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
+<programme start="20261026210000 +0000" stop="20261027010000 +0000" channel="[TV4SPL4].TV4.Sport.Live.4.se">
     <title lang="sv">Sändningsuppehåll</title>
   </programme>
 
